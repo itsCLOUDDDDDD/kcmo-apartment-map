@@ -16,7 +16,13 @@ The map uses MapTiler Dataviz Light (`dataviz-v4-light`), with OpenFreeMap Posit
 
 ## Apartments and boundaries
 
-The research export contains **105 apartment records, 48 map pins and 25 saved places** from the current V3 candidate table within ZIPs 64105, 64106, 64108 and 64109. All 57 records without confirmed coordinates remain in the list. The source workbook SHA256 is `845c58eb64f60a16fd314ad767723b0cdf5ca5c86acb5d7a1269a3c600ae7fda`. This static snapshot updates when rebuilt. The four Second + Delaware walking routes use a separately documented street-facing origin; the Census building pin remains unchanged.
+The research export contains **105 apartment records, 48 apartment pins and 28 saved places** from the current V3 candidate table within ZIPs 64105, 64106, 64108 and 64109. All 57 records without confirmed coordinates remain in the list. The source workbook SHA256 is `47b56cfde18c91ed2ad5d1243216dacf84b848fb5a6a0681f19e9c7546c6502c`. This static snapshot updates when rebuilt. The four Second + Delaware walking routes use a separately documented street-facing origin; the Census building pin remains unchanged.
+
+## Scene and venue evidence
+
+Venue popups and “Meet these places” link 19 reviewed Scene event/program records to their verified venues. They display the retained flyer crop beside readable event-specific dates, billed roles, music descriptions, post-audio labels and uncertainties. **P1** means the verified September 16 upload batch; no P2/P3 order is asserted for older filename batches.
+
+The four priority anchors remain In Good Co, recordBar, MOD and Third Place Lounge. The optional **Access to all four** sort uses each apartment’s longest recorded walk among those four. It lists incomplete records after fully routed ones without hiding them; “all four within five minutes” appears only when all four saved routes support it. New saved places do not become priority anchors.
 
 Bundled `kc-zctas.geojson` covers exactly 64101, 64105, 64106, 64108, 64109, 64110, 64111, 64112, 64113, 64114, 64116, 64124 and 64127. These are **approximate ZIP areas** from the 2020 Census, not USPS delivery boundaries. `kc-zctas.metadata.json` records source, vintage and checksum. Boundaries start off; enabling them shows all 13 and emphasizes selected areas. Nine areas have no exported apartments and show an empty state.
 

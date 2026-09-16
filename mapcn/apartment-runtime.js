@@ -45893,13 +45893,21 @@ var cI = [
 	}
 	showPlace(e, t = !1) {
 		if (!UF(e.coordinates)) return;
-		this.map.flyTo({
+		if (this.map.flyTo({
 			center: HF(e.coordinates),
 			zoom: 15,
 			pitch: this.state.threeD ? 45 : 0,
 			padding: this.safePadding(),
 			duration: t ? 0 : this.duration()
-		});
+		}), this.options.renderPlaceContent) {
+			this.dismissPopup(), this.popup = new kP({
+				offset: 16,
+				anchor: "center",
+				maxWidth: "min(740px, calc(100vw - 36px))",
+				className: "scene-map-popup"
+			}).setLngLat(HF(e.coordinates)).setDOMContent(this.options.renderPlaceContent(e)).addTo(this.map), this.popup.getElement().style.setProperty("--scene-map-height", `${Math.max(180, this.container.clientHeight - 40)}px`), this.popup.getElement().style.setProperty("--scene-map-width", `${Math.max(220, this.container.clientWidth - 40)}px`);
+			return;
+		}
 		let n = this.options.placeGuides?.[e.id], r = document.createElement("div");
 		r.className = "place-popup", iI(r, "h3", e.name), iI(r, "p", e.address), iI(r, "p", `${$F(e.category)} · ${e.neighborhood || ""}`), iI(r, "p", n?.description || e.note || "Saved place; current opening status has not been checked."), iI(r, "p", `Source checked: ${n?.checked || e.checked || "Not recorded"}. Map position: ${e.coordinateSource || "Unverified"}`, "small"), aI(r, n?.source || e.source || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${e.name} ${e.address} Kansas City MO`)}`, n?.source || e.source ? "Official / recorded source" : "Look up this saved place"), this.openPopup(HF(e.coordinates), r);
 	}

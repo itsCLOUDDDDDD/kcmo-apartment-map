@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://api.maptiler.com" crossorigin>
   <link rel="preconnect" href="https://tiles.openfreemap.org">
   <link rel="stylesheet" href="mapcn/apartment-runtime.css?v=mobile-layout-20260915-r1">
-  <link rel="stylesheet" href="styles.css?v=community-review-20260916-r1">
+  <link rel="stylesheet" href="styles.css?v=scene-map-20260916-r1">
 </head>
 <body data-view="map">
   <header class="page-header">
@@ -59,7 +59,7 @@
         <p id="filter-explanation" class="small muted">ZIP, amenity and search filters combine. Selected amenities must all match; sorting only changes the order.</p>
         <div class="filter-fields">
           <label class="field destination-field">Walking destination<select id="destination" aria-describedby="destination-context"><option value="in-good-co">In Good Co · Cocktail lounge</option><option value="mod">MOD · Art &amp; music</option><option value="recordbar">recordBar · Live music</option><option value="third-place-lounge">Third Place Lounge</option><option value="nearest">Nearest of my four nightlife places</option></select></label>
-          <label class="field">Sort apartments by<select id="sort-mode" aria-describedby="sort-explanation"><option value="walk">Shortest walk to selected destination</option><option value="cluster">Shortest walk to any of my four places</option><option value="overall">My preference rank (within each ZIP)</option><option value="name">Apartment name</option></select></label>
+          <label class="field">Sort apartments by<select id="sort-mode" aria-describedby="sort-explanation"><option value="walk">Shortest walk to selected destination</option><option value="cluster">Shortest walk to any of my four places</option><option value="all-four">Access to all four (longest walk)</option><option value="overall">My preference rank (within each ZIP)</option><option value="name">Apartment name</option></select></label>
         </div>
         <p id="sort-explanation" class="small muted">Walking distance is separate from my preference ranking.</p><p id="destination-context"></p>
         <div id="core-shortcuts" class="core-shortcuts" aria-label="Choose a walking destination"></div>
@@ -86,9 +86,9 @@
     <div class="options-footer"><button id="options-clear" type="button">Clear filters</button><button id="options-apply" type="button" class="primary-action">Show apartments</button></div>
   </dialog>
   <dialog id="compare-dialog" aria-labelledby="compare-title"><div class="dialog-header"><div><h2 id="compare-title">Compare apartments</h2><p>Side by side, without changing my choices. On a phone, swipe the table sideways.</p></div><button id="compare-close" aria-label="Close comparison">Close</button></div><div id="comparison" class="comparison-scroll" tabindex="0" role="region" aria-label="Apartment comparison table; scroll sideways for all apartments"></div></dialog>
-  <dialog id="places-guide-dialog" class="guide-dialog" aria-labelledby="places-guide-title"><div class="dialog-header"><div><p class="eyebrow">Why location matters</p><h2 id="places-guide-title">Places I want to live near</h2><p>These four nightlife destinations are in the Crossroads neighborhood. Choose one to see walking times from each apartment.</p></div><button id="places-guide-close" aria-label="Close place guide">Close</button></div><div id="places-guide-content" class="guide-content"></div></dialog>
+  <dialog id="places-guide-dialog" class="guide-dialog" aria-labelledby="places-guide-title"><div class="dialog-header"><div><p class="eyebrow">Why location matters</p><h2 id="places-guide-title">Places I want to live near</h2><p>The four Crossroads anchors remain the walking comparison. Explore their flyers and other music, social and work destinations below. New places do not change the four anchors.</p></div><button id="places-guide-close" aria-label="Close place guide">Close</button></div><div id="places-guide-content" class="guide-content"></div></dialog>
   <dialog id="about-dialog" class="guide-dialog" aria-labelledby="about-title"><div class="dialog-header"><h2 id="about-title">About this apartment search</h2><button id="about-close" aria-label="Close about this map">Close</button></div><div class="guide-content"><p>I’m comparing Kansas City apartments by location, space, cost and everyday comfort. Being able to walk to places I enjoy is one part of the decision—not an automatic winner.</p><h3>How to use it</h3><p>Choose the apartment ZIP codes to show. Tap a home pin or card for details. Tap a photo to browse its gallery. Open an apartment and choose “Add to comparison.” Then choose one or two more apartments to see them together. A number on a home pin opens a group of properties.</p><h3>What the labels mean</h3><p><strong>My preference rank</strong> is my personal order within each ZIP. <strong>Shortest walk</strong> is only distance, not a recommendation. Unranked apartments have not been put in a preference order.</p><p><strong>Unverified</strong> means we still need to check. Places without confirmed map pins remain in the list. Listed rents and vacancies can change; sources and check dates are in each apartment’s details.</p><h3>Build &amp; privacy</h3><p id="build-explanation"></p><p>V3.xlsx is the master list. Workbook changes need a rebuild and a separate publication step before the shared link updates. Viewing or comparing does not edit that list. Private housing paperwork is excluded.</p><a href="README.md">Full sources and sharing notes</a></div></dialog>
   <div id="toast" role="status" class="toast" hidden></div>
-  <script src="map-data.js?v=monthly-fees-20260915-r1"></script><script type="module" src="app.js?v=community-review-20260916-r1"></script>
+  <script src="map-data.js?v=scene-map-20260916-r1"></script><script type="module" src="app.js?v=scene-map-20260916-r1"></script>
 </body>
 </html>

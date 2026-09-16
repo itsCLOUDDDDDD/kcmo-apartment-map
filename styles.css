@@ -231,3 +231,14 @@ body[data-view="list"] .map-pane{opacity:0}
 .community-reports{margin:14px 0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--map-cream,#f7f6ed);font-size:13px;line-height:1.65}
 .community-reports p+p{margin-top:12px}
 .community-feedback>.small{line-height:1.6}
+/* Scene images keep their complete existing crop; text is available independently. */
+.scene-map-popup{left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important}
+.scene-map-popup .maplibregl-popup-content{padding:22px;width:min(740px,var(--scene-map-width,calc(100vw - 36px)));box-sizing:border-box;max-height:min(var(--scene-map-height,76vh),720px);overflow:auto}
+.scene-map-popup .maplibregl-popup-close-button{font-size:26px;width:36px;height:36px;right:0;top:0;background:#fff;z-index:2}
+.scene-venue{font:16px/1.5 system-ui,sans-serif;color:#1e3029;overflow-wrap:anywhere}
+.scene-venue h3{font-size:24px;margin:0 28px 8px 0}.scene-venue h4{font-size:19px;margin:10px 0}.scene-venue p{margin:8px 0}
+.scene-venue>a{display:inline-block;margin:4px 14px 8px 0}.scene-status{font-size:13px;font-weight:650;color:#375b4b}.scene-uncertainty{color:#75531e}
+.scene-event{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:18px;border-top:1px solid #d5ded8;padding:18px 0;align-items:start}
+.scene-event:not(:has(.scene-flyer-link)){display:block}.scene-flyer{display:block;width:100%;height:auto;object-fit:contain;background:#edf0ed;max-height:none;border-radius:6px}.scene-flyer-link{display:block}
+.scene-gallery>summary,.scene-guide-place>summary{cursor:pointer;padding:16px 0;font-weight:650;font-size:16px}.scene-guide-place{border-top:1px solid #d5ded8}.scene-guide-place>button{margin:10px 0 22px}.scene-event .small{font-size:13px;line-height:1.5}
+@media(max-width:600px){.scene-event{grid-template-columns:minmax(0,1fr);gap:12px}.scene-map-popup .maplibregl-popup-content{padding:18px;max-height:min(var(--scene-map-height,64dvh),64dvh)}.scene-venue{font-size:15px}.scene-flyer{max-height:52dvh;object-fit:contain}.scene-venue h3{font-size:21px}}

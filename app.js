@@ -5,6 +5,7 @@ import {amenitySummary, visibleAmenities, streetViewAction, recordedUnits, floor
 import {FOCUS_ZIPS, createMapBridge} from './map-bridge.js?v=priority-amenities-20260915-r1';
 import {mapConfig} from './map-config.js';
 import {communityReviewFor} from './community-reviews.js?v=community-review-20260916-r1';
+import {allFourLabel,compareAllFour,venueContent,appendSceneGuide} from './scene-presentation.js';
 const data=window.KCMO_MAP_DATA;
 const $=s=>document.querySelector(s);
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -50,7 +51,7 @@ const mapAbort=new AbortController();
 const lookup=id=>data.properties.find(p=>p.id===id);
 const currentRoute=p=>state.destination==='nearest'?p.nearest:p.walks.find(r=>r.destinationId===state.destination)||null;
 const activeDestination=p=>cores.find(v=>v.id===(currentRoute(p)?.destinationId||state.destination))||cores[0];
-const headline=p=>{const r=currentRoute(p);return r?`${r.minutes}-minute walk to ${r.destination}`:`Walk to ${activeDestination(p)?.name||'nearby nightlife'} unverified`;};
+const headline=p=>{if(state.sort==='all-four')return allFourLabel(p);const r=currentRoute(p);return r?`${r.minutes}-minute walk to ${r.destination}`:`Walk to ${activeDestination(p)?.name||'nearby nightlife'} unverified`;};
 const currentRank=p=>state.draftRanks.has(p.id)?state.draftRanks.get(p.id):p.overallRank;
 function transitExplanation(p,route){
   if(route&&route.minutes<=12)return 'This is a short walk. Waiting for a Streetcar can take longer than walking directly.';
@@ -63,6 +64,7 @@ const showToast=text=>{const el=$('#toast');el.textContent=text;el.hidden=false;
 const matchesPropertyFilters=p=>matchesPriorityAmenities(p,state.priorityAmenities)&&(!state.search||[p.name,p.neighborhood,p.address].join(' ').toLowerCase().includes(state.search));
 const visible=()=>data.properties.filter(p=>state.zips.has(p.zip)&&matchesPropertyFilters(p)).sort((a,b)=>{
   if(state.sort==='name')return a.name.localeCompare(b.name);
+  if(state.sort==='all-four')return compareAllFour(a,b);
   if(state.sort==='overall')return a.zip.localeCompare(b.zip)||(currentRank(a)??Infinity)-(currentRank(b)??Infinity)||a.name.localeCompare(b.name);
   const ar=state.sort==='cluster'?a.nearest:currentRoute(a),br=state.sort==='cluster'?b.nearest:currentRoute(b);
   return (ar?.minutes??Infinity)-(br?.minutes??Infinity)||(ar?.metres??Infinity)-(br?.metres??Infinity)||a.name.localeCompare(b.name);
@@ -166,7 +168,7 @@ function renderList(){
   $('#coverage-count').textContent=`${items.length} ${items.length===1?'apartment':'apartments'} · ${mapped} on map · ${unmapped} need map pins`;
   $('#missing-pin-note').textContent=unmapped?`${unmapped} without confirmed pins · included in List`:'';
   $('#missing-pin-note').hidden=!unmapped;
-  $('#order-explanation').textContent=state.sort==='overall'?'My preference order within each ZIP':state.sort==='name'?'Alphabetical order':state.sort==='cluster'||state.destination==='nearest'?'Shortest walk to any of my four places first':`Shortest walk to ${cores.find(v=>v.id===state.destination)?.name||'the selected place'} first`;
+  $('#order-explanation').textContent=state.sort==='all-four'?'Access to all four: shortest maximum walking time first; incomplete routes last, not hidden':state.sort==='overall'?'My preference order within each ZIP':state.sort==='name'?'Alphabetical order':state.sort==='cluster'||state.destination==='nearest'?'Shortest walk to any of my four places first':`Shortest walk to ${cores.find(v=>v.id===state.destination)?.name||'the selected place'} first`;
   $('#list-guidance').hidden=!state.comparing&&!state.compare.size;
   $('#list-guidance').textContent='Choose 2 or 3 apartments to compare.';
   for(const zip of zipCodes)$('#zip-count-'+zip).textContent='('+data.properties.filter(p=>p.zip===zip&&matchesPropertyFilters(p)).length+')';
@@ -351,9 +353,8 @@ function renderDestinationContext(){
 function renderWelcome(){
   $('#map-legend').innerHTML=[['home','Apartments'],['food','Restaurants'],['coffee','Coffee shops'],['nightlife','Nightlife & events'],['library','Libraries'],['streetcar','Streetcar']].map(([kind,label])=>`<li><span class="legend-symbol ${kind}">${icon(kind)}</span>${label}</li>`).join('');
   document.querySelectorAll('.layer-symbol').forEach(el=>{const kind=[...el.classList].find(k=>k!=='layer-symbol');el.innerHTML=icon(kind);});
-  $('#places-guide-content').innerHTML=cores.map(p=>{const g=placeGuides[p.id];return `<article class="guide-place"><div class="guide-place-title">${icon('nightlife')}<div><h3>${escape(p.name)}</h3><p class="small muted">${escape(p.address)} · ${escape(p.neighborhood)}</p></div></div><p>${escape(g.description)}</p><div class="guide-place-actions"><button data-guide-destination="${p.id}">Use ${escape(p.name)} for walking times</button>${anchor(g.source,'Official website')}</div><p class="small muted">Description checked ${escape(g.checked)}. Check current events and entry requirements before visiting.</p></article>`;}).join('')+`<section class="guide-daytime"><h3>Daytime laptop stops</h3><p>${icon('library')} Libraries and ${icon('coffee')} coffee shops are shown separately for daytime visits. Coffee-shop Wi-Fi, outlets and laptop policies still need checking.</p><button id="browse-daytime">Browse libraries &amp; coffee shops</button></section>`;
-  $('#places-guide-content').querySelectorAll('[data-guide-destination]').forEach(b=>b.onclick=()=>{setDestination(b.dataset.guideDestination);closeOverlay('places-guide-dialog',true);$('#places-guide-open').focus({preventScroll:true});});
-  $('#browse-daytime').onclick=()=>{closeOverlay('places-guide-dialog',true);$('.places-directory').open=true;$('.places-directory').scrollIntoView({block:'start',behavior:motion()?'smooth':'auto'});$('.places-directory button')?.focus({preventScroll:true});};
+  $('#places-guide-content').replaceChildren();
+  appendSceneGuide($('#places-guide-content'),data.places,placeGuides,p=>{closeOverlay('places-guide-dialog',true);if(cores.some(c=>c.id===p.id))setDestination(p.id);showPlace(p);});
   renderDestinationContext();
 }
 function browseApartments(comparing=false){
@@ -388,7 +389,7 @@ const bridge=createMapBridge(window,{
   intent(detail){
     if(!detail||typeof detail.id!=='string')return;
     if(detail.type==='select-apartment'&&visible().some(p=>p.id===detail.id))selectProperty(detail.id);
-    else if(detail.type==='select-destination'&&cores.some(p=>p.id===detail.id)){setDestination(detail.id);if(!state.selected)showPlace(cores.find(p=>p.id===detail.id));}
+    else if(detail.type==='select-destination'&&cores.some(p=>p.id===detail.id)){setDestination(detail.id);showPlace(cores.find(p=>p.id===detail.id));}
     else if(detail.type==='show-place'){const p=data.places.find(p=>p.id===detail.id);if(p)showPlace(p);}
   }
 });
@@ -430,7 +431,7 @@ async function startMap(){
     const css=getComputedStyle(document.documentElement);
     const style=mapConfig.apiKey?`https://api.maptiler.com/maps/${encodeURIComponent(mapConfig.styleId)}/style.json?key=${encodeURIComponent(mapConfig.apiKey)}`:mapConfig.fallbackStyle;
     if(mapAbort.signal.aborted)return;
-    mountedMap=await mountApartmentMap($('#map'),{signal:mapAbort.signal,workerUrl:new URL('./mapcn/maplibre-gl-worker.mjs',import.meta.url).href,style,fallbackStyle:mapConfig.fallbackStyle,data,initialState:mapSnapshot(),colors:{green:css.getPropertyValue('--pine').trim(),cream:css.getPropertyValue('--map-cream').trim()||'#f6f7f3'},placeGuides});
+    mountedMap=await mountApartmentMap($('#map'),{signal:mapAbort.signal,workerUrl:new URL('./mapcn/maplibre-gl-worker.mjs',import.meta.url).href,style,fallbackStyle:mapConfig.fallbackStyle,data,initialState:mapSnapshot(),colors:{green:css.getPropertyValue('--pine').trim(),cream:css.getPropertyValue('--map-cream').trim()||'#f6f7f3'},placeGuides,renderPlaceContent:p=>venueContent(p,placeGuides[p.id])});
   }catch{
     mapReady=false;$('#map').setAttribute('aria-busy','false');$('#map-status').hidden=false;$('#map-status').textContent='Map unavailable on this connection or device. All apartments, comparisons and source links still work.';
   }
