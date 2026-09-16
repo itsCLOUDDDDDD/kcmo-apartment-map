@@ -311,7 +311,7 @@ function setView(view,push=true){
   if(innerWidth<=800){window.scrollTo(0,0);state.preview=false;renderDetails();}
   $('#view-map').setAttribute('aria-pressed',String(view==='map'));$('#view-list').setAttribute('aria-pressed',String(view==='list'));
   $('.map-pane').setAttribute('aria-hidden',String(view==='list'));$('.map-pane').inert=view==='list';
-  requestAnimationFrame(()=>{syncMap();mapCommand({type:'resize'});restoreCarousel();if(push&&innerWidth<=800)$('.workspace').scrollIntoView({block:'start',behavior:'instant'});});if(push)remember();
+  requestAnimationFrame(()=>{fitWorkspace();syncMap();mapCommand({type:'resize'});restoreCarousel();if(push&&innerWidth<=800)$('.workspace').scrollIntoView({block:'start',behavior:'instant'});});if(push)remember();
 }
 function setDestination(id){state.destination=id;$('#destination').value=id;if(state.sort==='cluster'){state.sort='walk';$('#sort-mode').value='walk';}renderList();renderDetails();renderPlaceMarkers();renderCoreShortcuts();renderDestinationContext();drawRoutes(true);}
 function toggleCompare(id,on){
