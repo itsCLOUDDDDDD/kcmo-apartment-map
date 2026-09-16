@@ -10,7 +10,7 @@ The map uses MapTiler Dataviz Light (`dataviz-v4-light`), with OpenFreeMap Posit
 
 ## Apartments and boundaries
 
-The research export contains **105 apartment records, 48 map pins and 25 saved places** from the current V3 candidate table within ZIPs 64105, 64106, 64108 and 64109. All 57 records without confirmed coordinates remain in the list. The source workbook SHA256 is `db13a7bd7fa30bce41c986bf68c0f51b30255db18ee3157b5407618893ae9ee2`. This static snapshot updates when rebuilt. The four Second + Delaware walking routes use a separately documented street-facing origin; the Census building pin remains unchanged.
+The research export contains **105 apartment records, 48 map pins and 25 saved places** from the current V3 candidate table within ZIPs 64105, 64106, 64108 and 64109. All 57 records without confirmed coordinates remain in the list. The source workbook SHA256 is `845c58eb64f60a16fd314ad767723b0cdf5ca5c86acb5d7a1269a3c600ae7fda`. This static snapshot updates when rebuilt. The four Second + Delaware walking routes use a separately documented street-facing origin; the Census building pin remains unchanged.
 
 Bundled `kc-zctas.geojson` covers exactly 64101, 64105, 64106, 64108, 64109, 64110, 64111, 64112, 64113, 64114, 64116, 64124 and 64127. These are **approximate ZIP areas** from the 2020 Census, not USPS delivery boundaries. `kc-zctas.metadata.json` records source, vintage and checksum. Boundaries start off; enabling them shows all 13 and emphasizes selected areas. Nine areas have no exported apartments and show an empty state.
 
@@ -33,3 +33,7 @@ Keep the workbook, local research, backups, QA tools and source dependencies pri
 ## Detail and gallery features
 
 The site includes browsable photos, unit-aware percentage-of-standard estimate badges, and the revised detail order. Star #308 photos are user-provided, distinct from its building photo; ZIP 64108 is retained with the supplied 64100 discrepancy noted. Unknown cost inputs display Unverified, and historic percentages are never substituted for a selected unit.
+
+## Monthly fee planning assumption
+
+V3 applies a user-approved **$100 monthly-fee planning assumption** to all 226 candidate rows. Existing percentage-of-standard calculations include it and identify it as an estimate. This is not a verified lease charge or voucher approval; it may overlap charges already included in advertised rent, especially at Jazz Hill.

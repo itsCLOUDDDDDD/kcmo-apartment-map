@@ -65,6 +65,7 @@ export function recordedUnits(property) {
     const hasIdentifier=/#(?:[A-Za-z0-9]+)|\bExact Unit\s+[A-Za-z0-9-]+|\b\d{4}-\d{3}\b/i.test(part);
     if(!hasIdentifier||/historical|prior |not (?:shown|treated|found)|catalog entries/.test(part.toLowerCase())){beds=null;continue;}
     const bed=part.match(/\b(\d)BR\b/i);if(bed)beds=Number(bed[1]);
+    const bath=part.match(/\b(\d)BA\b/i);
     if(/\bstudio\b/i.test(part))beds=0;
     const size=part.match(/\b([\d,]+(?:[–-][\d,]+)?)\s*(?:sf|sq\s*ft)\b/i),rent=part.match(/\$(\d{1,3}(?:,\d{3})*|\d+)(?!\d)(?:\s*[–-]\s*\$?(\d{1,3}(?:,\d{3})*|\d+)(?!\d))?/);
     let identifiers=[...part.matchAll(/#([A-Za-z0-9]+(?:-[A-Za-z0-9]+)?)/g)].map(m=>m[1]);
@@ -78,7 +79,7 @@ export function recordedUnits(property) {
     const availability=/\binquire\b/i.test(part)?'Inquire — availability unconfirmed':availabilityText.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0]||availabilityText.match(/\b(now|oct(?:ober)?\s+\d+(?:,\s*\d{4})?|nov(?:ember)?\s+\d+(?:,\s*\d{4})?|dec(?:ember)?\s+\d+(?:,\s*\d{4})?|sep(?:tember)?\s+\d+(?:,\s*\d{4})?|jan(?:uary)?\s+\d+(?:,\s*\d{4})?|\d{1,2}\/\d{1,2}\/\d{4})\b/i)?.[0]||(/\bavailable\b/i.test(part)?'Listed available · no date given':'Date not recorded in this note');
     const priceLabel=/advertised total monthly|prices include required monthly fees|total monthly prices including required fees/i.test(raw)?'Advertised monthly total':'Recorded rent';
     const planSize=part.match(/\b([\d,]+(?:[–-][\d,]+)?)\s+plan\s+(size|range)(?:;\s*exact unit not established)?\s*sf\b/i);
-    for(const unit of identifiers)if(!records.some(record=>record.unit.split(' (physical ')[0]===unit.split(' (physical ')[0]))records.push({unit,beds:(!size||!rent)&&!bed&&!/\bstudio\b/i.test(part)?null:beds,sqft:planSize?planSize[1]+' sq ft · plan '+planSize[2]+', exact apartment size unverified':size?(/[–-]/.test(size[1])?size[1]:Number(size[1].replaceAll(',',''))):null,rent:rent?(rent[2]?'$'+rent[1]+'–$'+rent[2]:Number(rent[1].replaceAll(',',''))):null,available:availability,priceLabel,checked,source,structured:false,evidence:part.trim()});
+    for(const unit of identifiers)if(!records.some(record=>record.unit.split(' (physical ')[0]===unit.split(' (physical ')[0]))records.push({unit,beds:(!size||!rent)&&!bed&&!/\bstudio\b/i.test(part)?null:beds,baths:bath?Number(bath[1]):null,sqft:planSize?planSize[1]+' sq ft · plan '+planSize[2]+', exact apartment size unverified':size?(/[–-]/.test(size[1])?size[1]:Number(size[1].replaceAll(',',''))):null,rent:rent?(rent[2]?'$'+rent[1]+'–$'+rent[2]:Number(rent[1].replaceAll(',',''))):null,available:availability,priceLabel,checked,source,structured:false,evidence:part.trim()});
   }
   return records;
 }
