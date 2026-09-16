@@ -4,7 +4,7 @@ September 16, 2026 release. [Open the apartment map](https://itscloudddddd.githu
 
 ## Mobile layout and community feedback
 
-Phones use a compact sticky toolbar with active-filter counts, a filter bottom sheet, a map sized near 45% of the visible screen, controls along the right edge and a one-card carousel with a next-card preview. The layout retains gallery, comparisons, routes, 3D and apartment-detail behavior, with safe-area spacing, keyboard navigation and reduced-motion support. Chromium checks covered 320, 375, 390 and 430px widths; Safari verification remains outstanding.
+The September 16 mobile revision uses a fixed full-width map background with a compact overlaid card carousel. Swiping focuses the apartment pin; View details opens the full details. List mode has a persistent Show map control. The compact toolbar, active-filter counts and filter bottom sheet remain. Chrome verification covers 320–430px mobile widths and desktop; Safari remains unverified. The layout retains gallery, comparisons, routes, 3D and apartment-detail behavior, with safe-area spacing, keyboard navigation and reduced-motion support. Chromium checks covered 320, 375, 390 and 430px widths; Safari verification remains outstanding.
 
 Old Town properties include an anonymous community-comment summary after Tradeoffs. The supplied screenshot names Old Town Lofts without identifying the exact building or unit. Reports are clearly marked unverified and may not describe the selected property. They do not change property facts, amenity matches, rankings or cost calculations. The original screenshot remains outside the public bundle.
 
