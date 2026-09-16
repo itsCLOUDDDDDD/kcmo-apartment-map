@@ -1,6 +1,6 @@
 # Kansas City apartment map
 
-September 15, 2026 release. [Open the apartment map](https://itscloudddddd.github.io/kcmo-apartment-map/).
+September 15, 2026 release. [Open the apartment map](https://itscloudddddd.github.io/kcmo-apartment-map/). Priority amenities filter Pool, Rooftop, Patio and Gym together with ZIP/search. The published static snapshot contains 105 properties.
 
 ## Architecture
 
@@ -10,7 +10,7 @@ The map uses MapTiler Dataviz Light (`dataviz-v4-light`), with OpenFreeMap Posit
 
 ## Apartments and boundaries
 
-The reviewed export contains **53 apartment records, 48 confirmed pins and 25 saved places**. This is a preserved public snapshot, not a live copy of the broader research workbook. Existing apartment/place records and walking routes are retained.
+The research export contains **105 apartment records, 48 map pins and 25 saved places** from the current V3 candidate table within ZIPs 64105, 64106, 64108 and 64109. All 57 records without confirmed coordinates remain in the list. The source workbook SHA256 is `db13a7bd7fa30bce41c986bf68c0f51b30255db18ee3157b5407618893ae9ee2`. This static snapshot updates when rebuilt. The four Second + Delaware walking routes use a separately documented street-facing origin; the Census building pin remains unchanged.
 
 Bundled `kc-zctas.geojson` covers exactly 64101, 64105, 64106, 64108, 64109, 64110, 64111, 64112, 64113, 64114, 64116, 64124 and 64127. These are **approximate ZIP areas** from the 2020 Census, not USPS delivery boundaries. `kc-zctas.metadata.json` records source, vintage and checksum. Boundaries start off; enabling them shows all 13 and emphasizes selected areas. Nine areas have no exported apartments and show an empty state.
 
@@ -29,3 +29,7 @@ In the local source workspace, run `pnpm run build:apartment` from `outputs/mapc
 Fresh loads enable all destination categories and 3D; ZIP boundaries start off. Map controls let visitors switch to 2D, explore a selected apartment in 3D or show all 13 ZIP areas. Apartment details retain floor-plan and available-unit links, Street View, nearby destinations and comparisons. Temporary comparisons and preference choices remain session-only.
 
 Keep the workbook, local research, backups, QA tools and source dependencies private. Git history preserves previous public versions for rollback.
+
+## Detail and gallery features
+
+The site includes browsable photos, unit-aware percentage-of-standard estimate badges, and the revised detail order. Star #308 photos are user-provided, distinct from its building photo; ZIP 64108 is retained with the supplied 64100 discrepancy noted. Unknown cost inputs display Unverified, and historic percentages are never substituted for a selected unit.

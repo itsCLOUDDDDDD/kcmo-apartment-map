@@ -1,5 +1,8 @@
-import {amenitySummary, visibleAmenities, streetViewAction, recordedUnits, floorPlanGroups, photoScope, hasUnconfirmedTwoBedroom, selectedZipAreas, alternativeBedroom} from './presentation.js?v=voice-research-20260915-r1';
-import {FOCUS_ZIPS, createMapBridge} from './map-bridge.js?v=map-details-20260915-r2';
+import {PRIORITY_AMENITIES, matchesPriorityAmenities} from './priority-amenities.js?v=priority-amenities-20260915-r1';
+import {propertyPhotos, preferredPhotoIndex, photoSourceNote} from './property-media.js?v=priority-amenities-20260915-r1';
+import {paymentStandardBadge} from './payment-standard.js?v=priority-amenities-20260915-r1';
+import {amenitySummary, visibleAmenities, streetViewAction, recordedUnits, floorPlanGroups, photoScope, hasUnconfirmedTwoBedroom, selectedZipAreas, alternativeBedroom} from './presentation.js?v=priority-amenities-20260915-r1';
+import {FOCUS_ZIPS, createMapBridge} from './map-bridge.js?v=priority-amenities-20260915-r1';
 import {mapConfig} from './map-config.js';
 const data=window.KCMO_MAP_DATA;
 const $=s=>document.querySelector(s);
@@ -37,7 +40,8 @@ const motion=()=>matchMedia('(prefers-reduced-motion: reduce)').matches?0:600;
 const zipColors={'64105':'#886e59','64106':'#636a99','64108':'#225f80','64109':'#536f59'};
 const zipCodes=[...FOCUS_ZIPS];
 $('.zip-filters').innerHTML='<legend>Show apartments in ZIP</legend>'+zipCodes.map(zip=>`<label><input type="checkbox" value="${escape(zip)}" checked><span class="zip-dot" style="background:${zipColors[zip]||'#225f80'}" aria-hidden="true"></span>${escape(zip)} <small id="zip-count-${escape(zip)}"></small></label>`).join('');
-const state={zips:new Set(zipCodes),destination:'in-good-co',sort:'walk',search:'',selected:null,compare:new Set(),draftRanks:new Map(),threeD:true,comparing:false,view:'map',preview:false,detailOpen:false,unitChoices:new Map(),overlay:null};
+const state={zips:new Set(zipCodes),destination:'in-good-co',sort:'walk',search:'',priorityAmenities:new Set(),selected:null,compare:new Set(),draftRanks:new Map(),threeD:true,comparing:false,view:'map',preview:false,detailOpen:false,unitChoices:new Map(),overlay:null};
+const gallery={propertyId:null,index:0,opener:null,openerSelector:null,touch:null};
 let mapReady=false,mountedMap=null,rankService=false,mapSyncPending=false;
 const mapAbort=new AbortController();
 const lookup=id=>data.properties.find(p=>p.id===id);
@@ -53,27 +57,32 @@ function transitExplanation(p,route){
 }
 const missing=p=>p.missingFacts.filter(f=>f!=='Your overall ZIP rank'||!currentRank(p));
 const showToast=text=>{const el=$('#toast');el.textContent=text;el.hidden=false;clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>el.hidden=true,6500);};
-const visible=()=>data.properties.filter(p=>state.zips.has(p.zip)&&(!state.search||[p.name,p.neighborhood,p.address].join(' ').toLowerCase().includes(state.search))).sort((a,b)=>{
+const matchesPropertyFilters=p=>matchesPriorityAmenities(p,state.priorityAmenities)&&(!state.search||[p.name,p.neighborhood,p.address].join(' ').toLowerCase().includes(state.search));
+const visible=()=>data.properties.filter(p=>state.zips.has(p.zip)&&matchesPropertyFilters(p)).sort((a,b)=>{
   if(state.sort==='name')return a.name.localeCompare(b.name);
   if(state.sort==='overall')return a.zip.localeCompare(b.zip)||(currentRank(a)??Infinity)-(currentRank(b)??Infinity)||a.name.localeCompare(b.name);
   const ar=state.sort==='cluster'?a.nearest:currentRoute(a),br=state.sort==='cluster'?b.nearest:currentRoute(b);
   return (ar?.minutes??Infinity)-(br?.minutes??Infinity)||(ar?.metres??Infinity)-(br?.metres??Infinity)||a.name.localeCompare(b.name);
 });
 function photoRecord(p){
-  const unit=chosenUnit(p);
-  return typeof unit?.photo==='string'&&unit.photo?{...p,photo:unit.photo,photoCaption:`Identified unit #${unit.unit} photo`,photoSource:unit.source}:p;
+  const photos=propertyPhotos(p),record=photos[preferredPhotoIndex(photos,chosenUnit(p))];
+  return record?{...p,photo:record.url,photoCaption:record.caption,photoSource:record.source,photoLabel:record.scope}:p;
 }
-const displayPhotoScope=p=>photoScope(photoRecord(p));
+const displayPhotoScope=p=>photoRecord(p).photoLabel||photoScope(photoRecord(p));
 function photo(p,cls='thumb'){
-  p=photoRecord(p);
-  return p.photo?`<img class="${cls}" src="${escape(p.photo)}" alt="${escape(p.name)} — ${escape(displayPhotoScope(p))}" loading="lazy" referrerpolicy="no-referrer">`:`<div class="${cls} photo-empty">Photo<br>not verified</div>`;
+  const media=photoRecord(p);
+  return media.photo?`<img class="${cls}" src="${escape(media.photo)}" alt="${escape(p.name)} — ${escape(displayPhotoScope(p))}" loading="lazy" referrerpolicy="no-referrer">`:`<div class="${cls} photo-empty">Photo<br>not verified</div>`;
+}
+function standardBadge(p){
+  const badge=paymentStandardBadge(p,chosenUnit(p));
+  return `<span class="standard-badge" title="${escape(badge.description)}"><span>% of Std · est.</span><strong>${escape(badge.value)}</strong><small>${escape(badge.shortBasis)}</small><span class="sr-only">${escape(badge.description)}</span></span>`;
 }
 function handleImages(root=document){root.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{const box=document.createElement('div');box.className=img.className+' photo-empty';box.textContent='Photo unavailable — open the source gallery';img.replaceWith(box);},{once:true}));}
 const amenityKeys = [['laundry','Laundry'],['cooling','Cooling'],['gym','Gym'],['pool','Pool']];
 const extraFacts = [['finishes','Finishes'],['sunlight','Sunlight'],['entrance','Street entrance']];
 const chosenUnit = p => (p.units || []).find(u => u.unit === state.unitChoices.get(p.id));
 const offer = p => {
-  const u = chosenUnit(p), alternative=alternativeBedroom(p), oneAbsent=p.oneBedroom.offered===false||/confirmed absent|no 1BR|1BR (?:not offered|unavailable)|no one[- ]bedroom/i.test(p.oneBedroom.evidence||''),beds=oneAbsent?alternative.beds:1,summary=unitSummary(p,beds);
+  const u = chosenUnit(p), alternative=alternativeBedroom(p), oneAbsent=p.oneBedroom.offered===false,beds=oneAbsent?alternative.beds:1,summary=unitSummary(p,beds);
   if(u) return {price:money(u.rent),facts:`${u.beds} bedroom · ${area(u.sqft)}`,scope:`Apartment #${escape(u.unit)} · listed snapshot`};
   if(summary) return {price:summary.price,facts:`${beds} bedroom · ${summary.size}`,scope:`${summary.count} listed ${summary.count===1?'apartment':'apartment options'}`};
   if(oneAbsent)return {price:alternative.research.rent?rentLabel(alternative.research.rent):'Rent unverified',facts:`${alternative.beds} bedroom · ${area(alternative.research.sqft)}`,scope:'No 1-bedroom option · building research'};
@@ -94,10 +103,15 @@ function streetViewLink(p,hero=false) {
   return action.url?anchor(action.url,action.label+' ↗',hero?'street-view-action glass-action':'street-view-action'):'';
 }
 function apartmentFacts(p) {
-  const o=offer(p),units=recordedUnits(p),selected=chosenUnit(p),groups=floorPlanGroups(p);
+  const o=offer(p),units=recordedUnits(p),selected=chosenUnit(p);
   const unitRows=units.map(unit=>`<article class="recorded-unit ${selected?.unit===unit.unit?'active':''}"><${unit.structured?'button':'div'} class="unit-select" ${unit.structured?`data-unit="${escape(unit.unit)}" aria-pressed="${selected?.unit===unit.unit}"`: ''}><span><strong>Apartment #${escape(unit.unit)}</strong><span class="unit-dimensions">${unit.beds===null?'Bedroom count not recorded':unit.beds===0?'Studio':unit.beds+' bedroom'} · ${area(unit.sqft)}</span></span>${unit.structured?`<span class="unit-selection-label">${selected?.unit===unit.unit?'Selected':'Select apartment'}</span>`:''}</${unit.structured?'button':'div'}><div class="unit-record-details"><p class="unit-secondary-price">${unit.priceLabel?escape(unit.priceLabel)+': ':''}${money(unit.rent)} / month${unit.deposit?' · '+money(unit.deposit)+' deposit':''}</p><p class="small">${/^\d{4}-/.test(unit.available)?'Listed for ':''}${listingDate(unit.available)}</p><p class="small muted">Checked ${escape(unit.checked||'date not recorded')} · confirm availability with leasing.</p>${unit.source?anchor(unit.source,'Unit listing source ↗'):'<span class="small muted">Source attribution: see the recorded options below.</span>'}${!unit.structured?`<p class="small muted unit-evidence">${evidenceHTML(unit.evidence)}</p>`:''}</div></article>`).join('');
+
+  return `<h3 class="apartment-facts-heading">Apartment facts</h3><div class="apartment-facts-lead"><strong>${o.facts}</strong><p class="small muted">${o.scope}</p>${units.length?'':`<p class="unit-secondary-price">${o.price}${/^\$/.test(o.price)?' / month':''}</p>`}</div>${units.length?`<section class="unit-options"><h4>Recorded apartments · ${units.length}</h4>${unitRows}</section>`:''}${p.oneBedroom.evidence&&/do NOT pair|conflict/i.test(p.oneBedroom.evidence)?'<p class="warning-strip">Older rent/size values conflict with the listed apartments. Keep each apartment’s figures together; see Research for the source notes.</p>':''}<div class="primary-links">${anchor(p.links.floorplans,'Floor plans ↗')}${anchor(p.links.units,'Available units ↗')}</div>`;
+}
+function supplementalBedroomResearch(p) {
+  const units=recordedUnits(p),groups=floorPlanGroups(p);
   const plans=groups.length?`<div class="floor-plan-groups">${groups.map(group=>`<section class="floor-plan-group"><h4>${escape(group.label)}</h4><div class="floor-plan-grid">${group.plans.map(plan=>`<article class="floor-plan-card"><h5>${escape(plan.name)}</h5><p>${area(plan.sqft)}</p><p class="small muted">From ${escape(plan.rent.replace(/\+$/,''))} / month</p></article>`).join('')}</div></section>`).join('')}<p class="small muted">Published floor plans · availability unconfirmed. Checked ${escape(groups[0].plans[0].checked)}.</p></div>`:`<div class="bedroom-research-grid">${[[1,p.oneBedroom],[2,p.twoBedroom],...(p.threeBedroom?[[3,p.threeBedroom]]:[])].filter(([beds,research])=>research.offered!==false&&!units.some(unit=>unit.beds===beds)).map(([beds,research])=>`<section class="bedroom-research"><h4>${beds}-bedroom research</h4><p>${area(research.sqft)}</p><p class="small muted">${rentLabel(research.rent)}</p>${research.evidence?`<p class="small ${beds===2&&hasUnconfirmedTwoBedroom(p)?'warning':'muted'}">${evidenceHTML(research.evidence)}</p>`:''}</section>`).join('')}</div>${p.unitOptions?`<section class="recorded-options"><h4>Recorded apartment &amp; floor-plan options</h4><p class="small muted">Saved source notes; listed units and catalog plans retain their original qualifications.</p><p class="evidence">${evidenceHTML(p.unitOptions)}</p></section>`:''}`;
-  return `<h3 class="apartment-facts-heading">Apartment facts</h3><div class="apartment-facts-lead"><strong>${o.facts}</strong><p class="small muted">${o.scope}</p>${units.length?'':`<p class="unit-secondary-price">${o.price}${/^\$/.test(o.price)?' / month':''}</p>`}</div>${units.length?`<section class="unit-options"><h4>Recorded apartments · ${units.length}</h4>${unitRows}</section>`:''}${p.oneBedroom.evidence&&/do NOT pair|conflict/i.test(p.oneBedroom.evidence)?'<p class="warning-strip">Older rent/size values conflict with the listed apartments. Keep each apartment’s figures together; see Research for the source notes.</p>':''}${plans}<div class="primary-links">${anchor(p.links.floorplans,'Floor plans ↗')}${anchor(p.links.units,'Available units ↗')}</div>`;
+  return `<section class="detail-section supplemental-bedroom-research"><h3>Bedroom &amp; floor-plan research</h3>${plans}</section>`;
 }
 function gettingAround(p) {
   const route=currentRoute(p),destination=activeDestination(p);
@@ -109,28 +123,55 @@ function walkLine(p, link=false) {
   const route=currentRoute(p);
   return `<div class="walk-line"><span><strong>${escape(headline(p))}</strong>${route?'<small>Pedestrian estimate</small>':''}</span>${link&&route?anchor(route.url,'Route ↗','walk-link'):''}</div>`;
 }
+const priorityIcons={
+  pool:'<path d="M2 17c3-3 4 3 7 0s4 3 7 0 4 3 6 0M2 21c3-3 4 3 7 0s4 3 7 0 4 3 6 0M7 14V5a3 3 0 0 1 6 0m-1 12V5a3 3 0 0 1 6 0M7 7h5M7 11h5"/>',
+  rooftop:'<path d="M3 11h18M5 11v10h14V11M8 21v-5h3v5M4 11V7m5 4V7m6 4V7m5 4V7M4 7h16M8 3h8"/>',
+  patio:'<path d="M12 3 2 10h20L12 3Zm0 7v11M8 21h8M2 15h5v6m15-6h-5v6M2 12v5m20-5v5"/>',
+  gym:'<path d="M6 5v14M3 8v8M18 5v14M21 8v8M6 12h12"/>'
+};
+$('#priority-amenity-chips').innerHTML=PRIORITY_AMENITIES.map(({key,label})=>`<button type="button" class="priority-chip" data-priority-amenity="${key}" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${priorityIcons[key]}</svg>${label}<span class="priority-check" aria-hidden="true">✓</span></button>`).join('');
+function syncPriorityControls(){
+  document.querySelectorAll('[data-priority-amenity]').forEach(button=>button.setAttribute('aria-pressed',String(state.priorityAmenities.has(button.dataset.priorityAmenity))));
+  $('#clear-property-filters').hidden=!state.priorityAmenities.size&&!state.search&&state.zips.size===zipCodes.length;
+}
+function togglePriorityAmenity(key){
+  if(!PRIORITY_AMENITIES.some(item=>item.key===key))return;
+  if(state.priorityAmenities.has(key))state.priorityAmenities.delete(key);else state.priorityAmenities.add(key);
+  if(state.selected&&!visible().some(p=>p.id===state.selected)){
+    state.selected=null;state.preview=false;state.detailOpen=false;renderDetails();drawRoutes();
+  }
+  mapCommand({type:'dismiss-popup'});renderList();
+}
+function emptyResults(){
+  const labels=PRIORITY_AMENITIES.filter(({key})=>state.priorityAmenities.has(key)).map(({label})=>label).join(' + ');
+  const heading=state.zips.size?'No matching apartments':'Choose a ZIP area';
+  const message=!state.zips.size?'Choose at least one ZIP area, or clear filters to see all apartments.':labels?`No apartments in this view have recorded ${labels}${state.search?' and match your search':''}. Try fewer amenities or clear filters. Unknown amenities are excluded.`:state.search?'No apartments match your search in these ZIP areas. Clear filters to try again.':'There are no exported apartments for these ZIP areas yet. Their boundaries remain available on the map.';
+  return `<div class="empty"><h3>${heading}</h3><p>${escape(message)}</p><button id="reset-results">Clear filters · Show all apartments</button></div>`;
+}
 function renderList(){
+  syncPriorityControls();
   const items=visible(),mapped=items.filter(p=>p.coordinates).length,unmapped=items.length-mapped;
   const list=$('#property-list'),left=list.scrollLeft,top=$('.list-pane').scrollTop;
   $('#result-count').textContent=String(items.length);
-  $('#compact-count').textContent=`${items.length} apartments`;
-  $('#coverage-count').textContent=`${items.length} apartments · ${mapped} on map · ${unmapped} need map pins`;
+  $('#compact-count').textContent=`${items.length} ${items.length===1?'apartment':'apartments'}`;
+  $('#coverage-count').textContent=`${items.length} ${items.length===1?'apartment':'apartments'} · ${mapped} on map · ${unmapped} need map pins`;
   $('#missing-pin-note').textContent=unmapped?`${unmapped} without confirmed pins · included in List`:'';
   $('#missing-pin-note').hidden=!unmapped;
   $('#order-explanation').textContent=state.sort==='overall'?'My preference order within each ZIP':state.sort==='name'?'Alphabetical order':state.sort==='cluster'||state.destination==='nearest'?'Shortest walk to any of my four places first':`Shortest walk to ${cores.find(v=>v.id===state.destination)?.name||'the selected place'} first`;
   $('#list-guidance').hidden=!state.comparing&&!state.compare.size;
   $('#list-guidance').textContent='Choose 2 or 3 apartments to compare.';
-  for(const zip of zipCodes)$('#zip-count-'+zip).textContent='('+data.properties.filter(p=>p.zip===zip).length+')';
+  for(const zip of zipCodes)$('#zip-count-'+zip).textContent='('+data.properties.filter(p=>p.zip===zip&&matchesPropertyFilters(p)).length+')';
   list.innerHTML=items.length?items.map(p=>{const o=offer(p);return `<article class="property-card ${state.selected===p.id?'selected':''}" data-id="${p.id}">
+    <div class="card-photo"><button class="card-photo-open" data-photo="${p.id}" aria-label="View photos of ${escape(p.name)}" ${propertyPhotos(p).length?'':'disabled'}>${photo(p)}<span class="photo-scope">${escape(displayPhotoScope(p))}</span>${state.selected===p.id?'<span class="selected-label">Selected</span>':''}</button>${standardBadge(p)}</div>
     <button class="card-select" data-select="${p.id}" aria-label="Preview ${escape(p.name)}" aria-pressed="${state.selected===p.id}">
-      <span class="card-photo">${photo(p)}<span class="photo-scope">${escape(displayPhotoScope(p))}</span>${state.selected===p.id?'<span class="selected-label">Selected</span>':''}</span>
       <span class="card-copy"><span class="card-address">${escape(p.neighborhood)} · ${p.zip}</span><span class="card-title">${escape(p.name)}</span><span class="card-price">${o.price}<small>${/^\$/.test(o.price)?' / month':''}</small></span><span class="card-unit">${o.facts}</span><span class="card-scope">${o.scope}</span>${amenities(p,true)}${walkLine(p)}<span class="view-details-label">Preview apartment →</span>${!p.coordinates?'<span class="card-pin-note">Map pin unverified</span>':''}${p.band==='PIPELINE'?'<span class="card-pin-note">Future project · leasing unverified</span>':''}</span>
     </button>${state.sort==='overall'?`<span class="badge">My rank in ${p.zip}: ${currentRank(p)??'Not ranked yet'}${state.draftRanks.has(p.id)?' · draft':''}</span>`:''}
-    ${state.comparing||state.compare.size||state.selected===p.id?`<div class="card-footer"><label class="compare-check"><input type="checkbox" aria-label="Compare ${escape(p.name)}" data-compare="${p.id}" ${state.compare.has(p.id)?'checked':''}>${state.compare.has(p.id)?'Added to comparison':'Compare'}</label></div>`:''}</article>`;}).join(''):`<div class="empty"><h3>${state.zips.size?'No apartments in this view':'Choose a ZIP area'}</h3><p>${state.zips.size&&!state.search?'There are no exported apartments for the selected ZIP areas yet. Their boundaries are still available on the map.':'Choose a ZIP or clear your search.'}</p><button id="reset-results">Show all apartments</button></div>`;
+    ${state.comparing||state.compare.size||state.selected===p.id?`<div class="card-footer"><label class="compare-check"><input type="checkbox" aria-label="Compare ${escape(p.name)}" data-compare="${p.id}" ${state.compare.has(p.id)?'checked':''}>${state.compare.has(p.id)?'Added to comparison':'Compare'}</label></div>`:''}</article>`;}).join(''):emptyResults();
   handleImages(list);
+  list.querySelectorAll('[data-photo]').forEach(b=>b.onclick=()=>openPhoto(lookup(b.dataset.photo),b));
   list.querySelectorAll('[data-select]').forEach(b=>b.onclick=()=>selectProperty(b.dataset.select,true));
   list.querySelectorAll('[data-compare]').forEach(c=>c.onchange=()=>{toggleCompare(c.dataset.compare,c.checked);$(`[data-compare="${c.dataset.compare}"]`)?.focus({preventScroll:true});});
-  $('#reset-results')?.addEventListener('click',resetApartments);
+  $('#reset-results')?.addEventListener('click',()=>{resetApartments();document.querySelector('[data-priority-amenity]').focus({preventScroll:true});});
   list.scrollLeft=left;$('.list-pane').scrollTop=top;
   renderCompareBar();renderPropertyMarkers();
 }
@@ -140,7 +181,8 @@ function renderDetails(){
   if(!p){if($('#property-dialog').open)$('#property-dialog').close();return;}
   if(!panel.hidden){
     const o=offer(p);
-    panel.innerHTML=`<div class="preview-photo">${photo(p,'preview-image')}${streetViewLink(p,true)}<span class="photo-scope">${escape(displayPhotoScope(p))}</span><button class="preview-close" aria-label="Close apartment preview">×</button></div><div class="preview-body"><p class="card-address">${escape(p.neighborhood)} · ${p.zip}${!p.coordinates?' · Pin unverified':''}</p><h2 id="selected-apartment-title" tabindex="-1">${escape(p.name)}</h2><p class="preview-facts">${o.facts}</p><p class="unit-secondary-price">${o.price}${/^\$/.test(o.price)?' / month':''}</p><p class="card-scope">${o.scope}</p>${amenities(p,true)}${walkLine(p)}<div class="preview-actions"><button id="expand-property" class="primary-action">View details</button><button class="detail-compare">${state.compare.has(p.id)?'Remove comparison':'Add to compare'}</button></div></div>`;
+    panel.innerHTML=`<div class="preview-photo"><button class="preview-photo-open" aria-label="View photos of ${escape(p.name)}" ${propertyPhotos(p).length?'':'disabled'}>${photo(p,'preview-image')}<span class="photo-scope">${escape(displayPhotoScope(p))}</span></button>${streetViewLink(p,true)}<button class="preview-close" aria-label="Close apartment preview">×</button></div><div class="preview-body"><p class="card-address">${escape(p.neighborhood)} · ${p.zip}${!p.coordinates?' · Pin unverified':''}</p><h2 id="selected-apartment-title" tabindex="-1">${escape(p.name)}</h2><p class="preview-facts">${o.facts}</p><p class="unit-secondary-price">${o.price}${/^\$/.test(o.price)?' / month':''}</p><p class="card-scope">${o.scope}</p>${amenities(p,true)}${walkLine(p)}<div class="preview-actions"><button id="expand-property" class="primary-action">View details</button><button class="detail-compare">${state.compare.has(p.id)?'Remove comparison':'Add to compare'}</button></div></div>`;
+    panel.querySelector('.preview-photo-open').onclick=event=>openPhoto(p,event.currentTarget);
     panel.querySelector('.preview-close').onclick=closeProperty;
     $('#expand-property').onclick=openPropertyDetails;
     panel.querySelector('.detail-compare').onclick=()=>toggleCompare(p.id,!state.compare.has(p.id));
@@ -150,23 +192,24 @@ function renderDetails(){
 }
 function renderExpandedDetails(){
   const p=lookup(state.selected);if(!p)return;
-  const media=photoRecord(p);
+  const media=photoRecord(p),photos=propertyPhotos(p);
   const panel=$('#property-content'),scroll=panel.scrollTop,route=currentRoute(p),destination=activeDestination(p),o=offer(p),u=chosenUnit(p),warning=hasUnconfirmedTwoBedroom(p);
   const transit=`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(p.address+', Kansas City, MO '+p.zip)}&destination=${encodeURIComponent(destination?.address+', Kansas City, MO')}&travelmode=transit`;
-  panel.innerHTML=`<section class="detail-gallery" aria-label="Property photos">${streetViewLink(p,true)}<button class="enlarge-photo" ${media.photo?'':'disabled'} aria-label="Enlarge ${escape(displayPhotoScope(p))}">${photo(p,'hero-photo')}<span class="photo-scope">${escape(displayPhotoScope(p))}${media.photo?' · Enlarge ↗':''}</span></button><div class="gallery-note"><span>${media.photo?'1 saved photo':'Photo needed'} · ${displayPhotoScope(p)==='Exact-unit photo'?'Identified apartment photo':'Exact-apartment photos unverified'}</span>${p.links.photos?anchor(p.links.photos,'Shared / model gallery ↗'):''}</div></section>
+  panel.innerHTML=`<section class="detail-gallery" aria-label="Property photos">${streetViewLink(p,true)}<button class="enlarge-photo" ${media.photo?'':'disabled'} aria-label="Enlarge ${escape(displayPhotoScope(p))}">${photo(p,'hero-photo')}<span class="photo-scope">${escape(displayPhotoScope(p))}${media.photo?' · Enlarge ↗':''}</span></button><div class="gallery-note"><span>${photos.length?photos.length+' saved '+(photos.length===1?'photo':'photos'):'Photo needed'} · ${photoSourceNote(p)?'Building + user-provided #308 interiors':displayPhotoScope(p).startsWith('Exact-unit')?'Identified apartment photo':'Exact-apartment photos unverified'}</span>${p.links.photos?anchor(p.links.photos,'Shared / model gallery ↗'):''}</div></section>
     <div class="detail-body"><section class="unit-section"><p class="eyebrow">${escape(p.neighborhood)} · ZIP ${p.zip}</p><h2 id="property-title" tabindex="-1">${escape(p.name)}</h2><p class="small muted">${escape(p.address)}</p>
     ${p.band==='PIPELINE'?'<p class="warning-strip">Future project — not confirmed ready to lease</p>':''}
     ${apartmentFacts(p)}</section>
     <section class="detail-section amenities-section"><h3>Everyday comfort</h3><p class="small muted">Recorded building research. Confirm what comes with the exact apartment.</p>${amenities(p)}<dl class="facts amenity-evidence">${visibleAmenities(p).map(({key,title})=>`<dt>${title}</dt><dd>${escape(p.amenities[key])}</dd>`).join('')}</dl><dl class="facts secondary-facts">${extraFacts.map(([key,label])=>`<dt>${label}</dt><dd>${escape(p.amenities[key])}</dd>`).join('')}</dl></section>
     ${gettingAround(p)}
+    ${supplementalBedroomResearch(p)}
     <section class="detail-section tradeoffs-section"><div class="insight strength"><h3>Building amenities &amp; features</h3>${p.amenityDetails?`<p>${evidenceHTML(p.amenityDetails)}</p>`:''}<p>${evidenceHTML(readableCopy(p.strengths||'No confirmed standout features recorded yet.'))}</p></div><div class="insight tradeoff"><h3>Tradeoffs</h3><p>${escape(readableCopy(p.tradeoffs||'Insufficient comparable evidence. No overall verdict yet.'))}</p></div></section>
     <section class="detail-section preference-section"><details class="ranking-details"><summary>My preference ranking</summary><p><strong>My rank in ${p.zip}:</strong> ${currentRank(p)??'Not ranked yet'}${state.draftRanks.has(p.id)?' (draft only)':''}.</p><p class="small muted">Distance-only rank in ${p.zip}: ${p.clusterRank??'Unverified'}${p.nearest?' · '+p.nearest.minutes+'-minute walk to '+escape(p.nearest.destination):''}. It does not pick a winner.</p><form class="rank-form"><label for="rank-input">My rank</label><input id="rank-input" inputmode="numeric" type="number" min="1" max="${data.properties.filter(x=>x.zip===p.zip).length}" value="${currentRank(p)??''}" placeholder="—"><button type="submit">Try draft rank</button></form><p class="rank-status">Draft only: lasts until reload. Does not change V3 or the shared link.</p></details></section>
-    <details class="detail-section source-details"><summary>Research, photos &amp; source checks</summary><h4>Recorded amenity evidence</h4><dl class="facts research-amenities">${amenityKeys.map(([key,label])=>`<dt>${label}</dt><dd>${evidenceHTML(p.amenities[key])}</dd>`).join('')}</dl><p class="availability-note">${escape(p.availability)}</p><p class="small">${escape(p.photoCaption)} ${anchor(p.photoSource,'Photo source')}</p><p class="small">${evidenceHTML(p.linkScope)}</p>${p.photoEvidence?`<p class="evidence">Photo evidence: ${evidenceHTML(p.photoEvidence)}</p>`:''}${p.phone?`<p class="small">Leasing phone: ${escape(p.phone)}</p>`:''}<dl class="facts"><dt>Management</dt><dd>${escape(p.management)}</dd><dt>Built / renovated</dt><dd>${escape(p.building?.yearBuilt||'Unverified')} / ${escape(p.building?.yearRenovated||'Unverified')}</dd><dt>Mixed income</dt><dd>${escape(p.building?.mixedIncome||'Unverified')}</dd></dl><p class="small">Sources checked: ${escape(p.checked||'Not recorded')}. Rents and vacancies can change.</p><div class="secondary-links">${anchor(p.links.photos,'Photo gallery')}${anchor(p.links.website,'Property source')}${anchor(p.links.streetView,'Street View')}${anchor(p.links.appleMaps,'Apple Maps')}${anchor(p.links.googleMaps,'Google Maps')}</div>${p.oneBedroom.evidence?`<p class="evidence">1BR evidence: ${evidenceHTML(p.oneBedroom.evidence)}</p>`:''}${p.twoBedroom.evidence?`<p class="evidence ${warning?'warning':''}">2BR evidence: ${evidenceHTML(p.twoBedroom.evidence)}</p>`:''}${p.threeBedroom?.evidence?`<p class="evidence">3BR evidence: ${evidenceHTML(p.threeBedroom.evidence)}</p>`:''}${p.researchSources?`<p class="evidence">Sources / checked: ${evidenceHTML(p.researchSources)}</p>`:''}<p class="small muted">Pin: ${evidenceHTML(p.coordinateSource)} · ${escape(p.coordinateChecked||'check date not recorded')}. ${!p.coordinates?'Listed without a confirmed pin.':''}</p><details class="confirm-box"><summary>Unresolved research · ${missing(p).length} items</summary><p>${escape(readableCopy(p.confirmation))}</p><ul>${missing(p).map(x=>`<li>${escape(friendlyFact(x))}</li>`).join('')}</ul></details></details>
-    <details class="detail-section calculation-details"><summary>Voucher estimate &amp; calculations</summary><p class="small muted">${escape(data.meta.voucherCaveat)}</p><p class="small warning">Saved worksheet values below are not a quote for the apartment selected above.</p><dl class="facts"><dt>Acceptance</dt><dd>${escape(p.hcv)}</dd><dt>Program</dt><dd>${escape(p.lihtc)}</dd><dt>Minimum income</dt><dd>${escape(p.eligibility?.minimumIncome||'Unverified')}</dd><dt>Published 1-person limit</dt><dd>${escape(p.eligibility?.onePersonLimit||'Unverified')}</dd><dt>Official utility allowance</dt><dd>${money(p.oneBedroom.utilityAllowance)}</dd><dt>Electricity planning estimate</dt><dd>${money(p.costs?.electricityEstimate)}${typeof p.costs?.electricityEstimate==='number'?' — user estimate, not an authority allowance':''}</dd><dt>Required monthly fees</dt><dd>${money(p.costs?.requiredMonthlyFees)}</dd><dt>Cost basis</dt><dd>${evidenceHTML(p.costs?.basis||'Utilities and mandatory fees need verification.')}</dd><dt>Recorded 1BR standard</dt><dd>${money(p.oneBedroom.standard)}</dd><dt>1BR estimated gross / % / fit</dt><dd>${money(p.oneBedroom.gross)} / ${percentage(p.oneBedroom.percent)} / ${escape(p.oneBedroom.fit)} — estimate only</dd><dt>${alternativeBedroom(p).beds}BR estimated gross / % / fit</dt><dd>${money(alternativeBedroom(p).research.gross)} / ${percentage(alternativeBedroom(p).research.percent)} / ${escape(alternativeBedroom(p).research.fit)}${warning?' — invalid as a Star-specific conclusion until attribution is confirmed.':' — recorded 1BR standard; estimate only.'}</dd></dl></details>
+    <details class="detail-section source-details"><summary>Research, photos &amp; source checks</summary><h4>Recorded amenity evidence</h4><dl class="facts research-amenities">${amenityKeys.map(([key,label])=>`<dt>${label}</dt><dd>${evidenceHTML(p.amenities[key])}</dd>`).join('')}</dl><p class="availability-note">${escape(p.availability)}</p><p class="small">${escape(p.photoCaption)} ${anchor(p.photoSource,'Photo source')}</p><p class="small">${evidenceHTML(p.linkScope)}</p>${p.photoEvidence?`<p class="evidence">Recorded photo research: ${evidenceHTML(p.photoEvidence)}</p>`:''}${photoSourceNote(p)?`<p class="evidence photo-source-note">User-provided photo note: ${escape(photoSourceNote(p))}</p>`:''}${p.phone?`<p class="small">Leasing phone: ${escape(p.phone)}</p>`:''}<dl class="facts"><dt>Management</dt><dd>${escape(p.management)}</dd><dt>Built / renovated</dt><dd>${escape(p.building?.yearBuilt||'Unverified')} / ${escape(p.building?.yearRenovated||'Unverified')}</dd><dt>Mixed income</dt><dd>${escape(p.building?.mixedIncome||'Unverified')}</dd></dl><p class="small">Sources checked: ${escape(p.checked||'Not recorded')}. Rents and vacancies can change.</p><div class="secondary-links">${anchor(p.links.photos,'Photo gallery')}${anchor(p.links.website,'Property source')}${anchor(p.links.streetView,'Street View')}${anchor(p.links.appleMaps,'Apple Maps')}${anchor(p.links.googleMaps,'Google Maps')}</div>${p.oneBedroom.evidence?`<p class="evidence">1BR evidence: ${evidenceHTML(p.oneBedroom.evidence)}</p>`:''}${p.twoBedroom.evidence?`<p class="evidence ${warning?'warning':''}">2BR evidence: ${evidenceHTML(p.twoBedroom.evidence)}</p>`:''}${p.threeBedroom?.evidence?`<p class="evidence">3BR evidence: ${evidenceHTML(p.threeBedroom.evidence)}</p>`:''}${p.researchSources?`<p class="evidence">Sources / checked: ${evidenceHTML(p.researchSources)}</p>`:''}<p class="small muted">Pin: ${evidenceHTML(p.coordinateSource)} · ${escape(p.coordinateChecked||'check date not recorded')}. ${!p.coordinates?'Listed without a confirmed pin.':''}</p><details class="confirm-box"><summary>Unresolved research · ${missing(p).length} items</summary><p>${escape(readableCopy(p.confirmation))}</p><ul>${missing(p).map(x=>`<li>${escape(friendlyFact(x))}</li>`).join('')}</ul></details></details>
+    <details class="detail-section calculation-details"><summary>Voucher estimate &amp; calculations</summary><p class="small muted">${escape(data.meta.voucherCaveat)}</p><p class="small warning">Saved worksheet values below are not a quote for the apartment selected above.</p><dl class="facts"><dt>Acceptance</dt><dd>${escape(p.hcv)}</dd><dt>Program</dt><dd>${escape(p.lihtc)}</dd><dt>Minimum income</dt><dd>${escape(p.eligibility?.minimumIncome||'Unverified')}</dd><dt>Published 1-person limit</dt><dd>${escape(p.eligibility?.onePersonLimit||'Unverified')}</dd><dt>Official utility allowance</dt><dd>${money(p.oneBedroom.utilityAllowance)}</dd><dt>Electricity planning estimate</dt><dd>${money(p.costs?.electricityEstimate)}${typeof p.costs?.electricityEstimate==='number'?(p.costs.electricityEstimate===0?' — advertised housing-utility inclusion, not an authority allowance':' — user estimate, not an authority allowance'):''}</dd><dt>Required monthly fees</dt><dd>${money(p.costs?.requiredMonthlyFees)}</dd><dt>Cost basis</dt><dd>${evidenceHTML(p.costs?.basis||'Utilities and mandatory fees need verification.')}</dd><dt>Recorded 1BR standard</dt><dd>${money(p.oneBedroom.standard)}</dd><dt>1BR estimated gross / % / fit</dt><dd>${money(p.oneBedroom.gross)} / ${percentage(p.oneBedroom.percent)} / ${escape(p.oneBedroom.fit)} — estimate only</dd><dt>${alternativeBedroom(p).beds}BR estimated gross / % / fit</dt><dd>${money(alternativeBedroom(p).research.gross)} / ${percentage(alternativeBedroom(p).research.percent)} / ${escape(alternativeBedroom(p).research.fit)}${warning?' — invalid as a Star-specific conclusion until attribution is confirmed.':' — recorded 1BR standard; estimate only.'}</dd></dl></details>
 
     <div class="detail-end-actions"><button class="detail-compare">${state.compare.has(p.id)?'Remove from comparison':'Add to comparison'}</button><button class="return-preview">Back to preview</button></div></div>`;
   handleImages(panel);panel.scrollTop=scroll;
-  panel.querySelector('.enlarge-photo').onclick=()=>openPhoto(p);
+  panel.querySelector('.enlarge-photo').onclick=event=>openPhoto(p,event.currentTarget);
   panel.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>chooseUnit(p.id,b.dataset.unit));
   panel.querySelectorAll('[data-destination]').forEach(b=>b.onclick=()=>{setDestination(b.dataset.destination);$('.other-walks').open=true;panel.querySelector(`[data-destination="${b.dataset.destination}"]`)?.focus({preventScroll:true});});
   panel.querySelector('.show-on-map').onclick=()=>{closeExpandedDetails();setView('map');drawRoutes(true);};
@@ -181,7 +224,7 @@ function renderExpandedDetails(){
   };
 }
 function chooseUnit(id,unit){state.unitChoices.set(id,unit);renderList();renderDetails();$('#property-content [data-unit="'+CSS.escape(unit)+'"]')?.focus({preventScroll:true});}
-const historySnapshot=()=>({kcmo:true,selected:state.selected,preview:state.preview,detailOpen:state.detailOpen,view:state.view,overlay:state.overlay});
+const historySnapshot=()=>({kcmo:true,selected:state.selected,preview:state.preview,detailOpen:state.detailOpen,view:state.view,overlay:state.overlay,photoProperty:gallery.propertyId,photoIndex:gallery.index});
 const remember=(replace=false)=>history[replace?'replaceState':'pushState'](historySnapshot(),'');
 function openPropertyDetails(){state.detailOpen=true;renderDetails();$('#property-dialog').showModal();$('#property-content').scrollTop=0;remember();$('#property-title').focus({preventScroll:true});}
 function closeExpandedDetails(){state.detailOpen=false;$('#property-dialog').close();state.preview=true;renderDetails();remember(true);$('#expand-property')?.focus({preventScroll:true});}
@@ -229,7 +272,32 @@ function renderComparison(open=true){
   $('#comparison').innerHTML=`<table><thead><tr><th scope="col">Compare ${items.length} apartments</th>${items.map(p=>`<th scope="col">${photo(p,'compare-photo')}<p class="small muted">${escape(displayPhotoScope(p))}</p><h3>${escape(p.name)}</h3><p class="small muted">${escape(p.neighborhood)} · ${p.zip}</p></th>`).join('')}</tr></thead><tbody>${rows.map(([label,get])=>`<tr><th scope="row">${label}</th>${items.map(p=>`<td>${get(p)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
   handleImages($('#comparison'));if(open&&!$('#compare-dialog').open)openOverlay('compare-dialog');
 }
-function openPhoto(p){p=photoRecord(p);if(!p.photo)return;$('#photo-title').textContent=displayPhotoScope(p);$('#photo-content').innerHTML=`${photo(p,'enlarged-image')}<p>${escape(p.photoCaption)}</p><p>${displayPhotoScope(p)==='Exact-unit photo'?'Identified apartment photo; refer to the source for its unit number.':'Exact-apartment photos have not been verified.'} ${anchor(p.photoSource,'Photo source')} ${anchor(p.links.photos,'Photo gallery')}</p>`;handleImages($('#photo-content'));openOverlay('photo-dialog');}
+function openPhoto(p,opener=document.activeElement){
+  const photos=propertyPhotos(p);if(!photos.length)return;
+  gallery.propertyId=p.id;gallery.index=preferredPhotoIndex(photos,chosenUnit(p));gallery.opener=opener;
+  gallery.openerSelector=opener?.classList.contains('enlarge-photo')?'#property-content .enlarge-photo':opener?.classList.contains('preview-photo-open')?'#details .preview-photo-open':`[data-photo="${p.id}"]`;
+  renderPhotoGallery();openOverlay('photo-dialog');$('#photo-close').focus({preventScroll:true});
+}
+function renderPhotoGallery(){
+  const p=lookup(gallery.propertyId);if(!p)return;
+  const photos=propertyPhotos(p);if(!photos.length)return;
+  gallery.index=Math.max(0,Math.min(gallery.index,photos.length-1));
+  const item=photos[gallery.index];
+  $('#photo-title').textContent=p.name;
+  $('#photo-content').innerHTML=`<figure><div class="photo-stage"><img class="enlarged-image" src="${escape(item.url)}" alt="${escape(item.caption)} — ${escape(item.scope)}" referrerpolicy="no-referrer" draggable="false"></div><figcaption><p class="gallery-scope">${escape(item.scope)}</p><p class="gallery-caption">${escape(item.caption)}</p>${item.attribution?`<p class="small muted">${escape(item.attribution)}</p>`:''}${item.source?`<p>${anchor(item.source,'Photo source ↗')}</p>`:''}${item.unit==='308'&&photoSourceNote(p)?`<p class="small muted gallery-source-note">${escape(photoSourceNote(p))}</p>`:''}</figcaption></figure>`;
+  $('#photo-counter').textContent=`${gallery.index+1} of ${photos.length} · ${item.scope}`;
+  $('#photo-prev').hidden=photos.length<2;$('#photo-next').hidden=photos.length<2;
+  $('#photo-swipe-hint').hidden=photos.length<2;
+  handleImages($('#photo-content'));
+}
+function movePhoto(delta){
+  const photos=propertyPhotos(lookup(gallery.propertyId)||{});if(photos.length<2)return;
+  gallery.index=(gallery.index+delta+photos.length)%photos.length;renderPhotoGallery();remember(true);
+}
+function returnPhotoFocus(){
+  const target=gallery.opener?.isConnected?gallery.opener:gallery.openerSelector?$(gallery.openerSelector):null;
+  target?.focus({preventScroll:true});gallery.touch=null;
+}
 function renderCoreShortcuts(){$('#core-shortcuts').innerHTML=cores.map(v=>`<button class="${state.destination===v.id?'active':''}" data-core="${v.id}" aria-pressed="${state.destination===v.id}">${icon('nightlife')}<span>${escape(v.name)}</span></button>`).join('');$('#core-shortcuts').querySelectorAll('button').forEach(b=>b.onclick=()=>{setDestination(b.dataset.core);$(`[data-core="${b.dataset.core}"]`)?.focus({preventScroll:true});});}
 function renderDestinationContext(){
   const p=cores.find(v=>v.id===state.destination),g=placeGuides[state.destination];
@@ -313,7 +381,7 @@ function setMapDimension(enabled,explore=false){
 }
 async function startMap(){
   try{
-    const {mountApartmentMap}=await import('./mapcn/apartment-runtime.js?v=map-details-20260915-r2');
+    const {mountApartmentMap}=await import('./mapcn/apartment-runtime.js?v=priority-amenities-20260915-r1');
     const css=getComputedStyle(document.documentElement);
     const style=mapConfig.apiKey?`https://api.maptiler.com/maps/${encodeURIComponent(mapConfig.styleId)}/style.json?key=${encodeURIComponent(mapConfig.apiKey)}`:mapConfig.fallbackStyle;
     if(mapAbort.signal.aborted)return;
@@ -338,8 +406,10 @@ function toggleZipBoundaries(enabled){
 
 }
 function resetApartments(){
-  state.zips=new Set(zipCodes);$('.zip-filters').querySelectorAll('input').forEach(c=>c.checked=true);state.search='';$('#search').value='';applyZipBoundaries();renderList();overview();
+  state.priorityAmenities.clear();state.zips=new Set(zipCodes);$('.zip-filters').querySelectorAll('input').forEach(c=>c.checked=true);state.search='';$('#search').value='';applyZipBoundaries();renderList();overview();
 }
+document.querySelectorAll('[data-priority-amenity]').forEach(button=>button.onclick=()=>togglePriorityAmenity(button.dataset.priorityAmenity));
+$('#clear-property-filters').onclick=()=>{resetApartments();document.querySelector('[data-priority-amenity]').focus({preventScroll:true});};
 $('.zip-filters').querySelectorAll('input').forEach(c=>c.onchange=()=>{
   if(c.checked)state.zips.add(c.value);else state.zips.delete(c.value);
   applyZipBoundaries();
@@ -380,22 +450,38 @@ $('#view-map').onclick=()=>setView('map');$('#view-list').onclick=()=>setView('l
 $('#property-back').onclick=closeExpandedDetails;$('#property-close').onclick=closeExpandedDetails;
 $('#property-dialog').addEventListener('cancel',e=>{e.preventDefault();closeExpandedDetails();});
 $('#photo-close').onclick=()=>closeOverlay('photo-dialog');
+$('#photo-prev').onclick=()=>movePhoto(-1);$('#photo-next').onclick=()=>movePhoto(1);
+$('#photo-dialog').addEventListener('keydown',event=>{
+  if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();movePhoto(event.key==='ArrowLeft'?-1:1);}
+});
+$('#photo-content').addEventListener('touchstart',event=>{
+  if(event.touches.length!==1||!event.target.closest('.photo-stage')){gallery.touch=null;return;}
+  const point=event.touches[0];gallery.touch={x:point.clientX,y:point.clientY};
+},{passive:true});
+$('#photo-content').addEventListener('touchend',event=>{
+  const start=gallery.touch;gallery.touch=null;if(!start||event.changedTouches.length!==1)return;
+  const point=event.changedTouches[0],dx=point.clientX-start.x,dy=point.clientY-start.y;
+  if(Math.abs(dx)>48&&Math.abs(dx)>Math.abs(dy)*1.25)movePhoto(dx<0?1:-1);
+},{passive:true});
+$('#photo-content').addEventListener('touchcancel',()=>{gallery.touch=null;},{passive:true});
 addEventListener('popstate',event=>{
-  const saved=event.state?.kcmo?event.state:{};
+  const saved=event.state?.kcmo?event.state:{},wasPhoto=$('#photo-dialog').open;
   state.selected=saved.selected&&visible().some(p=>p.id===saved.selected)?saved.selected:state.selected;
   state.preview=Boolean(saved.preview&&state.selected);state.detailOpen=Boolean(saved.detailOpen&&state.selected);
   state.overlay=saved.overlay||null;
   for(const id of ['photo-dialog','options-dialog','compare-dialog','about-dialog','places-guide-dialog'])$('#'+id).close();
   if(!state.detailOpen)$('#property-dialog').close();setView(saved.view||'map',false);renderList();renderDetails();renderPlaceMarkers();drawRoutes();
   if(state.detailOpen&&!$('#property-dialog').open)$('#property-dialog').showModal();
+  if(state.overlay==='photo-dialog'){gallery.propertyId=saved.photoProperty||gallery.propertyId;gallery.index=saved.photoIndex||0;renderPhotoGallery();}
   if(state.overlay)$('#'+state.overlay).showModal();
+  if(wasPhoto&&state.overlay!=='photo-dialog')returnPhotoFocus();
 });
 
 function openOverlay(id){state.overlay=id;$('#'+id).showModal();remember();}
 function closeOverlay(id,returnOptions=false){
   $('#'+id).close();state.overlay=returnOptions?'options-dialog':null;
   if(returnOptions){$('#options-dialog').showModal();$(id==='about-dialog'?'#about-open':'#places-guide-open').focus({preventScroll:true});}
-  remember(true);
+  remember(true);if(id==='photo-dialog')returnPhotoFocus();
 }
 for(const id of ['options-dialog','compare-dialog','photo-dialog','about-dialog','places-guide-dialog'])$('#'+id).addEventListener('cancel',e=>{e.preventDefault();closeOverlay(id,['about-dialog','places-guide-dialog'].includes(id));});
 
