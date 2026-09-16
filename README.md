@@ -1,6 +1,12 @@
 # Kansas City apartment map
 
-September 15, 2026 release. [Open the apartment map](https://itscloudddddd.github.io/kcmo-apartment-map/). Priority amenities filter Pool, Rooftop, Patio and Gym together with ZIP/search. The published static snapshot contains 105 properties.
+September 16, 2026 release. [Open the apartment map](https://itscloudddddd.github.io/kcmo-apartment-map/). Compact mobile controls, snap-scrolling apartment cards and contextual community feedback build on the existing amenity and ZIP/search filters. The static snapshot contains 105 properties.
+
+## Mobile layout and community feedback
+
+Phones use a compact sticky toolbar with active-filter counts, a filter bottom sheet, a map sized near 45% of the visible screen, controls along the right edge and a one-card carousel with a next-card preview. The layout retains gallery, comparisons, routes, 3D and apartment-detail behavior, with safe-area spacing, keyboard navigation and reduced-motion support. Chromium checks covered 320, 375, 390 and 430px widths; Safari verification remains outstanding.
+
+Old Town properties include an anonymous community-comment summary after Tradeoffs. The supplied screenshot names Old Town Lofts without identifying the exact building or unit. Reports are clearly marked unverified and may not describe the selected property. They do not change property facts, amenity matches, rankings or cost calculations. The original screenshot remains outside the public bundle.
 
 ## Architecture
 

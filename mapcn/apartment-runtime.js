@@ -45722,28 +45722,33 @@ var cI = [
 	}
 	updatePlaceLabels = () => {
 		if (!this.ready) return;
-		let e = this.container.getBoundingClientRect(), t = this.safePadding(), n = (e, t) => e.left < t.right + 5 && e.right > t.left - 5 && e.top < t.bottom + 5 && e.bottom > t.top - 5, r = [...this.propertyMarkers.map((t) => {
-			let n = this.map.project(t.getLngLat());
-			return {
-				left: e.left + n.x - 22,
-				right: e.left + n.x + 22,
-				top: e.top + n.y - 22,
-				bottom: e.top + n.y + 22
+		let e = this.container.getBoundingClientRect(), t = this.safePadding(), n = (e, t) => e.left < t.right + 5 && e.right > t.left - 5 && e.top < t.bottom + 5 && e.bottom > t.top - 5, r = [...this.container.parentElement?.querySelectorAll(".map-view-controls, .zip-boundary-control, .maplibregl-ctrl-attrib, .kcmo-provider-logo") || []].map((e) => e.getBoundingClientRect()).filter((e) => e.width && e.height), i = this.propertyMarkers.map((t) => {
+			let i = this.map.project(t.getLngLat()), a = {
+				left: e.left + i.x - 24,
+				right: e.left + i.x + 24,
+				top: e.top + i.y - 24,
+				bottom: e.top + i.y + 24
 			};
-		})], i = [...this.placeMarkers].sort((e, t) => Number(t.getElement().dataset.priority) - Number(e.getElement().dataset.priority)), a = {}, o = 0;
-		for (let s of i) {
-			let i = s.getElement(), c = this.map.project(s.getLngLat());
-			i.classList.toggle("overview-pin", this.map.getZoom() < 13);
-			let l = c.x >= 0 && c.x <= e.width && c.y >= 0 && c.y <= e.height;
-			l && (a[i.dataset.category] = (a[i.dataset.category] || 0) + 1), i.dataset.inViewport = String(l);
-			let u = i.classList.contains("active"), d = l && (u || i.dataset.always === "true" || this.map.getZoom() >= 14);
-			if (i.classList.toggle("labels-hidden", !d), !d) continue;
-			let f = i.querySelector(".place-label"), p = f.getBoundingClientRect(), m = (i) => i.left >= e.left + t.left / 2 && i.right <= e.right - t.right / 2 && i.top >= e.top && i.bottom <= e.bottom && !r.some((e) => n(i, e));
-			m(p) || (i.classList.toggle("label-left"), p = f.getBoundingClientRect());
-			let h = u || m(p);
-			i.classList.toggle("labels-hidden", !h), h && (r.push(p), o++);
+			return t.getElement().classList.toggle("control-occluded", r.some((e) => n(a, e))), a;
+		}), a = [...i, ...r], o = [...i], s = [...this.placeMarkers].sort((e, t) => Number(t.getElement().dataset.priority) - Number(e.getElement().dataset.priority)), c = {}, l = 0;
+		for (let i of s) {
+			let s = i.getElement(), u = this.map.project(i.getLngLat()), d = {
+				left: e.left + u.x - 18,
+				right: e.left + u.x + 18,
+				top: e.top + u.y - 18,
+				bottom: e.top + u.y + 18
+			}, f = r.some((e) => n(d, e)) || o.some((e) => n(d, e));
+			s.classList.toggle("control-occluded", f), f || o.push(d), s.classList.toggle("overview-pin", this.map.getZoom() < 13);
+			let p = !f && u.x >= 0 && u.x <= e.width && u.y >= 0 && u.y <= e.height;
+			p && (c[s.dataset.category] = (c[s.dataset.category] || 0) + 1), s.dataset.inViewport = String(p);
+			let m = s.classList.contains("active"), h = p && (m || s.dataset.always === "true" || this.map.getZoom() >= 14);
+			if (s.classList.toggle("labels-hidden", !h), !h) continue;
+			let g = s.querySelector(".place-label"), _ = g.getBoundingClientRect(), v = (r) => r.left >= e.left + t.left / 2 && r.right <= e.right - t.right / 2 && r.top >= e.top && r.bottom <= e.bottom && !a.some((e) => n(r, e));
+			v(_) || (s.classList.toggle("label-left"), _ = g.getBoundingClientRect());
+			let y = v(_);
+			s.classList.toggle("labels-hidden", !y), y && (a.push(_), l++), a.push(d);
 		}
-		this.container.dataset.mapVisiblePlaceCategories = JSON.stringify(a), this.container.dataset.mapVisiblePlaceLabelCount = String(o);
+		this.container.dataset.mapVisiblePlaceCategories = JSON.stringify(c), this.container.dataset.mapVisiblePlaceLabelCount = String(l);
 	};
 	onMoveEnd = () => {
 		this.ready && (this.correctFit() || (this.cameraDiagnostics(), cancelAnimationFrame(this.frame), this.frame = requestAnimationFrame(() => {

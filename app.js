@@ -4,6 +4,7 @@ import {paymentStandardBadge} from './payment-standard.js?v=monthly-fees-2026091
 import {amenitySummary, visibleAmenities, streetViewAction, recordedUnits, floorPlanGroups, photoScope, hasUnconfirmedTwoBedroom, selectedZipAreas, alternativeBedroom} from './presentation.js?v=priority-amenities-20260915-r1';
 import {FOCUS_ZIPS, createMapBridge} from './map-bridge.js?v=priority-amenities-20260915-r1';
 import {mapConfig} from './map-config.js';
+import {communityReviewFor} from './community-reviews.js?v=community-review-20260916-r1';
 const data=window.KCMO_MAP_DATA;
 const $=s=>document.querySelector(s);
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -12,6 +13,7 @@ const rentLabel=n=>/conflict/i.test(String(n))?'Rent conflicting':/unverified|un
 const percentage=n=>typeof n==='number'&&Number.isFinite(n)?(n*100).toFixed(1)+'%':n?escape(n):'Unverified';
 const area=n=>!n?'Area unverified':Number.isFinite(Number(n))?escape(Number(n).toLocaleString('en-US'))+' sq ft':/^[\d, .–-]+$/.test(String(n))?escape(n)+' sq ft':escape(n);
 const listingDate=s=>/^\d{4}-\d{2}-\d{2}$/.test(String(s))?new Date(s+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):escape(s);
+const bathroomLabel=value=>value!==null&&value!==undefined&&value!==''&&Number.isFinite(Number(value))&&Number(value)>0?` · ${escape(value)} ${Number(value)===1?'bathroom':'bathrooms'}`:'';
 function unitSummary(p,beds=1){
   const units=(p.units||[]).filter(u=>u.beds===beds);if(!units.length)return null;
   const rents=units.map(u=>u.rent).filter(Number.isFinite),sizes=units.map(u=>u.sqft).filter(Number.isFinite);
@@ -42,6 +44,7 @@ const zipCodes=[...FOCUS_ZIPS];
 $('.zip-filters').innerHTML='<legend>Show apartments in ZIP</legend>'+zipCodes.map(zip=>`<label><input type="checkbox" value="${escape(zip)}" checked><span class="zip-dot" style="background:${zipColors[zip]||'#225f80'}" aria-hidden="true"></span>${escape(zip)} <small id="zip-count-${escape(zip)}"></small></label>`).join('');
 const state={zips:new Set(zipCodes),destination:'in-good-co',sort:'walk',search:'',priorityAmenities:new Set(),selected:null,compare:new Set(),draftRanks:new Map(),threeD:true,comparing:false,view:'map',preview:false,detailOpen:false,unitChoices:new Map(),overlay:null};
 const gallery={propertyId:null,index:0,opener:null,openerSelector:null,touch:null};
+let carouselPropertyId=null,carouselFrame=0;
 let mapReady=false,mountedMap=null,rankService=false,mapSyncPending=false;
 const mapAbort=new AbortController();
 const lookup=id=>data.properties.find(p=>p.id===id);
@@ -83,7 +86,7 @@ const extraFacts = [['finishes','Finishes'],['sunlight','Sunlight'],['entrance',
 const chosenUnit = p => (p.units || []).find(u => u.unit === state.unitChoices.get(p.id));
 const offer = p => {
   const u = chosenUnit(p), alternative=alternativeBedroom(p), oneAbsent=p.oneBedroom.offered===false,beds=oneAbsent?alternative.beds:1,summary=unitSummary(p,beds);
-  if(u) return {price:money(u.rent),facts:`${u.beds} bedroom${Number.isFinite(Number(u.baths))?` · ${u.baths} ${u.baths===1?'bathroom':'bathrooms'}`:''} · ${area(u.sqft)}`,scope:`Apartment #${escape(u.unit)} · listed snapshot`};
+  if(u) return {price:money(u.rent),facts:`${u.beds} bedroom${bathroomLabel(u.baths)} · ${area(u.sqft)}`,scope:`Apartment #${escape(u.unit)} · listed snapshot`};
   if(summary) return {price:summary.price,facts:`${beds} bedroom · ${summary.size}`,scope:`${summary.count} listed ${summary.count===1?'apartment':'apartment options'}`};
   if(oneAbsent)return {price:alternative.research.rent?rentLabel(alternative.research.rent):'Rent unverified',facts:`${alternative.beds} bedroom · ${area(alternative.research.sqft)}`,scope:'No 1-bedroom option · building research'};
   return {price:p.oneBedroom.rent?rentLabel(p.oneBedroom.rent):'Rent unverified',facts:p.oneBedroom.rent||p.oneBedroom.sqft?`1 bedroom · ${area(p.oneBedroom.sqft)}`:'Bedroom mix & size unverified',scope:'Saved research · availability unverified'};
@@ -104,7 +107,7 @@ function streetViewLink(p,hero=false) {
 }
 function apartmentFacts(p) {
   const o=offer(p),units=recordedUnits(p),selected=chosenUnit(p);
-  const unitRows=units.map(unit=>{const baths=Number.isFinite(Number(unit.baths))?` · ${unit.baths} ${unit.baths===1?'bathroom':'bathrooms'}`:'';return `<article class="recorded-unit ${selected?.unit===unit.unit?'active':''}"><${unit.structured?'button':'div'} class="unit-select" ${unit.structured?`data-unit="${escape(unit.unit)}" aria-pressed="${selected?.unit===unit.unit}"`: ''}><span><strong>Apartment #${escape(unit.unit)}</strong><span class="unit-dimensions">${unit.beds===null?'Bedroom count not recorded':unit.beds===0?'Studio':unit.beds+' bedroom'}${baths} · ${area(unit.sqft)}</span></span>${unit.structured?`<span class="unit-selection-label">${selected?.unit===unit.unit?'Selected':'Select apartment'}</span>`:''}</${unit.structured?'button':'div'}><div class="unit-record-details"><p class="unit-secondary-price">${unit.priceLabel?escape(unit.priceLabel)+': ':''}${money(unit.rent)} / month${unit.deposit?' · '+money(unit.deposit)+' deposit':''}</p><p class="small">${/^\d{4}-/.test(unit.available)?'Listed for ':''}${listingDate(unit.available)}</p><p class="small muted">Checked ${escape(unit.checked||'date not recorded')} · confirm availability with leasing.</p>${unit.source?anchor(unit.source,'Unit listing source ↗'):'<span class="small muted">Source attribution: see the recorded options below.</span>'}${!unit.structured?`<p class="small muted unit-evidence">${evidenceHTML(unit.evidence)}</p>`:''}</div></article>`}).join('');
+  const unitRows=units.map(unit=>{const baths=bathroomLabel(unit.baths);return `<article class="recorded-unit ${selected?.unit===unit.unit?'active':''}"><${unit.structured?'button':'div'} class="unit-select" ${unit.structured?`data-unit="${escape(unit.unit)}" aria-pressed="${selected?.unit===unit.unit}"`: ''}><span><strong>Apartment #${escape(unit.unit)}</strong><span class="unit-dimensions">${unit.beds===null?'Bedroom count not recorded':unit.beds===0?'Studio':unit.beds+' bedroom'}${baths} · ${area(unit.sqft)}</span></span>${unit.structured?`<span class="unit-selection-label">${selected?.unit===unit.unit?'Selected':'Select apartment'}</span>`:''}</${unit.structured?'button':'div'}><div class="unit-record-details"><p class="unit-secondary-price">${unit.priceLabel?escape(unit.priceLabel)+': ':''}${money(unit.rent)} / month${unit.deposit?' · '+money(unit.deposit)+' deposit':''}</p><p class="small">${/^\d{4}-/.test(unit.available)?'Listed for ':''}${listingDate(unit.available)}</p><p class="small muted">Checked ${escape(unit.checked||'date not recorded')} · confirm availability with leasing.</p>${unit.source?anchor(unit.source,'Unit listing source ↗'):'<span class="small muted">Source attribution: see the recorded options below.</span>'}${!unit.structured?`<p class="small muted unit-evidence">${evidenceHTML(unit.evidence)}</p>`:''}</div></article>`}).join('');
 
   return `<h3 class="apartment-facts-heading">Apartment facts</h3><div class="apartment-facts-lead"><strong>${o.facts}</strong><p class="small muted">${o.scope}</p>${units.length?'':`<p class="unit-secondary-price">${o.price}${/^\$/.test(o.price)?' / month':''}</p>`}</div>${units.length?`<section class="unit-options"><h4>Recorded apartments · ${units.length}</h4>${unitRows}</section>`:''}${p.oneBedroom.evidence&&/do NOT pair|conflict/i.test(p.oneBedroom.evidence)?'<p class="warning-strip">Older rent/size values conflict with the listed apartments. Keep each apartment’s figures together; see Research for the source notes.</p>':''}<div class="primary-links">${anchor(p.links.floorplans,'Floor plans ↗')}${anchor(p.links.units,'Available units ↗')}</div>`;
 }
@@ -133,6 +136,11 @@ $('#priority-amenity-chips').innerHTML=PRIORITY_AMENITIES.map(({key,label})=>`<b
 function syncPriorityControls(){
   document.querySelectorAll('[data-priority-amenity]').forEach(button=>button.setAttribute('aria-pressed',String(state.priorityAmenities.has(button.dataset.priorityAmenity))));
   $('#clear-property-filters').hidden=!state.priorityAmenities.size&&!state.search&&state.zips.size===zipCodes.length;
+  const count=state.priorityAmenities.size+Number(Boolean(state.search))+Number(state.zips.size!==zipCodes.length);
+  $('#active-filter-count').textContent=String(count);$('#active-filter-count').hidden=count===0;
+  $('#more-options').setAttribute('aria-label',`More options${count?`, ${count} active property ${count===1?'filter':'filters'}`:''}`);
+  $('#active-filter-summary').textContent=count?`${count} active property ${count===1?'filter':'filters'} · amenities match all`:'No property filters selected';
+  $('#options-clear').disabled=count===0;
 }
 function togglePriorityAmenity(key){
   if(!PRIORITY_AMENITIES.some(item=>item.key===key))return;
@@ -154,6 +162,7 @@ function renderList(){
   const list=$('#property-list'),left=list.scrollLeft,top=$('.list-pane').scrollTop;
   $('#result-count').textContent=String(items.length);
   $('#compact-count').textContent=`${items.length} ${items.length===1?'apartment':'apartments'}`;
+  $('#options-apply').textContent=`Show ${items.length} ${items.length===1?'apartment':'apartments'}`;
   $('#coverage-count').textContent=`${items.length} ${items.length===1?'apartment':'apartments'} · ${mapped} on map · ${unmapped} need map pins`;
   $('#missing-pin-note').textContent=unmapped?`${unmapped} without confirmed pins · included in List`:'';
   $('#missing-pin-note').hidden=!unmapped;
@@ -173,7 +182,37 @@ function renderList(){
   list.querySelectorAll('[data-compare]').forEach(c=>c.onchange=()=>{toggleCompare(c.dataset.compare,c.checked);$(`[data-compare="${c.dataset.compare}"]`)?.focus({preventScroll:true});});
   $('#reset-results')?.addEventListener('click',()=>{resetApartments();document.querySelector('[data-priority-amenity]').focus({preventScroll:true});});
   list.scrollLeft=left;$('.list-pane').scrollTop=top;
+  requestAnimationFrame(restoreCarousel);
   renderCompareBar();renderPropertyMarkers();
+}
+function carouselCards(){return [...$('#property-list').querySelectorAll('.property-card')];}
+function carouselIndex(cards=carouselCards()){
+  const list=$('#property-list'),start=list.getBoundingClientRect().left+parseFloat(getComputedStyle(list).paddingLeft);
+  return cards.reduce((best,card,index)=>Math.abs(card.getBoundingClientRect().left-start)<Math.abs(cards[best].getBoundingClientRect().left-start)?index:best,0);
+}
+function updateCarousel(){
+  if(innerWidth>800||state.view!=='map')return;
+  const cards=carouselCards(),index=carouselIndex(cards);
+  carouselPropertyId=cards[index]?.dataset.id||null;
+  $('#carousel-position').textContent=cards.length?`${index+1} / ${cards.length} apartments`:'';
+  $('#card-previous').disabled=!cards.length||index===0;
+  $('#card-next').disabled=!cards.length||index===cards.length-1;
+  $('.carousel-controls').hidden=!cards.length;
+}
+function scrollToCard(card,animate=false){
+  if(!card)return;
+  const list=$('#property-list'),offset=card.getBoundingClientRect().left-list.getBoundingClientRect().left-parseFloat(getComputedStyle(list).paddingLeft);
+  list.scrollTo({left:list.scrollLeft+offset,behavior:animate&&motion()?'smooth':'instant'});
+}
+function restoreCarousel(){
+  if(innerWidth>800||state.view!=='map')return;
+  const cards=carouselCards();
+  scrollToCard(cards.find(card=>card.dataset.id===carouselPropertyId)||cards[0]);updateCarousel();
+}
+function moveCard(amount,focus=false){
+  const cards=carouselCards(),next=Math.max(0,Math.min(cards.length-1,carouselIndex(cards)+amount));
+  scrollToCard(cards[next],true);
+  if(focus)cards[next]?.querySelector('.card-select').focus({preventScroll:true});
 }
 function renderDetails(){
   const p=lookup(state.selected),panel=$('#details');
@@ -190,6 +229,10 @@ function renderDetails(){
   }
   if(state.detailOpen)renderExpandedDetails();
 }
+function communityFeedback(p){
+  const review=communityReviewFor(p);if(!review)return '';
+  return `<section class="detail-section community-feedback" aria-labelledby="community-feedback-title"><h3 id="community-feedback-title">${escape(review.title)}</h3><p class="small muted">${escape(review.scope)}</p><div class="community-reports">${review.reports.map(report=>`<p>${escape(report)}</p>`).join('')}</div><p class="small muted community-source">${escape(review.source)}</p></section>`;
+}
 function renderExpandedDetails(){
   const p=lookup(state.selected);if(!p)return;
   const media=photoRecord(p),photos=propertyPhotos(p);
@@ -203,6 +246,7 @@ function renderExpandedDetails(){
     ${gettingAround(p)}
     ${supplementalBedroomResearch(p)}
     <section class="detail-section tradeoffs-section"><div class="insight strength"><h3>Building amenities &amp; features</h3>${p.amenityDetails?`<p>${evidenceHTML(p.amenityDetails)}</p>`:''}<p>${evidenceHTML(readableCopy(p.strengths||'No confirmed standout features recorded yet.'))}</p></div><div class="insight tradeoff"><h3>Tradeoffs</h3><p>${escape(readableCopy(p.tradeoffs||'Insufficient comparable evidence. No overall verdict yet.'))}</p></div></section>
+    ${communityFeedback(p)}
     <section class="detail-section preference-section"><details class="ranking-details"><summary>My preference ranking</summary><p><strong>My rank in ${p.zip}:</strong> ${currentRank(p)??'Not ranked yet'}${state.draftRanks.has(p.id)?' (draft only)':''}.</p><p class="small muted">Distance-only rank in ${p.zip}: ${p.clusterRank??'Unverified'}${p.nearest?' · '+p.nearest.minutes+'-minute walk to '+escape(p.nearest.destination):''}. It does not pick a winner.</p><form class="rank-form"><label for="rank-input">My rank</label><input id="rank-input" inputmode="numeric" type="number" min="1" max="${data.properties.filter(x=>x.zip===p.zip).length}" value="${currentRank(p)??''}" placeholder="—"><button type="submit">Try draft rank</button></form><p class="rank-status">Draft only: lasts until reload. Does not change V3 or the shared link.</p></details></section>
     <details class="detail-section source-details"><summary>Research, photos &amp; source checks</summary><h4>Recorded amenity evidence</h4><dl class="facts research-amenities">${amenityKeys.map(([key,label])=>`<dt>${label}</dt><dd>${evidenceHTML(p.amenities[key])}</dd>`).join('')}</dl><p class="availability-note">${escape(p.availability)}</p><p class="small">${escape(p.photoCaption)} ${anchor(p.photoSource,'Photo source')}</p><p class="small">${evidenceHTML(p.linkScope)}</p>${p.photoEvidence?`<p class="evidence">Recorded photo research: ${evidenceHTML(p.photoEvidence)}</p>`:''}${photoSourceNote(p)?`<p class="evidence photo-source-note">User-provided photo note: ${escape(photoSourceNote(p))}</p>`:''}${p.phone?`<p class="small">Leasing phone: ${escape(p.phone)}</p>`:''}<dl class="facts"><dt>Management</dt><dd>${escape(p.management)}</dd><dt>Built / renovated</dt><dd>${escape(p.building?.yearBuilt||'Unverified')} / ${escape(p.building?.yearRenovated||'Unverified')}</dd><dt>Mixed income</dt><dd>${escape(p.building?.mixedIncome||'Unverified')}</dd></dl><p class="small">Sources checked: ${escape(p.checked||'Not recorded')}. Rents and vacancies can change.</p><div class="secondary-links">${anchor(p.links.photos,'Photo gallery')}${anchor(p.links.website,'Property source')}${anchor(p.links.streetView,'Street View')}${anchor(p.links.appleMaps,'Apple Maps')}${anchor(p.links.googleMaps,'Google Maps')}</div>${p.oneBedroom.evidence?`<p class="evidence">1BR evidence: ${evidenceHTML(p.oneBedroom.evidence)}</p>`:''}${p.twoBedroom.evidence?`<p class="evidence ${warning?'warning':''}">2BR evidence: ${evidenceHTML(p.twoBedroom.evidence)}</p>`:''}${p.threeBedroom?.evidence?`<p class="evidence">3BR evidence: ${evidenceHTML(p.threeBedroom.evidence)}</p>`:''}${p.researchSources?`<p class="evidence">Sources / checked: ${evidenceHTML(p.researchSources)}</p>`:''}<p class="small muted">Pin: ${evidenceHTML(p.coordinateSource)} · ${escape(p.coordinateChecked||'check date not recorded')}. ${!p.coordinates?'Listed without a confirmed pin.':''}</p><details class="confirm-box"><summary>Unresolved research · ${missing(p).length} items</summary><p>${escape(readableCopy(p.confirmation))}</p><ul>${missing(p).map(x=>`<li>${escape(friendlyFact(x))}</li>`).join('')}</ul></details></details>
     <details class="detail-section calculation-details"><summary>Voucher estimate &amp; calculations</summary><p class="small muted">${escape(data.meta.voucherCaveat)}</p><p class="small warning">Saved worksheet values below are not a quote for the apartment selected above.</p><dl class="facts"><dt>Acceptance</dt><dd>${escape(p.hcv)}</dd><dt>Program</dt><dd>${escape(p.lihtc)}</dd><dt>Minimum income</dt><dd>${escape(p.eligibility?.minimumIncome||'Unverified')}</dd><dt>Published 1-person limit</dt><dd>${escape(p.eligibility?.onePersonLimit||'Unverified')}</dd><dt>Official utility allowance</dt><dd>${money(p.oneBedroom.utilityAllowance)}</dd><dt>Electricity planning estimate</dt><dd>${money(p.costs?.electricityEstimate)}${typeof p.costs?.electricityEstimate==='number'?(p.costs.electricityEstimate===0?' — advertised housing-utility inclusion, not an authority allowance':' — user estimate, not an authority allowance'):''}</dd><dt>Required monthly fees</dt><dd>${money(p.costs?.requiredMonthlyFees)}</dd><dt>Cost basis</dt><dd>${evidenceHTML(p.costs?.basis||'Utilities and mandatory fees need verification.')}</dd><dt>Recorded 1BR standard</dt><dd>${money(p.oneBedroom.standard)}</dd><dt>1BR estimated gross / % / fit</dt><dd>${money(p.oneBedroom.gross)} / ${percentage(p.oneBedroom.percent)} / ${escape(p.oneBedroom.fit)} — estimate only</dd><dt>${alternativeBedroom(p).beds}BR estimated gross / % / fit</dt><dd>${money(alternativeBedroom(p).research.gross)} / ${percentage(alternativeBedroom(p).research.percent)} / ${escape(alternativeBedroom(p).research.fit)}${warning?' — invalid as a Star-specific conclusion until attribution is confirmed.':' — recorded 1BR standard; estimate only.'}</dd></dl></details>
@@ -231,6 +275,7 @@ function closeExpandedDetails(){state.detailOpen=false;$('#property-dialog').clo
 function closeProperty(){state.preview=false;state.detailOpen=false;$('#property-dialog').close();renderDetails();remember(true);$(`[data-select="${state.selected}"]`)?.focus({preventScroll:true});}
 function selectProperty(id,fromList=false){
   if(!lookup(id))return;
+  carouselPropertyId=id;
   mapCommand({type:'dismiss-popup'});state.selected=id;state.preview=true;state.detailOpen=false;$('#start-comparison').hidden=false;
   renderList();renderDetails();renderPlaceMarkers();drawRoutes(true);remember();
   if(!fromList){const card=$(`[data-id="${id}"]`);card?.scrollIntoView({block:'nearest',inline:'center'});}
@@ -241,7 +286,7 @@ function setView(view,push=true){
   state.view=view;document.body.dataset.view=view;
   $('#view-map').setAttribute('aria-pressed',String(view==='map'));$('#view-list').setAttribute('aria-pressed',String(view==='list'));
   $('.map-pane').setAttribute('aria-hidden',String(view==='list'));$('.map-pane').inert=view==='list';
-  requestAnimationFrame(()=>{syncMap();mapCommand({type:'resize'});});if(push)remember();
+  requestAnimationFrame(()=>{syncMap();mapCommand({type:'resize'});restoreCarousel();if(push&&innerWidth<=800)$('.workspace').scrollIntoView({block:'start',behavior:'instant'});});if(push)remember();
 }
 function setDestination(id){state.destination=id;$('#destination').value=id;if(state.sort==='cluster'){state.sort='walk';$('#sort-mode').value='walk';}renderList();renderDetails();renderPlaceMarkers();renderCoreShortcuts();renderDestinationContext();drawRoutes(true);}
 function toggleCompare(id,on){
@@ -327,7 +372,7 @@ function mapSnapshot(){
   const vertical=Math.max(20,Math.min(40,frame.height*.18));
   return {zips:[...state.zips],visibleIds:visible().map(p=>p.id),selectedId:state.selected,destinationId:state.destination,threeD:state.threeD,
     layers:{zip:$('#layer-zip').checked,streetcar:$('#layer-streetcar').checked,core:$('#layer-core').checked,scenes:$('#layer-scenes').checked,daytime:$('#layer-daytime').checked,food:$('#layer-food').checked},
-    padding:{top:Math.max(vertical,110),bottom:innerWidth<=800&&active?Math.min(covered+25,Math.max(vertical,frame.height*.58)):(innerWidth<=800?75:vertical),left:40,right:innerWidth>800&&active?Math.min(390,frame.width*.46):40},reducedMotion:motion()===0};
+    padding:{top:innerWidth<=800?24:Math.max(vertical,110),bottom:innerWidth<=800&&active?Math.min(covered+25,Math.max(vertical,frame.height*.58)):(innerWidth<=800?48:vertical),left:innerWidth<=800?24:40,right:innerWidth<=800?116:active?Math.min(390,frame.width*.46):40},reducedMotion:motion()===0};
 }
 const bridge=createMapBridge(window,{
   ready(){mapReady=true;$('#map').setAttribute('aria-busy','false');applyZipBoundaries();syncMap();},
@@ -381,7 +426,7 @@ function setMapDimension(enabled,explore=false){
 }
 async function startMap(){
   try{
-    const {mountApartmentMap}=await import('./mapcn/apartment-runtime.js?v=priority-amenities-20260915-r1');
+    const {mountApartmentMap}=await import('./mapcn/apartment-runtime.js?v=mobile-layout-20260915-r1');
     const css=getComputedStyle(document.documentElement);
     const style=mapConfig.apiKey?`https://api.maptiler.com/maps/${encodeURIComponent(mapConfig.styleId)}/style.json?key=${encodeURIComponent(mapConfig.apiKey)}`:mapConfig.fallbackStyle;
     if(mapAbort.signal.aborted)return;
@@ -425,7 +470,12 @@ $('#three-d').onclick=()=>{$('#options-dialog').close();setMapDimension(!state.t
 $('#map-mode-2d').onclick=()=>setMapDimension(false);
 $('#map-mode-3d').onclick=()=>setMapDimension(true);
 $('#explore-3d').onclick=()=>setMapDimension(true,true);
-$('#map-layers').onclick=()=>{openOverlay('options-dialog');$('#map-options-title').scrollIntoView({block:'start'});$('#layer-food').focus({preventScroll:true});};
+$('#map-layers').onclick=()=>{
+  openOverlay('options-dialog');
+  const content=$('#options-dialog .guide-content');
+  content.scrollTop+=$('#map-options-title').getBoundingClientRect().top-content.getBoundingClientRect().top-16;
+  $('#layer-food').focus({preventScroll:true});
+};
 $('#zip-boundaries-toggle').onclick=()=>toggleZipBoundaries(!$('#layer-zip').checked);
 $('#layer-zip').onchange=e=>toggleZipBoundaries(e.target.checked);$('#layer-streetcar').onchange=applyMapLayers;
 $('#layer-core').onchange=()=>{renderPlaceMarkers();drawRoutes();};
@@ -434,6 +484,15 @@ $('#layer-scenes').onchange=renderPlaceMarkers;$('#layer-daytime').onchange=rend
 $('#compare-open').onclick=renderComparison;$('#compare-close').onclick=()=>closeOverlay('compare-dialog');$('#compare-clear').onclick=()=>{state.compare.clear();state.comparing=false;renderList();renderDetails();$('#apartments-heading').focus({preventScroll:true});};
 $('#compare-choose').onclick=()=>{if(state.selected)closeProperty();browseApartments(true);};
 $('#more-options').onclick=()=>openOverlay('options-dialog');$('#options-close').onclick=()=>closeOverlay('options-dialog');
+$('#options-clear').onclick=resetApartments;
+$('#options-apply').onclick=()=>closeOverlay('options-dialog');
+$('#options-dialog').addEventListener('keydown',event=>{
+  if(event.key!=='Tab')return;
+  const controls=[...event.currentTarget.querySelectorAll('button:not(:disabled),a[href],input:not(:disabled),select:not(:disabled),summary,[tabindex="0"]')].filter(el=>el.getClientRects().length);
+  const first=controls[0],last=controls.at(-1);
+  if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+  else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+});
 $('#browse-apartments').onclick=()=>browseApartments();$('#start-comparison').onclick=()=>browseApartments(true);
 $('#about-open').onclick=()=>{$('#options-dialog').close();openOverlay('about-dialog');};$('#about-close').onclick=()=>closeOverlay('about-dialog',true);
 $('#places-guide-open').onclick=()=>{$('#options-dialog').close();openOverlay('places-guide-dialog');};$('#places-guide-close').onclick=()=>closeOverlay('places-guide-dialog',true);
@@ -441,8 +500,20 @@ $('#preview-notice').textContent=data.meta.staged?'Local research preview · Not
 $('#build-explanation').textContent=data.meta.notice;
 $('#generated-at').textContent='Built '+new Date(data.meta.generatedAt).toLocaleString('en-US')+' · source checks are shown separately.';
 
-const fitWorkspace=()=>document.documentElement.style.setProperty('--intro-height',`${$('.workspace').getBoundingClientRect().top+scrollY}px`);
+const fitWorkspace=()=>{
+  document.documentElement.style.setProperty('--intro-height',`${$('.workspace').getBoundingClientRect().top+scrollY}px`);
+  document.documentElement.style.setProperty('--toolbar-height',`${$('.toolbar').getBoundingClientRect().height}px`);
+  requestAnimationFrame(()=>{restoreCarousel();syncMap();});
+};
 const shellObserver=new ResizeObserver(fitWorkspace);document.querySelectorAll('.page-header,.toolbar').forEach(el=>shellObserver.observe(el));
+$('#card-previous').onclick=()=>moveCard(-1);$('#card-next').onclick=()=>moveCard(1);
+$('#property-list').addEventListener('scroll',()=>{cancelAnimationFrame(carouselFrame);carouselFrame=requestAnimationFrame(updateCarousel);},{passive:true});
+$('#property-list').addEventListener('keydown',event=>{
+  if(innerWidth>800||state.view!=='map'||!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)||event.target.matches('input'))return;
+  event.preventDefault();
+  if(event.key==='Home'||event.key==='End'){const cards=carouselCards(),card=event.key==='Home'?cards[0]:cards.at(-1);scrollToCard(card,true);if(event.target!==event.currentTarget)card?.querySelector('.card-select').focus({preventScroll:true});}
+  else moveCard(event.key==='ArrowLeft'?-1:1,event.target!==event.currentTarget);
+});
 renderWelcome();renderList();renderPlaces();renderCoreShortcuts();applyZipBoundaries();syncMapControls();remember(true);startMap();
 if(['localhost','127.0.0.1'].includes(location.hostname))fetch('/api/status').then(r=>r.ok?r.json():null).then(status=>{rankService=Boolean(status?.rankEditing)&&data.meta.masterMapFields;}).catch(()=>{});
 
@@ -477,7 +548,7 @@ addEventListener('popstate',event=>{
   if(wasPhoto&&state.overlay!=='photo-dialog')returnPhotoFocus();
 });
 
-function openOverlay(id){state.overlay=id;$('#'+id).showModal();remember();}
+function openOverlay(id){state.overlay=id;$('#zip-picker').open=false;$('#'+id).showModal();if(id==='options-dialog'){$('#options-dialog').scrollTop=0;$('#options-dialog .guide-content').scrollTop=0;}remember();}
 function closeOverlay(id,returnOptions=false){
   $('#'+id).close();state.overlay=returnOptions?'options-dialog':null;
   if(returnOptions){$('#options-dialog').showModal();$(id==='about-dialog'?'#about-open':'#places-guide-open').focus({preventScroll:true});}
