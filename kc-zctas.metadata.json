@@ -1,0 +1,45 @@
+{
+  "retrievedAt": "2026-09-16T00:16:04.894Z",
+  "queryUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/1/query?where=ZCTA5+IN+%28%2764101%27%2C%2764105%27%2C%2764106%27%2C%2764108%27%2C%2764109%27%2C%2764110%27%2C%2764111%27%2C%2764112%27%2C%2764113%27%2C%2764114%27%2C%2764116%27%2C%2764124%27%2C%2764127%27%29&outFields=ZCTA5%2CGEOID%2CNAME%2CAREALAND%2CAREAWATER%2CINTPTLAT%2CINTPTLON&returnGeometry=true&outSR=4326&f=geojson&orderByFields=ZCTA5",
+  "layerUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA/MapServer/1",
+  "sourceSha256": "0250b5125f1a758bbb25f910dab107e3721462f318b1131698bebed47bb3e288",
+  "layerSha256": "e3e21d1d3d9a648eb007edc6a60073fbc92db916ee5316f85665c94de5d42627",
+  "source": "U.S. Census Bureau TIGERweb",
+  "title": "2020 Census ZIP Code Tabulation Areas",
+  "vintage": "2020 Census — January 1, 2020",
+  "coordinateReferenceSystem": "EPSG:4326",
+  "note": "2020 Census ZIP Code Tabulation Areas approximate ZIP coverage; they are not exact USPS delivery boundaries.",
+  "codes": [
+    "64101",
+    "64105",
+    "64106",
+    "64108",
+    "64109",
+    "64110",
+    "64111",
+    "64112",
+    "64113",
+    "64114",
+    "64116",
+    "64124",
+    "64127"
+  ],
+  "asset": "kc-zctas.geojson",
+  "assetSha256": "353a480c0842ecb9941b4e60c1615a459ff76b5269bdb905035cdcc6b34b379d",
+  "normalization": "Stable string feature IDs equal ZCTA5; features sorted by ZCTA5. No simplification, coordinate rounding, ring removal or geometry conversion.",
+  "validation": {
+    "features": 13,
+    "polygons": 14,
+    "rings": 14,
+    "holes": 0,
+    "vertices": 3255,
+    "bounds": [
+      -94.60851900012804,
+      38.911524000312255,
+      -94.51302100041347,
+      39.18339700034685
+    ]
+  },
+  "rebuild": "node 06_scripts_and_tools/fetch_kc_zctas.mjs --offline",
+  "refresh": "node 06_scripts_and_tools/fetch_kc_zctas.mjs"
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72" fill="none">
+  <title>In Good Co symbolic cocktail landmark</title>
+  <path d="M32 70 20 59h24L32 70Z" fill="#76506F"/>
+  <ellipse cx="32" cy="56" rx="23" ry="7" fill="#76506F"/>
+  <path d="M32 33v20m-10 1h20" stroke="#FFF1D5" stroke-width="4" stroke-linecap="round"/>
+  <path d="m12 18 20 23 20-23H12Z" fill="#BD644D"/>
+  <path d="m12 18 20 7 20-7" stroke="#FFF1D5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m20 24-8-18" stroke="#FFF1D5" stroke-width="3" stroke-linecap="round"/>
+  <path d="m48 4 8 6-2 10-9 3-7-7 2-9 8-3Z" fill="#E4A047" stroke="#FFF1D5" stroke-width="3"/>
+</svg>

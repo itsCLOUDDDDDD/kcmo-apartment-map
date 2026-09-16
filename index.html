@@ -2,35 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f7f8"><meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#f6f7f3"><meta name="referrer" content="no-referrer">
   <title>Kansas City apartment map</title><link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://api.maptiler.com" crossorigin>
   <link rel="preconnect" href="https://tiles.openfreemap.org">
-  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.9.1/dist/maplibre-gl.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mapcn/apartment-runtime.css?v=map-details-20260915-r2">
+  <link rel="stylesheet" href="styles.css?v=map-details-20260915-r2">
 </head>
-<body>
+<body data-view="map">
   <header class="page-header">
-    <div><p class="eyebrow">My Kansas City move</p><h1>Apartments I’m considering</h1><p class="intro-copy">Tap an apartment photo or pin to see the details.</p></div>
+    <div><p class="eyebrow">My Kansas City move</p><h1>Apartments in Kansas City</h1><p class="intro-copy">Places I’m considering. Tap a photo or home pin.</p></div>
   </header>
   <section class="toolbar" aria-label="Apartment ZIP filters">
-    <fieldset class="zip-filters"><legend>Show apartments in ZIP</legend><label><input type="checkbox" value="64108" checked><span class="zip-dot blue" aria-hidden="true"></span>64108 <small id="zip-count-64108"></small></label><label><input type="checkbox" value="64109" checked><span class="zip-dot purple" aria-hidden="true"></span>64109 <small id="zip-count-64109"></small></label></fieldset>
-    <button id="more-options" aria-haspopup="dialog">More options</button>
+    <details class="zip-picker" id="zip-picker"><summary aria-label="Choose ZIP areas"><span>Show apartments in</span><strong id="zip-selection-summary">All 13 ZIP areas</strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="zip-picker-panel">    <fieldset class="zip-filters"><legend>Show apartments in ZIP</legend><label><input type="checkbox" value="64108" checked><span class="zip-dot blue" aria-hidden="true"></span>64108 <small id="zip-count-64108"></small></label><label><input type="checkbox" value="64109" checked><span class="zip-dot purple" aria-hidden="true"></span>64109 <small id="zip-count-64109"></small></label></fieldset><div class="zip-picker-actions"><button id="zip-select-all" type="button">Select all</button><button id="zip-select-none" type="button">Clear</button><button id="zip-picker-done" type="button">Done</button></div><p>Counts show exported apartments. Every ZIP area can be explored on the map.</p></div></details>
+    <div class="browse-controls"><span id="compact-count" role="status">Loading apartments</span><div class="view-switch" role="group" aria-label="Apartment view"><button id="view-map" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3ZM9 3v15m6-12v15"/></svg>Map</button><button id="view-list" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M3 6h1M3 12h1M3 18h1"/></svg>List</button></div><button id="more-options" aria-haspopup="dialog">More options</button></div>
   </section>
   <main class="workspace">
     <aside class="list-pane" aria-label="Apartments under consideration">
-      <div class="list-heading"><h2 id="apartments-heading" tabindex="-1">Apartments <span id="result-count" aria-live="polite"></span></h2><p id="order-explanation" class="small muted"></p><p id="list-guidance" class="list-guidance" hidden></p></div>
+      <div class="list-heading"><h2 id="apartments-heading" tabindex="-1">Apartments <span id="result-count"></span></h2><p id="order-explanation" class="small muted"></p><p id="list-guidance" class="list-guidance" hidden></p><p id="missing-pin-note" class="small muted"></p></div>
       <div id="property-list"></div>
       <footer><p id="generated-at"></p><p>Research preview. Rents and availability need checking; open an apartment for sources.</p></footer>
     </aside>
     <section class="map-pane" aria-label="Map and selected property">
       <div class="map-frame">
-        <div id="map" role="region" aria-label="Apartment pins and walking destination"></div>
+        <div id="map" role="region" aria-busy="true" aria-label="Apartment pins and walking destination"></div>
+        <div class="map-view-controls" aria-label="Map controls">
+          <div class="map-dimension" role="group" aria-label="Map dimension"><button id="map-mode-2d" type="button" aria-pressed="false">2D</button><button id="map-mode-3d" type="button" aria-pressed="true">3D</button></div>
+          <div class="map-explore-actions"><button id="explore-3d" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5v9l-9 5-9-5V8Zm0 10 9-5M12 13 3 8m9 5v9"/></svg>Explore in 3D</button><button id="map-layers" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 17l10 5 10-5"/></svg>Layers</button></div>
+        </div>
+        <div class="zip-boundary-control">
+          <button id="zip-boundaries-toggle" aria-pressed="false" aria-controls="map zip-boundary-legend" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 5 9-2 7 6-3 11-12-2Z"/></svg>ZIP boundaries <span id="zip-boundaries-state">Off</span></button>
+          <div id="zip-boundary-legend" hidden><p id="zip-boundary-labels" role="status"></p><p class="zip-boundary-note">Approximate ZIP areas</p></div>
+        </div>
         <p id="map-status" role="status">Loading the map. Browse apartment photos below.</p>
-        <p id="map-mode-note" class="map-mode-note" hidden>3D building shapes from OpenStreetMap. Not Apple Flyover or a verified sunlight model.</p>
       </div>
-      <section id="details" class="detail-panel" aria-label="Selected property details" hidden></section>
     </section>
+    <section id="details" class="property-preview" role="region" aria-label="Selected apartment preview" hidden></section>
   </main>
+  <dialog id="property-dialog" class="property-dialog" aria-labelledby="property-title"><div class="dialog-header property-dialog-header"><button id="property-back" aria-label="Back to apartment preview">← Back</button><span>Apartment details</span><button id="property-close" aria-label="Close apartment details">Close</button></div><div id="property-content" class="detail-scroll" tabindex="0" role="region" aria-label="Scrollable apartment details"></div></dialog>
+  <dialog id="photo-dialog" class="photo-dialog" aria-labelledby="photo-title"><div class="dialog-header"><h2 id="photo-title">Building photo</h2><button id="photo-close" aria-label="Close enlarged photo">Close</button></div><div id="photo-content"></div></dialog>
   <div id="compare-bar" class="compare-bar" hidden><span id="compare-count"></span><button id="compare-choose">Choose another</button><button id="compare-open">Compare apartments</button><button id="compare-clear" class="secondary">Clear</button></div>
   <dialog id="options-dialog" class="guide-dialog options-dialog" aria-labelledby="options-title">
     <div class="dialog-header"><h2 id="options-title">More options</h2><button id="options-close">Done</button></div>
@@ -49,14 +59,16 @@
       <section class="options-section"><label class="field search">Find an apartment<input id="search" type="search" placeholder="Name or neighborhood"></label><p id="coverage-count" class="coverage-strip" aria-live="polite"></p><button id="browse-apartments">Show matching apartments</button></section>
       <section class="options-section" aria-labelledby="map-options-title"><h3 id="map-options-title">Show more on the map</h3>
         <fieldset class="layers"><legend class="sr-only">Optional map layers</legend>
-          <label><input id="layer-core" type="checkbox"> Other walking destinations</label>
-          <label><input id="layer-scenes" type="checkbox"> More nightlife places</label>
-          <label><input id="layer-daytime" type="checkbox"> Libraries &amp; coffee</label>
-          <label><input id="layer-streetcar" type="checkbox"> Streetcar route &amp; stops</label>
-          <label><input id="layer-zip" type="checkbox"> Approximate ZIP outlines</label>
+          <label data-category="food"><input id="layer-food" type="checkbox" checked><span class="layer-symbol food" aria-hidden="true"></span><span>Restaurants &amp; cafés<small>More places appear as you zoom in</small></span></label>
+          <label data-category="nightlife"><input id="layer-core" type="checkbox" checked><span class="layer-symbol nightlife" aria-hidden="true"></span><span>Other walking destinations</span></label>
+          <label data-category="nightlife"><input id="layer-scenes" type="checkbox" checked><span class="layer-symbol nightlife" aria-hidden="true"></span><span>More nightlife places</span></label>
+          <label data-category="library"><input id="layer-daytime" type="checkbox" checked><span class="layer-symbol library" aria-hidden="true"></span><span>Libraries &amp; coffee</span></label>
+          <label data-category="streetcar"><input id="layer-streetcar" type="checkbox" checked><span class="layer-symbol streetcar" aria-hidden="true"></span><span>Streetcar route &amp; stops</span></label>
+          <label><input id="layer-zip" type="checkbox"> ZIP boundaries · highlight selected ZIPs</label>
         </fieldset>
-        <div class="map-tools"><button id="overview">Show both ZIP areas</button><button id="zoom-in">Zoom in</button><button id="zoom-out">Zoom out</button><button id="three-d" aria-pressed="false">3D buildings</button></div>
-        <ul id="map-legend" class="map-legend" aria-label="Map symbol guide"></ul><p class="small muted">A number on a home pin means several apartments are close together. Tap it to choose one.</p>
+        <div class="map-tools"><button id="all-areas">Show all 13 ZIP areas</button><button id="overview">Show selected ZIP areas</button><button id="zoom-in">Zoom in</button><button id="zoom-out">Zoom out</button><button id="three-d" aria-pressed="true">3D buildings</button></div>
+        <p id="map-mode-note" class="small muted">3D is on. Choose Explore in 3D to see buildings near your selected apartment or In Good Co.</p>
+        <p id="map-provider-status" class="small muted" role="status"></p><ul id="map-legend" class="map-legend" aria-label="Map symbol guide"></ul><p class="small muted">A number on a home pin means several apartments are close together. Tap it to choose one.</p>
         <div class="map-key"><span class="key-walk">Walk</span><span class="key-transit">Streetcar</span><a href="https://www.census.gov/programs-surveys/geography/guidance/geo-areas/zctas.html" target="_blank" rel="noopener noreferrer">About ZIP outlines</a></div>
       </section>
       <details class="places-directory"><summary>Browse saved landmarks</summary><p class="small muted">All saved places stay available here. Some map pins still need checking.</p><div id="place-list"></div></details>
@@ -65,8 +77,8 @@
   </dialog>
   <dialog id="compare-dialog" aria-labelledby="compare-title"><div class="dialog-header"><div><h2 id="compare-title">Compare apartments</h2><p>Side by side, without changing my choices. On a phone, swipe the table sideways.</p></div><button id="compare-close" aria-label="Close comparison">Close</button></div><div id="comparison" class="comparison-scroll" tabindex="0" role="region" aria-label="Apartment comparison table; scroll sideways for all apartments"></div></dialog>
   <dialog id="places-guide-dialog" class="guide-dialog" aria-labelledby="places-guide-title"><div class="dialog-header"><div><p class="eyebrow">Why location matters</p><h2 id="places-guide-title">Places I want to live near</h2><p>These four nightlife destinations are in the Crossroads neighborhood. Choose one to see walking times from each apartment.</p></div><button id="places-guide-close" aria-label="Close place guide">Close</button></div><div id="places-guide-content" class="guide-content"></div></dialog>
-  <dialog id="about-dialog" class="guide-dialog" aria-labelledby="about-title"><div class="dialog-header"><h2 id="about-title">About this apartment search</h2><button id="about-close" aria-label="Close about this map">Close</button></div><div class="guide-content"><p>I’m comparing Kansas City apartments by location, space, cost and everyday comfort. Being able to walk to places I enjoy is one part of the decision—not an automatic winner.</p><h3>How to use it</h3><p>Choose one or both apartment ZIP codes. Tap a home pin or a photo for details. Open an apartment and choose “Add to comparison.” Then choose one or two more apartments to see them together. A number on a home pin opens a group of properties.</p><h3>What the labels mean</h3><p><strong>My preference rank</strong> is my personal order within each ZIP. <strong>Shortest walk</strong> is only distance, not a recommendation. Unranked apartments have not been put in a preference order.</p><p><strong>Unverified</strong> means we still need to check. Places without confirmed map pins remain in the list. Listed rents and vacancies can change; sources and check dates are in each apartment’s details.</p><h3>Build &amp; privacy</h3><p id="build-explanation"></p><p>V3.xlsx is the master list. Workbook changes need a rebuild and a separate publication step before the shared link updates. Viewing or comparing does not edit that list. Private housing paperwork is excluded.</p><a href="README.md">Full sources and sharing notes</a></div></dialog>
+  <dialog id="about-dialog" class="guide-dialog" aria-labelledby="about-title"><div class="dialog-header"><h2 id="about-title">About this apartment search</h2><button id="about-close" aria-label="Close about this map">Close</button></div><div class="guide-content"><p>I’m comparing Kansas City apartments by location, space, cost and everyday comfort. Being able to walk to places I enjoy is one part of the decision—not an automatic winner.</p><h3>How to use it</h3><p>Choose the apartment ZIP codes to show. Tap a home pin or a photo for details. Open an apartment and choose “Add to comparison.” Then choose one or two more apartments to see them together. A number on a home pin opens a group of properties.</p><h3>What the labels mean</h3><p><strong>My preference rank</strong> is my personal order within each ZIP. <strong>Shortest walk</strong> is only distance, not a recommendation. Unranked apartments have not been put in a preference order.</p><p><strong>Unverified</strong> means we still need to check. Places without confirmed map pins remain in the list. Listed rents and vacancies can change; sources and check dates are in each apartment’s details.</p><h3>Build &amp; privacy</h3><p id="build-explanation"></p><p>V3.xlsx is the master list. Workbook changes need a rebuild and a separate publication step before the shared link updates. Viewing or comparing does not edit that list. Private housing paperwork is excluded.</p><a href="README.md">Full sources and sharing notes</a></div></dialog>
   <div id="toast" role="status" class="toast" hidden></div>
-  <script src="map-data.js"></script><script type="module" src="app.js"></script>
+  <script src="map-data.js"></script><script type="module" src="app.js?v=map-details-20260915-r2"></script>
 </body>
 </html>

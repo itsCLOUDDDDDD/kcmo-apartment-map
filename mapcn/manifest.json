@@ -1,0 +1,14 @@
+{
+  "engine": "mapcn",
+  "maplibre": "6.9.1",
+  "files": {
+    "GLTFLoader-15RExzM_.js": "af4ae7427c5a3971cad770cf66fe5acd8432f65b89fbf921f4dbae239d8341f9",
+    "README.md": "2a01e14b58ebe50b14b8dbcc793c24fc6724276797a01122f7c03eee00c6d4c4",
+    "THIRD-PARTY-LICENSES.txt": "6f6c89e2b641fd5e8aec719e164aed19f4390144c19e6d11c8399a212fc129fc",
+    "apartment-runtime.css": "b063495cb645da0a14ff37d0e140648539b27851da3c07708586149d1e0f3cf0",
+    "apartment-runtime.js": "7a3d8691fdae7ec73a1a9ac77ad3915b000bd6979c4fe20d876215d76b177c75",
+    "maplibre-gl-shared.mjs": "6d03bca3b5e07d2726b121625281990589e26fcd735c45bcd4413b5d8d44690c",
+    "maplibre-gl-worker.mjs": "df44b49f9ab6db9e018a069bc73ceeab7e52f84b81fd65c2f280277244345670",
+    "three.module-CDmUygY0.js": "1d64a2337c920bc500ed0ef928bc3cd9a295f4270985153b092a13ec2bb54e64"
+  }
+}
