@@ -55,6 +55,9 @@ export function paymentStandardBadge(property,selectedUnit=null) {
   const minimum=Math.min(...results.map(result=>result.percent)),maximum=Math.max(...results.map(result=>result.percent));
   const low=minimum.toFixed(1),high=maximum.toFixed(1);
   const value=low===high?`${low}%`:`${low}–${high}%`;
-  const calculations=results.map((result,index)=>`${options[index].unit?'#'+options[index].unit:bedroomLabel(options[index].beds)}: (${dollars(result.rent)} rent + ${dollars(result.utility)} ${result.utilityType} + ${dollars(result.fees)} recorded monthly-fee planning assumption) ÷ ${dollars(result.standard)} recorded 1BR standard = ${result.percent.toFixed(1)}%`);
+  const calculations=results.map((result,index)=>{
+    const fees=result.fees===0?'$0 added required monthly fees':`${dollars(result.fees)} recorded required monthly fees`;
+    return `${options[index].unit?'#'+options[index].unit:bedroomLabel(options[index].beds)}: (${dollars(result.rent)} rent + ${dollars(result.utility)} ${result.utilityType} + ${fees}) ÷ ${dollars(result.standard)} recorded 1BR standard = ${result.percent.toFixed(1)}%`;
+  });
   return {label:'% of Std',value,basis,shortBasis,status:'estimate',minimum,maximum,description:`${calculations.join('; ')}. ${qualification}`};
 }

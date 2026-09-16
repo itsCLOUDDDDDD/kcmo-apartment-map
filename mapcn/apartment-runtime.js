@@ -45178,7 +45178,7 @@ var cI = [
 	"show-place",
 	"set-pitch",
 	"explore-3d"
-]), dI = class {
+]), dI = [-94.5799, 39.0942], fI = class {
 	element = document.createElement("div");
 	onAdd() {
 		this.element.className = "maplibregl-ctrl kcmo-provider-logo";
@@ -45190,7 +45190,7 @@ var cI = [
 	onRemove() {
 		this.element.remove();
 	}
-}, fI = class {
+}, pI = class {
 	map;
 	container;
 	options;
@@ -45208,7 +45208,7 @@ var cI = [
 	styleTimer;
 	resizeObserver;
 	frame = 0;
-	logo = new dI();
+	logo = new fI();
 	scale = new xP({
 		maxWidth: 90,
 		unit: "imperial"
@@ -45339,7 +45339,7 @@ var cI = [
 			try {
 				this.installLayers(), this.styleGeneration++, this.ready = !0, this.logo.element.hidden = this.provider !== "maptiler", this.container.dataset.mapProvider = this.provider, this.container.dataset.mapStyleGeneration = String(this.styleGeneration), this.container.dataset.mapReady = "true", this.map.resize(), this.applySnapshot();
 				let e = this.pendingCamera;
-				this.pendingCamera = null, e ? this.command(e) : this.everReady || this.fitZips(!0, !1), this.everReady = !0, this.publishStatus({
+				this.pendingCamera = null, e ? this.command(e) : this.everReady || this.showDowntownOverview(), this.everReady = !0, this.publishStatus({
 					status: this.provider === "maptiler" ? "ready" : "fallback",
 					message: this.provider === "maptiler" ? "Map ready." : "Backup street map active. Apartment pins and saved routes remain available."
 				}), this.emit("kcmo:map-ready", {
@@ -45950,6 +45950,20 @@ var cI = [
 		let n = KF(this.options.data.geography.zipAreas.geometry.features.filter((t) => e || this.state.zips.includes(String(t.properties?.ZCTA5))));
 		n.length && this.fitCoordinates(n, 14, t, this.state.threeD ? 30 : 0);
 	}
+	showDowntownOverview() {
+		this.fitCheck = null, this.dismissPopup(), this.map.jumpTo({
+			center: dI,
+			zoom: 13.65,
+			pitch: 0,
+			bearing: 0,
+			padding: {
+				top: 0,
+				bottom: 0,
+				left: 0,
+				right: 0
+			}
+		}), this.cameraDiagnostics();
+	}
 	command(e) {
 		if (this.destroyed) return;
 		if (e.type === "dismiss-popup") {
@@ -46023,7 +46037,7 @@ var cI = [
 	destroy() {
 		this.destroyed || (this.destroyed = !0, clearTimeout(this.styleTimer), cancelAnimationFrame(this.frame), this.resizeObserver.disconnect(), this.landmark.destroy(), document.removeEventListener("visibilitychange", this.updateMotion), this.dismissPopup(), this.propertyMarkers.forEach((e) => e.remove()), this.placeMarkers.forEach((e) => e.remove()), this.map.off("style.load", this.onStyleLoad), this.map.off("error", this.onError), this.map.off("moveend", this.onMoveEnd), this.map.off("zoom", this.onZoom), this.map.off("click", this.onClick), this.map.off("mousemove", this.onMouseMove), this.map.off("mouseout", this.onMouseOut), this.map.off("idle", this.onIdle), this.map.off("movestart", this.onMoving), this.map.off("dragstart", this.onUserMove), this.map.hasControl(this.scale) && this.map.removeControl(this.scale), this.map.hasControl(this.logo) && this.map.removeControl(this.logo), this.container.dataset.mapReady = "false");
 	}
-}, pI = class extends l.Component {
+}, mI = class extends l.Component {
 	state = { failed: !1 };
 	static getDerivedStateFromError() {
 		return { failed: !0 };
@@ -46035,11 +46049,11 @@ var cI = [
 		return this.state.failed ? null : this.props.children;
 	}
 };
-function mI({ connect: e }) {
+function hI({ connect: e }) {
 	let { map: t } = IF();
 	return (0, l.useEffect)(() => t ? e(t) : void 0, [t, e]), null;
 }
-var hI = /* @__PURE__ */ new Set([
+var gI = /* @__PURE__ */ new Set([
 	"focus-apartment",
 	"focus-route",
 	"fit-all",
@@ -46052,7 +46066,7 @@ var hI = /* @__PURE__ */ new Set([
 	"explore-3d",
 	"reload-style"
 ]);
-function gI(e, t) {
+function _I(e, t) {
 	if (!YF(t.initialState)) return Promise.reject(/* @__PURE__ */ Error("The map state is incomplete."));
 	if (t.signal?.aborted) return Promise.reject(new DOMException("Map mounting was cancelled.", "AbortError"));
 	FP(t.workerUrl);
@@ -46061,7 +46075,7 @@ function gI(e, t) {
 		YF(t) && (i = JF(t), r?.snapshot(i));
 	}, l = (e) => {
 		let t = e.detail;
-		t && hI.has(t.type) && (r ? r.command(t) : a = { ...t });
+		t && gI.has(t.type) && (r ? r.command(t) : a = { ...t });
 	};
 	window.addEventListener("kcmo:map-state", c), window.addEventListener("kcmo:map-command", l);
 	let d = () => {
@@ -46077,7 +46091,7 @@ function gI(e, t) {
 		};
 		t.signal?.addEventListener("abort", h, { once: !0 }), s = () => t.signal?.removeEventListener("abort", h);
 		let g = (n) => {
-			let o = new fI(n, e, t, i, {
+			let o = new pI(n, e, t, i, {
 				ready: m,
 				failed: p
 			});
@@ -46089,7 +46103,7 @@ function gI(e, t) {
 			h();
 			return;
 		}
-		n.render(/* @__PURE__ */ (0, OF.jsx)(pI, {
+		n.render(/* @__PURE__ */ (0, OF.jsx)(mI, {
 			onError: p,
 			children: /* @__PURE__ */ (0, OF.jsx)(zF, {
 				className: "kcmo-mapcn",
@@ -46102,10 +46116,10 @@ function gI(e, t) {
 				zoom: 11,
 				attributionControl: { compact: !0 },
 				canvasContextAttributes: { antialias: !0 },
-				children: /* @__PURE__ */ (0, OF.jsx)(mI, { connect: g })
+				children: /* @__PURE__ */ (0, OF.jsx)(hI, { connect: g })
 			})
 		}));
 	});
 }
 //#endregion
-export { gI as mountApartmentMap };
+export { _I as mountApartmentMap };

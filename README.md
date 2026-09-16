@@ -16,7 +16,7 @@ The map uses MapTiler Dataviz Light (`dataviz-v4-light`), with OpenFreeMap Posit
 
 ## Apartments and boundaries
 
-The research export contains **105 apartment records, 48 apartment pins and 28 saved places** from the current V3 candidate table within ZIPs 64105, 64106, 64108 and 64109. All 57 records without confirmed coordinates remain in the list. The source workbook SHA256 is `47b56cfde18c91ed2ad5d1243216dacf84b848fb5a6a0681f19e9c7546c6502c`. This static snapshot updates when rebuilt. The four Second + Delaware walking routes use a separately documented street-facing origin; the Census building pin remains unchanged.
+The research export contains **105 apartment records, 48 apartment pins and 28 saved places** from the current V3 candidate table within ZIPs 64105, 64106, 64108 and 64109. All 57 records without confirmed coordinates remain in the list. The source workbook SHA256 is `a9de65df13689135eeee61e671be34d061dde7221838c7b5efaf2996f103b0a8`. This static snapshot updates when rebuilt. The four Second + Delaware walking routes use a separately documented street-facing origin; the Census building pin remains unchanged.
 
 ## Scene and venue evidence
 
@@ -24,9 +24,9 @@ Venue popups and “Meet these places” link 19 reviewed Scene event/program re
 
 The four priority anchors remain In Good Co, recordBar, MOD and Third Place Lounge. The optional **Access to all four** sort uses each apartment’s longest recorded walk among those four. It lists incomplete records after fully routed ones without hiding them; “all four within five minutes” appears only when all four saved routes support it. New saved places do not become priority anchors.
 
-Bundled `kc-zctas.geojson` covers exactly 64101, 64105, 64106, 64108, 64109, 64110, 64111, 64112, 64113, 64114, 64116, 64124 and 64127. These are **approximate ZIP areas** from the 2020 Census, not USPS delivery boundaries. `kc-zctas.metadata.json` records source, vintage and checksum. Boundaries start off; enabling them shows all 13 and emphasizes selected areas. Nine areas have no exported apartments and show an empty state.
+Bundled `kc-zctas.geojson` covers exactly 64101, 64105, 64106, 64108, 64109, 64110, 64111, 64112, 64113, 64114, 64116, 64124 and 64127. These are **approximate ZIP areas** from the 2020 Census, not USPS delivery boundaries. `kc-zctas.metadata.json` records source, vintage and checksum. Boundaries start on and emphasize selected areas. Nine areas have no exported apartments and show an empty state.
 
-Initial framing includes all 13 polygons. More options has separate actions for selected areas and all areas. Card/pin selection focuses an apartment. Ordinary renders preserve camera position.
+Fresh loads start in 2D at the downtown overview, approximately the 1,000-foot scale. Initial card selection and carousel browsing highlight pins without changing the camera. Image completion resizes the map without focusing an apartment. Pool, Rooftop, Patio and Gym float along the mobile map edge. The ZIP picker filters apartments; separate Fit selected ZIP boundaries and Fit all 13 ZIP boundaries actions move the camera.
 
 ## Configuration and rebuilding
 
@@ -38,7 +38,7 @@ From the workspace root, `node 06_scripts_and_tools/fetch_kc_zctas.mjs` refreshe
 
 In the local source workspace, run `pnpm run build:apartment` from `outputs/mapcn-local-20260915` to compile the website runtime, manifest and worker files. Relative assets support GitHub Pages subdirectories. Deploy the reviewed site files, configuration, bridge, presentation helpers, geometry, landmark assets and entire `mapcn/` folder together. The source workspace and rebuild tools are not part of this public bundle.
 
-Fresh loads enable all destination categories and 3D; ZIP boundaries start off. Map controls let visitors switch to 2D, explore a selected apartment in 3D or show all 13 ZIP areas. Apartment details retain floor-plan and available-unit links, Street View, nearby destinations and comparisons. Temporary comparisons and preference choices remain session-only.
+Fresh loads enable saved destination categories and ZIP boundaries in 2D. Optional restaurant/cafe basemap labels start off. Map controls let visitors explore a selected apartment in 3D or fit ZIP areas. Apartment details retain floor-plan and available-unit links, Street View, nearby destinations and comparisons. Temporary comparisons and preference choices remain session-only.
 
 Keep the workbook, local research, backups, QA tools and source dependencies private. Git history preserves previous public versions for rollback.
 
@@ -46,6 +46,6 @@ Keep the workbook, local research, backups, QA tools and source dependencies pri
 
 The site includes browsable photos, unit-aware percentage-of-standard estimate badges, and the revised detail order. Star #308 photos are user-provided, distinct from its building photo; ZIP 64108 is retained with the supplied 64100 discrepancy noted. Unknown cost inputs display Unverified, and historic percentages are never substituted for a selected unit.
 
-## Monthly fee planning assumption
+## Cost estimates
 
-V3 applies a user-approved **$100 monthly-fee planning assumption** to all 226 candidate rows. Existing percentage-of-standard calculations include it and identify it as an estimate. This is not a verified lease charge or voucher approval; it may overlap charges already included in advertised rent, especially at Jazz Hill.
+The superseded blanket $100 monthly fee has been removed. The $100 electricity planning estimate remains only for supported CP Lofts and Jazz Hill records; Second + Delaware has a recorded $0 electricity estimate. Official utility allowances remain Unverified. A zero added-fee input means no separately verified charge is added to this planning scenario, not a guarantee that all fees are zero. Cards and details calculate percentages from current unit rents and supported cost inputs using the recorded 1BR standard. Missing utility inputs remain Unverified, including Star Lofts; historical percentages are not reused for its selected units. These estimates are not voucher approval.
