@@ -1,5 +1,20 @@
 # Kansas City apartment map
 
+## Start here: shared ChatGPT and Codex context
+
+This repository is the shared website/source reference. The existing live Google Sheet is the property-data master; provide its access separately. Private workbooks and research are not stored here. Read these documents explicitly when starting a new chat; a project connection is not a copy of the full conversation.
+
+- [Agent instructions](AGENTS.md): working rules and source ownership.
+- [Current status and next action](docs/CURRENT-STATUS.md): current decisions, completed work and unresolved automation.
+- [Sheet-to-website mapping](docs/DATA-FLOW.md): inputs, transformations, display fields and known gaps.
+- [Build and publication instructions](docs/BUILD.md): prerequisites, preview and GitHub Desktop steps.
+- [ChatGPT Project instructions](docs/CHATGPT-PROJECT-INSTRUCTIONS.md): text to paste into the project's settings; the same context applies to Codex through AGENTS.md.
+- [Workbook exporter source](tools/workbook-export/README.md) and [editable renderer](src/map-runtime/README.md).
+
+The September 16 sections below describe the existing published snapshot. Later sheet changes are recorded in current status and are not automatically reflected in the website. A website push does not fetch the latest sheet.
+
+## Published snapshot — September 16
+
 September 16, 2026 release. [Open the apartment map](https://itscloudddddd.github.io/kcmo-apartment-map/). Compact mobile controls, snap-scrolling apartment cards and contextual community feedback build on the existing amenity and ZIP/search filters. The static snapshot contains 105 properties.
 
 ## Mobile layout and community feedback
@@ -34,13 +49,11 @@ This is a static website hosted with GitHub Pages. For a local preview, serve th
 
 The public browser key is restricted in MapTiler to `itscloudddddd.github.io`, `localhost` and `127.0.0.1`. Keep the linked MapTiler logo and attribution. The account was verified on the **Free** plan: [current pricing](https://www.maptiler.com/cloud/pricing/) includes 100,000 API requests/month for MapLibre; reaching the limit pauses service. No paid upgrade was made. Analytics showed zero current-period requests at inspection and may lag.
 
-From the workspace root, `node 06_scripts_and_tools/fetch_kc_zctas.mjs` refreshes the saved Census source and bundled geometry. `node 06_scripts_and_tools/build_map_geography.mjs` rebuilds from saved sources. The existing `build_shared_apartment_map.mjs` workflow embeds geography into map-data.js under its workbook/export rules.
-
-In the local source workspace, run `pnpm run build:apartment` from `outputs/mapcn-local-20260915` to compile the website runtime, manifest and worker files. Relative assets support GitHub Pages subdirectories. Deploy the reviewed site files, configuration, bridge, presentation helpers, geometry, landmark assets and entire `mapcn/` folder together. The source workspace and rebuild tools are not part of this public bundle.
+The workbook exporter and editable renderer are now included as source. Follow [the current build instructions](docs/BUILD.md), which require an explicit workbook snapshot and distinguish local previews from publication. The exporter reuses published geography; raw-feed refresh tools and private source evidence remain outside this repository. Runtime and apartment-data builds are separate. Deploy reviewed website files and the entire generated mapcn folder together when those assets change.
 
 Fresh loads enable saved destination categories and ZIP boundaries in 2D. Optional restaurant/cafe basemap labels start off. Map controls let visitors explore a selected apartment in 3D or fit ZIP areas. Apartment details retain floor-plan and available-unit links, Street View, nearby destinations and comparisons. Temporary comparisons and preference choices remain session-only.
 
-Keep the workbook, local research, backups, QA tools and source dependencies private. Git history preserves previous public versions for rollback.
+Keep the workbook, local research, credentials, backups and private QA evidence out of this public repository. Selected code and synthetic tests are available for shared implementation context. Git history preserves previous public versions for rollback.
 
 ## Detail and gallery features
 

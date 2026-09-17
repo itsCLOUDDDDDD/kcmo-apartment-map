@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {exactPhotoLink,galleryLink} from './map_public_links.mjs';
+const scoped='Exact-unit #203 gallery: https://example.com/unit203; Exact-unit #303 gallery: https://example.com/unit303';
+assert.equal(exactPhotoLink(scoped,'203'),'https://example.com/unit203');
+assert.equal(exactPhotoLink(scoped,'303'),'https://example.com/unit303');
+assert.equal(exactPhotoLink(scoped,'2030'),null);
+assert.equal(exactPhotoLink('Exact-unit #203 and #303 gallery: https://example.com/shared','203'),null);
+assert.equal(exactPhotoLink('Model unit #203: https://example.com/model','203'),null);
+assert.equal(exactPhotoLink('Exact-unit #203 not verified: https://example.com/photo','203'),null);
+assert.equal(exactPhotoLink('Exact-unit photos not found; Building gallery: https://example.com/building','203'),null);
+assert.equal(exactPhotoLink('Exact-unit Unit 206 interior photo: https://example.com/206','206'),'https://example.com/206');
+assert.equal(galleryLink('Building gallery: https://example.com/building'),'https://example.com/building');
+console.log('PASS: exact-unit photo identity matching; separate scoped unit galleries; ambiguous, model, and unverified photos excluded.');

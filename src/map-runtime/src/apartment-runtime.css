@@ -1,0 +1,58 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@source "./components/ui/map.tsx";
+
+/* No Tailwind reset or global shadcn theme: the apartment UI keeps its style. */
+.kcmo-mapcn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  --color-background: #fff;
+  --color-muted-foreground: #526573;
+}
+.kcmo-provider-logo { margin: 0 0 4px 10px !important; }
+.kcmo-provider-logo a { display: block; width: 100px; height: 25px; }
+.kcmo-provider-logo img { display: block; width: 100px; height: 25px; }
+.kcmo-provider-logo[hidden] { display: none; }
+.kcmo-mapcn button:focus-visible, .kcmo-mapcn a:focus-visible { outline: 3px solid #285c4b; outline-offset: 3px; }
+.kcmo-mapcn .maplibregl-popup-content { max-height: min(330px, 60dvh); overflow-y: auto; }
+
+/* Scope above the page's earlier marker styles without changing its cards. */
+#map .property-pin, #map .venue-pin { position: absolute; }
+#map .property-pin .pin-face { background: #285c4b; border-radius: 50%; box-shadow: 0 2px 8px #123a2c42; }
+#map .property-pin .pin-face::after { display: none; }
+#map .property-pin .group-pin { width: 38px; height: 38px; }
+#map .property-pin.selected .pin-face { outline: 3px solid #8cb5a1; outline-offset: 2px; }
+#map .venue-pin { --venue-color: #805287; color: var(--venue-color); width: 44px; height: 44px; min-height: 44px; }
+#map .venue-pin.category-coffee { --venue-color: #b17c29; }
+#map .venue-pin.category-food { --venue-color: #b75c40; }
+#map .venue-pin.category-library { --venue-color: #326fa3; }
+#map .venue-pin .place-dot { width: 27px; height: 27px; top: 8px; left: 8px; color: white; background: var(--venue-color); border: 2px solid white; box-shadow: 0 2px 5px #24343d35; }
+#map .category-nightlife .place-dot { border-radius: 5px; transform: rotate(45deg); }
+#map .category-nightlife .place-icon { transform: rotate(-45deg); }
+#map .category-coffee .place-dot, #map .category-food .place-dot { border-radius: 50% 50% 50% 5%; transform: rotate(-45deg); }
+#map .category-coffee .place-icon, #map .category-food .place-icon { transform: rotate(45deg); }
+#map .category-library .place-dot { border-radius: 6px; }
+#map .venue-pin .place-icon { width: 15px; height: 15px; }
+#map .venue-pin.overview-pin:not(.active):not(.landmark-pin) .place-dot { width: 21px; height: 21px; top: 11px; left: 11px; }
+#map .venue-pin.overview-pin:not(.active):not(.landmark-pin) .place-icon { width: 12px; height: 12px; }
+#map .venue-pin .place-label { left: 39px; max-width: 158px; padding: 3px 5px; border-radius: 5px; background: #fafbf8a6; color: #3e4550; font-size: 11px; font-weight: 500; box-shadow: none; text-shadow: 0 1px 1px #fff, 1px 0 2px #fff, -1px 0 2px #fff; line-height: 1.3; pointer-events: none; }
+#map .venue-pin.label-left .place-label { left: auto; right: 39px; }
+#map .venue-pin .place-label small { color: #5d6167; font-size: 9px; font-weight: 400; }
+#map .venue-pin.active .place-label { background: var(--venue-color); color: #fff; font-weight: 650; padding: 6px 9px; box-shadow: 0 3px 10px #28334424; text-shadow: none; }
+#map .venue-pin.active .place-label small { color: #fff; }
+#map .venue-pin.active .place-dot { box-shadow: 0 0 0 3px #fff8, 0 2px 7px #24343d42; }
+#map .venue-pin:focus-visible { outline: 3px solid var(--venue-color); outline-offset: 2px; border-radius: 8px; z-index: 65; }
+#map .venue-pin.labels-hidden .place-label { display: none; }
+#map .control-occluded { visibility: hidden; pointer-events: none; }
+#map .landmark-pin .place-dot { width: 38px; height: 38px; left: 3px; top: 3px; border: none; background: transparent; box-shadow: none; transform: none; }
+#map .landmark-pin .place-dot img { display: block; width: 38px; height: 38px; filter: drop-shadow(0 2px 3px #45344c30); }
+#map .landmark-pin.active .place-dot { box-shadow: none; }
+#map[data-map-landmark-visible="true"] .landmark-pin .place-dot img { opacity: 0; }
+#map[data-map-landmark-visible="true"] .landmark-pin { width: 52px; height: 84px; min-height: 84px; }
+#map[data-map-motion="running"] .landmark-pin.priority .place-dot img { animation: kcmo-landmark-float 5s ease-in-out infinite; }
+#map[data-map-motion="running"] .property-pin.selected .pin-face { animation: kcmo-selection-glow 4s ease-in-out infinite; }
+@keyframes kcmo-landmark-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes kcmo-selection-glow { 0%, 100% { box-shadow: 0 0 0 3px #80a89120, 0 2px 8px #123a2c42; } 50% { box-shadow: 0 0 0 7px #80a89135, 0 2px 8px #123a2c42; } }
+@media (prefers-reduced-motion: reduce) { #map .landmark-pin.priority .place-dot img, #map .property-pin.selected .pin-face { animation: none !important; } }
+@media (max-width: 800px) { #map .venue-pin .place-label { max-width: 135px; font-size: 10px; } #map .venue-pin.active .place-label { padding: 5px 7px; } }
