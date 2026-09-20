@@ -1,9 +1,7 @@
-# Workbook export source
+# Workbook exporter
 
-The exporter and its two local helpers were copied from the existing local housing workspace on September 17, 2026. The changes for this repository are limited to paths: require explicit --workbook, default to ignored .local-preview output, and reuse geography from the current public map-data.js unless --geography is supplied. Record parsing and joins remain the older logic; see ../../docs/CURRENT-STATUS.md for compatibility gaps.
+Run `node tools/workbook-export/build_shared_apartment_map.mjs --workbook local-input/fresh-master.xlsx` from the repository root. The live Sheet remains master; the explicit XLSX is a private read-only build snapshot. Python 3 and Node.js 18+ are required.
 
-The entry point imports `@oai/artifact-tool`. This is a separately supplied spreadsheet runtime, not included here and not claimed to be publicly installable. A ChatGPT/Codex file-processing environment may provide it; verify actual availability. Do not send the user to install an unverified similarly named package or promise the exporter works on every fresh clone.
+The wrapper calls `tools/research/build_preview.py`, which uses `read_xlsx.py`, `build.cjs`, and `core.cjs`. It validates stable IDs, address-bound coordinates/routes, current Google measurements, unit/media ownership and visibility. Geometry availability is independent of walking-time validity. Output and validation reports stay under `.local-preview/`; this command never commits, publishes, edits the Sheet or rewrites the workbook.
 
-`map_public_links.mjs` handles public URLs and exact-unit photo attribution. `map_comparison_fields.mjs` maps cost/category inputs and validates route origins. `test_map_public_links.mjs` exercises unit photo scope using synthetic URLs and needs only Node.js.
-
-No raw workbook, live sheet URL, private research or credential is in this directory. The original staging flag is retained for source review, not a recommended new competing data source. See ../../docs/BUILD.md before execution.
+See [build and publication checks](../../docs/BUILD.md), [data mapping](../../docs/DATA-FLOW.md), and [current release state](../../docs/CURRENT-STATUS.md).

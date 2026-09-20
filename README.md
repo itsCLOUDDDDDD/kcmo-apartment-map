@@ -1,5 +1,11 @@
 # Kansas City apartment map
 
+## Current master snapshot — September 20
+
+The website uses the latest reviewed Google Sheet snapshot: **106 public properties, 104 mapped, two unresolved, and 2,808 Google walking measurements**. All 104 mapped properties have complete 27-venue and four-priority coverage. Missing path geometry does not invalidate walking times and is never invented. The priority venues are recordBar, Green Lady Lounge, MOD and In Good Co; Third Place remains an additional destination. The live Sheet remains the master. See [current status](docs/CURRENT-STATUS.md) and [build instructions](docs/BUILD.md).
+
+The September 16 sections below describe the historical release; current counts, priorities and source ownership above supersede those older details.
+
 ## Start here: shared ChatGPT and Codex context
 
 This repository is the shared website/source reference. The existing live Google Sheet is the property-data master; provide its access separately. Private workbooks and research are not stored here. Read these documents explicitly when starting a new chat; a project connection is not a copy of the full conversation.

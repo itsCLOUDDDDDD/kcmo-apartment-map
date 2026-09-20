@@ -81,6 +81,8 @@ const oneNineVinePhotos = [
 ];
 
 export function photoSourceNote(property) {
+  if(property.schemaVersion===3)return 'Building, amenity and exact-unit photos are scoped separately. Each photo retains its own source and checked date; a building gallery does not establish an apartment interior.';
+
   if (property.id === 'old-town-star-lofts') {
     return 'The user supplied ZIP 64100 with the #308 photos. It differs from the existing property record, 64108, which is retained. The photo attribution and ZIP discrepancy have not been independently verified.';
   }
@@ -91,6 +93,14 @@ export function photoSourceNote(property) {
 }
 
 export function propertyPhotos(property) {
+  if(property.schemaVersion===3){
+    const list=[...(property.media||[]).filter(p=>p.kind!=='link').map(p=>({...p,scope:({building:'Building / community',amenity:'Amenity',floorplan:'Published floor plan'})[p.scope]||p.scope,unit:null})),
+      ...(property.units||[]).flatMap(u=>(u.photos||[]).filter(p=>p.kind!=='link').map(p=>({...p,unit:u.unit,scope:'Exact-unit association · #'+u.unit})))];
+    const seen=new Set();
+    return list.filter(p=>{const key=p.url+'|'+(p.unit||'building');if(seen.has(key))return false;seen.add(key);return true;})
+      .map(p=>({...p,id:p.id||p.url,attribution:[p.attribution,p.checked?'Photo evidence checked '+p.checked:'Photo check date not recorded'].filter(Boolean).join(' · ')}));
+  }
+
   const result = property.photo ? [{
     id: `${property.id}-saved`, url: property.photo,
     caption: property.photoCaption || photoScope(property), scope: photoScope(property),
@@ -109,7 +119,7 @@ export function propertyPhotos(property) {
 }
 
 export function preferredPhotoIndex(photos, selectedUnit) {
-  if (!selectedUnit) return 0;
+  if (!selectedUnit) return photos.findIndex(photo=>!photo.unit);
   const index = photos.findIndex(photo => photo.unit === selectedUnit.unit);
-  return index < 0 ? 0 : index;
+  return index < 0 ? photos.findIndex(photo=>!photo.unit) : index;
 }

@@ -16,6 +16,20 @@ function optionsFor(property,selectedUnit) {
 }
 
 function estimate(property,option) {
+  if(property.schemaVersion===3){
+    const standard=property.oneBedroom?.standard,c=option.costs||{},utility=c.planningUtilities??property.costs?.planningUtilities;
+    const reasons=[];
+    if(!Number.isInteger(option.beds)||option.beds<0)reasons.push('bedroom count unverified');
+    if(!positive(option.rent))reasons.push('exact rent unverified');
+    if(!positive(standard))reasons.push('recorded 1BR payment standard unverified');
+    if(!amount(utility))reasons.push('utility planning standard missing');
+    if(c.feeStatus!=='Confirmed'||!amount(c.requiredMonthlyFees)||!c.feeSource||!c.feesChecked)reasons.push('required monthly fees unresolved');
+    if(reasons.length)return {reasons};
+    const gross=option.rent+utility+c.requiredMonthlyFees;
+    return {percent:gross/standard*100,gross,rent:option.rent,utility,utilityType:'user-selected utility planning standard (not an official allowance)',
+      fees:c.requiredMonthlyFees,standard};
+  }
+
   const standard=property.oneBedroom?.standard, costs={...property.costs,...option.costs};
   const allowance=Object.hasOwn(option,'utilityAllowance')?option.utilityAllowance:property.oneBedroom?.utilityAllowance;
   const utility=amount(allowance)?allowance:costs.electricityEstimate;

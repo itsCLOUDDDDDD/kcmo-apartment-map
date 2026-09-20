@@ -1,5 +1,8 @@
 // Summarize individual claims: uncertainty about one feature must not erase another.
 export function amenitySummary(key, value) {
+  if(key==='laundry'&&value==='Installed in-unit')return {label:'In-unit W/D · confirmed input',status:'present'};
+  if(key==='cooling'&&value==='Central HVAC')return {label:'Central HVAC · confirmed input',status:'present'};
+
   const raw=String(value||'Unverified'),text=raw.toLowerCase();
   const uncertain=s=>/unverified|unknown|not found|not confirmed|not established|not listed|not advertised|not verified|no (?:public |confirmed )?(?:listing|evidence)|source inaccessible/.test(s);
   const clauses=text.split(/[.;]|\bbut\b/).map(s=>s.trim()).filter(Boolean);
@@ -47,6 +50,9 @@ export function streetViewAction(property) {
 }
 
 export function recordedUnits(property) {
+  // Schema 3 never reparses notes or inherits a building check date/source into an apartment.
+  if(property.schemaVersion===3)return (property.units||[]).map(u=>({...u,structured:true,checked:u.checked||null,source:u.source||null}));
+
   const records=(property.units||[]).map(unit=>({...unit,structured:true,checked:unit.checked||property.checked||'',source:unit.source||property.links?.units||''}));
   if(records.length)return records;
   const raw=String(property.unitOptions||'');
