@@ -6,6 +6,28 @@ The reviewed export is bundled from `aistudio/src/data/housing-export.json` thro
 
 The verified current live Google Sheet owns property and venue research. A fresh explicit XLSX snapshot supplies Candidates, Map Details, Map Places, Map Routes, Scene & Anchors, cost settings/standards and Route Summary. `read_xlsx.py` reads it without modification; `core.cjs` exports public allowlisted facts; `build.cjs` invokes that shared core for the data export. Only the reviewed JSON is passed to AI Studio; the legacy preview renderer is not copied over the current interface.
 
+## Private discovery history — live restoration applied September 21, 2026
+
+The existing live master now carries property-level discovery history in **KCMO Candidates**, joined only by its existing **Property ID**. The baseline was checked against the live rows: 231 IDs, comprising 219 recovered collection histories, ten unrecovered origins, and two ambiguous identities. No source occurrence became a new candidate row. Newer rows are preserved by the updater; none were present during this run.
+
+| Sheet field | Historical meaning |
+|---|---|
+| Sources / Checked — reused | Existing text/links retained, followed by a labeled recovery block with source batch, exact file/URL, record ID/page/row, source date, collection date, earliest evidenced snapshot and register reference. Recovery date is not a new website check. |
+| Original inclusion reason — added | Attributed original research wording or documented collection link; distinguish recovered evidence from proof of first causal inclusion. |
+| Historical program / stage — added | Source-reported program and proposed/applied/awarded/operating/unspecified stage, with dates and occurrence citations. No new eligibility classification. |
+| Historical unit counts — added | Source-specific total/restricted/market counts, dates and project/building scope. Keep differing versions; do not sum overlapping sources. |
+| Historical AMI / set-aside — added | Separately attributed terms and unexpanded source codes; AMI is not a restricted-unit percentage. |
+| Provenance recovery status — added | Recovered collection evidence, **Original source not recovered**, or unresolved mapping. |
+| Provenance conflicts — added | Recorded contradictions, count versions, scope/identity issues and missing origins. No automatic conflict resolution, exclusion reversal or merge. |
+
+The verified positions for this run are BW and CV:DA; integrations must resolve current headers rather than rely on these letters. Only BW was unhidden; existing supporting-column visibility and row heights otherwise remain unchanged. Current Housing, Tax Credit / LIHTC, Mixed-Income, Accepts HCV, Date Added, Property evidence checked, Notes, all cost/unit/media/location/route fields and website visibility were preserved.
+
+Full occurrences remain in the private `PROPERTY-SOURCE-REGISTER.csv`, outside this public repository. Its PSR occurrence IDs are source references, never replacement Property IDs. Backups, the complete field plan, source-citation index and original research remain private and unchanged. Concise property-level summaries stay in Candidates; the 11,180 occurrences do not become candidate rows. Original HUD collection and later AHO discovery stay distinct. Multiple sources, dates, counts and project/building scopes remain attributed rather than silently reconciled.
+
+Appearance in the original research is sufficient for candidate retention, not confirmation of current LIHTC or HCV eligibility. Current marketing or website silence does not erase historical evidence. Keep current eligibility/HCV evidence separate; preserve explicit exclusions and website visibility. Ten unrecovered origins, including 1989 Main, retain **Original source not recovered**. The two Quinlan Row identities remain unresolved; neither receives ambiguous evidence automatically and neither is merged.
+
+**Applied:** 1,617 provenance data cells for 231 IDs plus six headers; native backup and independent fresh-export read-back verified all 16 tabs, with unrelated data and formulas unchanged. **Actual identical repeat run:** zero writes. These private history fields have no new public export mapping. This documentation publication does not export data, rebuild the frontend, edit the Sheet or change website assets; unrelated installers and release records below retain their existing status.
+
 ## Identity, visibility and research
 
 Property facts, locations and walking records join only by stable `Property ID`. Destinations join by `Place ID`/`Destination ID`. Names never bind facts or route measurements. Duplicate required IDs stop export. Candidate `Website visibility = Yes` and the existing reviewed ZIP scope control public inclusion. Missing coordinates retain list-only properties. Original candidate addresses stay separate from geocoder-matched evidence in the master.

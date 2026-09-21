@@ -1,3 +1,19 @@
+# Discovery history restoration — September 21, 2026
+
+Applied September 21, 2026: 231 existing candidate IDs received 1,617 provenance data-cell updates and six missing history headers. Reused **Sources / Checked** for an appended, attributed discovery block; existing content and links remain. Added **Original inclusion reason**, **Historical program / stage**, **Historical unit counts**, **Historical AMI / set-aside**, **Provenance recovery status**, and **Provenance conflicts**. Sources / Checked and the six new supporting fields are visible. No candidate rows were added or merged.
+
+The completed 11,180-occurrence register and fresh live master reconcile to **219 recovered collection histories + ten unrecovered origins + two ambiguous Quinlan identities = 231 IDs**. No newer rows were present. The ten missing origins, including 1989 Main, retain **Original source not recovered**. Ambiguous evidence was not assigned to either Quinlan Row ID. Historical counts/dates and source-reported stages remain attributed and separate from current eligibility/HCV evidence. Research inclusion is sufficient for candidate retention; explicit exclusions and website visibility are unchanged.
+
+A fresh live export and verified native copy preceded writing. Read-back across all 16 tabs found the exact intended cells and zero unrelated values, formulas, existing notes, styles, row-height or hidden-column changes. Only the existing Sources / Checked column was deliberately revealed. Nineteen local checks passed; the actual identical live rerun returned **zero writes**. The isolated restoration script was added without replacing existing code or triggers.
+
+**Sheet restoration is applied, not pending.** The 11,180 detailed source occurrences remain in the private `PROPERTY-SOURCE-REGISTER.csv`, outside this public repository. Original HUD collection and later AHO discovery remain distinct batches. Backups, the field-level change plan and detailed verification also remain private.
+
+Appearance in the original housing research establishes a research candidate, not confirmed current LIHTC or HCV eligibility. Current website silence, market-rate advertising, unconfirmed restricted inventory or unconfirmed HCV acceptance do not erase historical evidence or require removing a candidate. Preserve explicit user exclusions separately; this rule does not reinstate exclusions or change website visibility.
+
+This documentation publication updates only CURRENT-STATUS.md and DATA-FLOW.md. It does not rerun research, edit the Sheet, export data, rebuild the frontend or change application/data assets. The newer amenity, design and release entries below remain intact.
+
+---
+
 # Expanded property-details release — September 21, 2026
 
 The user approved the local expanded-card design and explicitly authorized commit and publication. Frontend source commit: `a534b04e39992594f75bc154a35e915943ac01f3` in `itsCLOUDDDDDD/aistudio`. This is a presentation-only release using the unchanged, previously published Sheet export; no fresh research or Sheet edits were performed.
