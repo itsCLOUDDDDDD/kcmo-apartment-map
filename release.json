@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "912f28c23d9947b85ba5c997919b53927a76993b",
+  "frontendCommit": "aaed6f5099c645f865d8246bbfa98643cac46ef5",
   "housingExportGeneratedAt": "2026-09-20T23:29:46.421Z",
   "workbookSha256": "c35f02ca937c1499781235378644be236bed671fc6e69fe94c9fabf581728755",
   "housingExportSha256": "dbdff06afe207ed973eb2f88f1b482ca24d630b81d1c5c19a83e8ee05ab19913",
@@ -9,19 +9,19 @@
   "listOnly": 2,
   "savedWalkingMeasurements": 2808,
   "files": {
+    "index.html": "dc54617799d81a5922f7f55847c5d59069fa0de0f12dad845e788799e2f8d47e",
+    "assets/index-D9-TESrH.js": "38e7d821ca378729c0bad9f443adc51b874b3fe8146a02b27b4c367f47da78fa",
     "assets/index-BkC-yguv.css": "09c4abc5cffc1dd07c2d98ce3b23a78a9561526cac37499b040ebaaf513a0e1b",
-    "assets/index-DO_lwCDz.js": "3c6104abdc232992901d8e47ea89e057821a33b69f35bb89da0c92909e0abaf1",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
-    "assets/photos/one-nine-vine-302-hud/floor-plan-2br.png": "86fb1b6affea105cac17b6ea1d0c38f1359a16e74f488ebe1dcee57ad9544591",
-    "assets/photos/one-nine-vine-302-hud/kitchen.png": "83ff6f40da159260ce934632886ac7b46a7a86a11f8b2fdf90abbaf46a022d9f",
     "assets/photos/one-nine-vine-302-hud/living-kitchen-1.png": "06dd4bc6793d07893c725826ac4044321517d834f365774a3c0131d9d1338749",
     "assets/photos/one-nine-vine-302-hud/living-kitchen-2.png": "7c066d84aaf1af713db1681098a79dae08b6a704dcaa1e1ece1b0d60feeda6bc",
-    "assets/photos/star-lofts-308/bathroom.png": "6925a3ec6616f9a4235aa73e3574e2fdbd58ec657b8127a1c443b236e842979b",
+    "assets/photos/one-nine-vine-302-hud/floor-plan-2br.png": "86fb1b6affea105cac17b6ea1d0c38f1359a16e74f488ebe1dcee57ad9544591",
+    "assets/photos/one-nine-vine-302-hud/kitchen.png": "83ff6f40da159260ce934632886ac7b46a7a86a11f8b2fdf90abbaf46a022d9f",
     "assets/photos/star-lofts-308/bedroom-closet.png": "6389ff7845f67d3226ad0a5d694c06a4be43a8b021dadef400d43ffcd0da67c2",
+    "assets/photos/star-lofts-308/bathroom.png": "6925a3ec6616f9a4235aa73e3574e2fdbd58ec657b8127a1c443b236e842979b",
     "assets/photos/star-lofts-308/kitchen-living.png": "4434c2d58b27baa0da994bb3a4ce2ec84479b0b61cee0a79e16524f1e979b6a4",
-    "index.html": "5c2eddff85d00b5a1550b2e033f2c8b0289e1aa482f17cb3161b701d366361a6",
     "map-data.js": "d53e937d6bffd1a1ece67f75e44eb5cdd623362a26375b3b26e64c6e0b98b460"
   }
 }

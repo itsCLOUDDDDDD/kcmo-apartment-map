@@ -1,5 +1,10 @@
 # Current website release — September 20, 2026
 
+## Fresh landing defaults
+
+The site now opens with all ZIPs and amenities, shortlist filtering off, no selected property or walking destination, and default source order. An explicit property selection retains its existing walking/card behavior. Reset filters also clears the destination/sort preference. Source change: `aistudio/src/App.tsx`, commit `aaed6f5099c645f865d8246bbfa98643cac46ef5`. TypeScript/build and browser reload checks passed: 106 total, 104 mapped/two list-only, no open property card; selected ZIP/destination/sort choices reset on reload. No housing data or styling changes.
+
+
 The user approved replacing the existing housing site with the reviewed AI Studio design and all additional changes from this work. Frontend source: `itsCLOUDDDDDD/aistudio` commit `912f28c23d9947b85ba5c997919b53927a76993b`. This release preserves its Tailwind styling and adds the approved close-zoom previews, compact property experience, recorded Street View actions, saved/event destination picker, category/priority venue markers, independent square walking tiles, and approved planning-cost rule.
 
 The left walking tile follows the selected destination and retains priority-cluster range/coverage. The right independently uses the same Property ID's saved `nearestSavedVenue` and `savedVenueCoverage`; each link owns its destination ID. Partial coverage is labeled and missing results stay unresolved. Marker coordinates are unchanged, list-only records remain available, filters do not automatically move the camera, and absent geometry never produces a fake route.
