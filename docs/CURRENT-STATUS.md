@@ -12,6 +12,8 @@ Frontend source: `itsCLOUDDDDDD/aistudio` commit `ae5d50b7b1a3d102478211b4c69112
 
 Validation: 10 importer test groups, fresh-export preservation checks, 32 shared-core tests, 14 Google-walking tests, four frontend suites, TypeScript and production build pass. Desktop 1280px and mobile 320px/390px checks pass for category/pin/picker agreement, external endpoints, missing walking measurements, unchanged nearest/cluster results, property switching, overlap selection, equal square tiles and no horizontal overflow. No browser console errors in these checks. Existing Vite configuration/chunk-size warnings remain nonblocking. `release.json` records this release's exact source, snapshot and file hashes; Pages deployment is verified separately after push.
 
+**Published and verified:** application release `8520b2b0cc5a893d3b86009c18c0f1c5fd4d6c2b`, successful Pages run `35561590583`. All 14 served hashes match `release.json`. Live desktop and 390px checks confirmed the expanded category/pin/picker catalog, KC Crew/Hy-Vee overlap selection, Kansas destinations under apartment ZIP filtering, correct independent direction endpoints, 27/27 nearest and 4/4 priority coverage, preserved 73.4% planning comparison, equal square tiles and no horizontal overflow or console errors. This documentation follow-up changes no application assets.
+
 Only the venue importer was installed in the bound project. The previously prepared cost-only Sheet installer remains uninstalled; this task preserves the published planning-cost calculation by retaining the already-approved rent-plus-utility exporter implementation. The live venue edit did not change cost formulas or install triggers.
 
 Earlier release entries below are historical.
