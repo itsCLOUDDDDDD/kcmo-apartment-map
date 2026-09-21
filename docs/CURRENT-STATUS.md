@@ -4,7 +4,9 @@ The live Google Sheet is the master. A fresh, read-only XLSX export of `V3_resea
 
 The reviewed public-data diff changes exactly those 51 property records, and only `amenities.laundry`, `amenities.gym`, `amenities.pool`, `amenityDetails`, `amenitySource`, and `amenitiesChecked`. Sheet wording, including Unknown and Conflict, is literal. The public source field accepts one URL, so the exporter retains the first URL from a Sheet cell containing multiple ` | `-separated links; the full evidence remains in the live Sheet. All other property facts, units, coordinates, rents, costs, routes, visibility, photos, venue data and geography are unchanged. The exported metadata changes only snapshot time and workbook hash. The Tailwind CSS file is byte-identical to the current release.
 
-Frontend source commit `6f8f2a17e9d5c84254c226effd12da9ada5b058b` contains the updated `src/data/housing-export.json` and data tests. The fresh exporter, 33 shared-core tests, 14 Google-walking tests, venue-export test, frontend tests, TypeScript check and production build pass. `release.json` records the exact source, Sheet snapshot and active file hashes. Publication and served-site verification are pending.
+Frontend source commit `6f8f2a17e9d5c84254c226effd12da9ada5b058b` contains the updated `src/data/housing-export.json` and data tests. The fresh exporter, 33 shared-core tests, 14 Google-walking tests, venue-export test, frontend tests, TypeScript check and production build pass. `release.json` records the exact source, Sheet snapshot and active file hashes.
+
+**Published and served-file verified:** website application commit `20502eeb5607446002d9e3ba69957feed2d7e564`; GitHub Pages run `35651424423` succeeded and its latest build names that commit. All 14 active files served from the live URL match `release.json`, including the new housing bundle, public data, unchanged Tailwind CSS and retained photos. The served bundle contains the updated Conflict/Unknown wording and primary source links. An interactive browser smoke check was not completed because browser control failed; no visual or console-check claim is made.
 
 Earlier releases below are historical.
 
