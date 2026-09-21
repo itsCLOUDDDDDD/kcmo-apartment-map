@@ -11,9 +11,9 @@ const snap={sheets:{'KCMO Candidates':[row],'Workflow Settings':setting,'Payment
 'Map Details':[],'Map Places':[{'Place ID':'test-place',Name:'Test venue',Address:'200 Sample St','City/State':'Kansas City, MO',Zip:'64108'}],
 'Scene & Anchors':[{'Place ID':'test-place',Name:'Test venue',Address:'200 Sample St','Walking cluster':C.CLUSTER}],'Map Routes':[]}};
 const unit={unit:'A1',beds:1,baths:1,sqft:700,rent:1000,available:'Unknown',checked:null,source:null,photos:[],costs:{}};
-test('Unknown fees never become zero or a complete total',()=>{
+test('Unknown fees remain unknown and do not block planning total',()=>{
  const u=C.units({...row,'Units JSON':JSON.stringify([unit])},C.settings(setting))[0],c=C.unitCost(u,1500,90);
- assert.equal(c.planningSubtotalExcludingUnresolvedFees,1090);assert.equal(c.planningTotal,null);assert.equal(c.officialComparisonTotal,null);assert.equal(c.percent,null);
+ assert.equal(c.planningSubtotalExcludingUnresolvedFees,1090);assert.equal(c.planningTotal,1090);assert.equal(c.officialComparisonTotal,null);assert.equal(c.percent,1090/1500);
 });
 test('Confirmed zero fees and own official allowance remain distinct',()=>{
  const raw=clone(unit);raw.costs={feeStatus:'Confirmed',requiredMonthlyFees:0,feeSource:'https://example.org/fees',feesChecked:'2026-09-17',allowanceStatus:'Confirmed',utilityAllowance:80,allowanceSource:'https://example.org/allowance',allowanceChecked:'2026-09-17'};
@@ -28,7 +28,7 @@ test('Building fees require explicit all-unit scope and explicit unit opt-in',()
  const r={...row,'Required Monthly Fees':25,'Fee status':'Confirmed','Fee scope':'All units','Fee source':'https://example.org/fees','Costs checked':'2026-09-17'};
  r['Units JSON']=JSON.stringify([unit]);assert.equal(C.units(r,C.settings(setting))[0].costs.requiredMonthlyFees,null);
  const raw=clone(unit);raw.costs.feeStatus='Use building confirmation';r['Units JSON']=JSON.stringify([raw]);
- assert.equal(C.unitCost(C.units(r,C.settings(setting))[0],1500,90).planningTotal,1115);
+ assert.equal(C.unitCost(C.units(r,C.settings(setting))[0],1500,90).planningTotal,1090);
 });
 test('Apartments retain independent price, size, date, source and photos',()=>{
  const a=clone(unit),b={...clone(unit),unit:'B2',beds:2,rent:1400,sqft:950};

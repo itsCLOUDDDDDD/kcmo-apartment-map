@@ -1,3 +1,23 @@
+# Venue catalog release — September 20, 2026
+
+The verified current live master was updated through its bound, backed-up venue importer: **31 added, one matched-existing, four pending review** (all 36 supplied inputs accounted for). The second actual run made zero writes. The full native backup and before/after workbooks remain private; no duplicate master was introduced.
+
+Map Places now has 59 saved venues (58 supplied/accepted coordinate pairs, one unresolved). Corresponding Scene & Anchors rows share the accepted Place IDs. Messenger reuses `messenger-coffee-ibis`; its accepted name/address/coordinates remain unchanged and the supplied coordinate conflict is retained as review evidence. Conoco/Favtrip at 500 E 10th and Sinclair/Windstar at 1704 Grand remain four pending identity-review rows in Scene & Anchors, without new Place IDs. Hy-Vee Arena and its KC Crew tenant are distinct venues. New records retain the exact supplied names, addresses, coordinates and categories, with provenance “User-supplied; not independently verified” and no fabricated verification dates or Google Place IDs.
+
+A fresh read-back snapshot has SHA-256 `596aca4cc7ec60b86675fd87909c3c32417e75b35301c675259fa4e9af29dcd1`. All 13 non-target tabs' cell values/formulas and all tab visibility are unchanged. Existing Map Places facts and existing Scene/Settings rows are preserved. The fresh export's 106 properties are deeply equal to the prior public properties, including costs, photos, units, visibility, all 2,808 current Google walking measurements and nearest/priority results. There are still 104 mapped properties, two list-only records, 21 units and 537 older route records retained in the master.
+
+The expanded browsing catalog is separate from the frozen original 27-venue routing cohort in Workflow Settings. All 104 mapped properties retain 27/27 routed-venue coverage and 4/4 priority coverage. The right tile says “Nearest among 27 routed venues.” New destinations show “Walking time not recorded” and their own external directions link; no geocoding, route request, matrix expansion, geometry invention or timer was used. Four priority IDs remain `recordbar`, `green-lady-lounge`, `mod`, `in-good-co`.
+
+Frontend source: `itsCLOUDDDDDD/aistudio` commit `ae5d50b7b1a3d102478211b4c69112d8bfb500f8`, built on the current `99f990e` payment-standard-card release. Existing Tailwind styling, property experience, Street View, independent walking tiles, landing defaults and planning costs are retained. Scene filters, destination choices and pins share one category filter. Coffee, fuel/store and community symbols use the current marker system; priority is independent of category. Kansas/outlying venues stay available when apartment ZIP filters change. Overlapping pins offer on-demand selection without moving coordinates; duplicate picker names include addresses.
+
+Validation: 10 importer test groups, fresh-export preservation checks, 32 shared-core tests, 14 Google-walking tests, four frontend suites, TypeScript and production build pass. Desktop 1280px and mobile 320px/390px checks pass for category/pin/picker agreement, external endpoints, missing walking measurements, unchanged nearest/cluster results, property switching, overlap selection, equal square tiles and no horizontal overflow. No browser console errors in these checks. Existing Vite configuration/chunk-size warnings remain nonblocking. `release.json` records this release's exact source, snapshot and file hashes; Pages deployment is verified separately after push.
+
+Only the venue importer was installed in the bound project. The previously prepared cost-only Sheet installer remains uninstalled; this task preserves the published planning-cost calculation by retaining the already-approved rent-plus-utility exporter implementation. The live venue edit did not change cost formulas or install triggers.
+
+Earlier release entries below are historical.
+
+---
+
 # Current website release — September 20, 2026
 
 ## Selected-card payment standard

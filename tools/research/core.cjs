@@ -31,9 +31,10 @@ const ResearchCore = (() => {
   }
   function settings(rows=[]) {
     const s=Object.fromEntries(rows.filter(r=>r.Setting).map(r=>[r.Setting,r.Value]));
-    return {planning:amount(s['Utility planning standard'])??90,
+    return {planning:rows.filter(r=>r.Setting==='Utility planning standard').length===1?amount(s['Utility planning standard']):null,
       reviewedZips:text(s['Website ZIP scope']||'64105,64106,64108,64109').split(',').map(text).filter(Boolean),
       sceneCity:text(s['Default scene city/state']||'Kansas City, MO'),
+      savedWalkingCohortIds:parse(s['Saved walking cohort IDs'],null,'Saved walking cohort IDs'),
       routeBase:text(s['Walking routing base']||'https://routing.openstreetmap.de/routed-foot/route/v1/driving'),
       maxSnap:amount(s['Maximum endpoint gap metres'])??75};
   }
@@ -117,11 +118,11 @@ const ResearchCore = (() => {
           allowanceChecked:confirmedAllowance?date(c.allowanceChecked):null}};
     });
   }
-  function unitCost(unit,standard,planning=90) {
+  function unitCost(unit,standard,planning=null) {
     const rent=positive(unit.rent),fees=amount(unit.costs?.requiredMonthlyFees),allowance=amount(unit.costs?.utilityAllowance);
-    const total=rent!==null&&fees!==null?rent+planning+fees:null;
+    const utility=amount(planning),total=rent!==null&&utility!==null?rent+utility:null;
     const official=rent!==null&&fees!==null&&allowance!==null?rent+allowance+fees:null;
-    return {planningStandard:planning,planningSubtotalExcludingUnresolvedFees:rent===null?null:rent+planning,
+    return {planningStandard:utility,planningSubtotalExcludingUnresolvedFees:total,
       unresolvedFees:fees===null,planningTotal:total,officialComparisonTotal:official,
       percent:total!==null&&positive(standard)!==null?total/standard:null,
       officialPercent:official!==null&&positive(standard)!==null?official/standard:null};
@@ -231,13 +232,26 @@ const ResearchCore = (() => {
     if(!clusters.size)throw Error('No '+CLUSTER+' destinations have a matching addressed Map Places row.');
     const publicPlaces=[...placeRows].map(([id,p])=>{
       const current={...p,'City/State':p['City/State']||config.sceneCity,Zip:text(p.Zip)};
-      const loc=location(current,p);
+      // User-supplied venue pins remain explicitly unverified; property validation is unchanged.
+      const supplied=p['Location status']==='User-supplied; not independently verified'&&
+        p['Coordinate source']===p['Location status']&&p['Location input']===addressKey(current)&&validCoords([p.Latitude,p.Longitude]);
+      const loc=location(current,p)||(supplied?{coordinates:[p.Latitude,p.Longitude],source:p['Coordinate source'],checked:null,status:p['Location status']}:null);
+      const endpoint=loc?.coordinates?.join(',')||(text(current.Address)&&! /^(unknown|unverified|unresolved)$/i.test(text(current.Address))?[current.Address,current['City/State'],current.Zip].filter(Boolean).join(', '):null);
       return {id,name:text(p.Name),address:text(current.Address),cityState:text(current['City/State']),zip:text(current.Zip),
-        category:clusters.has(id)?'Core scene':p.Category==='Core scene'?'Scene':text(p.Category),
+        category:text(p.Category),priority:clusters.has(id),
         neighborhood:text(p.Neighborhood),coordinates:loc?.coordinates||null,locationInput:addressKey(current),
         source:url(p['Source URL']),checked:date(p['Source checked']),coordinateSource:loc?.source||'Location unverified',
-        coordinateSourceUrl:loc?.sourceUrl||null,coordinateChecked:loc?.checked||null,note:null};
+        coordinateSourceUrl:loc?.sourceUrl||null,coordinateChecked:loc?.checked||null,note:null,
+        locationStatus:loc?.status||'Location unverified',provenance:supplied?p['Coordinate source']:null,
+        mapUrl:endpoint?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(endpoint):null,
+        directionsUrl:endpoint?'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(endpoint):null};
     });
+    const routedVenueIds=config.savedWalkingCohortIds;
+    if(routedVenueIds!==null&&(!Array.isArray(routedVenueIds)||new Set(routedVenueIds).size!==routedVenueIds.length||routedVenueIds.some(id=>!placeRows.has(id))))throw Error('Invalid saved walking cohort IDs.');
+    if(routedVenueIds===null&&publicPlaces.some(p=>p.provenance))throw Error('Expanded venue catalog requires a saved walking cohort.');
+    const eligible=publicPlaces.filter(p=>(routedVenueIds===null||routedVenueIds.includes(p.id))&&p.coordinates&&text(p.address));
+    // A temporarily unresolved cohort location still counts toward coverage.
+    const cohortIds=routedVenueIds||eligible.map(p=>p.id),eligibleIds=new Set(eligible.map(p=>p.id));
     const pmap=new Map(publicPlaces.map(p=>[p.id,p])), standards=sh['Payment Standards 2026']||[];
     const routeRows=(sh['Map Routes']||[]).filter(r=>Object.entries(r).some(([k,v])=>k!=='_row'&&text(v)));
     // The live Sheet has two Property-ID-only draft rows. Preserve them in the Sheet; they are not route evidence.
@@ -337,17 +351,17 @@ const ResearchCore = (() => {
       }
       const walks=[...latest.values()],clusterRoutes=walks.filter(x=>clusters.has(x.destinationId)).sort((a,b)=>a.minutes-b.minutes);
       const nearest=clusterRoutes[0]||null,complete=clusterRoutes.length===clusters.size;
-      const eligible=publicPlaces.filter(p=>p.coordinates&&text(p.address)),eligibleIds=new Set(eligible.map(p=>p.id));
       const venueWalks=walks.filter(w=>eligibleIds.has(w.destinationId)).sort((a,b)=>(a.providerSeconds??a.minutes*60)-(b.providerSeconds??b.minutes*60)||a.destinationId.localeCompare(b.destinationId));
-      const nearestSavedVenue=venueWalks[0]||null,savedVenueCoverage={count:venueWalks.length,total:eligible.length,complete:venueWalks.length===eligible.length&&eligible.length>0};
+      const nearestSavedVenue=venueWalks[0]||null,savedVenueCoverage={count:venueWalks.length,total:cohortIds.length,complete:venueWalks.length===cohortIds.length&&cohortIds.length>0};
       report.drawableRoutes+=walks.filter(w=>w.geometry).length;
       report.retainedRoutes+=walks.length;report.discardedOrStaleRoutes+=drawableRows.length-walks.length;report.providerSupportRoutes+=supportRoutes.length;
       if(loc)report.mappedIds.push(id);else{report.unresolvedLocations.push(id);report.listOnlyIds.push(id);}
       const bedroom=n=>{
         const list=us.filter(u=>u.beds===n),one=list.length===1?list[0]:null;
-        return {beds:n,rent:one?.rent??positive(r[n+'BR Rent']),sqft:one?.sqft??positive(r[n+'BR Sq Ft']),
-          gross:one?.comparison.planningTotal??null,percent:one?.comparison.percent??null,
-          fit:'Planning comparison only; official allowance and eligibility require confirmation',
+        const rent=one?one.rent:positive(r[n+'BR Rent']),comparison=unitCost({rent},standard,config.planning);
+        return {beds:n,rent,sqft:one?.sqft??positive(r[n+'BR Sq Ft']),
+          gross:comparison.planningTotal,percent:comparison.percent,
+          fit:'Planning estimate only; not voucher approval',
           offered:null,evidence:one?('Unit #'+one.unit+' only; see its own source/date.'):null};
       };
       const property={schemaVersion:SCHEMA,id,workbookRow:r._row||null,name:text(r.Property),address:text(r.Address),cityState:text(r['City/State']),zip,
@@ -357,7 +371,7 @@ const ResearchCore = (() => {
         hcv:text(r['Accepts HCV'])||'Unknown',lihtc:text(r['Tax Credit / LIHTC'])||'Unknown',
         oneBedroom:{...bedroom(1),standard,utilityAllowance:null},twoBedroom:bedroom(2),threeBedroom:bedroom(3),
         costs:{planningUtilities:config.planning,electricityEstimate:config.planning,requiredMonthlyFees:null,
-          basis:'User-selected $'+config.planning+' utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope.'},
+          basis:'Planning gross = recorded rent + '+(config.planning===null?'unresolved utility setting':'$'+config.planning+' utility planning standard')+'. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval.'},
         amenities:{laundry:text(r['In-Unit W/D'])||'Unknown',cooling:text(r['Central HVAC'])||'Unknown',gym:text(r.Gym)||'Unknown',pool:text(r.Pool)||'Unknown',
           finishes:text(d['Modern finishes'])||'Exact-unit finishes unverified',sunlight:text(d.Sunlight)||'Unverified',entrance:text(d['Street entrance'])||'Unverified'},
         amenityDetails:text(r['Amenities / Parking'])||null,amenitiesChecked:date(r['Amenities checked']),amenitySource:url(r['Amenity source']),
@@ -402,10 +416,10 @@ const ResearchCore = (() => {
     for(const zip of new Set(properties.map(p=>p.zip)))properties.filter(p=>p.zip===zip&&p.nearest).sort((a,b)=>a.nearest.minutes-b.nearest.minutes||a.name.localeCompare(b.name)).forEach((p,i)=>p.clusterRank=i+1);
     return {payload:{meta:{schemaVersion:SCHEMA,title:'Kansas City apartments',generatedAt:new Date().toISOString(),
       workbookSha256:snapshot.sha256||null,reviewedZips:options.all?[...new Set(properties.map(p=>p.zip))]:config.reviewedZips,
-      clusterIds:[...clusters.keys()],utilityPlanningStandard:config.planning,previewOnly:true,masterMapFields:true,
+      clusterIds:[...clusters.keys()],savedWalkingCohortIds:cohortIds,venueCatalogCount:publicPlaces.length,utilityPlanningStandard:config.planning,previewOnly:true,masterMapFields:true,
       notice:'Static reviewed snapshot. Sheet edits do not publish this website.',
       privacy:'Public allowlisted property facts only; notes, archives, personal eligibility, source workbook and credentials are excluded.',
-      voucherCaveat:'The $'+config.planning+' utility standard is a planning assumption, not an official allowance. Missing fees prevent a complete total. All bedroom types use the recorded 1BR comparator.',
+      voucherCaveat:'Planning gross is recorded rent plus the utility planning setting once, without separate fees. All bedroom counts, including unknown, use the recorded 1BR standard. Missing rent, utility setting or valid standard stays unresolved. Planning estimate only; not voucher approval.',
       routingAttribution:'Current walking measurements: Google. Older evidence: Outscraper and OSRM/FOSSGIS. Geometry availability is separate from walking-time validity; no missing paths are invented.',
       routingAttributionUrl:'https://www.openstreetmap.org/copyright',routingCorrectionsUrl:'https://www.openstreetmap.org/fixthemap'},
       properties,places:publicPlaces,geography:snapshot.geography||{streetcar:{stops:[]}}},report};
