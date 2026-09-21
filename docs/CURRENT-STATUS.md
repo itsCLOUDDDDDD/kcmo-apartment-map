@@ -1,3 +1,19 @@
+# Expanded property-details release — September 21, 2026
+
+The user approved the local expanded-card design and explicitly authorized commit and publication. Frontend source commit: `a534b04e39992594f75bc154a35e915943ac01f3` in `itsCLOUDDDDDD/aistudio`. This is a presentation-only release using the unchanged, previously published Sheet export; no fresh research or Sheet edits were performed.
+
+- Top swipe/arrow gallery and short photo links preserve exact-unit ownership. The ZIP-adjacent 1BR-standard button reveals the calculation. Rent and percentage stay visible with one short Est. label; missing rent stays Unknown. Existing rent-plus-utility arithmetic and the 1BR denominator are unchanged.
+- Amenities precede apartment and destination details. Yes/No/—/Conflict labels retain shared laundry, hookups, select-unit and building/portfolio scope. Full evidence remains in the data. Repeated cost disclaimers and geocoding/verification panels are removed from this browsing card; saved listing availability appears last, never substituting a research-check date for vacancy.
+- Nearby order: one expandable four-destination priority cluster, Nightlife, Coffee, Library, Sports / gym. Existing scene categories are not mislabeled as bars. Rounded minutes expand to exact saved measurements. Nearest results use valid walks from the unchanged 27-venue cohort, with partial coverage labeled “among checked.” Coffee coverage is 3/17; the 13 sports/community venues have no saved walks and offer browsing/directions only. No route API calls or fabricated paths.
+- All five frontend test suites, TypeScript, production build and isolated Chrome checks passed. Browser coverage includes 320/390/768/1280-pixel widths, short mobile height, gallery navigation/reset/local images, property switching, missing rent, laundry/conflicts, ownership, route coverage/exact values, wrapping, focus, close, compare and locate. Remote photo availability was not re-researched. Existing Vite configuration and bundle-size warnings remain nonblocking.
+- The compact card, adapter, calculation/routing helpers and all property/venue data are unchanged. Housing-export SHA-256 remains `131989d8242fa0c7f77ec82c3273d097bcae5aa72752f5e9c3085c24904bd9f9`: 106 properties, 104 mapped/two list-only, 21 units, 59 venues and 2,808 saved walks. `map-data.js` and all ten local photos are byte-identical. `release.json` records the source and 14 active file hashes.
+
+Release assets are prepared and locally verified. GitHub Pages publication and live verification are pending; they will be recorded after the authorized push.
+
+Earlier releases below are historical.
+
+---
+
 # Amenity snapshot release — September 21, 2026
 
 The live Google Sheet is the master. A fresh, read-only XLSX export of `V3_research_ready_MASTER_2026-09-20.xlsx` has SHA-256 `2cb1bb13d437a1eb7e4637f6e25ba394f8ccd150b3f3da58270c2cbea8919a2f`. Its 56 newly checked ZIP 64106/64108 candidate rows were matched by Property ID. The existing visibility rules publish 51 of them and continue to hold five; no property was added or exposed.
