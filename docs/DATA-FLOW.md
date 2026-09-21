@@ -30,9 +30,13 @@ Appearance in the original research is sufficient for candidate retention, not c
 
 ## Identity, visibility and research
 
-Property facts, locations and walking records join only by stable `Property ID`. Destinations join by `Place ID`/`Destination ID`. Names never bind facts or route measurements. Duplicate required IDs stop export. Candidate `Website visibility = Yes` and the existing reviewed ZIP scope control public inclusion. Missing coordinates retain list-only properties. Original candidate addresses stay separate from geocoder-matched evidence in the master.
+Property facts, locations and walking records join only by stable `Property ID`. Destinations join by `Place ID`/`Destination ID`. Names never bind facts or route measurements. Duplicate required IDs stop export. September 21 explicit approval publishes all 231 current candidate IDs, including prior holds and exclusions, using `tools/research/build.cjs --all` with the reviewed private snapshot. This release overrides the earlier Yes-only/four-ZIP publication gate without rewriting Sheet visibility or exclusion history; the approval establishes publication scope, not current eligibility. Future exports must preserve this approved full-list scope unless the user changes it. Missing coordinates retain list-only properties. Original candidate addresses stay separate from geocoder-matched evidence in the master.
 
 Units retain their own rent, size, bedrooms, source/date and exact-unit photos. Building and amenity media remain separate. Confirmed fees and official allowances require their own scope/source/date; unknowns stay unresolved. Private notes, screening records, raw workbook tables, credentials and source files are excluded from public data.
+
+## Full collection publication
+
+The public snapshot contains 231 properties: 104 with accepted coordinates and 127 list-only, plus 26 recorded unit options. All existing IDs remain separate; no ambiguous identity is merged. The full list and ZIP filter use the exported collection, not a hard-coded four-ZIP shortlist. Property symbols are green diamonds; Sports & community symbols are red soccer balls, shared with the legend. Private provenance summaries/register and personal research remain outside the public export. The existing 106 public property objects, 59-venue catalog and 2,808 saved walks are unchanged.
 
 ## Walking evidence
 

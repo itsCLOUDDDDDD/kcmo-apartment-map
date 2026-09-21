@@ -1,12 +1,12 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "a534b04e39992594f75bc154a35e915943ac01f3",
-  "housingExportGeneratedAt": "2026-09-21T20:24:14.210Z",
-  "workbookSha256": "2cb1bb13d437a1eb7e4637f6e25ba394f8ccd150b3f3da58270c2cbea8919a2f",
-  "housingExportSha256": "131989d8242fa0c7f77ec82c3273d097bcae5aa72752f5e9c3085c24904bd9f9",
-  "properties": 106,
+  "frontendCommit": "930f15b02b9c9412aea6c2862e4dbd64a8231961",
+  "housingExportGeneratedAt": "2026-09-21T23:52:03.563Z",
+  "workbookSha256": "79db26dd7a599e9e13020233b8c0db19de32f075387d152ec72bb5051689b30e",
+  "housingExportSha256": "074c367255d4bdee5365856bf8677ef83505bb3e686d692fb2905bd3bce590d2",
+  "properties": 231,
   "mapped": 104,
-  "listOnly": 2,
+  "listOnly": 127,
   "savedWalkingMeasurements": 2808,
   "venueCatalog": 59,
   "mappedVenues": 58,
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-BYGnFRSz.css": "fe0b700525a7523fab079334f544e66a384be4530136128757bca7618ea18a87",
-    "assets/index-Bfu5xUv0.js": "c17d6bbf7b60c8f7d5785ca89963c8442ea81b59abcacfa53be21b65151424f9",
+    "assets/index-BHt2ragb.css": "19b2f49bdc64193dca749787ef0f09cc9b9c6baa66367b45b8f76e90876ddc41",
+    "assets/index-L-KIrhL9.js": "303c6f6fd90a2944c9bea0d61c24c1ab46ad5544ef4413679ed3e956d60bec66",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -31,7 +31,9 @@
     "assets/photos/star-lofts-308/bathroom.png": "6925a3ec6616f9a4235aa73e3574e2fdbd58ec657b8127a1c443b236e842979b",
     "assets/photos/star-lofts-308/bedroom-closet.png": "6389ff7845f67d3226ad0a5d694c06a4be43a8b021dadef400d43ffcd0da67c2",
     "assets/photos/star-lofts-308/kitchen-living.png": "4434c2d58b27baa0da994bb3a4ce2ec84479b0b61cee0a79e16524f1e979b6a4",
-    "index.html": "d5c5d472057a1a597567949dfb8f3c868cdd65965f44cbd2bd5aed8442130b5d",
-    "map-data.js": "6781138554d3f91d61ad71a1a8b6f203021e8e98887721daccf43a904bb0817d"
-  }
+    "index.html": "403ec48441bcb444e767c6e9f76e554a6fd570d74e6f013a883229f2c855ac44",
+    "map-data.js": "42e276d21eeaba689da187350786a2961aeba9b246cb023c29c73fa69963a53a"
+  },
+  "units": 26,
+  "publicationScope": "All 231 existing candidate IDs, including previously held or excluded rows; explicitly approved September 21, 2026."
 }

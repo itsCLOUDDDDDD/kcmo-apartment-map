@@ -16,3 +16,7 @@ The reviewed public snapshot is `src/data/housing-export.json`, and saved event 
 For an authorized release, copy the complete `dist/` contents into a clean checkout of this repository, preserve `.nojekyll`, and serialize the identical reviewed housing JSON to `map-data.js` as `window.KCMO_MAP_DATA`. Record source/snapshot and file hashes in `release.json`. The current interface uses the bundled JSON; `map-data.js` remains an equivalent public export for compatibility.
 
 Review intended paths and privacy, check desktop/mobile behavior, then commit and push only the release to main. GitHub Pages serves the root of main. Verify the Pages build commit/status, live file hashes, Google map, property selection, independent walking tiles and mobile layout. A build or source push alone does not establish successful website publication.
+
+## Current full-list publication scope
+
+The September 21 user approval includes all 231 existing candidate IDs, including prior holds and exclusions. Generate the reviewed public allowlisted payload with `tools/research/build.cjs --all` from the private read-only Sheet snapshot, retaining 104 mapped and 127 list-only records until accepted coordinate evidence changes. Do not revert to the older Yes-only/four-ZIP gate or change Sheet visibility merely to build the site. Keep private notes and provenance evidence out of the payload. See DATA-FLOW.md and CURRENT-STATUS.md for current scope and verification.

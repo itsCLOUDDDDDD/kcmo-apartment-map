@@ -1,3 +1,17 @@
+# Full property collection and pin styling — September 21, 2026
+
+The user explicitly approved publishing all existing properties, including previous holds and the two previously ruled-out properties. The fresh read-only master snapshot contains **231 unique Property IDs plus one header row = 232 Sheet rows**. The full reviewed export now contains **231 properties: 104 mapped and 127 list-only**, 26 structured units, 59 venues and the unchanged 2,808 saved walking measurements. The 125 newly included properties have no verified coordinates; no locations or routes were invented. Ambiguous identities retain their separate existing IDs.
+
+All 106 previously published property objects, venue data and geography are deeply unchanged. The export uses the existing public allowlist; private notes, provenance fields, source register, originals, personal information and credentials remain excluded. The Sheet was read, not edited: existing visibility/exclusion records are preserved as history, while this explicit publication approval overrides the earlier website Hold/ZIP scope for this release. Research inclusion does not confirm current LIHTC/HCV eligibility.
+
+The approved green diamond property pins and red soccer-ball Sports & community pins are included. ZIP choices now cover all 27 ZIPs represented in the full collection. Missing coordinates keep properties in List; selection, recorded costs, exact-unit photos, routes, other venue symbols and the current layout are retained.
+
+Frontend source: `itsCLOUDDDDDD/aistudio` commit `930f15b02b9c9412aea6c2862e4dbd64a8231961`. All five frontend test suites, TypeScript, production build, 33 exporter tests, 14 Google-walking tests, ID/accounting/privacy checks and diff checks passed. Desktop and 320px/390px browser checks confirmed green diamonds, red soccer-ball pins, the bounded ZIP control, List (231), 104/127 map accounting, the newly available ZIP filters and The Lanes at Mission Bowl as a list-only record with an unresolved payment standard. Existing build configuration/chunk-size warnings remain nonblocking. `release.json` records the exact source, snapshot and active file hashes.
+
+**Release prepared and source pushed; public deployment verification pending.** No research rerun, Sheet write, geocoding or routing request was performed. The provenance restoration and newer amenity/design history below are preserved.
+
+---
+
 # Discovery history restoration — September 21, 2026
 
 Applied September 21, 2026: 231 existing candidate IDs received 1,617 provenance data-cell updates and six missing history headers. Reused **Sources / Checked** for an appended, attributed discovery block; existing content and links remain. Added **Original inclusion reason**, **Historical program / stage**, **Historical unit counts**, **Historical AMI / set-aside**, **Provenance recovery status**, and **Provenance conflicts**. Sources / Checked and the six new supporting fields are visible. No candidate rows were added or merged.
