@@ -1,3 +1,15 @@
+# Amenity snapshot release — September 21, 2026
+
+The live Google Sheet is the master. A fresh, read-only XLSX export of `V3_research_ready_MASTER_2026-09-20.xlsx` has SHA-256 `2cb1bb13d437a1eb7e4637f6e25ba394f8ccd150b3f3da58270c2cbea8919a2f`. Its 56 newly checked ZIP 64106/64108 candidate rows were matched by Property ID. The existing visibility rules publish 51 of them and continue to hold five; no property was added or exposed.
+
+The reviewed public-data diff changes exactly those 51 property records, and only `amenities.laundry`, `amenities.gym`, `amenities.pool`, `amenityDetails`, `amenitySource`, and `amenitiesChecked`. Sheet wording, including Unknown and Conflict, is literal. The public source field accepts one URL, so the exporter retains the first URL from a Sheet cell containing multiple ` | `-separated links; the full evidence remains in the live Sheet. All other property facts, units, coordinates, rents, costs, routes, visibility, photos, venue data and geography are unchanged. The exported metadata changes only snapshot time and workbook hash. The Tailwind CSS file is byte-identical to the current release.
+
+Frontend source commit `6f8f2a17e9d5c84254c226effd12da9ada5b058b` contains the updated `src/data/housing-export.json` and data tests. The fresh exporter, 33 shared-core tests, 14 Google-walking tests, venue-export test, frontend tests, TypeScript check and production build pass. `release.json` records the exact source, Sheet snapshot and active file hashes. Publication and served-site verification are pending.
+
+Earlier releases below are historical.
+
+---
+
 # Venue catalog release — September 20, 2026
 
 The verified current live master was updated through its bound, backed-up venue importer: **31 added, one matched-existing, four pending review** (all 36 supplied inputs accounted for). The second actual run made zero writes. The full native backup and before/after workbooks remain private; no duplicate master was introduced.

@@ -14,6 +14,8 @@ const ResearchCore = (() => {
     if(/^https?:\/\/[^/]*@/.test(s))return null;
     return s;
   }
+  // The public amenity source has one URL; the Sheet may keep several, separated by " | ".
+  const primaryAmenityUrl=v=>url(text(v).split(/\s+\|\s+/)[0]);
   function date(v) {
     if(v instanceof Date)return isNaN(v.valueOf())?null:v.toISOString().slice(0,10);
     if(typeof v==='number'&&v>30000&&v<80000)return new Date(Date.UTC(1899,11,30)+v*86400000).toISOString().slice(0,10);
@@ -374,7 +376,7 @@ const ResearchCore = (() => {
           basis:'Planning gross = recorded rent + '+(config.planning===null?'unresolved utility setting':'$'+config.planning+' utility planning standard')+'. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval.'},
         amenities:{laundry:text(r['In-Unit W/D'])||'Unknown',cooling:text(r['Central HVAC'])||'Unknown',gym:text(r.Gym)||'Unknown',pool:text(r.Pool)||'Unknown',
           finishes:text(d['Modern finishes'])||'Exact-unit finishes unverified',sunlight:text(d.Sunlight)||'Unverified',entrance:text(d['Street entrance'])||'Unverified'},
-        amenityDetails:text(r['Amenities / Parking'])||null,amenitiesChecked:date(r['Amenities checked']),amenitySource:url(r['Amenity source']),
+        amenityDetails:text(r['Amenities / Parking'])||null,amenitiesChecked:date(r['Amenities checked']),amenitySource:primaryAmenityUrl(r['Amenity source']),
         units:us,media:publicMedia,photo:cover?.url||null,photoSource:cover?.source||null,photoCaption:cover?.caption||null,
         unitOptions:null,photoEvidence:null,researchSources:null,publicNotes:text(r['Public notes'])||null,
         building:{yearBuilt:positive(r['Year Built']),yearRenovated:positive(r['Year Renov']),mixedIncome:text(r['Mixed-Income'])||'Unknown'},

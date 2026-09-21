@@ -50,6 +50,14 @@ test('Private notes, archives and personal eligibility never enter public output
  const x=clone(snap);Object.assign(x.sheets['KCMO Candidates'][0],{Notes:'PRIVATE_SENTINEL','Sources / Checked':'PRIVATE_SENTINEL','Min-Income Rule':'PRIVATE_SENTINEL'});
  assert(!JSON.stringify(C.build(x).payload).includes('PRIVATE_SENTINEL'));
 });
+test('Amenity statuses stay literal and the first saved source URL remains public',()=>{
+ const x=clone(snap),r=x.sheets['KCMO Candidates'][0];
+ Object.assign(r,{'In-Unit W/D':'Conflict — shared laundry versus no laundry',Gym:'Unknown — not listed',Pool:'Unknown',
+  'Amenities / Parking':'Shared laundry; parking unverified','Amenity source':'https://example.org/official | https://example.org/secondary','Amenities checked':'2026-09-21'});
+ const p=C.build(x).payload.properties[0];
+ assert.equal(p.amenities.laundry,r['In-Unit W/D']);assert.equal(p.amenities.gym,r.Gym);assert.equal(p.amenities.pool,r.Pool);
+ assert.equal(p.amenityDetails,r['Amenities / Parking']);assert.equal(p.amenitySource,'https://example.org/official');assert.equal(p.amenitiesChecked,'2026-09-21');
+});
 test('Invalid JSON fails instead of dropping individual units',()=>{assert.throws(()=>C.units({...row,'Units JSON':'broken'},C.settings(setting)),/invalid JSON/);});
 test('Address edits invalidate saved locations',()=>{
  const d={'Location input':C.addressKey(row),'Location status':'Saved address-matched',Latitude:39.1,Longitude:-94.58,'Coordinate source':'Saved source'};

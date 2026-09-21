@@ -1,9 +1,9 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "ae5d50b7b1a3d102478211b4c69112d8bfb500f8",
-  "housingExportGeneratedAt": "2026-09-21T04:33:26.659Z",
-  "workbookSha256": "596aca4cc7ec60b86675fd87909c3c32417e75b35301c675259fa4e9af29dcd1",
-  "housingExportSha256": "457f0110536df11863eb69a6265cabe8216026c5d989069205ea97fbfe4e5fc0",
+  "frontendCommit": "6f8f2a17e9d5c84254c226effd12da9ada5b058b",
+  "housingExportGeneratedAt": "2026-09-21T20:24:14.210Z",
+  "workbookSha256": "2cb1bb13d437a1eb7e4637f6e25ba394f8ccd150b3f3da58270c2cbea8919a2f",
+  "housingExportSha256": "131989d8242fa0c7f77ec82c3273d097bcae5aa72752f5e9c3085c24904bd9f9",
   "properties": 106,
   "mapped": 104,
   "listOnly": 2,
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "index.html": "f280478826eb9ee0cef2720cb4eb8f71e1caa92e7681bedcb8503c2fab358cae",
-    "assets/index-C7_ciQ9B.js": "8ee0abac65ef89f6a1b1dcba1ce48cf67a06a4110c09f3925b75dc29eade1106",
+    "index.html": "eebecb0cf5d05621cecf08567313fd53f57675b76e21cbf7768bbaf94be20e2f",
+    "assets/index-7_Oy9a_O.js": "dc58dc50ae324adbd70c38529fb26a9f6f8e9086d8234c6f45a86098b7e34e16",
     "assets/index-C7eXFKTe.css": "f284fa5c6c3e50bda63532392157515a53be6f1fff0fe05e648603e1ebebbe64",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
@@ -32,6 +32,6 @@
     "assets/photos/star-lofts-308/bedroom-closet.png": "6389ff7845f67d3226ad0a5d694c06a4be43a8b021dadef400d43ffcd0da67c2",
     "assets/photos/star-lofts-308/bathroom.png": "6925a3ec6616f9a4235aa73e3574e2fdbd58ec657b8127a1c443b236e842979b",
     "assets/photos/star-lofts-308/kitchen-living.png": "4434c2d58b27baa0da994bb3a4ce2ec84479b0b61cee0a79e16524f1e979b6a4",
-    "map-data.js": "4867742c3ad58ed5e3c6ca04f005271ef85dc964fa6438e3c1aef4e870a00d72"
+    "map-data.js": "6781138554d3f91d61ad71a1a8b6f203021e8e98887721daccf43a904bb0817d"
   }
 }
