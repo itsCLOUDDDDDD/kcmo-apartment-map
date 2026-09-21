@@ -1,5 +1,10 @@
 # Current website release — September 20, 2026
 
+## Selected-card payment standard
+
+The right side of the selected property's cost area now always shows its recorded 1BR payment-standard dollar amount and ZIP, independently of rent/percentage availability. It binds `property.source.oneBedroom.standard` and `property.zipCode` for the same selected Property ID, using the existing comparison benchmark. Missing/nonpositive standards display Unverified. No data facts or calculations changed; existing Tailwind styling and card presentation remain. Source `99f990eaadf25693d268a2ce413e1e36d42d55fd`, `src/components/housing/HousingPropertyCard.tsx`. TypeScript/build, desktop/320px wrapping and property-switch checks passed: Star Lofts $1,804 / 64108; Cordova $1,826 / 64105 even with unknown rent/percentage. No mobile horizontal overflow.
+
+
 ## Fresh landing defaults
 
 The site now opens with all ZIPs and amenities, shortlist filtering off, no selected property or walking destination, and default source order. An explicit property selection retains its existing walking/card behavior. Reset filters also clears the destination/sort preference. Source change: `aistudio/src/App.tsx`, commit `aaed6f5099c645f865d8246bbfa98643cac46ef5`. TypeScript/build and browser reload checks passed: 106 total, 104 mapped/two list-only, no open property card; selected ZIP/destination/sort choices reset on reload. No housing data or styling changes.
