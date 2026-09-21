@@ -8,7 +8,9 @@ Data: September 20 V3 snapshot, generated `2026-09-20T23:29:46.421Z`, workbook S
 
 Source data, interaction and cost tests, TypeScript checks and production build passed. Desktop and 390px production-preview checks passed; equal walking tiles also passed at 320px, with independent destination selection/property switching and no text overflow in tested cases. Public source facts outside the approved cost/release metadata were preserved. The release manifest records exact source/export and deployable file hashes. The live Sheet and bound Apps Script were not changed; the prepared Sheet cost installer remains uninstalled.
 
-Publication verification is recorded after the Pages deployment. Earlier entries below describe the superseded renderer and are historical.
+**Published and verified:** website release `885b8e61976d9a83b3ee0cbbbdf9a5ee3164331f`, GitHub Pages run `35558237202`, successful September 20 (Chicago) / September 21 UTC. All 14 served entry/data/style/script/photo hashes match `release.json`. Live Google map loads without console errors. Desktop and 320px/390px checks verified equal square tiles, correct independent destination links, property switching with no stale tile state, close-card cleanup, both list-only records and corrected costs (Washington #206: 73.4%). No horizontal overflow occurred in the tested mobile layouts. Source/build checks passed; generated output retained harmless whitespace warnings.
+
+Earlier entries below describe the superseded renderer and are historical.
 
 ---
 
