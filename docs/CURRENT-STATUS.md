@@ -16,11 +16,20 @@ Validation: 10 importer test groups, fresh-export preservation checks, 32 shared
 
 Only the venue importer was installed in the bound project. The previously prepared cost-only Sheet installer remains uninstalled; this task preserves the published planning-cost calculation by retaining the already-approved rent-plus-utility exporter implementation. The live venue edit did not change cost formulas or install triggers.
 
+## Open scope and reconciliation notes
+
+- The website/exporter cost correction is published and verified separately from the prepared live-Sheet cost installer, which remains uninstalled. No live-Sheet formula, bound-script, provider, routing, application, or publication change is authorized by this documentation update.
+- The 104 × 27 routed batch is complete for the current mapped set. The expanded browsing catalog is not a new routing cohort; newly added destinations remain unrouted unless separately recorded in the live master.
+- Four shared-address venue identity rows remain pending review. Parkview II and The Grand on Beacon Hill remain list-only location cases. Messenger's supplied coordinate conflict is preserved without overwriting the accepted endpoint. Ide #203 remains withheld pending a matching structured unit/media record.
+- Preview-era missing-key, migration, and limited-verification blockers belong to the isolated historical preview and are not current release instructions. They do not authorize reinstating an old renderer or starting a new publication.
+- Candidate research remains broad income-restricted capture; the separate LIHTC/tax-credit evidence task is not a universal narrower filter. Property-specific availability, eligibility, HCV acceptance and currentness remain distinct unresolved research fields.
+- Final bound-script/local-source parity and live-Sheet installation status still require future evidence. Do not infer them from the repository-reported release records above.
+
 Earlier release entries below are historical.
 
 ---
 
-# Current website release — September 20, 2026
+# Historical website release — September 20, 2026
 
 ## Selected-card payment standard
 
@@ -36,7 +45,7 @@ The user approved replacing the existing housing site with the reviewed AI Studi
 
 The left walking tile follows the selected destination and retains priority-cluster range/coverage. The right independently uses the same Property ID's saved `nearestSavedVenue` and `savedVenueCoverage`; each link owns its destination ID. Partial coverage is labeled and missing results stay unresolved. Marker coordinates are unchanged, list-only records remain available, filters do not automatically move the camera, and absent geometry never produces a fake route.
 
-Data: September 20 V3 snapshot, generated `2026-09-20T23:29:46.421Z`, workbook SHA-256 `c35f02ca937c1499781235378644be236bed671fc6e69fe94c9fabf581728755`. Counts: 106 properties, 104 mapped/two list-only, 21 units, 28 saved venues and 2,808 saved Google walking measurements. All 104 mapped properties have 27/27 saved-venue and 4/4 priority coverage. Current Google measurements have no drawable geometry. The approved cost correction adds the $90 utility planning setting to recorded rent once and uses the recorded 1BR standard for every apartment size; unknown inputs remain unresolved. This is a planning estimate, not voucher approval.
+That earlier September 20 V3 snapshot had 106 properties, 104 mapped/two list-only, 21 units, 28 saved venues and 2,808 saved Google walking measurements. Its workbook SHA-256 was `c35f02ca937c1499781235378644be236bed671fc6e69fe94c9fabf581728755`. All 104 mapped properties had 27/27 saved-venue and 4/4 priority coverage. Current Google measurements had no drawable geometry. The approved cost correction added the $90 utility planning setting to recorded rent once and used the recorded 1BR standard for every apartment size; unknown inputs remained unresolved. This was a planning estimate, not voucher approval.
 
 Source data, interaction and cost tests, TypeScript checks and production build passed. Desktop and 390px production-preview checks passed; equal walking tiles also passed at 320px, with independent destination selection/property switching and no text overflow in tested cases. Public source facts outside the approved cost/release metadata were preserved. The release manifest records exact source/export and deployable file hashes. The live Sheet and bound Apps Script were not changed; the prepared Sheet cost installer remains uninstalled.
 
@@ -46,7 +55,7 @@ Earlier entries below describe the superseded renderer and are historical.
 
 ---
 
-# Current website release — September 20, 2026
+# Historical website release — September 20, 2026
 
 The live Google Sheet remains the master. This release uses its supplied `V3_research_ready_MASTER_2026-09-20.xlsx` build snapshot, SHA-256 `c35f02ca937c1499781235378644be236bed671fc6e69fe94c9fabf581728755`. The workbook is private, ignored, unchanged, and excluded from Git.
 

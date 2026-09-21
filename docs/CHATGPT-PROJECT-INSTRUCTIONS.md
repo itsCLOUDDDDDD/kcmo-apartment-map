@@ -14,6 +14,8 @@ For each handoff, record: requested outcome, accepted decisions, affected files/
 
 Keep private research and credentials out of this public repository. Perform only the requested scope. Distinguish local changes, committed changes, pushed changes and verified publication. Do not publish simply because a build passed.
 
+Preserve exact Property IDs, Place IDs and Destination IDs; names do not bind facts or routes. Keep the original 27-venue routing cohort separate from later browsing additions. Provider retrieval is explicit-only, and valid measures remain separate from optional geometry. Preserve the reviewed AI Studio design and the approved planning rule: recorded unit rent plus the configured utility planning standard once, divided by the recorded 1BR standard for every bedroom size, with missing inputs unresolved and no fee/allowance gate.
+
 ## Starting the implementation chat
 
 After the repository is accessible, a concise request is: “Read the project entry documents and current status. Inspect the current sheet/export before changing anything. Continue the next unfinished task, preserving newer user edits. Verify the result and update the handoff.”
