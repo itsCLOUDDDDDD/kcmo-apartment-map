@@ -19,9 +19,9 @@ window.KCMO_MAP_DATA = {
     "utilityPlanningStandard": 90,
     "previewOnly": false,
     "masterMapFields": true,
-    "notice": "Static reviewed snapshot. Sheet edits do not publish this website.",
+    "notice": "Reviewed static snapshot. Sheet edits do not publish this website. Planning costs use the approved rent-plus-utility setting rule.",
     "privacy": "Public allowlisted property facts only; notes, archives, personal eligibility, source workbook and credentials are excluded.",
-    "voucherCaveat": "The $90 utility standard is a planning assumption, not an official allowance. Missing fees prevent a complete total. All bedroom types use the recorded 1BR comparator.",
+    "voucherCaveat": "Planning gross is recorded rent plus the utility planning setting once, without separate fees. All bedroom counts, including unknown, use the recorded 1BR standard. Missing rent, utility setting or valid standard stays unresolved. Planning estimate only; not voucher approval.",
     "routingAttribution": "Current walking measurements: Google. Older evidence: Outscraper and OSRM/FOSSGIS. Geometry availability is separate from walking-time validity; no missing paths are invented.",
     "routingAttributionUrl": "https://www.openstreetmap.org/copyright",
     "routingCorrectionsUrl": "https://www.openstreetmap.org/fixthemap",
@@ -54,9 +54,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1481,
         "sqft": 679,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1571,
+        "percent": 0.8603504928806134,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -66,9 +66,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 2904,
         "sqft": 1134,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 2994,
+        "percent": 1.6396495071193866,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -78,7 +78,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -86,7 +86,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Yes",
@@ -1056,9 +1056,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1088,
         "sqft": 663,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1178,
+        "percent": 0.6451259583789705,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -1068,9 +1068,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1353,
         "sqft": 812,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1443,
+        "percent": 0.7902519167579408,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -1080,7 +1080,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -1088,7 +1088,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry — complimentary on every floor; installed in-unit equipment not listed",
@@ -2058,9 +2058,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1250,
         "sqft": 722,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1340,
+        "percent": 0.7338444687842278,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -2072,7 +2072,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -2082,7 +2082,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -2090,7 +2090,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Yes — full-size washer and dryer included in exact #206",
@@ -3060,9 +3060,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 825,
         "sqft": 760,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 915,
+        "percent": 0.5010952902519168,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -3072,9 +3072,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 975,
         "sqft": 910,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1065,
+        "percent": 0.5832420591456736,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": "Unit #108-Chase only; see its own source/date."
       },
@@ -3084,7 +3084,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -3092,7 +3092,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry in every building; hookups select properties; installed in-unit machines unconfirmed",
@@ -3139,9 +3139,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 915,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 915,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5010952902519168,
             "officialPercent": null
           }
         },
@@ -3177,9 +3177,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 915,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 915,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5010952902519168,
             "officialPercent": null
           }
         },
@@ -3215,9 +3215,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1065,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1065,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5832420591456736,
             "officialPercent": null
           }
         }
@@ -4178,9 +4178,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 925,
         "sqft": 730,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1015,
+        "percent": 0.5558598028477546,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -4192,7 +4192,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -4202,7 +4202,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -4210,7 +4210,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry in every building; hookups select properties; installed in-unit machines unconfirmed",
@@ -4269,9 +4269,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1015,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1015,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5558598028477546,
             "officialPercent": null
           }
         },
@@ -4307,9 +4307,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 890,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 890,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.4874041621029573,
             "officialPercent": null
           }
         },
@@ -4345,9 +4345,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 965,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 965,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5284775465498357,
             "officialPercent": null
           }
         }
@@ -5297,9 +5297,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 850,
         "sqft": 770,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 940,
+        "percent": 0.5147864184008762,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -5311,7 +5311,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -5321,7 +5321,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -5329,7 +5329,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry in every building; hookups select properties; installed in-unit machines unconfirmed",
@@ -5376,9 +5376,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 940,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 940,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5147864184008762,
             "officialPercent": null
           }
         },
@@ -5414,9 +5414,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 990,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 990,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5421686746987951,
             "officialPercent": null
           }
         }
@@ -6377,9 +6377,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1495,
         "sqft": 760,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1585,
+        "percent": 0.8680175246440307,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -6389,9 +6389,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1595,
         "sqft": null,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1685,
+        "percent": 0.9227820372398685,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -6401,7 +6401,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -6409,7 +6409,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "#203: washer/dryer included. Building offers in-unit AND shared laundry; other units unconfirmed.",
@@ -7370,7 +7370,7 @@ window.KCMO_MAP_DATA = {
         "sqft": 710,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -7382,7 +7382,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -7392,7 +7392,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -7400,7 +7400,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry in every building; hookups select properties; installed in-unit machines unconfirmed",
@@ -8370,9 +8370,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 900,
         "sqft": 720,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 990,
+        "percent": 0.5421686746987951,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -8384,7 +8384,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -8392,9 +8392,9 @@ window.KCMO_MAP_DATA = {
         "beds": 3,
         "rent": 1500,
         "sqft": 2020,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1590,
+        "percent": 0.8707557502738226,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": "Unit #1204 only; see its own source/date."
       },
@@ -8402,7 +8402,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry in every building; hookups select properties; installed in-unit machines unconfirmed",
@@ -8461,9 +8461,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1040,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1040,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5695509309967142,
             "officialPercent": null
           }
         },
@@ -8499,9 +8499,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 990,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 990,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5421686746987951,
             "officialPercent": null
           }
         },
@@ -8537,9 +8537,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1590,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1590,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.8707557502738226,
             "officialPercent": null
           }
         }
@@ -9489,9 +9489,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1000,
         "sqft": 860,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1090,
+        "percent": 0.5969331872946331,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": "Unit #1101 / physical 101 only; see its own source/date.",
         "standard": 1826,
@@ -9503,7 +9503,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -9513,7 +9513,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -9521,7 +9521,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry in every building; hookups select properties; installed in-unit machines unconfirmed",
@@ -9580,9 +9580,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1090,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1090,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5969331872946331,
             "officialPercent": null
           }
         }
@@ -10532,9 +10532,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1000,
         "sqft": 830,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1090,
+        "percent": 0.5969331872946331,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -10546,7 +10546,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -10556,7 +10556,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -10564,7 +10564,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry in every building; hookups select properties; installed in-unit machines unconfirmed",
@@ -10611,9 +10611,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1090,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1090,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5969331872946331,
             "officialPercent": null
           }
         },
@@ -10661,9 +10661,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 990,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 990,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5421686746987951,
             "officialPercent": null
           }
         }
@@ -11613,9 +11613,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1000,
         "sqft": 970,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1090,
+        "percent": 0.5969331872946331,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": "Unit #3104 / physical 104 only; see its own source/date.",
         "standard": 1826,
@@ -11627,7 +11627,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -11637,7 +11637,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -11645,7 +11645,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry in every building; hookups select properties; installed in-unit machines unconfirmed",
@@ -11692,9 +11692,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1090,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1090,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5969331872946331,
             "officialPercent": null
           }
         }
@@ -12644,9 +12644,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1350,
         "sqft": null,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1440,
+        "percent": 0.7886089813800657,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -12658,7 +12658,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -12668,7 +12668,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -12676,7 +12676,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -13637,7 +13637,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -13649,7 +13649,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -13659,7 +13659,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -13667,7 +13667,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown / proposed project",
@@ -14620,7 +14620,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -14632,7 +14632,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -14642,7 +14642,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -14650,7 +14650,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown / proposed project",
@@ -15611,7 +15611,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -15623,7 +15623,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -15633,7 +15633,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -15641,7 +15641,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown / proposed project",
@@ -16602,7 +16602,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -16614,7 +16614,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -16624,7 +16624,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -16632,7 +16632,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Current portfolio advertises in-unit washer/dryer; verify this building/unit.",
@@ -17593,7 +17593,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -17605,7 +17605,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -17615,7 +17615,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -17623,7 +17623,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Current portfolio advertises in-unit washer/dryer; verify this building/unit.",
@@ -18584,7 +18584,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -18596,7 +18596,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -18606,7 +18606,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -18614,7 +18614,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -19567,7 +19567,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -19579,7 +19579,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -19589,7 +19589,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -19597,7 +19597,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",
@@ -20558,7 +20558,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -20570,7 +20570,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -20580,7 +20580,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -20588,7 +20588,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -21541,7 +21541,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1826,
@@ -21553,7 +21553,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -21563,7 +21563,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -21571,7 +21571,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry rooms",
@@ -22530,9 +22530,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1180,
         "sqft": 724,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1270,
+        "percent": 0.8813324080499653,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -22542,9 +22542,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1460,
         "sqft": 1020,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1550,
+        "percent": 1.0756419153365717,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -22554,7 +22554,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -22562,7 +22562,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Washer/dryer included — official in-unit laundry, building scope",
@@ -23532,9 +23532,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1050,
         "sqft": 750,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1140,
+        "percent": 0.7911172796668979,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -23544,9 +23544,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1349,
         "sqft": null,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1439,
+        "percent": 0.9986120749479528,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -23556,7 +23556,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -23564,7 +23564,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Washer/dryer included — official apartment amenities",
@@ -24534,9 +24534,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 999,
         "sqft": 740,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1089,
+        "percent": 0.7557251908396947,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -24546,9 +24546,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1299,
         "sqft": 878,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1389,
+        "percent": 0.963913948646773,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -24558,7 +24558,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -24566,7 +24566,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Selected layouts: Dessau #102/#101 and Columbus Park #106 include W/D; Greenwich #115/#313 and Brooklyn #316 use community laundry; Soho #301 explicitly community laundry.",
@@ -25536,9 +25536,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 728,
         "sqft": 777,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 818,
+        "percent": 0.5676613462873005,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -25548,9 +25548,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1042,
         "sqft": 1106,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1132,
+        "percent": 0.7855655794587092,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -25560,7 +25560,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -25568,7 +25568,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared on-site laundry — official 24-hour laundry room; installed in-unit machines not advertised",
@@ -26538,9 +26538,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1204,
         "sqft": 814,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1294,
+        "percent": 0.8979875086745316,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -26550,9 +26550,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1440,
         "sqft": 1070,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1530,
+        "percent": 1.0617626648160998,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -26562,7 +26562,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -26570,7 +26570,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry facility advertised; selected-unit installed W/D not established by current sources",
@@ -27540,9 +27540,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 900,
         "sqft": 770,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 990,
+        "percent": 0.6870229007633588,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -27554,7 +27554,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -27564,7 +27564,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -27572,7 +27572,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry confirmed by official portfolio; hookups only selected properties, not established in listed units",
@@ -28544,7 +28544,7 @@ window.KCMO_MAP_DATA = {
         "sqft": 750,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -28556,7 +28556,7 @@ window.KCMO_MAP_DATA = {
         "sqft": 1095,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -28566,7 +28566,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -28574,7 +28574,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Washer/dryer included advertised building-wide by property-specific listings; exact available unit not identified",
@@ -29546,7 +29546,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -29558,7 +29558,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -29568,7 +29568,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -29576,7 +29576,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry in each building — official; no in-unit machines claimed",
@@ -30548,7 +30548,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -30560,7 +30560,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -30570,7 +30570,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -30578,7 +30578,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Historical2019source reports W/D included in each home; current manager does not establish equipment, so current inclusion remains unconfirmed",
@@ -31529,9 +31529,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 900,
         "sqft": 720,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 990,
+        "percent": 0.6870229007633588,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -31543,7 +31543,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -31553,7 +31553,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -31561,7 +31561,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry confirmed by official portfolio; hookups only selected properties, not established in listed units",
@@ -32533,7 +32533,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -32545,7 +32545,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -32555,7 +32555,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -32563,7 +32563,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown from the reviewed current evidence",
@@ -33516,7 +33516,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -33528,7 +33528,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -33538,7 +33538,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -33546,7 +33546,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "In-unit washer/dryer advertised on joint property site; confirm exact Row home",
@@ -34499,7 +34499,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -34511,7 +34511,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -34521,7 +34521,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -34529,7 +34529,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "On-site shared laundry",
@@ -35482,7 +35482,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -35494,7 +35494,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -35504,7 +35504,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -35512,7 +35512,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -36465,7 +36465,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -36477,7 +36477,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -36487,7 +36487,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -36495,7 +36495,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",
@@ -37448,7 +37448,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -37460,7 +37460,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -37470,7 +37470,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -37478,7 +37478,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -38431,7 +38431,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -38443,7 +38443,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -38453,7 +38453,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -38461,7 +38461,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Laundry rooms and W/D hookups; installed machines not promised",
@@ -39414,7 +39414,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -39426,7 +39426,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -39436,7 +39436,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -39444,7 +39444,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry and washer/dryer hookups; installed appliances not established.",
@@ -40397,7 +40397,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -40409,7 +40409,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -40419,7 +40419,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -40427,7 +40427,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -41377,7 +41377,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -41389,7 +41389,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -41399,7 +41399,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -41407,7 +41407,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -41529,7 +41529,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1441,
@@ -41541,7 +41541,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -41551,7 +41551,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -41559,7 +41559,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -42510,9 +42510,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1575,
         "sqft": null,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1665,
+        "percent": 0.9229490022172949,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -42524,7 +42524,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -42534,7 +42534,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -42542,7 +42542,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -43493,9 +43493,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1485,
         "sqft": 743,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1575,
+        "percent": 0.873059866962306,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -43505,9 +43505,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 2005,
         "sqft": 998,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 2095,
+        "percent": 1.1613082039911309,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -43517,7 +43517,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -43525,7 +43525,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Yes",
@@ -44487,9 +44487,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1300,
         "sqft": 633,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1390,
+        "percent": 0.770509977827051,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -44499,9 +44499,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1375,
         "sqft": 956,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1465,
+        "percent": 0.8120842572062085,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": "Unit #302-HUD only; see its own source/date."
       },
@@ -44511,7 +44511,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -44519,7 +44519,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "YES - official apartment amenities list includes washer/dryer",
@@ -44566,9 +44566,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1465,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1465,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.8120842572062085,
             "officialPercent": null
           }
         }
@@ -45598,9 +45598,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1189,
         "sqft": 650,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1279,
+        "percent": 0.708980044345898,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -45610,9 +45610,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1166,
         "sqft": 755,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1256,
+        "percent": 0.6962305986696231,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -45622,7 +45622,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -45630,7 +45630,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Yes - in-unit laundry",
@@ -46592,9 +46592,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1014,
         "sqft": 788,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1104,
+        "percent": 0.6119733924611973,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -46606,7 +46606,7 @@ window.KCMO_MAP_DATA = {
         "sqft": 933,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -46616,7 +46616,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -46624,7 +46624,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "No - shared laundry",
@@ -47575,9 +47575,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 965,
         "sqft": 674,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1055,
+        "percent": 0.5848115299334812,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -47587,9 +47587,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 918,
         "sqft": 856,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1008,
+        "percent": 0.5587583148558758,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -47599,7 +47599,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -47607,7 +47607,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -48569,9 +48569,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 960,
         "sqft": 625,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1050,
+        "percent": 0.582039911308204,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -48581,9 +48581,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1149,
         "sqft": 820,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1239,
+        "percent": 0.6868070953436807,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -48593,7 +48593,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -48601,7 +48601,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -49563,9 +49563,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 900,
         "sqft": 720,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 990,
+        "percent": 0.5487804878048781,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": "Unit #207 only; see its own source/date.",
         "standard": 1804,
@@ -49575,9 +49575,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1200,
         "sqft": 1250,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1290,
+        "percent": 0.7150776053215078,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -49587,7 +49587,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -49595,7 +49595,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -49642,9 +49642,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 990,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 990,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5487804878048781,
             "officialPercent": null
           }
         }
@@ -50597,9 +50597,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 875,
         "sqft": 950,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 965,
+        "percent": 0.5349223946784922,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -50609,9 +50609,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1200,
         "sqft": 1700,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1290,
+        "percent": 0.7150776053215078,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -50621,7 +50621,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -50629,7 +50629,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "HOOKUPS in unit + laundry each floor",
@@ -50676,9 +50676,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 965,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 965,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5349223946784922,
             "officialPercent": null
           }
         },
@@ -50748,9 +50748,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1090,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1090,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.6042128603104213,
             "officialPercent": null
           }
         },
@@ -50786,9 +50786,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 1090,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 1090,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.6042128603104213,
             "officialPercent": null
           }
         }
@@ -51741,9 +51741,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 860,
         "sqft": 745,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 950,
+        "percent": 0.5266075388026608,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": "Unit #204 only; see its own source/date.",
         "standard": 1804,
@@ -51755,7 +51755,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -51765,7 +51765,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -51773,7 +51773,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -51820,9 +51820,9 @@ window.KCMO_MAP_DATA = {
             "planningStandard": 90,
             "planningSubtotalExcludingUnresolvedFees": 950,
             "unresolvedFees": true,
-            "planningTotal": null,
+            "planningTotal": 950,
             "officialComparisonTotal": null,
-            "percent": null,
+            "percent": 0.5266075388026608,
             "officialPercent": null
           }
         }
@@ -52777,7 +52777,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -52789,7 +52789,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -52799,7 +52799,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -52807,7 +52807,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -53760,7 +53760,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -53772,7 +53772,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -53782,7 +53782,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -53790,7 +53790,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -54754,7 +54754,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -54766,7 +54766,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -54776,7 +54776,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -54784,7 +54784,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -55737,7 +55737,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -55749,7 +55749,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -55759,7 +55759,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -55767,7 +55767,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -56720,7 +56720,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -56732,7 +56732,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -56742,7 +56742,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -56750,7 +56750,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -57703,7 +57703,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -57715,7 +57715,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -57725,7 +57725,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -57733,7 +57733,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -58697,7 +58697,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -58709,7 +58709,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -58719,7 +58719,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -58727,7 +58727,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -59691,7 +59691,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -59703,7 +59703,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -59713,7 +59713,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -59721,7 +59721,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -60674,7 +60674,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -60686,7 +60686,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -60696,7 +60696,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -60704,7 +60704,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -61657,7 +61657,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -61669,7 +61669,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -61679,7 +61679,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -61687,7 +61687,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -62637,7 +62637,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -62649,7 +62649,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -62659,7 +62659,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -62667,7 +62667,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -62789,7 +62789,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -62801,7 +62801,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -62811,7 +62811,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -62819,7 +62819,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry advertised",
@@ -63772,7 +63772,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -63784,7 +63784,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -63794,7 +63794,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -63802,7 +63802,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry advertised",
@@ -64755,7 +64755,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -64767,7 +64767,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -64777,7 +64777,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -64785,7 +64785,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown / construction project",
@@ -65738,7 +65738,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -65750,7 +65750,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -65760,7 +65760,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -65768,7 +65768,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Shared laundry and washer hookups; installed in-unit appliances not established.",
@@ -66721,7 +66721,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -66733,7 +66733,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -66743,7 +66743,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -66751,7 +66751,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -67704,7 +67704,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -67716,7 +67716,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -67726,7 +67726,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -67734,7 +67734,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -68687,7 +68687,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -68699,7 +68699,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -68709,7 +68709,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -68717,7 +68717,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Official: in-unit washer/dryer.",
@@ -69670,7 +69670,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -69682,7 +69682,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -69692,7 +69692,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -69700,7 +69700,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",
@@ -70653,7 +70653,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1804,
@@ -70665,7 +70665,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -70675,7 +70675,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -70683,7 +70683,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -71634,9 +71634,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1420,
         "sqft": null,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1510,
+        "percent": 1.4299242424242424,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -71646,9 +71646,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 1680,
         "sqft": null,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1770,
+        "percent": 1.6761363636363635,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -71658,7 +71658,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -71666,7 +71666,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -72619,7 +72619,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -72629,9 +72629,9 @@ window.KCMO_MAP_DATA = {
         "beds": 2,
         "rent": 2435,
         "sqft": 1976,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 2525,
+        "percent": 2.391098484848485,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -72641,7 +72641,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -72649,7 +72649,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -73608,9 +73608,9 @@ window.KCMO_MAP_DATA = {
         "beds": 1,
         "rent": 1024,
         "sqft": null,
-        "gross": null,
-        "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "gross": 1114,
+        "percent": 1.0549242424242424,
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -73622,7 +73622,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -73632,7 +73632,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -73640,7 +73640,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -74593,7 +74593,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -74605,7 +74605,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -74615,7 +74615,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -74623,7 +74623,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -75587,7 +75587,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -75599,7 +75599,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -75609,7 +75609,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -75617,7 +75617,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -76570,7 +76570,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -76582,7 +76582,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -76592,7 +76592,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -76600,7 +76600,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -77553,7 +77553,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -77565,7 +77565,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -77575,7 +77575,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -77583,7 +77583,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -78536,7 +78536,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -78548,7 +78548,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -78558,7 +78558,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -78566,7 +78566,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -79519,7 +79519,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -79531,7 +79531,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -79541,7 +79541,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -79549,7 +79549,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -80502,7 +80502,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -80514,7 +80514,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -80524,7 +80524,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -80532,7 +80532,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -81485,7 +81485,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -81497,7 +81497,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -81507,7 +81507,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -81515,7 +81515,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unverified",
@@ -82468,7 +82468,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -82480,7 +82480,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -82490,7 +82490,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -82498,7 +82498,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown / proposed project",
@@ -83451,7 +83451,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -83463,7 +83463,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -83473,7 +83473,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -83481,7 +83481,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -84434,7 +84434,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -84446,7 +84446,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -84456,7 +84456,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -84464,7 +84464,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -85417,7 +85417,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -85429,7 +85429,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -85439,7 +85439,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -85447,7 +85447,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -86400,7 +86400,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -86412,7 +86412,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -86422,7 +86422,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -86430,7 +86430,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -87383,7 +87383,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -87395,7 +87395,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -87405,7 +87405,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -87413,7 +87413,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Official: in-unit washer/dryer.",
@@ -88366,7 +88366,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -88378,7 +88378,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -88388,7 +88388,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -88396,7 +88396,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",
@@ -89349,7 +89349,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -89361,7 +89361,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -89371,7 +89371,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -89379,7 +89379,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -90332,7 +90332,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -90344,7 +90344,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -90354,7 +90354,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -90362,7 +90362,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -91315,7 +91315,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -91327,7 +91327,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -91337,7 +91337,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -91345,7 +91345,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -92298,7 +92298,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -92310,7 +92310,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -92320,7 +92320,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -92328,7 +92328,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Syndication advertises installed in-unit laundry.",
@@ -93281,7 +93281,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -93293,7 +93293,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -93303,7 +93303,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -93311,7 +93311,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Official: shared basement laundry.",
@@ -94264,7 +94264,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -94276,7 +94276,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -94286,7 +94286,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -94294,7 +94294,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",
@@ -95247,7 +95247,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -95259,7 +95259,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -95269,7 +95269,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -95277,7 +95277,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",
@@ -96230,7 +96230,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -96242,7 +96242,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -96252,7 +96252,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -96260,7 +96260,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",
@@ -97213,7 +97213,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -97225,7 +97225,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -97235,7 +97235,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -97243,7 +97243,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",
@@ -98196,7 +98196,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -98208,7 +98208,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -98218,7 +98218,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -98226,7 +98226,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",
@@ -99179,7 +99179,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -99191,7 +99191,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -99201,7 +99201,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -99209,7 +99209,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -100162,7 +100162,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -100174,7 +100174,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -100184,7 +100184,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -100192,7 +100192,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -101145,7 +101145,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -101157,7 +101157,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -101167,7 +101167,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -101175,7 +101175,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "See amenities; otherwise unverified.",
@@ -102128,7 +102128,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -102140,7 +102140,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -102150,7 +102150,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -102158,7 +102158,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Unknown",
@@ -103111,7 +103111,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null,
         "standard": 1056,
@@ -103123,7 +103123,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -103133,7 +103133,7 @@ window.KCMO_MAP_DATA = {
         "sqft": null,
         "gross": null,
         "percent": null,
-        "fit": "Planning comparison only; official allowance and eligibility require confirmation",
+        "fit": "Planning estimate only; not voucher approval",
         "offered": null,
         "evidence": null
       },
@@ -103141,7 +103141,7 @@ window.KCMO_MAP_DATA = {
         "planningUtilities": 90,
         "electricityEstimate": 90,
         "requiredMonthlyFees": null,
-        "basis": "User-selected $90 utility planning standard. Unknown fees and official allowances remain unresolved. Unit fees require their own confirmation or explicit all-unit scope."
+        "basis": "Planning gross = recorded rent + $90 utility planning standard. No separate fees or official allowance added. All bedroom counts use the recorded 1BR standard. Planning estimate only; not voucher approval."
       },
       "amenities": {
         "laundry": "Not established from current property/manager evidence.",

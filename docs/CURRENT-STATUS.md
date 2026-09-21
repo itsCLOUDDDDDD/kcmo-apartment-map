@@ -1,5 +1,19 @@
 # Current website release — September 20, 2026
 
+The user approved replacing the existing housing site with the reviewed AI Studio design and all additional changes from this work. Frontend source: `itsCLOUDDDDDD/aistudio` commit `912f28c23d9947b85ba5c997919b53927a76993b`. This release preserves its Tailwind styling and adds the approved close-zoom previews, compact property experience, recorded Street View actions, saved/event destination picker, category/priority venue markers, independent square walking tiles, and approved planning-cost rule.
+
+The left walking tile follows the selected destination and retains priority-cluster range/coverage. The right independently uses the same Property ID's saved `nearestSavedVenue` and `savedVenueCoverage`; each link owns its destination ID. Partial coverage is labeled and missing results stay unresolved. Marker coordinates are unchanged, list-only records remain available, filters do not automatically move the camera, and absent geometry never produces a fake route.
+
+Data: September 20 V3 snapshot, generated `2026-09-20T23:29:46.421Z`, workbook SHA-256 `c35f02ca937c1499781235378644be236bed671fc6e69fe94c9fabf581728755`. Counts: 106 properties, 104 mapped/two list-only, 21 units, 28 saved venues and 2,808 saved Google walking measurements. All 104 mapped properties have 27/27 saved-venue and 4/4 priority coverage. Current Google measurements have no drawable geometry. The approved cost correction adds the $90 utility planning setting to recorded rent once and uses the recorded 1BR standard for every apartment size; unknown inputs remain unresolved. This is a planning estimate, not voucher approval.
+
+Source data, interaction and cost tests, TypeScript checks and production build passed. Desktop and 390px production-preview checks passed; equal walking tiles also passed at 320px, with independent destination selection/property switching and no text overflow in tested cases. Public source facts outside the approved cost/release metadata were preserved. The release manifest records exact source/export and deployable file hashes. The live Sheet and bound Apps Script were not changed; the prepared Sheet cost installer remains uninstalled.
+
+Publication verification is recorded after the Pages deployment. Earlier entries below describe the superseded renderer and are historical.
+
+---
+
+# Current website release — September 20, 2026
+
 The live Google Sheet remains the master. This release uses its supplied `V3_research_ready_MASTER_2026-09-20.xlsx` build snapshot, SHA-256 `c35f02ca937c1499781235378644be236bed671fc6e69fe94c9fabf581728755`. The workbook is private, ignored, unchanged, and excluded from Git.
 
 ## Released data and behavior

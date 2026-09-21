@@ -1,5 +1,9 @@
 # Sheet to website data flow
 
+## Current AI Studio frontend
+
+The reviewed export is bundled from `aistudio/src/data/housing-export.json` through its housing adapter. Root `map-data.js` exposes the same JSON for public export compatibility. `release.json` records source identity and hashes. Sixteen confirmed saved/event choices join by exact destination ID; unmatched locations are not invented. The selected-property right tile binds `nearestSavedVenue` and `savedVenueCoverage` independently of the left destination selection. Planning costs are recorded rent plus the utility planning setting once, divided by the property’s recorded 1BR standard; missing inputs remain unresolved. The website release does not install Sheet formulas or Apps Script.
+
 The live Google Sheet owns property research. A fresh explicit XLSX snapshot supplies Candidates, Map Details, Map Places, Map Routes, Scene & Anchors, cost settings/standards and Route Summary. `read_xlsx.py` reads it without modification; `core.cjs` exports public allowlisted facts; `build_preview.py` creates the local preview and validation report.
 
 ## Identity, visibility and research

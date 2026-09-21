@@ -1,22 +1,18 @@
-# Build and verify the website
+# Build and publish the AI Studio housing interface
 
-The live Google Sheet is the master; use an explicit fresh XLSX snapshot stored in ignored `local-input/` or `.local-input/`. Python 3 standard library and Node.js 18+ are sufficient for the workbook exporter. No spreadsheet-writing or network service is used.
+Editable frontend source: `itsCLOUDDDDDD/aistudio`. Use its reviewed main commit and existing Tailwind system. `release.json` identifies the source commit used for this release.
 
 ```sh
-node tools/workbook-export/build_shared_apartment_map.mjs --workbook local-input/fresh-master.xlsx --output .local-preview/site
-python3 tools/research/read_xlsx.py local-input/fresh-master.xlsx > .local-preview/snapshot.json
-node tools/research/verify_master_release.cjs .local-preview/snapshot.json .local-preview/site/map-data.js local-input/fresh-master.xlsx
-node tools/research/test_google_walks.cjs
-node tools/research/test_core.cjs
-node tools/research/test_renderers.mjs .local-preview/site
-node tools/research/test_walking_access.mjs .local-preview/site
-python3 -m http.server 8765 --bind 127.0.0.1 --directory .local-preview/site
+npm ci
+npm test
+npm run lint
+npm run build
 ```
 
-`verify_master_release.cjs` asserts the reviewed September 20 counts, unresolved IDs, 27-venue and four-priority coverage, complete Google evidence, Sheet summaries, and unit-photo ownership. Future intentional master changes require a reviewed update to those expectations.
+Configure the existing Google Maps browser key in an ignored `.env.local` as `VITE_GOOGLE_MAPS_API_KEY`. Never commit environment files. Vite uses relative asset paths for GitHub Pages repository hosting. The browser key is necessarily included in the browser build; do not add server credentials.
 
-Output stays local. The builder writes `.local-preview/validation-report.json`, preserves public geography, copies only allowlisted site assets, and never changes the source workbook. `--site-template <reviewed-public-files>` selects a reviewed layout when unrelated working-tree interface changes must remain unpublished. This release used the previously published layout plus only Sheet compatibility and walking-display changes; its existing compiled map renderer already omits missing geometry.
+The reviewed public snapshot is `src/data/housing-export.json`, and saved event joins are in `src/data/saved-events.json`. Keep stable property and destination IDs, unresolved facts, unit ownership and the independent nearest/priority summaries. Updating the Sheet does not automatically update these snapshots. Do not run the former site's builder over the current frontend.
 
-Review the public comparison, workbook hash, privacy, route coverage, exact-unit photos, and desktop/mobile browser behavior before publication. A prepared preview includes a local banner and `meta.previewOnly=true`. Promote only reviewed files, remove the local banner, set `meta.previewOnly=false` and `meta.staged=false`, and re-run acceptance checks on the promoted data. Keep all private workbooks, inputs, reports and Apps Script payloads out of Git.
+For an authorized release, copy the complete `dist/` contents into a clean checkout of this repository, preserve `.nojekyll`, and serialize the identical reviewed housing JSON to `map-data.js` as `window.KCMO_MAP_DATA`. Record source/snapshot and file hashes in `release.json`. The current interface uses the bundled JSON; `map-data.js` remains an equivalent public export for compatibility.
 
-When publication is authorized, stage only the intended release files on the existing `main`, review the staged diff, commit, and push to origin. A push deploys GitHub Pages from the root of `main`. Check the Pages build's commit/status, compare served public asset hashes with the release, and confirm the live page renders the new data. A successful local build alone is not a deployment.
+Review intended paths and privacy, check desktop/mobile behavior, then commit and push only the release to main. GitHub Pages serves the root of main. Verify the Pages build commit/status, live file hashes, Google map, property selection, independent walking tiles and mobile layout. A build or source push alone does not establish successful website publication.
