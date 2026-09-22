@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "db9e04ae4c7278657ac925cbe18552e1ff67b5ad",
+  "frontendCommit": "8782bee975576266c94da56e7aa9e213dd70b01f",
   "housingExportGeneratedAt": "2026-09-22T00:28:15.002Z",
   "workbookSha256": "4bd64cece1b0d3d5ad4b28a45051c74699fcce6a399fadfdb9e4d400630dcae1",
   "housingExportSha256": "356d59034f17199bf9f63b87432a2eb35aca56ac81f42aabced0ae0997596ec8",
@@ -19,19 +19,35 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-DZfYT3PI.css": "f773111e2faba35f6e1820caa0b8341f2b2a72fcfdde1c01f5cab6db9b1c63db",
-    "assets/index-SntLC6S2.js": "d2e5025cc82598770cd420b22b20c5fc0b54b16e52e795f06f4fbd8d1a79cbf7",
+    "index.html": "7e1889a90e7aaab0baee70e9174eed38ac6d2d4ff9022ae75ffee40d809e094f",
+    "assets/index-DvqB4Lr1.css": "2f3f2c5d835a55de30fa0fc7516655bc3094f572c81ebf9fa898b81d570102f0",
+    "assets/index-DM9gK4qQ.js": "35105259a8346fbcabc8492fc17e12ab30aa888d7cb7d86b206ad4693dcd2bb4",
+    "assets/scene/2026-09-14_outsiders-social-club_kellz-chiefs-party_go-to-kellz.png": "36bfc482f58f26a77f53385bb454d321d94ec866ab9e91279a96cf6fa35827dd",
+    "assets/scene/2025-11-01_uptown-theater_zack-fox-dj-set_ace-b2b-lov3_full.png": "ff1ef0c83897ffbce220c360060ab932b5c6a4bcf8e39be43e85b52407e7ac2a",
+    "assets/scene/2026-02-08_sk8bar_floras-bloody-benefit-bash_lov3-ester-diol-mitchmakebeat_full.png": "7b3fb8e3cd10cbb385879a36f81766f81164c1a3d3def178d6730a7d1046b00f",
+    "assets/scene/2026-02-20_1428-st-louis-ave_strictly-luvaffair_charmaine-melak-lov3-localuva-stinkcur_full.png": "a77fdaaf6e8454e13dc1f8ee071c6c5f888d7601b309a0bd9042ca35adf7df02",
+    "assets/scene/2026-09-12_mod_stimulate-this-is-a-dance-party_tromac-rickyology-just-des-daybrk-lov3.png": "d95e14e16a3d731949365f5d3f4e3dce77746060ce270669c98dfe8576ad642e",
+    "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
+    "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
+    "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
+    "assets/scene/2025-10-11_minibar_dj-taye-dj-diehard-dj-lov3_dj-taye-dj-diehard-dj-lov3_full.png": "d24a6bbd120703deea438f32a8dcf59cf23e1bc23df80646c8db88a2eac31913",
+    "assets/scene/2025-05-31_undisclosed_meta-hi-fi-full-spectrum_stevie-cruz-janet-azimuth-jfortune-metaphysic_full.png": "99f41433607e59044dc89f9166b1c3b446e786a904af603a04c145a89941dbdc",
+    "assets/scene/2026-08-28_mod_strictly-she_mayapologies-melak-lov3-localuva_full.png": "f90d2eaaec8e4019bb4f115900f360ba0c3c95cb0a3bd8a926e1b8d54e5b2853",
+    "assets/scene/2026-09-14_outsiders-social-club_co-work-day.png": "68a8bcb75759f4d3bf13fa27c400800a3af0328336913da5fa5ff542162b3cbc",
+    "assets/scene/2026-05-01_ul_strictly-duro_catsitter-dj-esterdiol-localuva-atemporal-the-real-roya_full.png": "696695508b596c9b26f16d98083c8b0dc107a109cc6b3fcaa856d33871e941a2",
+    "assets/scene/2026-01-23_the-bottleneck_room-96-airr-fundraiser_kemper10k-nate-ishotwitty-lone3lm-catsitter_full.png": "5fc92361fea75497776717ec0a65410ee8064ed13ffe35002ebf21e5eaf40395",
+    "assets/scene/2026-09-15_outsiders-social-club_bible-study_daylie.png": "83001afba5d955f47ca8aa7046570e788ae4735565412c5dd5887a27de2e861b",
+    "assets/scene/2026-08-14_mod_stimulate-style-guide_lord-ki-g8ldsoul-lov3.png": "67e946df31347a98a3f2da69fe26f9ee9b948b422f4e659967e255a23fbf580a",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
-    "assets/photos/one-nine-vine-302-hud/floor-plan-2br.png": "86fb1b6affea105cac17b6ea1d0c38f1359a16e74f488ebe1dcee57ad9544591",
-    "assets/photos/one-nine-vine-302-hud/kitchen.png": "83ff6f40da159260ce934632886ac7b46a7a86a11f8b2fdf90abbaf46a022d9f",
     "assets/photos/one-nine-vine-302-hud/living-kitchen-1.png": "06dd4bc6793d07893c725826ac4044321517d834f365774a3c0131d9d1338749",
     "assets/photos/one-nine-vine-302-hud/living-kitchen-2.png": "7c066d84aaf1af713db1681098a79dae08b6a704dcaa1e1ece1b0d60feeda6bc",
-    "assets/photos/star-lofts-308/bathroom.png": "6925a3ec6616f9a4235aa73e3574e2fdbd58ec657b8127a1c443b236e842979b",
+    "assets/photos/one-nine-vine-302-hud/floor-plan-2br.png": "86fb1b6affea105cac17b6ea1d0c38f1359a16e74f488ebe1dcee57ad9544591",
+    "assets/photos/one-nine-vine-302-hud/kitchen.png": "83ff6f40da159260ce934632886ac7b46a7a86a11f8b2fdf90abbaf46a022d9f",
     "assets/photos/star-lofts-308/bedroom-closet.png": "6389ff7845f67d3226ad0a5d694c06a4be43a8b021dadef400d43ffcd0da67c2",
+    "assets/photos/star-lofts-308/bathroom.png": "6925a3ec6616f9a4235aa73e3574e2fdbd58ec657b8127a1c443b236e842979b",
     "assets/photos/star-lofts-308/kitchen-living.png": "4434c2d58b27baa0da994bb3a4ce2ec84479b0b61cee0a79e16524f1e979b6a4",
-    "index.html": "55e4cf8a9c08ee91c4fcb261cd38b5e26f091de60dd73305eb5616c2081932fd",
     "map-data.js": "af5de202456e222b6385127eae2c5ceb156fba0d239291fa17b1e7d374c26a1b"
   },
   "units": 26,
@@ -49,5 +65,24 @@
     "fixed": true,
     "matchingPickerSwatches": true,
     "venueColorsChanged": false
+  },
+  "sceneRestoration": {
+    "events": 19,
+    "flyers": 15,
+    "missingFlyerEventIds": [
+      "E16",
+      "E17",
+      "E18",
+      "E19"
+    ],
+    "unresolvedLocationEventIds": [
+      "E01",
+      "E03",
+      "E09"
+    ],
+    "reviewedAt": "2026-09-16",
+    "historicalExamples": true,
+    "pins": "Gold music symbols, 36px with dark outlines",
+    "coffeeSportsAndZipColorsUnchanged": true
   }
 }

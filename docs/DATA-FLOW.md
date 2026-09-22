@@ -1,5 +1,18 @@
 # Sheet to website data flow
 
+
+## Scene evidence restoration — approved website release
+
+Scene presentation is shared by `venuePresentation`, `VenueMarker` and `VenueLegend`: Core/Saved/Regional Scene and Scene Extension labels use gold (`#facc15`) with dark music icons and outlines. Scene pins are 36px with overlap priority below selected and priority venues, above ordinary venues. Other venue categories and the fixed property ZIP palette remain separate.
+
+The current React frontend reads the 19 reviewed records from `src/data/saved-events.json`. Their historical detail is restored from the retained `scene-data.js` export, correlated by existing Event ID and venue ID; the JSON records the historical export hash. The original minimal event fields remain unchanged. Existing source/crop manifests verify all 15 copied PNGs; no image is regenerated. `public/assets/scene/` is carried into the local production build by Vite.
+
+`SceneEventCards` renders the same historical cards inside the existing Scene place selection and venue popup. It filters on exact venue ID, never `suggestedVenueId`. The unresolved-location disclosure exposes UL, undisclosed META and Movidas without adding pins. The existing 16 located event choices used by walking controls remain unchanged. The larger-flyer dialog uses only the retained crop. Missing E16–E19 images are explicit nulls with exact missing references.
+
+Each event keeps its lineup/roles, music wording, post audio, caption/style context, uncertain event date and saved source reference. `sourceUrl` links to a curated local `assets/scene/research.html#EventID` excerpt; it is labeled saved research, not an original social-post permalink. Original post URLs were not retained in the historical export and are not invented. Private source screenshots/notes are not copied. Source-batch IDs, capture labels, verified supplied date (September 16 batch only), source-note date, post date and September 16 review date are distinct from event dates and the September 21 restoration date. Filenames do not establish upload order.
+
+The Sheet/housing export, current property facts, ZIP palette, venues, coordinates, routes and costs are not regenerated or changed. The approved build now includes these Scene assets; release.json records the source commit and deployed-file hashes. The publication does not refresh the housing snapshot.
+
 ## Current AI Studio frontend
 
 The reviewed export is bundled from `aistudio/src/data/housing-export.json` through its housing adapter. Root `map-data.js` exposes the same JSON for public export compatibility. `release.json` records source identity and hashes. Sixteen confirmed saved/event choices join by exact destination ID; unmatched locations are not invented. The selected-property right tile binds `nearestSavedVenue` and `savedVenueCoverage` independently of the left destination selection. Planning costs are recorded rent plus the utility planning setting once, divided by the property’s recorded 1BR standard; missing inputs remain unresolved. The website release does not install Sheet formulas or Apps Script.
