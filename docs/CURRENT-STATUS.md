@@ -8,7 +8,7 @@ The approved green diamond property pins and red soccer-ball Sports & community 
 
 Frontend source: `itsCLOUDDDDDD/aistudio` commit `930f15b02b9c9412aea6c2862e4dbd64a8231961`. All five frontend test suites, TypeScript, production build, 33 exporter tests, 14 Google-walking tests, ID/accounting/privacy checks and diff checks passed. Desktop and 320px/390px browser checks confirmed green diamonds, red soccer-ball pins, the bounded ZIP control, List (231), 104/127 map accounting, the newly available ZIP filters and The Lanes at Mission Bowl as a list-only record with an unresolved payment standard. Existing build configuration/chunk-size warnings remain nonblocking. `release.json` records the exact source, snapshot and active file hashes.
 
-**Release prepared and source pushed; public deployment verification pending.** No research rerun, Sheet write, geocoding or routing request was performed. The provenance restoration and newer amenity/design history below are preserved.
+**Published and verified:** website commit `c7b0ff679a77cb95e8c1756e5be941525a09f5ac`; GitHub Pages run `35669954210` succeeded and the Pages build names that commit. All 14 active served files match the release manifest. Live browser checks confirmed the Google map, green diamond/red soccer-ball pins, 231 property cards, 104 mapped/127 list-only accounting, all-area reset and The Lanes at Mission Bowl through its new ZIP option. This verification follow-up changes documentation only. No research rerun, Sheet write, geocoding or routing request was performed. The provenance restoration and newer amenity/design history below are preserved.
 
 ---
 
