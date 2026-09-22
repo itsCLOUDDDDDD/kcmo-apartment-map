@@ -137,6 +137,16 @@ const ResearchCore = (() => {
     return {coordinates:coords,source:text(d['Coordinate source']),sourceUrl:url(d['Coordinate source URL']),
       checked:date(d['Coordinate checked']),status:text(d['Location status']),input:addressKey(row)};
   }
+  function reportedPriorityWalk(raw,row,loc,dest,clusters) {
+    if(raw.Provider!=='User-supplied'||raw['Route status']!=='Supplied nearest-priority claim; unverified'||
+      raw['Route mode']!=='walk'||!loc||!dest||!clusters.has(dest.id)||
+      raw['Origin input']!==addressKey(row)||text(raw['Property ID'])!==text(row['Property ID'])||
+      !text(raw['Import evidence key'])||positive(raw.Minutes)===null||positive(raw.Metres)===null)return null;
+    const origin=parse(raw['Provider origin coordinates'],null,'Supplied origin');
+    if(!validCoords(origin)||JSON.stringify(origin)!==JSON.stringify(loc.coordinates))return null;
+    return {destinationId:dest.id,destination:dest.name,minutes:raw.Minutes,metres:raw.Metres,
+      source:'User-supplied',checked:date(raw.Checked),measurementValid:false,nearestVerified:false};
+  }
   function routeOrigin(r,loc) {
     if(!text(r['Route origin JSON']))return {coordinates:loc.coordinates,scope:'Address location; entrance unverified',source:loc.sourceUrl,checked:loc.checked};
     const o=parse(r['Route origin JSON'],null,'Route origin');
@@ -339,7 +349,9 @@ const ResearchCore = (() => {
       const cover=publicMedia.find(x=>x.scope==='building'&&x.kind==='image');
       const ownRoutes=allRoutes.filter(x=>text(x['Property ID'])===id),supportRoutes=ownRoutes.filter(x=>x.Provider==='Outscraper'&&['walk','transit'].includes(x['Route mode'])&&
         !(x['Route mode']==='walk'&&x['Geometry status']==='Verified provider path'));
-      const drawableRows=ownRoutes.filter(x=>!supportRoutes.includes(x)),valid=[];
+      const suppliedRows=ownRoutes.filter(x=>x.Provider==='User-supplied');
+      const reportedPriorityWalks=suppliedRows.map(x=>reportedPriorityWalk(x,r,loc,pmap.get(text(x['Destination ID'])),clusters)).filter(Boolean);
+      const drawableRows=ownRoutes.filter(x=>!supportRoutes.includes(x)&&!suppliedRows.includes(x)),valid=[];
       for(const raw of drawableRows){const rt=route(raw,id,r,loc,pmap.get(text(raw['Destination ID'])),config);if(rt)valid.push(rt);
         else if(raw.Provider==='Google')report.rejectedGoogleRoutes.push({propertyId:id,destinationId:text(raw['Destination ID']),row:raw._row||null});}
       const activeGoogle=new Set(),latest=new Map();
@@ -403,6 +415,7 @@ const ResearchCore = (() => {
       const buildingFeeConfirmed=r['Fee status']==='Confirmed'&&r['Fee scope']==='All units'&&amount(r['Required Monthly Fees'])!==null&&url(r['Fee source'])&&date(r['Costs checked']);
       if(buildingFeeConfirmed){property.costs.requiredMonthlyFees=amount(r['Required Monthly Fees']);property.costs.feeSource=url(r['Fee source']);property.costs.feesChecked=date(r['Costs checked']);}
       else report.unresolvedRequiredFees.properties++;
+      if(reportedPriorityWalks.length)property.reportedPriorityWalks=reportedPriorityWalks;
       properties.push(property);
     }
     report.exportedProperties=properties.length;report.publicCandidates=properties.length;
@@ -443,7 +456,7 @@ const ResearchCore = (() => {
     const m=valid[0];return {status:'Validated address interpolation; entrance unverified',coordinates:[m.coordinates.y,m.coordinates.x],
       matchedAddress:m.matchedAddress,matchedZip:text(m.addressComponents.zip),input:addressKey(input),raw:m};
   }
-  return {SCHEMA,CLUSTER,text,norm,number,amount,positive,url,date,addressKey,validCoords,parse,settings,units,unitCost,
+  return {reportedPriorityWalk,SCHEMA,CLUSTER,text,norm,number,amount,positive,url,date,addressKey,validCoords,parse,settings,units,unitCost,
     location,routeOrigin,routeKey,route,build,validateCensus,normalizedStreet};
 })();
 if(typeof module!=='undefined'&&module.exports)module.exports=ResearchCore;

@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict'),C=require('./core.cjs');
+const row={'Property ID':'test',Address:'100 Sample St','City/State':'Kansas City, MO',Zip:'64108'};
+const loc={coordinates:[39.1,-94.5]},dest={id:'priority',name:'Priority venue'},clusters=new Map([['priority',dest]]);
+const raw={'Property ID':'test','Destination ID':'priority',Provider:'User-supplied','Route status':'Supplied nearest-priority claim; unverified','Route mode':'walk','Origin input':C.addressKey(row),'Import evidence key':'test:1',Minutes:3,Metres:208,'Provider origin coordinates':JSON.stringify(loc.coordinates)};
+const run=(r=raw,l=loc,d=dest)=>C.reportedPriorityWalk(r,row,l,d,clusters);
+assert.deepEqual(run(),{destinationId:'priority',destination:'Priority venue',minutes:3,metres:208,source:'User-supplied',checked:null,measurementValid:false,nearestVerified:false});
+for(const [key,value]of Object.entries({Provider:'Google','Origin input':'stale','Property ID':'other','Import evidence key':'',Minutes:0,Metres:-1,'Provider origin coordinates':'[0,0]'}))assert.equal(run({...raw,[key]:value}),null,key);
+assert.equal(run(raw,null),null);assert.equal(run(raw,loc,{id:'other'}),null);
+assert.equal(C.route(raw,'test',row,loc,dest,{}),null);
+console.log('PASS: supplied walks stay unverified and reject stale origins, wrong IDs, unsupported venues and invalid figures; never become verified routes.');

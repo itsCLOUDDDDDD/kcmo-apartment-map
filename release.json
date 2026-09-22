@@ -1,12 +1,12 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "930f15b02b9c9412aea6c2862e4dbd64a8231961",
-  "housingExportGeneratedAt": "2026-09-21T23:52:03.563Z",
-  "workbookSha256": "79db26dd7a599e9e13020233b8c0db19de32f075387d152ec72bb5051689b30e",
-  "housingExportSha256": "074c367255d4bdee5365856bf8677ef83505bb3e686d692fb2905bd3bce590d2",
+  "frontendCommit": "db9e04ae4c7278657ac925cbe18552e1ff67b5ad",
+  "housingExportGeneratedAt": "2026-09-22T00:28:15.002Z",
+  "workbookSha256": "4bd64cece1b0d3d5ad4b28a45051c74699fcce6a399fadfdb9e4d400630dcae1",
+  "housingExportSha256": "356d59034f17199bf9f63b87432a2eb35aca56ac81f42aabced0ae0997596ec8",
   "properties": 231,
-  "mapped": 104,
-  "listOnly": 127,
+  "mapped": 226,
+  "listOnly": 5,
   "savedWalkingMeasurements": 2808,
   "venueCatalog": 59,
   "mappedVenues": 58,
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-BHt2ragb.css": "19b2f49bdc64193dca749787ef0f09cc9b9c6baa66367b45b8f76e90876ddc41",
-    "assets/index-L-KIrhL9.js": "303c6f6fd90a2944c9bea0d61c24c1ab46ad5544ef4413679ed3e956d60bec66",
+    "assets/index-DZfYT3PI.css": "f773111e2faba35f6e1820caa0b8341f2b2a72fcfdde1c01f5cab6db9b1c63db",
+    "assets/index-SntLC6S2.js": "d2e5025cc82598770cd420b22b20c5fc0b54b16e52e795f06f4fbd8d1a79cbf7",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -31,9 +31,23 @@
     "assets/photos/star-lofts-308/bathroom.png": "6925a3ec6616f9a4235aa73e3574e2fdbd58ec657b8127a1c443b236e842979b",
     "assets/photos/star-lofts-308/bedroom-closet.png": "6389ff7845f67d3226ad0a5d694c06a4be43a8b021dadef400d43ffcd0da67c2",
     "assets/photos/star-lofts-308/kitchen-living.png": "4434c2d58b27baa0da994bb3a4ce2ec84479b0b61cee0a79e16524f1e979b6a4",
-    "index.html": "403ec48441bcb444e767c6e9f76e554a6fd570d74e6f013a883229f2c855ac44",
-    "map-data.js": "42e276d21eeaba689da187350786a2961aeba9b246cb023c29c73fa69963a53a"
+    "index.html": "55e4cf8a9c08ee91c4fcb261cd38b5e26f091de60dd73305eb5616c2081932fd",
+    "map-data.js": "af5de202456e222b6385127eae2c5ceb156fba0d239291fa17b1e7d374c26a1b"
   },
   "units": 26,
-  "publicationScope": "All 231 existing candidate IDs, including previously held or excluded rows; explicitly approved September 21, 2026."
+  "publicationScope": "All 231 existing candidate IDs, including previously held or excluded rows; explicitly approved September 21, 2026.",
+  "suppliedLocationImport": {
+    "matched": 122,
+    "pending": 2,
+    "reportedWalks": 122,
+    "independentlyVerified": false,
+    "liveReadBack": "passed",
+    "actualRepeatWrites": 0
+  },
+  "zipColors": {
+    "assignedZips": 27,
+    "fixed": true,
+    "matchingPickerSwatches": true,
+    "venueColorsChanged": false
+  }
 }

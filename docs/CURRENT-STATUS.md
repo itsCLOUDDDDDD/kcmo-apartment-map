@@ -1,3 +1,17 @@
+# Supplied property locations and ZIP colors — September 21, 2026
+
+The live master received **122 address-and-ZIP-matched location records and 122 user-supplied walking records**, joined to existing Property IDs. Reused Map Details, Map Routes, Research History and six Route Summary fields (732 summary cells); no candidate rows or columns were added. All 124 supplied occurrences are retained privately. Quinlan Row remains ambiguous between two existing IDs, and Trails at Bannister lacks a usable street address; those two supplied records were not assigned.
+
+A verified native backup preceded the write. Fresh read-back across all 16 tabs confirms the intended additions and zero unrelated value, formula, style, note, row-height or hidden-column changes. The actual repeat execution returned **VERIFIED NO-OP, zero writes**. The initial post-write check needed a correction for Sheet-formatted evidence dates; independent read-back and the corrected repeat check passed. Existing coordinates, routes, rents, amenities, unit/photo ownership, costs, IDs, exclusions and notes remain unchanged.
+
+The reviewed website export retains **231 properties: 226 mapped and five list-only**, 26 units, 59 venues and all **2,808 existing verified walking measurements**. The 122 new coordinates and nearest-priority walking claims are explicitly user-supplied and not independently verified. Rounded minutes are not converted into exact provider seconds; missing source dates, paths and other destination measurements remain unknown. Reports appear separately from verified walks and do not affect verified nearest/ranking or coverage. All 109 other property objects and the entire venue catalog remain unchanged.
+
+Each of the 27 ZIPs has a fixed, distinct property-diamond fill and a matching swatch in the existing ZIP picker. Selection preserves the ZIP fill. Venue colors and symbols, including red Sports & community soccer balls, are unchanged. Desktop/mobile checks cover matching fills, filtering, keyboard navigation, Escape, picker bounds and stacking; frontend suites, TypeScript/build, exporter contract tests and privacy/diff checks passed. Frontend source is `itsCLOUDDDDDD/aistudio` at `db9e04ae4c7278657ac925cbe18552e1ff67b5ad`.
+
+**Sheet updates are applied and verified. Website release prepared; deployment verification is pending.** The public export contains only allowed property facts, not the supplied document, import evidence, backup, private history or source register. Historical publication entries below retain their original dates and counts.
+
+---
+
 # Full property collection and pin styling — September 21, 2026
 
 The user explicitly approved publishing all existing properties, including previous holds and the two previously ruled-out properties. The fresh read-only master snapshot contains **231 unique Property IDs plus one header row = 232 Sheet rows**. The full reviewed export now contains **231 properties: 104 mapped and 127 list-only**, 26 structured units, 59 venues and the unchanged 2,808 saved walking measurements. The 125 newly included properties have no verified coordinates; no locations or routes were invented. Ambiguous identities retain their separate existing IDs.
