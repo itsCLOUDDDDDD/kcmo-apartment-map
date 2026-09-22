@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "22627c14593ae3ad7262661e092cdefd118765cf",
+  "frontendCommit": "1b48542696ff2e3a09285db0e594a592672e03d3",
   "housingExportGeneratedAt": "2026-09-22T17:14:36.938Z",
   "workbookSha256": "735c9648a80c211e0fc5c2c008fe8db4d840d807b2482e876f894f34cde763d2",
   "housingExportSha256": "c1acee7e2439179cae966b0458571089ac7cc27ffd68688d65f3d43e5b7e72fa",
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-DmnmeUEo.js": "3e444d84d98869890970ece4073590c616b44bc7855e5c3c9fd12ec9407d1525",
-    "assets/index-DvqB4Lr1.css": "2f3f2c5d835a55de30fa0fc7516655bc3094f572c81ebf9fa898b81d570102f0",
+    "assets/index-CSUsLQPb.css": "b2cc0604d7ac852a1c6063ee456b6ffc02fc87322ee6bdfe154ec5d478ad8212",
+    "assets/index-CTfmTyWa.js": "c3bd6c39f447f5b33ac9f798dbf3b72db06f903af1c37c1a201b18f680a65034",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,7 +47,7 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "7aed16caaf86eb85088d47887666e346fda49d09f6c4856911c96c93b1908ae7",
+    "index.html": "00f66d694d9332f3b8ce6f2c5426063741fa8f9400de7a666dc12fb801f11a38",
     "map-data.js": "f5fe9d2887c6fc56767adef32c73c184451fbe22b7d470d0f1b4cb987f1d22be"
   },
   "units": 26,
@@ -95,5 +95,25 @@
     "liveReadBack": "passed",
     "actualRepeatWrites": 0,
     "existingPropertiesChanged": 0
+  },
+  "sceneAddressTallies": {
+    "batch": "scene-address-tallies-20260922",
+    "addressGroups": 24,
+    "mainAppearances": 51,
+    "calendarOnly": 32,
+    "calendarBreakdown": {
+      "sk8bar": 25,
+      "in-good-co": 7
+    },
+    "sceneMatchedAddressGroups": 10,
+    "pendingAddressGroups": 14,
+    "matchedMain": 29,
+    "pendingMain": 22,
+    "areaOnly": 1,
+    "newCoordinates": 0,
+    "newRoutes": 0,
+    "publicSummarySha256": "899f3c00ee01953514fc994b0dcbdc38922e91f90eb03f6e02a7b3144e2a3b54",
+    "privateOriginalsPublished": false,
+    "previousFlyerAssetsUnchanged": true
   }
 }

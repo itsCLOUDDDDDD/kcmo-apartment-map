@@ -1,3 +1,15 @@
+# Scene address connections — September 22, 2026
+
+The user authorized publishing the completed Scene address research. The new visible **Scene** control opens 24 address groups with **51 main collected event/address appearances** and **32 separate calendar-only entries** (25 SK8BAR, seven In Good Co). Area filters, DJ/organizer search, per-event references, attributed flyer versus user-report evidence, possible duplicates, profile-only connections and unresolved locations are retained. Existing venue popups show the same address-level summaries through accepted Place IDs.
+
+Ten address groups match the applied Scene list (29 main appearances); 14 remain pending (22 main appearances) and are included in the research view without invented venue IDs or coordinates. One additional West Bottoms area-only connection stays outside address totals. Shared addresses and duplicate rows count once. Move the Needle KC remains a source/presenter with booking role unresolved; it is not a host venue or a confirmed performer booking.
+
+Seven frontend suites, TypeScript, production build and desktop/320px/390px checks passed. Search, deduplicated area totals, keyboard close/focus return, enlarged flyers and MOD's five-event popup were checked. All 258 property objects, 26 units, 59 saved venues, 2,808 verified walks, coordinates, routes, priorities and existing 15 cropped flyer files are unchanged. Private originals, comments, raw notes, local paths and Sheet identifiers are excluded from the new public summary. No research, extraction, geocoding, routing or Sheet writes occurred.
+
+**Release prepared; publication verification pending.** The exact source and application hashes are recorded in release.json. Earlier release entries below are historical.
+
+---
+
 # Mac corridor additions - September 22, 2026
 
 The live master has 27 new properties, appended to KCMO Candidates rows 233:259 with corresponding Map Details, Map Routes and Route Summary rows. Three existing-address duplicates (Bellerive, Del Monte and Interstate Flats) were skipped. Four entries remain held for address conflicts or overlap: Armour Park, Raleigh Arms, Roxford at The Crosswalks and The Duke. All 34 dispositions are retained in private Research History.

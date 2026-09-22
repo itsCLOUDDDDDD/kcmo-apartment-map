@@ -1,5 +1,15 @@
 # Sheet to website data flow
 
+## Scene address tally publication — September 22, 2026
+
+The completed address report, reconciled with the verified applied Scene summary, supplies an explicit allowlisted derivative in frontend `src/data/scene-tallies.json`. It is separate from the unchanged housing export and prior historical event cards. The live Sheet is not edited or automatically fetched by this publication. Report batch `scene-address-tallies-20260922` and its hash identify the source; raw notes, original images, personal comments, Sheet identifiers and filesystem links are excluded.
+
+Each location keeps a stable address-group key, existing accepted Place IDs, venue names, address, supported area, main Event IDs, calendar-only Event IDs, role-separated connections, uncertainty and concise source references. Totals count unique address-key/Event-ID pairs; repeated rows and artist counts never increase them. Main totals are 51 (29 in ten matched Scene address groups, 22 in fourteen pending groups). Calendar-only totals are 32 (SK8BAR 25; In Good Co seven). The 51 include 49 supported-area Kansas City appearances, one unresolved reported street address and one Lawrence appearance. The separate West Bottoms area-only event and fully undisclosed events do not enter address totals.
+
+`SceneTalliesDialog` exposes all research groups with area filters and search. `SceneTallySummary` joins existing venue cards only through accepted IDs; no alias or missing ID is invented. Encore and Uptown share an address total without assigning Encore a new venue ID. Pending Scene mapping does not delete an existing independently saved venue pin. Move the Needle stays a source/presenter with unresolved booking role, separate from its host venues. Unknown locations stay unknown; no coordinates or walks are created.
+
+Supporting records distinguish inspected flyers/captions, retained or new user observations, mixed evidence and user-attributed schedules. The existing 19 historical cards and 15 approved crop files remain unchanged and are reused by Event ID where available. Calendar-only entries, possible additional appearances and non-DJ programs are labeled separately. The public summary does not imply weekly frequency, attendance, total activity or neighborhood quality. All property, route and other venue exports remain byte-identical to the preceding Mac corridor release.
+
 ## Mac corridor import - September 22, 2026
 
 The existing master now has 258 candidates. A private, locked and backed-up add-on appended 27 stable Property IDs after street-address duplicate checks, plus 27 coordinate records, 27 supplied walking claims, 27 derived summaries and 34 source dispositions. Three duplicates were skipped; four overlapping/conflicting address entries remain unassigned. Existing rows, IDs and research were preserved. Actual identical rerun: zero writes.
