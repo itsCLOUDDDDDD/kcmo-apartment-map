@@ -1,3 +1,13 @@
+# Mac corridor additions - September 22, 2026
+
+The live master has 27 new properties, appended to KCMO Candidates rows 233:259 with corresponding Map Details, Map Routes and Route Summary rows. Three existing-address duplicates (Bellerive, Del Monte and Interstate Flats) were skipped. Four entries remain held for address conflicts or overlap: Armour Park, Raleigh Arms, Roxford at The Crosswalks and The Duke. All 34 dispositions are retained in private Research History.
+
+A verified native backup preceded writes. Independent read-back compared 216,743 existing cells across all 16 tabs, with zero unrelated value, formula, note, style or layout changes. The actual identical rerun returned VERIFIED NO-OP, zero writes. The final checker needed correction for the Sheet's date display; saved dates and other values passed independent verification.
+
+The publication candidate contains 258 properties, 253 mapped and five list-only, with the existing 26 units, 59 venues and 2,808 verified walks unchanged. All 231 prior published property objects remain deeply unchanged. The 27 new coordinate and nearest-priority claims are explicitly user-supplied and unverified; unknown rents, availability, eligibility, amenities and units remain unknown. Six frontend suites, TypeScript, build, exporter tests, desktop/mobile detail checks and map selection passed. Publication verification is pending below. Prior local-only Scene research remains separate and is not imported by this release.
+
+---
+
 # Scene cards and gold pins — September 21, 2026
 
 

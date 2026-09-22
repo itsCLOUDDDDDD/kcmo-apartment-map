@@ -1,5 +1,13 @@
 # Sheet to website data flow
 
+## Mac corridor import - September 22, 2026
+
+The existing master now has 258 candidates. A private, locked and backed-up add-on appended 27 stable Property IDs after street-address duplicate checks, plus 27 coordinate records, 27 supplied walking claims, 27 derived summaries and 34 source dispositions. Three duplicates were skipped; four overlapping/conflicting address entries remain unassigned. Existing rows, IDs and research were preserved. Actual identical rerun: zero writes.
+
+The read-only post-import snapshot hash is `735c9648a80c211e0fc5c2c008fe8db4d840d807b2482e876f894f34cde763d2`. The existing allowlisted exporter supplies the 27 new public objects. This addition-only release retains all 231 prior public objects and geography verbatim; specifically, Bellerive's published gym wording is retained rather than replaced by the shorter Sheet value. This is a scoped merge, not a claim that every older public field was refreshed from this snapshot.
+
+The same reviewed JSON is bundled into the existing frontend and serialized into map-data.js. There are 253 mapped properties, five list-only records and 149 supplied walking claims in total. Supplied claims remain outside verified walking coverage, sorting and nearest calculations. No provider seconds, dates, paths, missing property facts or private source history are invented or published. No new Scene evidence, UI code or provider requests are included.
+
 
 ## Scene evidence restoration — published September 21, 2026
 
