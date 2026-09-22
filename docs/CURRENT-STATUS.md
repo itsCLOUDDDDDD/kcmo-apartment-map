@@ -8,7 +8,7 @@ The reviewed website export retains **231 properties: 226 mapped and five list-o
 
 Each of the 27 ZIPs has a fixed, distinct property-diamond fill and a matching swatch in the existing ZIP picker. Selection preserves the ZIP fill. Venue colors and symbols, including red Sports & community soccer balls, are unchanged. Desktop/mobile checks cover matching fills, filtering, keyboard navigation, Escape, picker bounds and stacking; frontend suites, TypeScript/build, exporter contract tests and privacy/diff checks passed. Frontend source is `itsCLOUDDDDDD/aistudio` at `db9e04ae4c7278657ac925cbe18552e1ff67b5ad`.
 
-**Sheet updates are applied and verified. Website release prepared; deployment verification is pending.** The public export contains only allowed property facts, not the supplied document, import evidence, backup, private history or source register. Historical publication entries below retain their original dates and counts.
+**Sheet updates and website publication are applied and verified.** Website application commit `dc3c7cdac500018085739b3113cb7e787548f6b7`; Pages run `35672689101` succeeded. All 14 served files match `release.json`. Live browser checks confirmed 226 property pins, 27 ZIP swatches with zero color mismatches, and the separate supplied-walk labels. This completion-status follow-up changes documentation only. The public export contains only allowed property facts, not the supplied document, import evidence, backup, private history or source register. Historical publication entries below retain their original dates and counts.
 
 ---
 
