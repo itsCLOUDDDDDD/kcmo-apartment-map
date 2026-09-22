@@ -6,9 +6,15 @@ Use the accessible current files as evidence. Do not assume that a project chat 
 
 The user works in the existing live Google Sheet. It is the property-data master; local workbook exports are dated inputs. The private sheet URL and private research are supplied separately, not stored in this public repository. Do not restore the older local-workbook-master workflow from historical release text.
 
+Shared technical instructions and progress live here. The approved frontend source and private context live in the confirmed-private `itsCLOUDDDDDD/aistudio` repository; retrieve personal preferences only when relevant from `docs/HOUSING-CONTEXT.md` and dated private research workflow from `docs/PROJECT-MEMORY.md` on its current branch. Those files are outside the Vite build and must never be copied into this public repository or website assets. Research Markdown and handoffs are dated evidence, not automatically applied Sheet values.
+
 The interface goal is a compact sheet with everyday confirmed inputs first and supporting calculations/history grouped or hidden. Preserve evidence, formulas, stable IDs, and one building row with its own units. No separate Units tab. Do not turn unknown utility/fee values into zero or claim a planning estimate is a verified amount. Preserve newer user edits.
 
 Inspect actual headers before editing; recorded column letters are snapshots. Keep unit rent, size, availability, photos and sources attributed to the same unit. Do not merge separate addresses merely because names match.
+
+For housing research, retain a candidate with even one evidenced income-restricted unit; a task focused on LIHTC has that narrower scope only for that task. Original discovery evidence remains relevant when a current site is silent. Keep program participation, restriction scope, HCV treatment, vacancy and application approval separate. Match research to the existing Property ID and street address/ZIP/building or phase before proposing Sheet changes; hold ambiguous identities. District boundaries alone do not prove TIF, PIEA, Chapter 353 or other property-level incentives. Record exact sources, dates, project scope, stage and conflicts. Do not turn TIF, PIEA, Chapter 353 or historic tax credits into LIHTC or voucher conclusions.
+
+The approved planning comparison is (recorded rent + configured utility planning setting once) / the property's recorded 1BR payment standard for every apartment size. Missing rent, setting or positive standard leaves the result unresolved. Fees, official utility allowances and bedroom verification are separate evidence, not gates for this estimate; do not change the configured setting from a reference schedule without an explicit decision. See docs/DATA-FLOW.md.
 
 Location search links only navigate. No automatic geocoding, browser-URL capture or route fetch currently exists in this repository. Never claim it does. If implementing it, verify property identity, distinguish the pin from the map camera, and retain measured routes and source dates. Do not substitute straight-line estimates for saved walking times.
 

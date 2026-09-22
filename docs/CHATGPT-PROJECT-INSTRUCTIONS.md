@@ -4,9 +4,13 @@ Use `itsCLOUDDDDDD/kcmo-apartment-map` as this project's shared source and techn
 
 The repository contains instructions and implementation files, not our complete chat history. Read the listed documents explicitly. The live Google Sheet is the property-data master; its URL and access are supplied separately. Uploads are dated snapshots. A connected repository does not automatically provide access to a private sheet or local files.
 
+For personal housing preferences, retrieve `docs/HOUSING-CONTEXT.md` from the confirmed-private `itsCLOUDDDDDD/aistudio` repository when access and relevance warrant it; `docs/PROJECT-MEMORY.md` there is dated supplemental research context. Both files are outside that frontend's website build. Keep their contents and private research out of this public repository, public exports and published assets. Shared rules and progress belong in this repository's AGENTS.md, docs/DATA-FLOW.md and docs/CURRENT-STATUS.md.
+
 First check actual read/write and execution capabilities. Do not assume that GitHub access is either always read-only or always editable. If direct editing is unavailable, produce exact proposed changes and a compact implementation handoff. Do available independent work before asking me to provide missing access.
 
 Keep my daily work in the sheet. Put confirmed property/unit details, amenities and source/photo links first; automate derived values while keeping unknown facts unresolved. Preserve units with their building, evidence history and existing IDs. Do not create a separate Units tab or another working master.
+
+For tax-incentive research, match each source to an existing Property ID and verified address/building before preparing field changes. Preserve exact source, date, program stage and uncertainty. District overlap is only a lead; it does not prove that a property received an incentive. Keep LIHTC, affordability and voucher evidence distinct from TIF, PIEA, Chapter 353 and historic-credit evidence. Preserve the configured rent-plus-utility planning comparison documented in DATA-FLOW.md.
 
 Give concise, beginner-friendly responses. For steps I must perform, identify the exact application, file, sheet or cell; give one manageable action and review my result before advancing. Do not give formula-only promises for work that needs an actual retrieval or execution step.
 

@@ -1,3 +1,9 @@
+# Documentation and utility reference — September 22, 2026
+
+Shared instructions and data-flow notes now document the existing research-to-Sheet workflow, tax-incentive evidence rules and approved planning formula. The user-supplied 2026 HAKC allowance workbook was reviewed for filled personal fields and added as a dated reference; it does not change the $90 planning setting. Private personal context was placed in `itsCLOUDDDDDD/aistudio/docs/HOUSING-CONTEXT.md`, outside its website build. The earlier 231-property README count was corrected to the latest reported and live-verified 258-property release. This is a documentation/reference handoff only: no live Sheet write, tax-research consolidation, application/data change or website-content verification was performed here. The cost-only Sheet installer remains uninstalled; the requested tax-incentive field work remains pending. The user's “141” reference still needs identification against the current master before any matching or import.
+
+---
+
 # MAC amenities, ZIP 64111 — September 22, 2026
 
 All 15 requested existing properties were checked against official MAC pages. The live master received 89 net amenity-cell changes across those 15 existing Property IDs, following a native backup. Independent fresh-export comparison checked 225,657 cells across all 16 tabs: no unrelated values, formulas, notes, layout or styles changed. Google automatically link-formatted 12 updated source cells. The final actual repeat at 13:43:37 America/Chicago returned VERIFIED with zero writes. Initial date verification required a UTC normalization correction; independently exported research dates are September 22, 2026.
