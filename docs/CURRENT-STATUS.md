@@ -4,7 +4,9 @@ The live master has 27 new properties, appended to KCMO Candidates rows 233:259 
 
 A verified native backup preceded writes. Independent read-back compared 216,743 existing cells across all 16 tabs, with zero unrelated value, formula, note, style or layout changes. The actual identical rerun returned VERIFIED NO-OP, zero writes. The final checker needed correction for the Sheet's date display; saved dates and other values passed independent verification.
 
-The publication candidate contains 258 properties, 253 mapped and five list-only, with the existing 26 units, 59 venues and 2,808 verified walks unchanged. All 231 prior published property objects remain deeply unchanged. The 27 new coordinate and nearest-priority claims are explicitly user-supplied and unverified; unknown rents, availability, eligibility, amenities and units remain unknown. Six frontend suites, TypeScript, build, exporter tests, desktop/mobile detail checks and map selection passed. Publication verification is pending below. Prior local-only Scene research remains separate and is not imported by this release.
+The published collection contains 258 properties, 253 mapped and five list-only, with the existing 26 units, 59 venues and 2,808 verified walks unchanged. All 231 prior published property objects remain deeply unchanged. The 27 new coordinate and nearest-priority claims are explicitly user-supplied and unverified; unknown rents, availability, eligibility, amenities and units remain unknown. Six frontend suites, TypeScript, build, exporter tests, desktop/mobile detail checks and map selection passed. Prior local-only Scene research remains separate and is not imported by this release.
+
+**Published and verified:** frontend `22627c14593ae3ad7262661e092cdefd118765cf`, website application `60e1a5651a2513d02496b916a593a05769485728`, successful Pages run `35759946793`. All 30 served files match release.json. The live browser confirms List (258), 253 mapped/five list-only, and 3408 Gillham's separate supplied MOD 41-minute / 3,040-metre claim, with unknown rent and unrecorded verified walks preserved. This completion record changes documentation only.
 
 ---
 
