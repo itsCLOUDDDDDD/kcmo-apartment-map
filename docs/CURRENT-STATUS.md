@@ -6,7 +6,7 @@ Ten address groups match the applied Scene list (29 main appearances); 14 remain
 
 Seven frontend suites, TypeScript, production build and desktop/320px/390px checks passed. Search, deduplicated area totals, keyboard close/focus return, enlarged flyers and MOD's five-event popup were checked. All 258 property objects, 26 units, 59 saved venues, 2,808 verified walks, coordinates, routes, priorities and existing 15 cropped flyer files are unchanged. Private originals, comments, raw notes, local paths and Sheet identifiers are excluded from the new public summary. No research, extraction, geocoding, routing or Sheet writes occurred.
 
-**Release prepared; publication verification pending.** The exact source and application hashes are recorded in release.json. Earlier release entries below are historical.
+**Published and verified:** frontend `1b48542696ff2e3a09285db0e594a592672e03d3`, website application `31c5e91bb64cd4f996e997ad92181ff5cf55fd1f`; Pages run `35765322793` succeeded. All 30 served files match release.json. Live browser checks confirm the visible Scene control, 51/32 totals, 24 address groups, Move the Needle search, DISTRKCT's attributed event references and a 390px layout without horizontal overflow. No application-console errors were observed. This completion follow-up changes documentation only. Earlier release entries below are historical.
 
 ---
 
