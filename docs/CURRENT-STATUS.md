@@ -8,7 +8,7 @@ The reviewed fresh export changes only those 15 properties' laundry/gym/pool, fu
 
 Routing for the 27 newly added MAC properties remains pending: the existing script uses the billable Google Routes API, conflicting with the no-paid-services instruction. Spending authorization was requested but not received. The Arc identity conflict also requires resolution before relying on that property's routing endpoint. No routing API calls, new paths or fabricated timings were made.
 
-Publication is authorized by the user's final request. The initial application release `cc313c2423165e56230da24fcf3e900e0c2a934a` deployed successfully and all 30 live file hashes matched. The final evidence refinement uses fresh master snapshot `258a2d130b3b9f84593981a03e4b1724c153b16da9bfd5551047e1d6583e6760`; its deployment is verified separately below. Private master exports, recovery links, updater payloads and audit originals are excluded from publication.
+**Published and verified:** final frontend `cd14170b346e7770cba240a6eb5e236ef3d554a5`, website application `0cf06f18a03e6339c248f305c7f816b2cc92e84b`, successful Pages run `35769259509`. All 30 served file hashes match. Live checks confirm the 258-property collection, off-site membership labels, Yankee Hill's separate installed/shared laundry, unknown rent, absent verified walks and 390px layout without overflow or application-console errors. The final evidence refinement uses fresh master snapshot `258a2d130b3b9f84593981a03e4b1724c153b16da9bfd5551047e1d6583e6760`. Private master exports, recovery links, updater payloads and audit originals are excluded from publication. This completion follow-up changes documentation only; routing remains pending as described above.
 
 ---
 
