@@ -1,3 +1,17 @@
+# MAC amenities, ZIP 64111 — September 22, 2026
+
+All 15 requested existing properties were checked against official MAC pages. The live master received 89 amenity-cell changes across those 15 existing Property IDs, following a native backup. Independent fresh-export comparison checked 225,657 cells across all 16 tabs: no unrelated values, formulas, notes, layout or styles changed. Google automatically link-formatted 13 updated source cells. The corrected actual repeat returned VERIFIED with zero writes. Initial date verification required a UTC normalization correction; independently exported research dates are September 22, 2026.
+
+Shared laundry remains distinct from installed machines; eight properties retain Unknown in-unit status alongside confirmed shared laundry. Interstate's prior select-unit claim is retained but not freshly reconfirmed. Arc on Armour has an unresolved identity conflict: the saved address is 110–120 E Armour, while MAC lists 211 W Armour. Its three amenity statuses explicitly say Conflict; amenities belonging to the other address are withheld. Ten properties therefore retain a primary laundry or identity uncertainty. Zillow gap checking encountered human verification and supplied no new confirmed facts.
+
+The reviewed fresh export changes only those 15 properties' laundry/gym/pool, full amenity details, source URL and check date. The other 243 public property objects and all coordinates, rents, units, costs, visibility, photos, venues, Scene evidence and 2,808 verified routes remain unchanged. Two small existing-label rules retain off-site optional-membership scope and address-conflict labels; Tailwind layout and styling are unchanged. Seven frontend suites, TypeScript, production build, 33 exporter contract tests, 14 Google-walk tests and supplied-walk tests pass. Desktop, 390px and 320px checks cover membership qualifiers, shared laundry, missing rent, property switching, conflicts and absent walking records; no horizontal overflow or application-console errors occurred.
+
+Routing for the 27 newly added MAC properties remains pending: the existing script uses the billable Google Routes API, conflicting with the no-paid-services instruction. Spending authorization was requested but not received. The Arc identity conflict also requires resolution before relying on that property's routing endpoint. No routing API calls, new paths or fabricated timings were made.
+
+Publication is authorized by the user's final request. This entry records the checked release before deployment; deployment and live verification are recorded below once completed. The fresh master snapshot hash is `06e28e5f6a3304892fa957899f5219c37c701b280e15261098f70ffac5dff367`. Private master exports, recovery links, updater payloads and audit originals are excluded from publication.
+
+---
+
 # Scene address connections — September 22, 2026
 
 The user authorized publishing the completed Scene address research. The new visible **Scene** control opens 24 address groups with **51 main collected event/address appearances** and **32 separate calendar-only entries** (25 SK8BAR, seven In Good Co). Area filters, DJ/organizer search, per-event references, attributed flyer versus user-report evidence, possible duplicates, profile-only connections and unresolved locations are retained. Existing venue popups show the same address-level summaries through accepted Place IDs.
