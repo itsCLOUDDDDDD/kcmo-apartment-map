@@ -1,7 +1,7 @@
 # Sheet to website data flow
 
 
-## Scene evidence restoration — approved website release
+## Scene evidence restoration — published September 21, 2026
 
 Scene presentation is shared by `venuePresentation`, `VenueMarker` and `VenueLegend`: Core/Saved/Regional Scene and Scene Extension labels use gold (`#facc15`) with dark music icons and outlines. Scene pins are 36px with overlap priority below selected and priority venues, above ordinary venues. Other venue categories and the fixed property ZIP palette remain separate.
 
