@@ -1,3 +1,13 @@
+# Old Town unit research — September 23, 2026
+
+Applied and independently verified in the live master: seven data-cell updates on the two existing Old Town property rows. Existing structured units received user-supplied, independently unverified attribution and the requested September 22 research/check date; appended source history preserves prior metadata and distinguishes the attachment's September 23 email date. The Star summary rent now matches its already-recorded 950-square-foot unit. Property and unit IDs, verified addresses/ZIPs, other units/photos and all earlier evidence remain intact. No property or Units tab was added.
+
+A private native backup, including comments, preceded writes. Fresh-export comparison covered 225,657 cells across all 16 tabs and verified no unrelated values, formulas, notes, styles or layout changes. Google Sheets initially substituted Arial in edited cells; original Aptos formatting was restored and the final comparison passed. The identical payload repeat required zero writes. Existing planning formulas recalculated using the unchanged $90 setting; no formula was installed or replaced. HCV/subsidy treatment, utilities, fees, final deposit terms and larger-unit availability were not newly confirmed. Existing legacy claims remain history, not fresh verification.
+
+This milestone updates the live Sheet and this completion record only. Website data was not exported or published. Private source attachments, master exports, backup links and detailed cell reports remain outside the public repository.
+
+---
+
 # Documentation and utility reference — September 22, 2026
 
 Shared instructions and data-flow notes now document the existing research-to-Sheet workflow, tax-incentive evidence rules and approved planning formula. The user-supplied 2026 HAKC allowance workbook was reviewed for filled personal fields and added as a dated reference; it does not change the $90 planning setting. Private personal context was placed in `itsCLOUDDDDDD/aistudio/docs/HOUSING-CONTEXT.md`, outside its website build. The earlier 231-property README count was corrected to the latest reported and live-verified 258-property release. This is a documentation/reference handoff only: no live Sheet write, tax-research consolidation, application/data change or website-content verification was performed here. The cost-only Sheet installer remains uninstalled; the requested tax-incentive field work remains pending. The user's “141” reference still needs identification against the current master before any matching or import.
