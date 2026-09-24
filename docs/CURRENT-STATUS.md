@@ -1,10 +1,16 @@
+# Amenity supplied-coordinate update — local only, September 24, 2026
+
+All seven neighborhood-layer positions now match the latest explicit user-provided coordinates. The operator’s embedded amenity map was also reviewed; it conflicts with several requested placements and with the original Arcade/Arc identity. Drawers retain these distinctions and source links. The apartment building coordinates, master data and saved routes were not edited by this task. Existing uncommitted unit-card work is preserved. TypeScript/build and exact coordinate comparison pass. No commit, push or publication; the prior release below remains live.
+
+---
+
 # Complete MAC email inventory — September 24, 2026
 
 All 21 quoted units are applied to 13 existing buildings and approved for publication, including Bellerive 713/711/702 and Raleigh 3346-2W under the existing Gillham ID. The master has been backed up and independently read back: 21 intended cell changes, preserved unrelated facts/formulas/notes and hidden layout; only the edited website link received automatic link formatting. Earlier 17-unit preview status is superseded.
 
 The release contains 47 total structured units, 34 MAC identities, 260 properties, 64 places and 2,808 preserved saved walks. Selectable unit cards update rent, size, bedrooms and the rent-plus-$90 comparison against the recorded 1BR standard. Size warnings/exclusions are removed. Walking access expands once per property. Raleigh retains its legacy 3344 origin with the official 3346–3350 leasing address separately disclosed; no exact-unit entrance or new route is inferred. Bellerive’s corrected pin remains unchanged.
 
-Known email dates and early-October quotes are recorded without claiming independently current vacancies. Bellerive’s missing tour URLs and unknown source date are explicit. Source labels and quoted addresses are visible in unit details. No contact or scheduling occurred. TypeScript, build, 12 frontend suites and 34 exporter contracts pass; local Bellerive selection/source checks pass. Publication verification pending deployment.
+Known email dates and early-October quotes are recorded without claiming independently current vacancies. Bellerive’s missing tour URLs and unknown source date are explicit. Source labels and quoted addresses are visible in unit details. No contact or scheduling occurred. TypeScript, build, 12 frontend suites and 34 exporter contracts pass; local Bellerive selection/source checks pass. Published and verified: frontend `55a4f57`, application `edc0801`, successful Pages run `36070600360`; Pages confirms built and all 30 live hashes plus manifest match. Live Bellerive 713/Raleigh 3346-2W selection, address/source details, basemap/photos and 390px layout pass.
 
 ---
 
