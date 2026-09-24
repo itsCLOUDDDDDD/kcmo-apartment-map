@@ -1,6 +1,6 @@
 # Bellerive pin correction — September 24, 2026
 
-The user's building-pin correction is applied and independently read back in the master: 39.0639354419834, -94.5827161930349. Source/date and previous coordinates are retained; no entrance or gym location is inferred. The prior supplied 43-minute walk is historical because its origin used the old coordinates; no provider calls or new routes were made. Only Bellerive's exported coordinates, provenance, Street View link and stale supplied-walk display changed. All other 259 properties, facilities, media, costs and 2,808 verified walks remain unchanged. Eleven suites, TypeScript and production build pass. Frontend 877baf1; publication verification pending.
+The user's building-pin correction is applied and independently read back in the master: 39.0639354419834, -94.5827161930349. Source/date and previous coordinates are retained; no entrance or gym location is inferred. The prior supplied 43-minute walk is historical because its origin used the old coordinates; no provider calls or new routes were made. Only Bellerive's exported coordinates, provenance, Street View link and stale supplied-walk display changed. All other 259 properties, facilities, media, costs and 2,808 verified walks remain unchanged. Eleven suites, TypeScript and production build pass. Published and verified: frontend `877baf1`, website application `a279b7a`, successful Pages run `36062852645`; all 30 live file hashes match. Local rendered marker confirms the corrected coordinates and no superseded 43-minute claim.
 
 ---
 
