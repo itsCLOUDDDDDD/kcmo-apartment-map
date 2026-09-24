@@ -242,6 +242,8 @@ const ResearchCore = (() => {
     }
     const clusters=indexed(confirmedScene,'Place ID','confirmed cluster place',{requireIds:true});
     if(!clusters.size)throw Error('No '+CLUSTER+' destinations have a matching addressed Map Places row.');
+    const facilityIds=new Set([...placeRows].filter(([,p])=>text(p.Category)==='MAC facility').map(([id])=>id));
+    if([...facilityIds].some(id=>clusters.has(id)||(config.savedWalkingCohortIds||[]).includes(id)))throw Error('Facilities cannot automatically join Scene or routing cohorts.');
     const publicPlaces=[...placeRows].map(([id,p])=>{
       const current={...p,'City/State':p['City/State']||config.sceneCity,Zip:text(p.Zip)};
       // User-supplied venue pins remain explicitly unverified; property validation is unchanged.
@@ -249,7 +251,9 @@ const ResearchCore = (() => {
         p['Coordinate source']===p['Location status']&&p['Location input']===addressKey(current)&&validCoords([p.Latitude,p.Longitude]);
       const loc=location(current,p)||(supplied?{coordinates:[p.Latitude,p.Longitude],source:p['Coordinate source'],checked:null,status:p['Location status']}:null);
       const endpoint=loc?.coordinates?.join(',')||(text(current.Address)&&! /^(unknown|unverified|unresolved)$/i.test(text(current.Address))?[current.Address,current['City/State'],current.Zip].filter(Boolean).join(', '):null);
-      return {id,name:text(p.Name),address:text(current.Address),cityState:text(current['City/State']),zip:text(current.Zip),
+      const rawFacility=facilityIds.has(id)?parse(p['Facility JSON'],null,'Facility JSON'):null;
+      const facility=rawFacility?{resources:(rawFacility.resources||[]).map(text),hostAccess:text(rawFacility.host_access),otherAccess:text(rawFacility.other_resident_access),locationScope:text(rawFacility.location_scope),sources:(rawFacility.sources||[]).map(url).filter(Boolean),checked:date(rawFacility.checked),packages:(rawFacility.packages||[]).map(x=>({name:text(x.name),monthlyPrice:number(x.monthly_price_usd),resources:(x.additional_resources||[]).map(text),includes:text(x.includes)||null})),media:[]}:null;
+      return {...(facility?{facility}:{}),id,name:text(p.Name),address:text(current.Address),cityState:text(current['City/State']),zip:text(current.Zip),
         category:text(p.Category),priority:clusters.has(id),
         neighborhood:text(p.Neighborhood),coordinates:loc?.coordinates||null,locationInput:addressKey(current),
         source:url(p['Source URL']),checked:date(p['Source checked']),coordinateSource:loc?.source||'Location unverified',
@@ -378,7 +382,9 @@ const ResearchCore = (() => {
           fit:'Planning estimate only; not voucher approval',
           offered:null,evidence:one?('Unit #'+one.unit+' only; see its own source/date.'):null};
       };
-      const property={schemaVersion:SCHEMA,id,workbookRow:r._row||null,name:text(r.Property),address:text(r.Address),cityState:text(r['City/State']),zip,
+      const rawMac=parse(r['MAC community JSON'],null,'MAC community JSON');
+      const mac=rawMac?{operator:text(rawMac.operator),directoryName:text(rawMac.directoryName),officialAddress:text(rawMac.officialAddress),source:url(rawMac.source),checked:date(rawMac.checked),addressStatus:text(rawMac.addressStatus),facilityAccess:(rawMac.facilityAccess||[]).map(e=>{if(!facilityIds.has(e.facilityId))throw Error('Unresolved facility reference '+e.facilityId);return {facilityId:e.facilityId,label:text(e.label),sources:(e.sources||[]).map(url).filter(Boolean),checked:date(e.checked)};})}:null;
+      const property={...(mac?{mac}:{}),schemaVersion:SCHEMA,id,workbookRow:r._row||null,name:text(r.Property),address:text(r.Address),cityState:text(r['City/State']),zip,
         neighborhood:text(r.Area)||'Unknown',band:text(r.Band)||'Unknown',management:text(r.Management)||'Unknown',
         phone:text(r.Phone)||null,coordinates:loc?.coordinates||null,coordinateSource:loc?.source||'Unverified',
         coordinateSourceUrl:loc?.sourceUrl||null,coordinateChecked:loc?.checked||null,locationStatus:loc?.status||'Pending validation',

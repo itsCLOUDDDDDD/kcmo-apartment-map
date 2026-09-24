@@ -194,4 +194,19 @@ test('A genuine Outscraper path is drawable only with matching address keys and 
  assert.equal(C.route({...route,'Cache key':'stale'},candidate['Property ID'],candidate,loc,destination,C.settings(setting)),null);
 });
 
+test('Facilities use separate IDs, source-dated edges and a private-field allowlist',()=>{
+ const x=clone(snap),f={'Place ID':'facility-one',Name:'Shared pool',Address:'300 Sample St','City/State':'Kansas City, MO',Zip:'64108',Category:'MAC facility',
+  'Facility JSON':JSON.stringify({resources:['Pool'],host_access:'Shared access; fees unconfirmed',other_resident_access:'Optional membership',location_scope:'Entrance unresolved',sources:['https://example.org/facility'],checked:'2026-09-24',packages:[{name:'Optional',monthly_price_usd:100,additional_resources:['Pool']}],privateQuote:'PRIVATE_SENTINEL',media:[{url:'https://example.org/private.jpg'}]})};
+ x.sheets['Map Places'].push(f);
+ x.sheets['KCMO Candidates'][0]['MAC community JSON']=JSON.stringify({operator:'Mac Properties',facilityAccess:[{facilityId:'facility-one',label:'Shared access; fees unconfirmed',sources:['https://example.org/access'],checked:'2026-09-24',privateQuote:'PRIVATE_SENTINEL'}]});
+ const out=C.build(x).payload,site=out.places.find(p=>p.id==='facility-one');
+ assert.equal(site.coordinates,null);assert.equal(site.priority,false);assert.deepEqual(site.facility.media,[]);
+ assert.equal(out.properties.length,1);assert.equal(out.properties[0].mac.facilityAccess[0].facilityId,site.id);
+ assert.equal(out.meta.utilityPlanningStandard,90);assert(!JSON.stringify(out).includes('PRIVATE_SENTINEL'));assert(!JSON.stringify(out).includes('private.jpg'));
+ const bad=clone(x);bad.sheets['KCMO Candidates'][0]['MAC community JSON']=JSON.stringify({facilityAccess:[{facilityId:'missing'}]});
+ assert.throws(()=>C.build(bad),/Unresolved facility reference/);
+ x.sheets['Scene & Anchors'].push({'Place ID':f['Place ID'],Name:f.Name,Address:f.Address,'Walking cluster':C.CLUSTER});
+ assert.throws(()=>C.build(x),/Facilities cannot automatically join/);
+});
+
 console.log(JSON.stringify({passed,networkCalls:0,scope:'Pure contract tests; no Google authorization or live provider test'}));

@@ -1,14 +1,14 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "7cb1801684b58dceaa4a56fc50cb5ad15598e255",
-  "housingExportGeneratedAt": "2026-09-22T18:43:31.621Z",
-  "workbookSha256": "258a2d130b3b9f84593981a03e4b1724c153b16da9bfd5551047e1d6583e6760",
-  "housingExportSha256": "e49ba9719308871313819fd92baeca22bac5df94cea9981f682f8cecf800bc6f",
-  "properties": 258,
-  "mapped": 253,
-  "listOnly": 5,
+  "frontendCommit": "deb088e6fde77e4b74912bbd56ac9909b1ed6ed3",
+  "housingExportGeneratedAt": "2026-09-24T17:35:43.386Z",
+  "workbookSha256": "12fe3e27c524b80daea169d76a035fc2014868beb11c259ef1d24b3c2f5c1ff1",
+  "housingExportSha256": "150b85558f17d89ea871bd1ba0d6a93b88e6c80b9d30c126d34b7a41069fb3d8",
+  "properties": 260,
+  "mapped": 246,
+  "listOnly": 14,
   "savedWalkingMeasurements": 2808,
-  "venueCatalog": 59,
+  "venueCatalog": 64,
   "mappedVenues": 58,
   "routedVenues": 27,
   "venueImport": {
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-BdqFexSA.js": "e308d7b782bf473147dd908af461db026cee2ae48270d449037ee4e417c4b632",
-    "assets/index-BY34krDA.css": "33bbc1e8ad7bed8395d6a9d6468290febc08fa6ff9db268ee076aadaa8950892",
+    "assets/index-B8eQzW6s.js": "29400ac3cf0da61f96e8f9bacc7ffb6b7eb61c86b50025eb1dd7c1096517fe0c",
+    "assets/index-CUNFm8S7.css": "9440f5bd991d0cb32cb84b8712a6d46dd624ef93a2ac901e96bcd1df65e29761",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "96231b444f2f0d96a6a749073ff4afbe3df63cb7b64784bc300190145e0faa4b",
-    "map-data.js": "8850e778940c08ba35272a9355fb07a43a4b9e59b3676ffcad6dd3f833ca3088"
+    "index.html": "208bcb0dbf46d38fa88ae5c8653afdfd3af378115b8b51574cf949de0ada2941",
+    "map-data.js": "16bf04201461a666dd6da1b160fb75f2c292814de60e76f24ff3edc59ca1764a"
   },
   "units": 26,
-  "publicationScope": "Approved seven-location Mac neighborhood amenity layer; existing housing, venues, saved media, Scene evidence, routes and photo-cover behavior preserved.",
+  "publicationScope": "Approved 34-entry MAC identity reconciliation and separate facility/access layer; 31 matched, two added, one held. Preserve existing neighborhood layer, unrelated data, costs, units, photos, routes and Scene evidence.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -141,5 +141,29 @@
     "source": "User-supplied September 24, 2026; not independently verified",
     "defaultEnabled": false,
     "photos": "On demand; availability unverified"
+  },
+  "macReconciliation": {
+    "batch": "mac-identity-facilities-20260924",
+    "checked": "2026-09-24",
+    "inventory": 34,
+    "matched": 31,
+    "added": 2,
+    "held": [
+      {
+        "name": "Raleigh Arms",
+        "address": "3346-3350 Gillham Road",
+        "reason": "Unresolved relationship to legacy 3344 - 50 Gillham Road; do not merge or add a duplicate identity.",
+        "source": "https://www.macapartments.com/apartments/mo/kansas-city/raleigh-arms0/default",
+        "checked": "2026-09-24"
+      }
+    ],
+    "addressCorrections": 7,
+    "facilitySites": 5,
+    "poolSites": 3,
+    "liveReadBack": "passed",
+    "actualRepeatWrites": 0,
+    "unrelatedPublicFactsChanged": 0,
+    "routingApiCalls": 0,
+    "facilityPinsAdded": 0
   }
 }
