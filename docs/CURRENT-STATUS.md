@@ -1,3 +1,13 @@
+# Complete MAC email inventory — September 24, 2026
+
+All 21 quoted units are applied to 13 existing buildings and approved for publication, including Bellerive 713/711/702 and Raleigh 3346-2W under the existing Gillham ID. The master has been backed up and independently read back: 21 intended cell changes, preserved unrelated facts/formulas/notes and hidden layout; only the edited website link received automatic link formatting. Earlier 17-unit preview status is superseded.
+
+The release contains 47 total structured units, 34 MAC identities, 260 properties, 64 places and 2,808 preserved saved walks. Selectable unit cards update rent, size, bedrooms and the rent-plus-$90 comparison against the recorded 1BR standard. Size warnings/exclusions are removed. Walking access expands once per property. Raleigh retains its legacy 3344 origin with the official 3346–3350 leasing address separately disclosed; no exact-unit entrance or new route is inferred. Bellerive’s corrected pin remains unchanged.
+
+Known email dates and early-October quotes are recorded without claiming independently current vacancies. Bellerive’s missing tour URLs and unknown source date are explicit. Source labels and quoted addresses are visible in unit details. No contact or scheduling occurred. TypeScript, build, 12 frontend suites and 34 exporter contracts pass; local Bellerive selection/source checks pass. Publication verification pending deployment.
+
+---
+
 # Bellerive pin correction — September 24, 2026
 
 The user's building-pin correction is applied and independently read back in the master: 39.0639354419834, -94.5827161930349. Source/date and previous coordinates are retained; no entrance or gym location is inferred. The prior supplied 43-minute walk is historical because its origin used the old coordinates; no provider calls or new routes were made. Only Bellerive's exported coordinates, provenance, Street View link and stale supplied-walk display changed. All other 259 properties, facilities, media, costs and 2,808 verified walks remain unchanged. Eleven suites, TypeScript and production build pass. Published and verified: frontend `877baf1`, website application `a279b7a`, successful Pages run `36062852645`; all 30 live file hashes match. Local rendered marker confirms the corrected coordinates and no superseded 43-minute claim.

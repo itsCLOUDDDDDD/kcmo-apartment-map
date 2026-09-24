@@ -1,9 +1,9 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "877baf1242fdbb2ffcc73cdcd4c65cde4b5cd8de",
-  "housingExportGeneratedAt": "2026-09-24T21:37:11.308Z",
-  "workbookSha256": "36f18da036f5ee1e63a666e70cbc5aa1af675dab3d5d742b18cb3133fabf0f5c",
-  "housingExportSha256": "5ed8f21bf12b644c0976637876149318d97e1bf49a17bc6642c1ec71827c8a5e",
+  "frontendCommit": "55a4f570589c581f1b83ce817895b1752ad7df34",
+  "housingExportGeneratedAt": "2026-09-24T22:58:04.617Z",
+  "workbookSha256": "6c91cde78e6fb386510b9b372a65dc5998549d4f203e2047bc62e7558be1850e",
+  "housingExportSha256": "0dce5c39179caa6288902bf69ba07f7e2915a2ffa12235126bfb1a4cb02c585c",
   "properties": 260,
   "mapped": 246,
   "listOnly": 14,
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-C0qRVeHr.js": "93045ec5b8a1b059f61daefce45dd028d88d05686ed9a183856b0323608d9827",
-    "assets/index-CUNFm8S7.css": "9440f5bd991d0cb32cb84b8712a6d46dd624ef93a2ac901e96bcd1df65e29761",
+    "assets/index-BdaSH5FK.css": "0632b4185f48168ebaded6ccb645ab054983d226aed62d5a12684503035a97e0",
+    "assets/index-BmziafGn.js": "4e7e67477e783df5b72b6aced7567ec05d6b44b436161fa1184eb81c18de6e15",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "2de5c09a89847fbfe5861dfd516f8b32b41de7ed10ba433a7e3d46800a9dbbb3",
-    "map-data.js": "48cc624a934cd098e69023f75f2b21dd157a450d053068a2bdd56a87db596575"
+    "index.html": "1f426a8bafc4ed6142f682844186bb99467fc2c9cdcad84f25c7bca5eaa02cf0",
+    "map-data.js": "c6d294589136a4cdc7edd355844f1feca41efd8ab47fb7364d6631c2c365df42"
   },
   "units": 26,
-  "publicationScope": "Bellerive supplied building-pin correction only; stale supplied walking claim retained as private history. All other properties, facilities, costs, media and verified routes preserved.",
+  "publicationScope": "All 21 distinct quoted MAC apartments attached to 13 existing buildings, dated leasing references and selectable unit cards. Includes Bellerive 713/711/702 and Raleigh 3346-2W; no minimum-size exclusion. Preserve existing coordinates, routes, media, facilities and unrelated research.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -175,5 +175,17 @@
     ],
     "masterReadBack": "passed",
     "routingApiCalls": 0
+  },
+  "emailUnits": {
+    "distinctQuotedUnits": 21,
+    "matchedBuildings": 13,
+    "structuredUnitsTotal": 47,
+    "source": "User-supplied MAC leasing correspondence",
+    "sourceDates": "September 22 batch; September 24 thread context; Bellerive message date unknown",
+    "masterReadBack": "passed",
+    "duplicates": 0,
+    "raleighPropertyId": "prop-dfdd634a-1c52-4d7b-981b-55c1b0de8ef7",
+    "raleighOrigin": "Existing 3344 Gillham building pin; exact unit entrance unverified",
+    "sizeExclusion": false
   }
 }

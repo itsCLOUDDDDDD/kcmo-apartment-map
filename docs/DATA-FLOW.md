@@ -1,3 +1,7 @@
+## Quoted unit metadata — September 24, 2026
+
+Within existing building Units JSON, export quoted address, source-document label, floor, stated move-in window, touring status, features, safe 3D-tour URL/scope, source label/date and distinct received date. Unknown source dates do not become checked dates. Preserve string unit numbers and deduplicate by Property ID plus unit. Include every quoted unit regardless of size; no size warning or exclusion applies to these cards. This specific authorized scope exports structured unit facts, never full correspondence or private history. Selected unit estimates use its rent plus the existing planning utility setting over the property’s recorded 1BR standard. Available units precede a single collapsed property-level Walking access section.
+
 ## MAC community and facility relationships
 
 The master candidate row's `MAC community JSON` contains official identity/address evidence and `facilityAccess` edges keyed to existing Map Places IDs. `Facility JSON` on category `MAC facility` rows holds the site's resources, host versus other-resident access, location scope, source/check dates and optional packages. The exporter allowlists these public fields; private research, quotations and history never enter the export. Facilities do not become housing candidates, Scene events or automatic walking-cohort destinations. The compact MAC filter and linked facility details consume these same records.

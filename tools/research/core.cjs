@@ -108,6 +108,12 @@ const ResearchCore = (() => {
       const confirmedAllowance=c.allowanceStatus==='Confirmed'&&amount(c.utilityAllowance)!==null&&url(c.allowanceSource)&&date(c.allowanceChecked);
       const fee=ownFee?c.requiredMonthlyFees:useCommon&&commonFee?row['Required Monthly Fees']:null;
       return {id:text(raw.id)||null,unit,beds,baths:positive(raw.baths),sqft:positive(raw.sqft),rent:positive(raw.rent),
+        quotedAddress:text(raw.quotedAddress)||null, sourceDocument:text(raw.sourceDocument)||null,
+        floor:positive(raw.floor), moveInWindow:text(raw.moveInWindow)||null,
+        touringStatus:text(raw.touringStatus)||null, features:Array.isArray(raw.features)?raw.features.map(text).filter(Boolean):[],
+        tourUrl:url(raw.tourUrl), tourScope:text(raw.tourScope)||null,
+        sourceLabel:text(raw.sourceLabel)||null, sourceDate:date(raw.sourceDate), receivedDate:date(raw.receivedDate),
+        belowSizeMinimum:positive(raw.sqft)!==null&&positive(raw.sqft)<550,
         available:text(raw.available)||'Availability unknown',evidenceType:text(raw.evidenceType)||'Recorded research',
         checked:date(raw.checked),source:url(raw.source),amenities:text(raw.amenities)||null,
         deposit:amount(raw.deposit),photos:p,photo:p.find(x=>x.kind==='image')?.url||null,structured:true,
