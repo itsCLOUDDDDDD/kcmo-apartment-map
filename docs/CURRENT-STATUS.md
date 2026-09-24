@@ -1,7 +1,8 @@
-# Neighborhood amenity layer — approved release, September 24, 2026
+# Neighborhood amenity layer — published and verified, September 24, 2026
 
-The editable frontend adds seven user-supplied Mac neighborhood amenity records, category pins, an optional Amenities (7) toggle, Show all, a mobile location chooser, tier/address/features drawer and on-demand attributed Places photo reel. Location and amenity claims are labeled unverified; no property, venue, route or master data changed. Ten existing suites, TypeScript/build and desktop/390px browser checks pass. Photo navigation/credits were checked with test responses; real photo availability remains unverified. User approved publication. Frontend 7cb1801 is prepared for release; deployment and live verification are pending.
+Published following the user's approval. Frontend `7cb1801684b58dceaa4a56fc50cb5ad15598e255`, website application `6aac96743ff43a14d7a204efa9ec0f30eb29d8d1`, successful Pages run `36034165810`. All 30 served file hashes and the release manifest match. Live Chrome 1280px and 390px checks pass: seven markers, every tier/address/feature, desktop pin clicks, mobile chooser, closing and layer hiding, no horizontal overflow and no uncaught application errors. Photo-reel navigation and credits pass with intercepted test responses; actual photos for these locations remain unverified. Safari remains untested.
 
+The optional Amenities (7) layer contains the seven supplied Mac locations, category pins, Show all, a chooser for overlapping locations, membership/features drawer and on-demand attributed photo reel. Supplied locations, tiers and features remain labeled unverified. Existing housing/venue exports, routes, Scene data, saved media and photo-cover behavior are preserved. Ten suites, TypeScript and production build passed. No Sheet writes or reconciliation imports occurred. This verification follow-up changes documentation only.
 
 ---
 
