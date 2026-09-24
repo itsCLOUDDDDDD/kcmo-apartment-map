@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "cd14170b346e7770cba240a6eb5e236ef3d554a5",
+  "frontendCommit": "ecfe12aaf8fbb6b447f2521a84fd3d327d0e871e",
   "housingExportGeneratedAt": "2026-09-22T18:43:31.621Z",
   "workbookSha256": "258a2d130b3b9f84593981a03e4b1724c153b16da9bfd5551047e1d6583e6760",
   "housingExportSha256": "e49ba9719308871313819fd92baeca22bac5df94cea9981f682f8cecf800bc6f",
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-CSUsLQPb.css": "b2cc0604d7ac852a1c6063ee456b6ffc02fc87322ee6bdfe154ec5d478ad8212",
-    "assets/index-PRtO-YQJ.js": "4d18e4bd2fbfcdd56a294e2df0b530e9229f0df85c9f86bab9d8961b09b203d2",
+    "assets/index-CshY6mVi.css": "1c1f30dadc8799acf2bafefeb7c4a92b4ec115ca3d7f381f16fef5423718e4fe",
+    "assets/index-sPCvaDgB.js": "81f4bd387ba9b81ee8e14eaab931f914ddeea735d5d19574db0f236a31d1e3b3",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "6eb10a868a013e6b6e0ef3693810ad8d4bbd9240c6f7f48950c11817b0b80187",
+    "index.html": "e39d3f65278fac24f98ebe060466b8664c0c05d5fbcef41fc416b7cd48fea433",
     "map-data.js": "8850e778940c08ba35272a9355fb07a43a4b9e59b3676ffcad6dd3f833ca3088"
   },
   "units": 26,
-  "publicationScope": "Refresh only the 15 requested existing MAC properties in ZIP 64111 from the verified live Sheet; preserve all other published facts and existing Scene presentation.",
+  "publicationScope": "Places photo reels, multi-address/corridor matching and browser-local starred covers only; all published property facts, saved media, Scene evidence and routes preserved.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -127,5 +127,13 @@
     "unrelatedPublicFactsChanged": 0,
     "routing": "pending spending authorization and Arc identity resolution",
     "routingApiCalls": 0
+  },
+  "placesPhotos": {
+    "slashAddressMatching": true,
+    "disclosedArmourComplexProfiles": true,
+    "curatedCovers": "browser-local fingerprint selections",
+    "apiPhotoNamesPersisted": false,
+    "automaticVisualClassification": false,
+    "savedDataUnchanged": true
   }
 }

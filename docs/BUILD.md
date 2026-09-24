@@ -11,6 +11,8 @@ npm run build
 
 Configure the existing Google Maps browser key in an ignored `.env.local` as `VITE_GOOGLE_MAPS_API_KEY`. Never commit environment files. Vite uses relative asset paths for GitHub Pages repository hosting. The browser key is necessarily included in the browser build; do not add server credentials.
 
+The photo reels also require Places API (New) for this browser key. Verify real Places media with the published origin after deployment, including slash/corridor matches and photographer credits. Cover choices are stored in that browser origin and do not migrate from localhost automatically. Check list/selected-map thumbnail updates, modal hero persistence across refresh, reset, unavailable selections and blocked-storage handling. Do not persist expiring media URLs or photo resource names.
+
 The reviewed public snapshot is `src/data/housing-export.json`, and saved event joins are in `src/data/saved-events.json`. Keep stable property and destination IDs, unresolved facts, unit ownership and the independent nearest/priority summaries. Updating the Sheet does not automatically update these snapshots. Do not run the former site's builder over the current frontend.
 
 For an authorized release, copy the complete `dist/` contents into a clean checkout of this repository, preserve `.nojekyll`, and serialize the identical reviewed housing JSON to `map-data.js` as `window.KCMO_MAP_DATA`. Record source/snapshot and file hashes in `release.json`. The current interface uses the bundled JSON; `map-data.js` remains an equivalent public export for compatibility.

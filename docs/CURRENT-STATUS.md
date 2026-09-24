@@ -1,3 +1,13 @@
+# Places photos and starred covers - September 24, 2026
+
+Approved for publication by the user. Frontend source `ecfe12a` adds Google Places photo reels, primary/secondary slash-address and numeric-range matching, the approved property-name/same-street Armour corridor exception with source-profile disclosure, and interactive Set as cover / Reset controls. Existing custom images and saved unit galleries retain their attribution and ownership. Paradise Flats now matches its saved secondary address and displays the returned ten-photo reel. No automatic Street View images or visual room classifier are used.
+
+Starred photos override Sheet/default thumbnails in list and selected map cards and open first in details. Choices persist only in the same browser/origin and sync across its tabs; they are not saved to the live Sheet or shared with other devices. Storage contains selection fingerprints, not image URLs, photo resource names, bytes or API keys. Fresh Places responses resolve selections after reload; missing photos and blocked storage are disclosed.
+
+All ten suites, TypeScript/build and local desktop/mobile tests pass: real photos, attribution, instant list/map updates, refresh persistence, reset, cross-tab changes, missing-photo handling and storage failures. The reviewed housing export, map-data export, 258 property identities, 26 units, 59 venues, 2,808 saved walks, Scene evidence and saved media remain unchanged. The newer Old Town Sheet-only update below is preserved but is not imported by this photo release. Private context and environment files remain outside the website build. Deployment and live verification are pending below.
+
+---
+
 # Old Town unit research — September 23, 2026
 
 Applied and independently verified in the live master: seven data-cell updates on the two existing Old Town property rows. Existing structured units received user-supplied, independently unverified attribution and the requested September 22 research/check date; appended source history preserves prior metadata and distinguishes the attachment's September 23 email date. The Star summary rent now matches its already-recorded 950-square-foot unit. Property and unit IDs, verified addresses/ZIPs, other units/photos and all earlier evidence remain intact. No property or Units tab was added.
