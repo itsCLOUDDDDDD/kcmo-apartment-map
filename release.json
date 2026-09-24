@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "ecfe12aaf8fbb6b447f2521a84fd3d327d0e871e",
+  "frontendCommit": "7cb1801684b58dceaa4a56fc50cb5ad15598e255",
   "housingExportGeneratedAt": "2026-09-22T18:43:31.621Z",
   "workbookSha256": "258a2d130b3b9f84593981a03e4b1724c153b16da9bfd5551047e1d6583e6760",
   "housingExportSha256": "e49ba9719308871313819fd92baeca22bac5df94cea9981f682f8cecf800bc6f",
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-CshY6mVi.css": "1c1f30dadc8799acf2bafefeb7c4a92b4ec115ca3d7f381f16fef5423718e4fe",
-    "assets/index-sPCvaDgB.js": "81f4bd387ba9b81ee8e14eaab931f914ddeea735d5d19574db0f236a31d1e3b3",
+    "assets/index-BdqFexSA.js": "e308d7b782bf473147dd908af461db026cee2ae48270d449037ee4e417c4b632",
+    "assets/index-BY34krDA.css": "33bbc1e8ad7bed8395d6a9d6468290febc08fa6ff9db268ee076aadaa8950892",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "e39d3f65278fac24f98ebe060466b8664c0c05d5fbcef41fc416b7cd48fea433",
+    "index.html": "96231b444f2f0d96a6a749073ff4afbe3df63cb7b64784bc300190145e0faa4b",
     "map-data.js": "8850e778940c08ba35272a9355fb07a43a4b9e59b3676ffcad6dd3f833ca3088"
   },
   "units": 26,
-  "publicationScope": "Places photo reels, multi-address/corridor matching and browser-local starred covers only; all published property facts, saved media, Scene evidence and routes preserved.",
+  "publicationScope": "Approved seven-location Mac neighborhood amenity layer; existing housing, venues, saved media, Scene evidence, routes and photo-cover behavior preserved.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -135,5 +135,11 @@
     "apiPhotoNamesPersisted": false,
     "automaticVisualClassification": false,
     "savedDataUnchanged": true
+  },
+  "neighborhoodAmenities": {
+    "count": 7,
+    "source": "User-supplied September 24, 2026; not independently verified",
+    "defaultEnabled": false,
+    "photos": "On demand; availability unverified"
   }
 }

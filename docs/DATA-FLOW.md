@@ -1,3 +1,7 @@
+## Neighborhood amenity layer — approved implementation, September 24, 2026
+
+Frontend `src/data/neighborhoodAmenities.ts` holds seven explicitly user-supplied neighborhood POIs, separate from the property and saved-venue master exports. `HousingMap.tsx` renders the optional layer inside `KansasCityApartmentMap.tsx`. No property joins, eligibility conclusions or walking measurements are derived from these records. Coordinates, tiers and features retain unverified attribution. The existing Places photo matcher loads on demand using each supplied name/address/ZIP; attributed results are place photos, not proof of specific amenity features. The location chooser provides access to overlapping pins without changing their coordinates. Publication was approved September 24; see CURRENT-STATUS for deployment verification.
+
 # Sheet to website data flow
 
 ## Places photos and local cover choices
