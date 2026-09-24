@@ -1,3 +1,9 @@
+# Bellerive pin correction — September 24, 2026
+
+The user's building-pin correction is applied and independently read back in the master: 39.0639354419834, -94.5827161930349. Source/date and previous coordinates are retained; no entrance or gym location is inferred. The prior supplied 43-minute walk is historical because its origin used the old coordinates; no provider calls or new routes were made. Only Bellerive's exported coordinates, provenance, Street View link and stale supplied-walk display changed. All other 259 properties, facilities, media, costs and 2,808 verified walks remain unchanged. Eleven suites, TypeScript and production build pass. Frontend 877baf1; publication verification pending.
+
+---
+
 # MAC reconciliation - applied, published and verified, September 24, 2026
 
 Frontend `deb088e6fde77e4b74912bbd56ac9909b1ed6ed3` and website application `0cb140b56264ebffe66799a0b3b085cb3f9da6b5` are committed and pushed. Pages run `36037117842` succeeded; Pages reports the application commit as built. All 30 served file hashes and the release manifest match. Live desktop and 390px layout checks confirm 33 MAC records, visible Raleigh hold, Roxford/Duke additions, five facility sections, corrected Arc access labels and no horizontal overflow. Provider requests were deliberately blocked during live QA, so Google basemap and photo loading are not newly verified; expected blocked-provider errors are not reported as successful map loading. This follow-up records completion without changing application assets.

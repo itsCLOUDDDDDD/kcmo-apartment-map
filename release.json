@@ -1,9 +1,9 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "deb088e6fde77e4b74912bbd56ac9909b1ed6ed3",
-  "housingExportGeneratedAt": "2026-09-24T17:35:43.386Z",
-  "workbookSha256": "12fe3e27c524b80daea169d76a035fc2014868beb11c259ef1d24b3c2f5c1ff1",
-  "housingExportSha256": "150b85558f17d89ea871bd1ba0d6a93b88e6c80b9d30c126d34b7a41069fb3d8",
+  "frontendCommit": "877baf1242fdbb2ffcc73cdcd4c65cde4b5cd8de",
+  "housingExportGeneratedAt": "2026-09-24T21:37:11.308Z",
+  "workbookSha256": "36f18da036f5ee1e63a666e70cbc5aa1af675dab3d5d742b18cb3133fabf0f5c",
+  "housingExportSha256": "5ed8f21bf12b644c0976637876149318d97e1bf49a17bc6642c1ec71827c8a5e",
   "properties": 260,
   "mapped": 246,
   "listOnly": 14,
@@ -19,7 +19,7 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-B8eQzW6s.js": "29400ac3cf0da61f96e8f9bacc7ffb6b7eb61c86b50025eb1dd7c1096517fe0c",
+    "assets/index-C0qRVeHr.js": "93045ec5b8a1b059f61daefce45dd028d88d05686ed9a183856b0323608d9827",
     "assets/index-CUNFm8S7.css": "9440f5bd991d0cb32cb84b8712a6d46dd624ef93a2ac901e96bcd1df65e29761",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "208bcb0dbf46d38fa88ae5c8653afdfd3af378115b8b51574cf949de0ada2941",
-    "map-data.js": "16bf04201461a666dd6da1b160fb75f2c292814de60e76f24ff3edc59ca1764a"
+    "index.html": "2de5c09a89847fbfe5861dfd516f8b32b41de7ed10ba433a7e3d46800a9dbbb3",
+    "map-data.js": "48cc624a934cd098e69023f75f2b21dd157a450d053068a2bdd56a87db596575"
   },
   "units": 26,
-  "publicationScope": "Approved 34-entry MAC identity reconciliation and separate facility/access layer; 31 matched, two added, one held. Preserve existing neighborhood layer, unrelated data, costs, units, photos, routes and Scene evidence.",
+  "publicationScope": "Bellerive supplied building-pin correction only; stale supplied walking claim retained as private history. All other properties, facilities, costs, media and verified routes preserved.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -165,5 +165,15 @@
     "unrelatedPublicFactsChanged": 0,
     "routingApiCalls": 0,
     "facilityPinsAdded": 0
+  },
+  "bellerivePinCorrection": {
+    "received": "2026-09-24",
+    "source": "User supplied; not independently verified",
+    "coordinates": [
+      39.0639354419834,
+      -94.5827161930349
+    ],
+    "masterReadBack": "passed",
+    "routingApiCalls": 0
   }
 }
