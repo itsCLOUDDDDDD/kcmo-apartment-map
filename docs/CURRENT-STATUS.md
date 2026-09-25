@@ -1,4 +1,4 @@
-# MAC property locations — publication approved September 25, 2026
+# MAC property locations — published and verified September 25, 2026
 
 The current live Sheet, reviewed export and served website were compared before editing. The freshly retrieved official directory still lists 34 Kansas City communities, all matched to existing stable IDs. Hamilton's official property page confirms 701 E Armour but it is absent from the directory/master/export; one distinct Property ID was added. No duplicate or identity merge was made.
 
@@ -12,7 +12,7 @@ All 14 frontend suites, 34 exporter contracts, 14 Google-walk contracts, supplie
 
 Snapshot SHA-256: `fc7e4b428821550c192e2303fce73c10748f8254af15b9bfb2b2d15da0712a60`. Reviewed JSON SHA-256: `de0432b11ddf1e827014c11c311a57699c68d714b760a7c97b72bbdf229eac13`.
 
-**Publication approved September 25.** Frontend `720f48bd2e5ac5addbefd655e5e15746da08f5aa` is committed and pushed. The reviewed website bundle is prepared for the existing GitHub Pages site; deployment/live verification is pending. This approval covers the property-location update above.
+**Published and verified September 25:** frontend `720f48bd2e5ac5addbefd655e5e15746da08f5aa`, website application `94888c93722e242f3643536dc47d94fb602328c0`, successful Pages run `36157302749`. All 30 served file hashes and the release manifest match the tested build. The live site has 261 properties, 250 mapped/11 list-only, and 35 MAC identities (29 mapped/six list-only). No new provider requests or route calculations. This documentation follow-up changes no application assets.
 
 ## Remaining MAC list-only records
 
