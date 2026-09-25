@@ -28,8 +28,8 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
   "meta": {
     "schemaVersion": 3,
     "title": "Kansas City apartments",
-    "generatedAt": "2026-09-25T02:23:27.605Z",
-    "workbookSha256": "fc7e4b428821550c192e2303fce73c10748f8254af15b9bfb2b2d15da0712a60",
+    "generatedAt": "2026-09-25T16:54:20.282Z",
+    "workbookSha256": "dfc2eba005284c920bdbb79a6806180ca5b24bbee025eb98ec436f6621053be0",
     "reviewedZips": [
       "64105",
       "64106",
@@ -132,6 +132,12 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "listOnly": 6,
       "source": "User-supplied Google Maps observations; not independently verified",
       "scope": "Property location updates only; saved routes and other facts preserved"
+    },
+    "downtownCoordinateUpdate": {
+      "receivedDate": "2026-09-25",
+      "properties": 17,
+      "source": "User-supplied table; precision claims not independently verified",
+      "scope": "Property pins only. Saved ZIP/payment-standard settings and routes remain unchanged; saved walks retain their recorded prior origins. Supplied walk figures are retained privately as evidence, not imported measurements."
     }
   },
   "properties": [
@@ -1150,13 +1156,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Yarco Property Management",
       "phone": "(816) 912-0600",
       "coordinates": [
-        39.103506,
-        -94.588189
+        39.103202,
+        -94.5878992
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 915 BROADWAY ST, KANSAS CITY, MO, 64105 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=915+Broadway+Blvd%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=915+Broadway+Blvd%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Unverified / discretionary absent another covenant",
       "lihtc": "No current LIHTC/income-restricted component confirmed; historic credits are not LIHTC",
       "oneBedroom": {
@@ -1248,7 +1254,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": null,
         "units": null,
         "photos": "https://www.915broadway.com/floorplans/two-bedroom/fedora",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.103506,-94.588189",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.103202,-94.5878992",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=915%20Broadway%20Blvd%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=915%20Broadway%20Blvd%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -2152,13 +2158,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Private owner / listing manager unverified",
       "phone": "Unverified",
       "coordinates": [
-        39.103487,
-        -94.58995
+        39.1030517,
+        -94.590224
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 920 WASHINGTON ST, KANSAS CITY, MO, 64105 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=920+Washington+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=920+Washington+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Unverified - private owner approval and PHA process required",
       "lihtc": "Historic LIHTC record shows 15/15 low-income units; current restriction term and private-condo listing tag unresolved",
       "oneBedroom": {
@@ -2250,7 +2256,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": "https://www.zillow.com/homedetails/920-Washington-St-APT-206-Kansas-City-MO-64105/90029453_zpid/",
         "units": "https://www.zillow.com/homedetails/920-Washington-St-APT-206-Kansas-City-MO-64105/90029453_zpid/",
         "photos": "https://www.zillow.com/homedetails/920-Washington-St-APT-206-Kansas-City-MO-64105/90029453_zpid/?mmlb=g,0",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.103487,-94.58995",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1030517,-94.590224",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=920%20Washington%20St%2C%20Apt%20206%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=920%20Washington%20St%2C%20Apt%20206%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -3154,13 +3160,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Old Town Management",
       "phone": "(816) 842-1424",
       "coordinates": [
-        39.110494,
-        -94.584969
+        39.1103212,
+        -94.5851555
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 200 DELAWARE ST, KANSAS CITY, MO, 64105 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=200+Delaware+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=200+Delaware+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Covered LIHTC unit cannot reject solely for voucher status; current intake unverified",
       "lihtc": "Yes - LIHTC; 35/35 low-income units documented",
       "oneBedroom": {
@@ -3367,7 +3373,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": "https://www.apartments.com/old-town-lofts-kansas-city-mo/6l2s7sr/",
         "units": "https://www.apartments.com/old-town-lofts-kansas-city-mo/6l2s7sr/",
         "photos": "https://oldtownloftskc.com/river-market",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.110494,-94.584969",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1103212,-94.5851555",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=200%20Delaware%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=200%20Delaware%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -4272,13 +4278,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Old Town Management",
       "phone": "(816) 842-1424",
       "coordinates": [
-        39.102084,
-        -94.584148
+        39.1018702,
+        -94.5840864
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 1009 BALTIMORE AVE, KANSAS CITY, MO, 64105 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1009+Baltimore+Ave%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1009+Baltimore+Ave%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Covered LIHTC unit cannot reject solely for voucher status; current intake unverified",
       "lihtc": "Yes - LIHTC; 32/32 low-income units in HUD record",
       "oneBedroom": {
@@ -4485,7 +4491,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": "https://oldtownloftskc.securecafe.com/onlineleasing/finance-building-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448625&floorPlans=3349441",
         "units": "https://oldtownloftskc.securecafe.com/onlineleasing/finance-building-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448625&floorPlans=3349441",
         "photos": "https://oldtownloftskc.securecafe.com/onlineleasing/finance-building-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448625&floorPlans=3349441",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.102084,-94.584148",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1018702,-94.5840864",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=1009%20Baltimore%20Ave%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=1009%20Baltimore%20Ave%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -5391,13 +5397,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Old Town Management",
       "phone": "(816) 842-1424",
       "coordinates": [
-        39.103162,
-        -94.585497
+        39.1025555,
+        -94.5857241
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 934 WYANDOTTE ST, KANSAS CITY, MO, 64105 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=934+Wyandotte+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=934+Wyandotte+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Covered LIHTC unit cannot reject solely for voucher status; current intake unverified",
       "lihtc": "Yes - LIHTC; 58/58 low-income units at 60% AMGI",
       "oneBedroom": {
@@ -5566,7 +5572,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": "https://www.apartments.com/old-town-lofts-kansas-city-mo/6l2s7sr/",
         "units": "https://www.apartments.com/old-town-lofts-kansas-city-mo/6l2s7sr/",
         "photos": "https://www.apartments.com/old-town-lofts-kansas-city-mo/6l2s7sr/",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.103162,-94.585497",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1025555,-94.5857241",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=934%20Wyandotte%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=934%20Wyandotte%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -6471,13 +6477,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Appreciate",
       "phone": "(573) 303-3477",
       "coordinates": [
-        39.103435,
-        -94.58834
+        39.1029481,
+        -94.588445
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 920 BROADWAY ST, KANSAS CITY, MO, 64105 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=920+Broadway+Blvd%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=920+Broadway+Blvd%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Unverified",
       "lihtc": "No verified LIHTC; official unit list labels rents market rate; third-party income-restricted tag unresolved",
       "oneBedroom": {
@@ -6557,7 +6563,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": null,
         "units": null,
         "photos": "https://idelofts.com/%23unit-203",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.103435,-94.58834",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1029481,-94.588445",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=920%20Broadway%20Blvd%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=920%20Broadway%20Blvd%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -7462,13 +7468,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Old Town Management",
       "phone": "(816) 842-1424",
       "coordinates": [
-        39.103384,
-        -94.58534
+        39.1030868,
+        -94.5850615
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 917 WYANDOTTE ST, KANSAS CITY, MO, 64105 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=917+Wyandotte+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=917+Wyandotte+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Covered LIHTC unit cannot reject solely for voucher status; current intake unverified",
       "lihtc": "Yes - 39/39 LIHTC units (32 1BR, 7 2BR)",
       "oneBedroom": {
@@ -7560,7 +7566,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": "https://oldtownloftskc.securecafe.com/onlineleasing/the-lofts-at-917/floorplans.aspx",
         "units": "https://oldtownloftskc.securecafe.com/onlineleasing/the-lofts-at-917/floorplans.aspx",
         "photos": "https://www.apartments.com/old-town-lofts-kansas-city-mo/6l2s7sr/",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.103384,-94.58534",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1030868,-94.5850615",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=917%20Wyandotte%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=917%20Wyandotte%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -8464,13 +8470,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Old Town Management",
       "phone": "(816) 842-1424",
       "coordinates": [
-        39.102199,
-        -94.583311
+        39.1021659,
+        -94.5832603
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 15 W 10TH ST, KANSAS CITY, MO, 64105 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=15+W+10th+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=15+W+10th+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Building / Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Building / Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Covered tax-credit unit cannot reject solely for voucher status; current intake unverified",
       "lihtc": "Yes - 49/49 LIHTC units (44 1BR, 4 2BR, 1 3BR)",
       "oneBedroom": {
@@ -8677,7 +8683,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": "https://oldtownloftskc.securecafe.com/onlineleasing/hanover-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448627&floorPlans=3349435",
         "units": "https://oldtownloftskc.securecafe.com/onlineleasing/hanover-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448627&floorPlans=3349435",
         "photos": "https://oldtownloftskc.securecafe.com/onlineleasing/hanover-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448627&floorPlans=3349435",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.102199,-94.583311",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1021659,-94.5832603",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=15%20W%2010th%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=15%20W%2010th%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -9583,13 +9589,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Old Town Management",
       "phone": "(816) 842-1424",
       "coordinates": [
-        39.11098,
-        -94.582372
+        39.1113283,
+        -94.5821749
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 119 WALNUT ST, KANSAS CITY, MO, 64106 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=119+Walnut+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=119+Walnut+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Covered tax-credit unit cannot reject solely for voucher status; current intake unverified",
       "lihtc": "Former combined I/II/III record: 44/44 LIHTC units at 60% AMGI; building-level allocation unverified.",
       "oneBedroom": {
@@ -9720,7 +9726,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": "https://oldtownloftskc.securecafe.com/onlineleasing/old-town-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448630&floorPlans=3349410",
         "units": "https://oldtownloftskc.securecafe.com/onlineleasing/old-town-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448630&floorPlans=3349410",
         "photos": "https://oldtownloftskc.securecafe.com/onlineleasing/old-town-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448630&floorPlans=3349410",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.11098,-94.582372",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1113283,-94.5821749",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=119%20Walnut%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=119%20Walnut%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -10626,13 +10632,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Old Town Management",
       "phone": "(816) 842-1424",
       "coordinates": [
-        39.110586,
-        -94.582259
+        39.1108491,
+        -94.5820898
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 207 WALNUT ST, KANSAS CITY, MO, 64106 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=207+Walnut+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=207+Walnut+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Covered tax-credit unit cannot reject solely for voucher status; current intake unverified",
       "lihtc": "Former combined I/II/III record: 44/44 LIHTC units at 60% AMGI; building-level allocation unverified.",
       "oneBedroom": {
@@ -10801,7 +10807,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": "https://oldtownloftskc.securecafe.com/onlineleasing/old-town-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448630&floorPlans=3349410",
         "units": "https://oldtownloftskc.securecafe.com/onlineleasing/old-town-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448630&floorPlans=3349410",
         "photos": "https://oldtownloftskc.securecafe.com/onlineleasing/old-town-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448630&floorPlans=3349410",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.110586,-94.582259",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1108491,-94.5820898",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=207%20Walnut%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=207%20Walnut%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -11707,13 +11713,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Old Town Management",
       "phone": "(816) 842-1424",
       "coordinates": [
-        39.110559,
-        -94.582251
+        39.1106264,
+        -94.58203
       ],
-      "coordinateSource": "Census address interpolation; not an entrance survey. 213 WALNUT ST, KANSAS CITY, MO, 64106 | https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=213+Walnut+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=213+Walnut+St%2C+Kansas+City%2C+MO&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-15",
-      "locationStatus": "Saved address-matched; re-geocode for independent validation",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Covered tax-credit unit cannot reject solely for voucher status; current intake unverified",
       "lihtc": "Former combined I/II/III record: 44/44 LIHTC units at 60% AMGI; building-level allocation unverified.",
       "oneBedroom": {
@@ -11832,7 +11838,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": "https://oldtownloftskc.securecafe.com/onlineleasing/old-town-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448630&floorPlans=3349410",
         "units": "https://oldtownloftskc.securecafe.com/onlineleasing/old-town-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448630&floorPlans=3349410",
         "photos": "https://oldtownloftskc.securecafe.com/onlineleasing/old-town-lofts/availableunits.aspx?contactOnly=1&myOlePropertyId=448630&floorPlans=3349410",
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.110559,-94.582251",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1106264,-94.58203",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=213%20Walnut%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=213%20Walnut%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -16694,13 +16700,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "The Landings at River Market / Canyon View; 816-403-4399.",
       "phone": null,
       "coordinates": [
-        39.110422250441,
-        -94.584791784729
+        39.1101816,
+        -94.5844211
       ],
-      "coordinateSource": "US Census Geocoder; address-range interpolation, not a rooftop or entrance",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/address?street=213%20DELAWARE%20ST&city=Kansas%20City&state=MO&zip=64105&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-18",
-      "locationStatus": "Validated address interpolation; entrance unverified",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "AHO generic LIHTC/HCV language is a lead, not current written manager confirmation. Current credit, minimum income, voucher-counting and deposits are unknown.",
       "lihtc": "Historic loft apartment building, now marketed by Landings; current restricted units/HCV route unverified.",
       "oneBedroom": {
@@ -16780,7 +16786,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": null,
         "units": null,
         "photos": null,
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.110422250441,-94.584791784729",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1101816,-94.5844211",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=213%20Delaware%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=213%20Delaware%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -17685,13 +17691,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "The Landings at River Market / Canyon View; 816-403-4399.",
       "phone": null,
       "coordinates": [
-        39.108956728129,
-        -94.5843002111
+        39.108846,
+        -94.584162
       ],
-      "coordinateSource": "US Census Geocoder; address-range interpolation, not a rooftop or entrance",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/address?street=401%20DELAWARE%20ST&city=Kansas%20City&state=MO&zip=64105&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-18",
-      "locationStatus": "Validated address interpolation; entrance unverified",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "AHO generic LIHTC/HCV language is a lead, not current written manager confirmation. Current credit, minimum income, voucher-counting and deposits are unknown.",
       "lihtc": "Historic loft apartment building, now marketed by Landings; current restricted units/HCV route unverified.",
       "oneBedroom": {
@@ -17771,7 +17777,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": null,
         "units": null,
         "photos": null,
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.108956728129,-94.5843002111",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.108846,-94.584162",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=401%20Delaware%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=401%20Delaware%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -18677,12 +18683,12 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "phone": "Not supplied by AHO; none verified",
       "coordinates": [
         39.1002279,
-        -94.59116870000001
+        -94.5911687
       ],
-      "coordinateSource": "Google Maps Geocoding validated Kansas City match",
+      "coordinateSource": "User-supplied coordinate; reported precision: Intersection / Site; not independently verified",
       "coordinateSourceUrl": null,
-      "coordinateChecked": "2026-09-20",
-      "locationStatus": "Validated Google geocode; Kansas City/ZIP matched",
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Intersection / Site; not independently verified. Saved walks retain prior origins.",
       "hcv": "AHO HCV label only; no current primary leasing or unit-specific voucher evidence",
       "lihtc": "AHO LIHTC claim; current participation unverified",
       "oneBedroom": {
@@ -18762,7 +18768,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": null,
         "units": null,
         "photos": null,
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1002279,-94.59116870000001",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1002279,-94.5911687",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=12th%20and%20Pennsylvania%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=12th%20and%20Pennsylvania%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -19659,13 +19665,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Not established from current property/manager evidence.",
       "phone": null,
       "coordinates": [
-        39.103685902893,
-        -94.589793284903
+        39.1033701,
+        -94.5896413
       ],
-      "coordinateSource": "US Census Geocoder; address-range interpolation, not a rooftop or entrance",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/address?street=905%20WASHINGTON%20ST&city=Kansas%20City&state=MO&zip=64105&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-18",
-      "locationStatus": "Validated address interpolation; entrance unverified",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "AHO generic LIHTC/HCV language is a lead, not current written manager confirmation. Current credit, minimum income, voucher-counting and deposits are unknown.",
       "lihtc": "Historical 84-unit LIHTC phase; individual address sources now describe condominiums.",
       "oneBedroom": {
@@ -19745,7 +19751,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": null,
         "units": null,
         "photos": null,
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.103685902893,-94.589793284903",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1033701,-94.5896413",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=905%20Washington%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=905%20Washington%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -20650,13 +20656,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Unknown current manager",
       "phone": "Not supplied by AHO; none verified",
       "coordinates": [
-        39.1030517,
-        -94.59022399999999
+        39.1038106,
+        -94.5898726
       ],
-      "coordinateSource": "Google Maps Geocoding validated Kansas City match",
+      "coordinateSource": "User-supplied coordinate; reported precision: Intersection / Parcel; not independently verified",
       "coordinateSourceUrl": null,
-      "coordinateChecked": "2026-09-20",
-      "locationStatus": "Validated Google geocode; Kansas City/ZIP matched",
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Intersection / Parcel; not independently verified. Saved walks retain prior origins.",
       "hcv": "AHO HCV label only; no current primary leasing or unit-specific voucher evidence",
       "lihtc": "AHO LIHTC claim; current participation unverified",
       "oneBedroom": {
@@ -20736,7 +20742,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": null,
         "units": null,
         "photos": null,
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1030517,-94.59022399999999",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1038106,-94.5898726",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=Ninth%20and%20Washington%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=Ninth%20and%20Washington%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },
@@ -21633,13 +21639,13 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
       "management": "Pennbrooke on-site management (firm not identified)",
       "phone": "816-474-3844 official",
       "coordinates": [
-        39.102524026436,
-        -94.591156585069
+        39.1027587,
+        -94.5914229
       ],
-      "coordinateSource": "US Census Geocoder; address-range interpolation, not a rooftop or entrance",
-      "coordinateSourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/address?street=604%20W%2010TH%20ST&city=Kansas%20City&state=MO&zip=64105&benchmark=Public_AR_Current&format=json",
-      "coordinateChecked": "2026-09-18",
-      "locationStatus": "Validated address interpolation; entrance unverified",
+      "coordinateSource": "User-supplied coordinate; reported precision: Rooftop; not independently verified",
+      "coordinateSourceUrl": null,
+      "coordinateChecked": "2026-09-25",
+      "locationStatus": "Saved address-matched user-supplied Rooftop; not independently verified. Saved walks retain prior origins.",
       "hcv": "Official income-based property subsidy; ordinary tenant-based HCV unit not established",
       "lihtc": "Official HUD-assisted housing; AHO PBRA/LIHTC",
       "oneBedroom": {
@@ -21719,7 +21725,7 @@ Organizers/series: This Is Ours KC ×1; {B/qKC} ×1`,placeIds:[`palm-tree-club`]
         "floorplans": null,
         "units": null,
         "photos": null,
-        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.102524026436,-94.591156585069",
+        "streetView": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=39.1027587,-94.5914229",
         "googleMaps": "https://www.google.com/maps/search/?api=1&query=604%20W%2010th%20St%2C%20Kansas%20City%2C%20MO%2C%2064105",
         "appleMaps": "https://maps.apple.com/?address=604%20W%2010th%20St%2C%20Kansas%20City%2C%20MO%2C%2064105"
       },

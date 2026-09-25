@@ -1,9 +1,9 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "720f48bd2e5ac5addbefd655e5e15746da08f5aa",
-  "housingExportGeneratedAt": "2026-09-25T02:23:27.605Z",
-  "workbookSha256": "fc7e4b428821550c192e2303fce73c10748f8254af15b9bfb2b2d15da0712a60",
-  "housingExportSha256": "de0432b11ddf1e827014c11c311a57699c68d714b760a7c97b72bbdf229eac13",
+  "frontendCommit": "96a012da466415357f0d7ff3f8247af795586c1c",
+  "housingExportGeneratedAt": "2026-09-25T16:54:20.282Z",
+  "workbookSha256": "dfc2eba005284c920bdbb79a6806180ca5b24bbee025eb98ec436f6621053be0",
+  "housingExportSha256": "b079bbd572be3c30a89ec1a494f8847fe1261258e53cd02c9943f5608cb73227",
   "properties": 261,
   "mapped": 250,
   "listOnly": 11,
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-Bu9F55Uh.js": "b3bb8206cd9ca438a8bc7a2ac0abb9ceafc0dbd3b674daa326b165f75995189a",
     "assets/index-CZVMRS4i.css": "128ec11e548c462555a1fe3a787a0c5e5b2515c506001be4573c0c150fc8bb80",
+    "assets/index-FYoKVM9V.js": "30dba00a096e939de94cf52227cb0c9b4aa57dff4db8c1efe365962c79fc7a97",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "a0aafcfceced05da7a9a30728a3a1d3c035c13a283fa1d348f16197dcbc05b87",
-    "map-data.js": "3518aee18e0ead0e8746612db24be644a06985f92678b97e1787599de22ffb9a"
+    "index.html": "3bba140c105423d3497c0cc3595a8a71a44c4886597462c46739e373b6c28c20",
+    "map-data.js": "90472dbdd183a4b8c6f0845fa21ab457ccdf7a65214cbfe941a0b97f4a28f347"
   },
-  "units": 26,
-  "publicationScope": "User-approved September 25 publication of tested MAC property locations: Roxford, Cavalier, Westover, Hamilton addition, Brownhardt provenance. Preserve amenities, units, routes, design and remaining identity holds.",
+  "units": 47,
+  "publicationScope": "User-approved September 25 publication of 17 supplied downtown coordinate pairs. Preserve ZIPs, costs, units, amenities, saved route origins and design.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -200,5 +200,11 @@
     "listOnly": 6,
     "source": "User-supplied Google Maps observations; not independently verified",
     "scope": "Property location updates only; saved routes and other facts preserved"
+  },
+  "downtownCoordinateUpdate": {
+    "receivedDate": "2026-09-25",
+    "properties": 17,
+    "source": "User-supplied table; precision claims not independently verified",
+    "scope": "Property pins only. Saved ZIP/payment-standard settings and routes remain unchanged; saved walks retain their recorded prior origins. Supplied walk figures are retained privately as evidence, not imported measurements."
   }
 }
