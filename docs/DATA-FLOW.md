@@ -1,3 +1,10 @@
+## MAC access-scope model — September 24, 2026
+
+NeighborhoodAmenity uses hostPropertyId/hostAddress/hostName for physical context and a separate explicit accessScope (neighborhood-shared, property-only, public, unknown). Neither host matching nor nearby advertising sets access. Host coordinates resolve by stable ID; independently sourced complex/park/coworking points use standalone mode. Parent aliases were replaced by host fields.
+
+The shared toggle count and contents derive only from neighborhood-shared records: Carriage House, Gymnasium, Pump Room, Dashery Pool/Club/Gym complex, IBM and the documented Arcade coworking space. Public Gillham Dog Park and unconfirmed Arc gaming have separate layers. 520's property-only record renders only when its exact host is selected and never enters the shared count. Existing facility IDs supply consistent access labels in the facility dialog. Saved source notes preserve host-included access and cheaper eligible packages alongside All Access; optional membership fees never alter housing calculations. This frontend release does not edit the master or housing export.
+
+
 ## Quoted unit metadata — September 24, 2026
 
 Within existing building Units JSON, export quoted address, source-document label, floor, stated move-in window, touring status, features, safe 3D-tour URL/scope, source label/date and distinct received date. Unknown source dates do not become checked dates. Preserve string unit numbers and deduplicate by Property ID plus unit. Include every quoted unit regardless of size; no size warning or exclusion applies to these cards. This specific authorized scope exports structured unit facts, never full correspondence or private history. Selected unit estimates use its rent plus the existing planning utility setting over the property’s recorded 1BR standard. Available units precede a single collapsed property-level Walking access section.

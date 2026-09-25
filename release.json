@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "55a4f570589c581f1b83ce817895b1752ad7df34",
+  "frontendCommit": "5ca5f09b5951a857b50471a3e5dcf1ff488c8792",
   "housingExportGeneratedAt": "2026-09-24T22:58:04.617Z",
   "workbookSha256": "6c91cde78e6fb386510b9b372a65dc5998549d4f203e2047bc62e7558be1850e",
   "housingExportSha256": "0dce5c39179caa6288902bf69ba07f7e2915a2ffa12235126bfb1a4cb02c585c",
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-BdaSH5FK.css": "0632b4185f48168ebaded6ccb645ab054983d226aed62d5a12684503035a97e0",
-    "assets/index-BmziafGn.js": "4e7e67477e783df5b72b6aced7567ec05d6b44b436161fa1184eb81c18de6e15",
+    "assets/index-CZVMRS4i.css": "128ec11e548c462555a1fe3a787a0c5e5b2515c506001be4573c0c150fc8bb80",
+    "assets/index-RzPnx8jp.js": "d9fa70c9e92a7c2ca2072105659072c675d74ae16b6747c61a3cfaf06bbe3c69",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "1f426a8bafc4ed6142f682844186bb99467fc2c9cdcad84f25c7bca5eaa02cf0",
+    "index.html": "3b3e604a37fb5b5789bb5fa5cf833a163d927652ad50582d425e48c160c50b72",
     "map-data.js": "c6d294589136a4cdc7edd355844f1feca41efd8ab47fb7364d6631c2c365df42"
   },
   "units": 26,
-  "publicationScope": "All 21 distinct quoted MAC apartments attached to 13 existing buildings, dated leasing references and selectable unit cards. Includes Bellerive 713/711/702 and Raleigh 3346-2W; no minimum-size exclusion. Preserve existing coordinates, routes, media, facilities and unrelated research.",
+  "publicationScope": "Approved MAC amenity access-scope and host-coordinate corrections. Six shared amenity records contain two shared pools; public and unconfirmed layers are separate; 520 property-only on host selection. Housing data, media, routes and quoted units preserved.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -137,10 +137,13 @@
     "savedDataUnchanged": true
   },
   "neighborhoodAmenities": {
-    "count": 7,
-    "source": "User-supplied September 24, 2026; not independently verified",
-    "defaultEnabled": false,
-    "photos": "On demand; availability unverified"
+    "sharedRecords": 6,
+    "sharedPools": 2,
+    "publicRecords": 1,
+    "unconfirmedRecords": 1,
+    "propertyOnlyRecords": 1,
+    "hostCoordinates": "stable Property ID at render time",
+    "crosswalksIdentitiesPreserved": true
   },
   "macReconciliation": {
     "batch": "mac-identity-facilities-20260924",

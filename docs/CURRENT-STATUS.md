@@ -1,3 +1,11 @@
+# MAC amenity scope release — September 24, 2026
+
+Publication authorized. Frontend 5ca5f09b5951a857b50471a3e5dcf1ff488c8792 separates physical hosts from access scope. Six MAC Shared records contain exactly two pools: Carriage House and Dashery. Public Gillham Dog Park and unconfirmed Arc gaming use separate layers. 520 is property-only and renders only on host selection. Bellerive hosts Carriage House, Gymnasium and Pump Room; IBM follows International at 301 E Armour. Dashery Pool/Club/Gym remain one shared complex; four Crosswalks identities remain distinct. The documented Arcade coworking space is separate from the unconfirmed Arc gaming claim.
+
+All 14 suites, TypeScript/build and offline desktop/mobile UI checks pass. Housing export, saved media, existing property identities, units and routes are unchanged. Arcade host/street, Arc gaming identity/canonical coordinate and individual Crosswalks fee terms remain unresolved. Deployment verification is pending; this record will be updated after live checks.
+
+---
+
 # Amenity supplied-coordinate update — local only, September 24, 2026
 
 All seven neighborhood-layer positions now match the latest explicit user-provided coordinates. The operator’s embedded amenity map was also reviewed; it conflicts with several requested placements and with the original Arcade/Arc identity. Drawers retain these distinctions and source links. The apartment building coordinates, master data and saved routes were not edited by this task. Existing uncommitted unit-card work is preserved. TypeScript/build and exact coordinate comparison pass. No commit, push or publication; the prior release below remains live.
