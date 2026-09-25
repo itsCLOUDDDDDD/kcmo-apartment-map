@@ -1,3 +1,7 @@
+## Old Town portfolio filter — September 25, 2026
+
+Old Town membership uses an exact case-insensitive current Management value of Old Town Management. It does not use neighborhood names, historical manager mentions or Cold Storage ownership. The official 11 portfolio links correspond to 13 existing building IDs because 119, 207 and 213 Walnut remain distinct pins. Manager toggles combine by union before ZIP/amenity/favorites filtering. No new facts or private leasing correspondence are exported by this presentation change.
+
 ## Saved property favorites — September 25, 2026
 
 `kcmo_favorite_properties_v1` stores only stable Property IDs in browser localStorage. App startup restores the set; card and detail controls persist toggles and storage events synchronize tabs. The Favorites only filter feeds the same filtered property collection to map and list. Storage errors retain the current session choice and show a save-failure notice. Browser-local choices are not exported, written to the Sheet or synchronized between devices. Other filters still apply.

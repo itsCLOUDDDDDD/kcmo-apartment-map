@@ -1,3 +1,11 @@
+Old Town portfolio filter — September 25, 2026
+
+The Old Town only toggle filters map pins and property cards by the existing current Management field. Official River Market, Business Loop and Crossroads listings reconcile to 11 portfolio entries and 13 saved building addresses: the Old Town Walnut listing has three separate buildings. All were already published, so no candidate additions or property-data changes were needed. Selecting multiple management filters includes any selected group; ZIP, amenity and Favorites only filters still apply. Cold Storage is a separate property and is excluded.
+
+Frontend `e8f4ca514bdfd124099f7f225c96a4f65ba31ac5`. All 16 test suites, TypeScript, production build and local desktop/390px checks pass: exact 13 pin/card IDs, 29 combined Yarco/Old Town results, favorites intersection, reset and mobile layout.
+
+---
+
 Property favorites — September 25, 2026
 
 Favorite buttons now save stable property IDs in this browser. Favorites only filters both property pins and list cards and combines with other active filters. Choices survive reload/reopening and synchronize across tabs of this website; they are not saved to the Sheet or synchronized across devices. Removing a favorite updates the filtered view immediately. Failed browser saves show a notice. Header controls wrap on narrow screens.
