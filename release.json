@@ -1,12 +1,12 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "5ca5f09b5951a857b50471a3e5dcf1ff488c8792",
-  "housingExportGeneratedAt": "2026-09-24T22:58:04.617Z",
-  "workbookSha256": "6c91cde78e6fb386510b9b372a65dc5998549d4f203e2047bc62e7558be1850e",
-  "housingExportSha256": "0dce5c39179caa6288902bf69ba07f7e2915a2ffa12235126bfb1a4cb02c585c",
-  "properties": 260,
-  "mapped": 246,
-  "listOnly": 14,
+  "frontendCommit": "720f48bd2e5ac5addbefd655e5e15746da08f5aa",
+  "housingExportGeneratedAt": "2026-09-25T02:23:27.605Z",
+  "workbookSha256": "fc7e4b428821550c192e2303fce73c10748f8254af15b9bfb2b2d15da0712a60",
+  "housingExportSha256": "de0432b11ddf1e827014c11c311a57699c68d714b760a7c97b72bbdf229eac13",
+  "properties": 261,
+  "mapped": 250,
+  "listOnly": 11,
   "savedWalkingMeasurements": 2808,
   "venueCatalog": 64,
   "mappedVenues": 58,
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
+    "assets/index-Bu9F55Uh.js": "b3bb8206cd9ca438a8bc7a2ac0abb9ceafc0dbd3b674daa326b165f75995189a",
     "assets/index-CZVMRS4i.css": "128ec11e548c462555a1fe3a787a0c5e5b2515c506001be4573c0c150fc8bb80",
-    "assets/index-RzPnx8jp.js": "d9fa70c9e92a7c2ca2072105659072c675d74ae16b6747c61a3cfaf06bbe3c69",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "3b3e604a37fb5b5789bb5fa5cf833a163d927652ad50582d425e48c160c50b72",
-    "map-data.js": "c6d294589136a4cdc7edd355844f1feca41efd8ab47fb7364d6631c2c365df42"
+    "index.html": "a0aafcfceced05da7a9a30728a3a1d3c035c13a283fa1d348f16197dcbc05b87",
+    "map-data.js": "3518aee18e0ead0e8746612db24be644a06985f92678b97e1787599de22ffb9a"
   },
   "units": 26,
-  "publicationScope": "Approved MAC amenity access-scope and host-coordinate corrections. Six shared amenity records contain two shared pools; public and unconfirmed layers are separate; 520 property-only on host selection. Housing data, media, routes and quoted units preserved.",
+  "publicationScope": "User-approved September 25 publication of tested MAC property locations: Roxford, Cavalier, Westover, Hamilton addition, Brownhardt provenance. Preserve amenities, units, routes, design and remaining identity holds.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -190,5 +190,15 @@
     "raleighPropertyId": "prop-dfdd634a-1c52-4d7b-981b-55c1b0de8ef7",
     "raleighOrigin": "Existing 3344 Gillham building pin; exact unit entrance unverified",
     "sizeExclusion": false
+  },
+  "macPropertyLocations": {
+    "checked": "2026-09-24",
+    "officialDirectoryCount": 34,
+    "additionalOfficialPropertyPages": 1,
+    "masterMacCount": 35,
+    "mapped": 29,
+    "listOnly": 6,
+    "source": "User-supplied Google Maps observations; not independently verified",
+    "scope": "Property location updates only; saved routes and other facts preserved"
   }
 }

@@ -1,3 +1,34 @@
+# MAC property locations — publication approved September 25, 2026
+
+The current live Sheet, reviewed export and served website were compared before editing. The freshly retrieved official directory still lists 34 Kansas City communities, all matched to existing stable IDs. Hamilton's official property page confirms 701 E Armour but it is absent from the directory/master/export; one distinct Property ID was added. No duplicate or identity merge was made.
+
+Roxford (1020 E Armour), Cavalier (1111), Westover (1108) and Hamilton (701) now use the user's exact supplied coordinates. Brownhardt (801) already had the requested pair; provenance is refreshed. All five pairs are tested exactly with September 24 user-supplied attribution, not independent Google API verification. 721 retains its existing exact-address-bound supplied coordinate. Raleigh's later confirmed complex identity/legacy 3344 origin remains unchanged and qualified against official 3346–3350 Gillham.
+
+Before → after: **260 → 261 total properties; 246 → 250 mapped; 14 → 11 list-only. MAC records 34 → 35; 25 → 29 mapped; 9 → 6 list-only, including one Ricardo address conflict.** Directory-only accounting is 34 entries, 28 mapped/six list-only; Hamilton is the additional official-page identity. No official identity in the audited set remains absent from the master.
+
+The master read-back compared 227,282 existing cells across 17 tabs: 37 intended cell changes, one new candidate/Map Details row and eight private Research History records. Existing values/formulas/notes/layout outside the allowed cells were preserved; four edited date cells received automatic date formatting. Actual rerun returned VERIFIED NO-OP. The normal exporter ran from the read-back snapshot; only approved location fields plus Hamilton were merged into the reviewed public payload. All 47 units, 64 places, 2,808 saved walks, 141 supplied-walk claims, route origins, amenity definitions, costs and existing IDs are unchanged. No routing, paid APIs or amenity pin changes.
+
+All 14 frontend suites, 34 exporter contracts, 14 Google-walk contracts, supplied-walk checks, TypeScript and production build pass. Tests now distinguish having a pin from having saved walks. Source UI/design and amenity code are unchanged; no new live basemap or photo-provider validation was performed. Existing Vite configuration/chunk-size warnings remain nonblocking. An unrelated historical venue-import test requires its own before/after fixture; venue preservation for this task is verified directly against the current snapshots.
+
+Snapshot SHA-256: `fc7e4b428821550c192e2303fce73c10748f8254af15b9bfb2b2d15da0712a60`. Reviewed JSON SHA-256: `de0432b11ddf1e827014c11c311a57699c68d714b760a7c97b72bbdf229eac13`.
+
+**Publication approved September 25.** Frontend `720f48bd2e5ac5addbefd655e5e15746da08f5aa` is committed and pushed. The reviewed website bundle is prepared for the existing GitHub Pages site; deployment/live verification is pending. This approval covers the property-location update above.
+
+## Remaining MAC list-only records
+
+| Property ID | Property | Saved address | Missing evidence |
+|---|---|---|---|
+| prop-21ff97d6-86ef-51d9-a1fb-75c82d3e6dda | Alexander | 3421 Locust St | Old pin belonged to 500 E Armour. Need an exact pin bound to 3421 Locust. |
+| prop-53c8949b-326d-536e-a9a0-7035788eb5ce | Arc on Armour | 211 W Armour Blvd | Old pin belonged to 110–120 E Armour. Need an exact pin bound to 211 W Armour; no amenity join inferred. |
+| prop-3b2ee55a-0952-51ec-91fd-5a23d242bf0d | Cleopatra | 3425 Locust St | Old pin belonged to 506 E Armour. Need an exact pin bound to 3425 Locust. |
+| prop-c6916419-1c67-5c86-bb67-d2d709ab6925 | Ricardo | 811 E Armour Blvd | User says 625 E Armour; official MAC page/directory and saved #111 quote say 811. Need building/address resolution and an exact pin. Historical 805 coordinate cannot be reused. |
+| prop-38ef203f-dd38-5f92-90c3-7bc893e36578 | Senate at The Crosswalks | 1025 E Armour Blvd | Old pin belonged to 1000 E Armour. Need an exact pin bound to 1025; no neighbor copied. |
+| prop-c94f6e34-c85e-57d5-846f-179c1d0d4180 | The Duke | 500 E Armour Blvd | No exact pin saved for 500 E Armour. Alexander’s historical point is not evidence for Duke. |
+
+Sources: [current official directory](https://www.macapartments.com/searchlisting), [Hamilton official page](https://www.macapartments.com/apartments/mo/kansas-city/the-hamilton9/default), [Ricardo official page](https://www.macapartments.com/apartments/mo/kansas-city/ricardo0/default). Ricardo’s supplied 625 address is retained as conflicting evidence; saved 811 address and its quoted unit remain intact pending resolution.
+
+---
+
 # MAC amenity scope release — September 24, 2026
 
 Published and verified: application `164d7f718968a9bdf4febbd6c1bc40c862f12783`, successful Pages run `36079324535`. All 30 live file hashes and release manifest match. Frontend 5ca5f09b5951a857b50471a3e5dcf1ff488c8792 separates physical hosts from access scope. Six MAC Shared records contain exactly two pools: Carriage House and Dashery. Public Gillham Dog Park and unconfirmed Arc gaming use separate layers. 520 is property-only and renders only on host selection. Bellerive hosts Carriage House, Gymnasium and Pump Room; IBM follows International at 301 E Armour. Dashery Pool/Club/Gym remain one shared complex; four Crosswalks identities remain distinct. The documented Arcade coworking space is separate from the unconfirmed Arc gaming claim.
