@@ -1,3 +1,7 @@
+## Saved property favorites — September 25, 2026
+
+`kcmo_favorite_properties_v1` stores only stable Property IDs in browser localStorage. App startup restores the set; card and detail controls persist toggles and storage events synchronize tabs. The Favorites only filter feeds the same filtered property collection to map and list. Storage errors retain the current session choice and show a save-failure notice. Browser-local choices are not exported, written to the Sheet or synchronized between devices. Other filters still apply.
+
 ## MAC access-scope model — September 24, 2026
 
 NeighborhoodAmenity uses hostPropertyId/hostAddress/hostName for physical context and a separate explicit accessScope (neighborhood-shared, property-only, public, unknown). Neither host matching nor nearby advertising sets access. Host coordinates resolve by stable ID; independently sourced complex/park/coworking points use standalone mode. Parent aliases were replaced by host fields.

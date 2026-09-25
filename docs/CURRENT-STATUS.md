@@ -1,3 +1,11 @@
+Property favorites — September 25, 2026
+
+Favorite buttons now save stable property IDs in this browser. Favorites only filters both property pins and list cards and combines with other active filters. Choices survive reload/reopening and synchronize across tabs of this website; they are not saved to the Sheet or synchronized across devices. Removing a favorite updates the filtered view immediately. Failed browser saves show a notice. Header controls wrap on narrow screens.
+
+Frontend `e50d243af9847828c201f6ac9e41ec3aba209da7`. All 16 frontend test suites, TypeScript and production build pass. Local desktop and 390px browser checks pass for refresh persistence, filtered pins/cards, removal, details controls, tab synchronization, storage-failure notice and mobile layout. Property data, Yarco filter and Cold Storage pool record are unchanged.
+
+---
+
 Yarco-only filter and property refresh — published September 25, 2026
 
 The live Sheet now confirms 16 Kansas City records whose current Management field identifies Yarco or a Yarco entity. The published map includes those manager labels and adds a “Yarco only” control alongside “MAC only”; when both are checked, either group remains visible. A historical Yarco mention does not qualify if the current manager field names another operator. All 261 properties remain listed when filters are off.

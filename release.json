@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "10873a983bafdb4c080c6ed53cb0f4b1620bc743",
+  "frontendCommit": "e50d243af9847828c201f6ac9e41ec3aba209da7",
   "housingExportGeneratedAt": "2026-09-25T19:41:41.101Z",
   "workbookSha256": "751814a461daff8a99daf1568ca16142ca6f7315884968a3a8672d55f2d2b911",
   "housingExportSha256": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
@@ -19,8 +19,8 @@
     "secondRunWrites": 0
   },
   "files": {
+    "assets/index-Bk8o1X3E.js": "3fe4b13d4e35ac30ac78218173ee35751cdd29e40b876ec1d155be7246210d98",
     "assets/index-CZVMRS4i.css": "128ec11e548c462555a1fe3a787a0c5e5b2515c506001be4573c0c150fc8bb80",
-    "assets/index-mz5Q8QPV.js": "ffae859f1189f2acfbde9bd22aeb57386488e92dae6d7104f0106034768f17b7",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "31e0b0c1739bfdc9d4477675bb9e36ccf9744d018a2d806c9ac8a552e923bac8",
+    "index.html": "47bac8422090868ec0e1770a2f95235bd317e6d5937a661419413ddd707fa67f",
     "map-data.js": "01fbba49482e0d59d9af60f313c1f2c534aea4c4bd1b182dffd38c7830b00ba2"
   },
   "units": 47,
-  "publicationScope": "Yarco-only map filter and refreshed current Yarco manager labels for 16 records; Cold Storage rooftop-pool recheck. All unrelated public property fields preserved.",
+  "publicationScope": "Persistent browser-local property favorites, favorites-only map/list filter, and mobile filter wrapping. Property data unchanged.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -297,8 +297,15 @@
   },
   "coldStoragePoolReview": {
     "propertyId": "prop-7f716988-54b7-4ab5-81d6-61b4473aba44",
-    "amenity": "Yes — rooftop pool",
+    "amenity": "Yes \u2014 rooftop pool",
     "checkedDate": "2026-09-25",
     "source": "https://www.coldstorageloftskc.com/kansas-city/cold-storage-lofts/amenities/"
+  },
+  "favorites": {
+    "storage": "Browser-local stable property IDs",
+    "filter": "Map and list; combines with other active filters",
+    "crossTabSync": true,
+    "crossDeviceSync": false,
+    "sheetWrites": 0
   }
 }
