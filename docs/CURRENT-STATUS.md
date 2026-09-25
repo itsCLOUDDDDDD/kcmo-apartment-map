@@ -4,7 +4,7 @@ The live Sheet now confirms 16 Kansas City records whose current Management fiel
 
 Cold Storage Lofts remains recorded as having a rooftop pool; its official amenities page was rechecked September 25 and the Sheet/export date was refreshed. Alexandria’s official contact page reconfirmed Yarco management, with the original research history preserved in the live Sheet. All unrelated property fields and existing property IDs are unchanged.
 
-The full frontend test suite, Yarco filter coverage, TypeScript check, production build and local desktop map/filter check pass. The local build used the existing ignored map-key configuration; no credentials are committed. Frontend source `10873a983bafdb4c080c6ed53cb0f4b1620bc743`; release.json records the reviewed source and served-file hashes.
+The full frontend test suite, Yarco filter coverage, TypeScript check, production build and local desktop map/filter check pass. The live map shows 16 property cards and pins with “Yarco only” selected. Published September 25 from website commit `ac8052a1fd57a7fae653955c9c34b6cab09263fb`; Pages run `36182205348` succeeded, and all 30 served-file hashes match `release.json`. Frontend source `10873a983bafdb4c080c6ed53cb0f4b1620bc743`. The local build used the existing ignored map-key configuration; no credentials are committed.
 
 
 ---
