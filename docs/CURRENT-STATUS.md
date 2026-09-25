@@ -1,3 +1,14 @@
+Yarco-only filter and property refresh — published September 25, 2026
+
+The live Sheet now confirms 16 Kansas City records whose current Management field identifies Yarco or a Yarco entity. The published map includes those manager labels and adds a “Yarco only” control alongside “MAC only”; when both are checked, either group remains visible. A historical Yarco mention does not qualify if the current manager field names another operator. All 261 properties remain listed when filters are off.
+
+Cold Storage Lofts remains recorded as having a rooftop pool; its official amenities page was rechecked September 25 and the Sheet/export date was refreshed. Alexandria’s official contact page reconfirmed Yarco management, with the original research history preserved in the live Sheet. All unrelated property fields and existing property IDs are unchanged.
+
+The full frontend test suite, Yarco filter coverage, TypeScript check, production build and local desktop map/filter check pass. The local build used the existing ignored map-key configuration; no credentials are committed. Frontend source `10873a983bafdb4c080c6ed53cb0f4b1620bc743`; release.json records the reviewed source and served-file hashes.
+
+
+---
+
 # MAC property locations — published and verified September 25, 2026
 
 The current live Sheet, reviewed export and served website were compared before editing. The freshly retrieved official directory still lists 34 Kansas City communities, all matched to existing stable IDs. Hamilton's official property page confirms 701 E Armour but it is absent from the directory/master/export; one distinct Property ID was added. No duplicate or identity merge was made.

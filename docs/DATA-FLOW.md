@@ -139,3 +139,7 @@ September 20 applied import: 31 added, one Messenger match, four pending; 59 cat
 ## September 20 verification
 
 The reviewed snapshot has 231 candidates; 106 public properties; 104 mapped and two unresolved; 2,808 current Google measurements plus 537 older master route records; 104/104 complete 27-venue summaries and 104/104 complete four-priority summaries. The exporter independently matches the Sheet's saved summaries. See CURRENT-STATUS.md for release scope and remaining gaps.
+
+## Current management filters — September 25, 2026
+
+The “Yarco only” control filters property pins and cards using the reviewed `management` field from the public housing export. It accepts current manager values beginning with Yarco, including `Yarco`, `Yarco Property Management` and `Yarco-Devco`; it does not match historical mentions later in another manager value. The existing “MAC only” control remains. Selecting both shows the union of the two groups. The full property list remains the default. The September 25 refresh carries 16 current Yarco-manager records; New View Place remains excluded because its current manager is Seldin. Cold Storage Lofts’ existing rooftop-pool claim and official source were rechecked, with its check date refreshed. No other property fields, identifiers, units or saved routes changed.

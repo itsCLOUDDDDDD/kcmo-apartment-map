@@ -1,9 +1,9 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "96a012da466415357f0d7ff3f8247af795586c1c",
-  "housingExportGeneratedAt": "2026-09-25T16:54:20.282Z",
-  "workbookSha256": "dfc2eba005284c920bdbb79a6806180ca5b24bbee025eb98ec436f6621053be0",
-  "housingExportSha256": "b079bbd572be3c30a89ec1a494f8847fe1261258e53cd02c9943f5608cb73227",
+  "frontendCommit": "10873a983bafdb4c080c6ed53cb0f4b1620bc743",
+  "housingExportGeneratedAt": "2026-09-25T19:41:41.101Z",
+  "workbookSha256": "751814a461daff8a99daf1568ca16142ca6f7315884968a3a8672d55f2d2b911",
+  "housingExportSha256": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
   "properties": 261,
   "mapped": 250,
   "listOnly": 11,
@@ -20,7 +20,7 @@
   },
   "files": {
     "assets/index-CZVMRS4i.css": "128ec11e548c462555a1fe3a787a0c5e5b2515c506001be4573c0c150fc8bb80",
-    "assets/index-FYoKVM9V.js": "30dba00a096e939de94cf52227cb0c9b4aa57dff4db8c1efe365962c79fc7a97",
+    "assets/index-mz5Q8QPV.js": "ffae859f1189f2acfbde9bd22aeb57386488e92dae6d7104f0106034768f17b7",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +47,11 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "3bba140c105423d3497c0cc3595a8a71a44c4886597462c46739e373b6c28c20",
-    "map-data.js": "90472dbdd183a4b8c6f0845fa21ab457ccdf7a65214cbfe941a0b97f4a28f347"
+    "index.html": "31e0b0c1739bfdc9d4477675bb9e36ccf9744d018a2d806c9ac8a552e923bac8",
+    "map-data.js": "01fbba49482e0d59d9af60f313c1f2c534aea4c4bd1b182dffd38c7830b00ba2"
   },
   "units": 47,
-  "publicationScope": "User-approved September 25 publication of 17 supplied downtown coordinate pairs. Preserve ZIPs, costs, units, amenities, saved route origins and design.",
+  "publicationScope": "Yarco-only map filter and refreshed current Yarco manager labels for 16 records; Cold Storage rooftop-pool recheck. All unrelated public property fields preserved.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -206,5 +206,99 @@
     "properties": 17,
     "source": "User-supplied table; precision claims not independently verified",
     "scope": "Property pins only. Saved ZIP/payment-standard settings and routes remain unchanged; saved walks retain their recorded prior origins. Supplied walk figures are retained privately as evidence, not imported measurements."
+  },
+  "yarcoManagementRefresh": {
+    "checkedDate": "2026-09-25",
+    "currentManagerRecords": 16,
+    "properties": [
+      {
+        "id": "second-delaware",
+        "name": "Second + Delaware",
+        "management": "Yarco Property Management"
+      },
+      {
+        "id": "915-broadway",
+        "name": "915 Broadway",
+        "management": "Yarco Property Management"
+      },
+      {
+        "id": "avon-apartments",
+        "name": "Avon Apartments",
+        "management": "Yarco Property Management"
+      },
+      {
+        "id": "prop-8ee0c394-eee4-4f3f-8798-061740a75a5b",
+        "name": "The Alexandria",
+        "management": "Yarco Property Management"
+      },
+      {
+        "id": "prop-d40ad43f-30b7-4032-87a9-09f3aaf118cb",
+        "name": "Chatham Senior",
+        "management": "Yarco Property Management"
+      },
+      {
+        "id": "prop-26b7cda4-f417-4630-89e4-8301f26035c1",
+        "name": "Parvin Estates",
+        "management": "Yarco"
+      },
+      {
+        "id": "prop-0bdd2d67-0231-45e2-884f-d11e0f17df8d",
+        "name": "Jefferson Manor",
+        "management": "Yarco"
+      },
+      {
+        "id": "prop-946354b1-6830-418f-bb11-b977da645ceb",
+        "name": "Lawndale Heights",
+        "management": "Yarco"
+      },
+      {
+        "id": "prop-a18cd830-24e9-470e-99bf-2caffbc11be3",
+        "name": "Nowlin Hall",
+        "management": "Yarco Property Management"
+      },
+      {
+        "id": "prop-cc60fb56-4d00-4451-8033-b36978fa41ed",
+        "name": "Freeway Homes",
+        "management": "Yarco Property Management"
+      },
+      {
+        "id": "prop-f09e36e2-fa5b-497c-a755-f3ae109945ef",
+        "name": "Friendship Village",
+        "management": "Yarco"
+      },
+      {
+        "id": "prop-404cbe51-9c0c-4d29-bb91-ea34eb43d888",
+        "name": "Swope Health Village - Senior Living I",
+        "management": "Yarco-Devco L.L.C."
+      },
+      {
+        "id": "prop-62d3e43c-4d58-4e4f-b14d-f5b9e6df153f",
+        "name": "Swope Ridge Gardens",
+        "management": "Yarco"
+      },
+      {
+        "id": "prop-9b759847-b347-47da-a1e1-a1eed2751c6f",
+        "name": "Brookside Senior Residences",
+        "management": "Yarco"
+      },
+      {
+        "id": "prop-cb0e3877-2a5e-4941-be1f-277948841a0d",
+        "name": "East Hills Village",
+        "management": "Yarco"
+      },
+      {
+        "id": "prop-7d830d72-4f99-46e4-8d9b-f72e6c96536b",
+        "name": "Wornall Estates",
+        "management": "Yarco"
+      }
+    ],
+    "matching": "Current management values beginning with Yarco; historical mentions in other manager values are excluded.",
+    "alexandriaSource": "https://www.liveatalexandria.com/contact"
+  },
+  "coldStoragePoolReview": {
+    "propertyId": "prop-7f716988-54b7-4ab5-81d6-61b4473aba44",
+    "amenity": "Yes — rooftop pool",
+    "checkedDate": "2026-09-25",
+    "source": "https://www.coldstorageloftskc.com/kansas-city/cold-storage-lofts/amenities/"
   }
 }
