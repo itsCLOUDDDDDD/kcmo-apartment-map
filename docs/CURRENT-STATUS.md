@@ -1,4 +1,12 @@
-Favorites filter persistence — September 26, 2026
+Shared favorites — September 26, 2026
+
+Favorites now use one public list for everyone across browsers and devices, stored in a standalone Apps Script service (property IDs only; no Sheet/private-data access). Add/remove actions update individual IDs without overwriting other visitors' edits. Visible pages sync every 15 seconds and on return. Saving and failure/retry states are explicit. An optional button imports previous browser-local favorites without deleting that backup or automatically restoring removed shared favorites. Favorites only on/off remains a local display preference. Housing export and all property data are unchanged.
+
+All 16 existing suites plus shared-client tests, TypeScript and production build pass. Local browser tests verify save/removal across independent storage origins and a 390-CSS-pixel layout. Safari/device-specific testing remains outstanding. The earlier browser-only favorites limitation below is historical and superseded.
+
+---
+
+Favorites filter persistence — September 26, 2026 (prior release)
 
 Fixed Favorites only resetting when leaving or reopening the page. The filter now saves its on/off state separately from favorite property IDs, restores on startup, synchronizes across tabs, and persists Reset filters. Failed filter saves display a specific notice. Existing favorite IDs and all property data are preserved. Frontend `caf3730`; all 16 test suites, TypeScript and production build pass. Browser checks confirm refresh, navigation away/return, tab close/reopen and persisted off state.
 
