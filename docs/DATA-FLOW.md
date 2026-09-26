@@ -4,7 +4,7 @@ Old Town membership uses an exact case-insensitive current Management value of O
 
 ## Saved property favorites — September 25, 2026
 
-`kcmo_favorite_properties_v1` stores only stable Property IDs in browser localStorage. App startup restores the set; card and detail controls persist toggles and storage events synchronize tabs. The Favorites only filter feeds the same filtered property collection to map and list. Storage errors retain the current session choice and show a save-failure notice. Browser-local choices are not exported, written to the Sheet or synchronized between devices. Other filters still apply.
+`kcmo_favorite_properties_v1` stores only stable Property IDs in browser localStorage. App startup restores the set; card and detail controls persist toggles and storage events synchronize tabs. As of September 26, `kcmo_favorites_only_v1` separately saves the Favorites only boolean. Startup restores it; toggling and Reset filters persist it, and storage events synchronize it across tabs. The filter feeds the same filtered property collection to map and list. Each storage error retains the current session choice and shows its corresponding save-failure notice. Browser-local choices are not exported, written to the Sheet or synchronized between devices. Other filters still apply.
 
 ## MAC access-scope model — September 24, 2026
 

@@ -1,3 +1,9 @@
+Favorites filter persistence — September 26, 2026
+
+Fixed Favorites only resetting when leaving or reopening the page. The filter now saves its on/off state separately from favorite property IDs, restores on startup, synchronizes across tabs, and persists Reset filters. Failed filter saves display a specific notice. Existing favorite IDs and all property data are preserved. Frontend `caf3730`; all 16 test suites, TypeScript and production build pass. Browser checks confirm refresh, navigation away/return, tab close/reopen and persisted off state.
+
+---
+
 Old Town portfolio filter — September 25, 2026
 
 The Old Town only toggle filters map pins and property cards by the existing current Management field. Official River Market, Business Loop and Crossroads listings reconcile to 11 portfolio entries and 13 saved building addresses: the Old Town Walnut listing has three separate buildings. All were already published, so no candidate additions or property-data changes were needed. Selecting multiple management filters includes any selected group; ZIP, amenity and Favorites only filters still apply. Cold Storage is a separate property and is excluded.
