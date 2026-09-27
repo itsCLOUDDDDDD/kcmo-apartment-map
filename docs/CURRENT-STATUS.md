@@ -1,5 +1,13 @@
 Shared favorites — September 26, 2026
 
+---
+
+On-demand live routing — September 26, 2026
+
+The map now calculates Google Maps directions only after a user chooses a property or amenity and requests a route. It supports both directions (origin to target and target to searched destination), current GPS, Places Autocomplete, browser-local Home/Work presets, and Walking, Transit, Driving and Bicycling modes. The map renders a separate blue live route with distance/duration summary and an expandable turn-by-turn panel; curated neighborhood walks remain independent. Route requests are cached for the session. Home/Work values never enter the housing export, `map-data.js`, Sheet or shared favorites service.
+
+Frontend source commit `ebe40b029291d8772a42350d21abdaae49c9553d`. TypeScript, the complete frontend test suite, production build, desktop/mobile browser checks, reverse routing and all four mode requests pass. Housing export hash, map-data equivalence, property data, saved walks, favorites, photos and Street View links are unchanged. Google’s browser console reports only the current nonblocking legacy Maps JS deprecation notices for DirectionsService, DirectionsRenderer and Autocomplete; the existing key/configuration was kept because it is the verified working setup.
+
 Favorites now use one public list for everyone across browsers and devices, stored in a standalone Apps Script service (property IDs only; no Sheet/private-data access). Add/remove actions update individual IDs without overwriting other visitors' edits. Visible pages sync every 15 seconds and on return. Saving and failure/retry states are explicit. An optional button imports previous browser-local favorites without deleting that backup or automatically restoring removed shared favorites. Favorites only on/off remains a local display preference. Housing export and all property data are unchanged.
 
 All 16 existing suites plus shared-client tests, TypeScript and production build pass. Local browser tests verify save/removal across independent storage origins and a 390-CSS-pixel layout. Safari/device-specific testing remains outstanding. The earlier browser-only favorites limitation below is historical and superseded.

@@ -1,3 +1,7 @@
+## On-demand live routing — September 26, 2026
+
+Live routing is a display-only map interaction. A selected property or amenity supplies its existing mapped coordinates as the target; the user supplies an origin through current GPS, Google Places Autocomplete, or browser-local Home/Work presets, or switches to a searched destination for the reverse direction. Walking, Transit, Driving and Bicycling requests are issued only after `Get Directions` or an active-route mode change and are cached for the session. The resulting Google route, summary and sanitized step instructions stay in UI state and are not written to the housing export, `map-data.js`, Sheet, favorites service or curated walking records. Curated neighborhood walks continue to use their existing saved geometry and measurements.
+
 ## Old Town portfolio filter — September 25, 2026
 
 Old Town membership uses an exact case-insensitive current Management value of Old Town Management. It does not use neighborhood names, historical manager mentions or Cold Storage ownership. The official 11 portfolio links correspond to 13 existing building IDs because 119, 207 and 213 Walnut remain distinct pins. Manager toggles combine by union before ZIP/amenity/favorites filtering. No new facts or private leasing correspondence are exported by this presentation change.
