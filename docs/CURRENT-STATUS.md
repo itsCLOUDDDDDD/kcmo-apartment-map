@@ -8,6 +8,8 @@ This presentation release preserves the September 25 snapshot byte-for-byte: **2
 
 Validation: all 17 frontend suites, separate shared-client suite, TypeScript and production build pass. All nine pages pass 27 desktop/portrait/landscape checks with no page errors, horizontal overflow or broken application images. Browser checks cover filters, unit costs/unknowns, sources, amenities, mobile navigation, persistent map/camera, map views/Street View, building photos/credits/cover/reset, manual/reverse routing, shared save/error/retry/import and same-origin filter synchronization. Layout and service tests used mocked shared writes; no favorite decisions were changed. Route UI integration was checked with mocked provider results, and Places photos were checked live. Safari/device-specific checks remain outstanding. Existing build chunk warnings are nonblocking.
 
+Published application commit `a93653606fbe7b42fc4a2be1f9b52b4c2f25064a`, frontend `2fe0e7367124867be98d3de17a94d67c7fa4db9c`. GitHub Pages run [37863868942](https://github.com/itsCLOUDDDDDD/kcmo-apartment-map/actions/runs/37863868942) succeeded; the live manifest and all 64 served application-file hashes match. Published-origin checks pass for all nine pages on desktop/mobile, the gallery, real map, actual shared-favorites read, live photo pixels and credits, and a user-triggered walking route with rendered blue path and 15 steps. No shared-favorites POST was attempted or sent. Existing provider deprecation notices remain nonblocking.
+
 `release.json` identifies the exact frontend commit, snapshot and application hashes. GitHub Pages serves the root of this repository's main branch. Earlier release records below are historical.
 
 ---
