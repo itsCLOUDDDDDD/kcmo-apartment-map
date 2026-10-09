@@ -1,3 +1,17 @@
+# HomeSource redesign — October 8, 2026
+
+The approved nine-page HomeSource interface is implemented: Explore, Properties, Property detail, Favorites, Places & Scene, Directions, Amenities, Map options and Integration guide. The All pages gallery links each screen and current desktop/mobile previews. Desktop keeps sidebar navigation and a wider map/results view; portrait and landscape adapt content and retain navigation.
+
+The persistent real Google map, Street View, on-demand walking/transit/driving/biking directions, scoped Places photos and credits, manual cover choices, one shared favorites list, explicit legacy import and local Favorites-only preference are preserved. Management filters combine by union. Exact unit photos and costs stay with their unit; building photos and facilities retain separate scope. Missing coordinates stay list-only with no invented routing target. Saved walking evidence remains independent of live routes. Saved path drawing requires valid recorded geometry; the current snapshot has none, so no path is inferred from a walking time.
+
+This presentation release preserves the September 25 snapshot byte-for-byte: **261 properties, 250 mapped/11 list-only, 47 units, 64 places and 2,808 saved walks**. Housing-export SHA-256 is `b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1`. No Sheet edits, candidate decisions or vacancy refresh are included. Source kit, reusable prompt, private context and original evidence are excluded.
+
+Validation: all 17 frontend suites, separate shared-client suite, TypeScript and production build pass. All nine pages pass 27 desktop/portrait/landscape checks with no page errors, horizontal overflow or broken application images. Browser checks cover filters, unit costs/unknowns, sources, amenities, mobile navigation, persistent map/camera, map views/Street View, building photos/credits/cover/reset, manual/reverse routing, shared save/error/retry/import and same-origin filter synchronization. Layout and service tests used mocked shared writes; no favorite decisions were changed. Route UI integration was checked with mocked provider results, and Places photos were checked live. Safari/device-specific checks remain outstanding. Existing build chunk warnings are nonblocking.
+
+`release.json` identifies the exact frontend commit, snapshot and application hashes. GitHub Pages serves the root of this repository's main branch. Earlier release records below are historical.
+
+---
+
 Shared favorites — September 26, 2026
 
 ---

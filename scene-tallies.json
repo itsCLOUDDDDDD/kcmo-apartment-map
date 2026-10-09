@@ -1,0 +1,1499 @@
+{
+  "batch": "scene-address-tallies-20260922",
+  "asOf": "2026-09-22",
+  "reportSha256": "f417440432ec406acd7fe1642511a5c99aa3852384d26db7660add01c1cbe75d",
+  "locations": [
+    {
+      "locationKey": "address-348614b1b691",
+      "name": "MOD Gallery & Space",
+      "address": "1809 McGee St",
+      "area": "Crossroads",
+      "eventIds": [
+        "E02",
+        "E14",
+        "E15",
+        "SC26-017",
+        "N22-05"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: LOV3 ×3; Daybrk ×1; DJ Billo ×1; G8LDSOUL ×1; Janet / Janet Azimuth (reported match) ×1; Just Des ×1; Localuva ×1; Lord KI ×1; MayaPolOgies ×1; Melak ×1; Rickyology ×1; Tromac ×1\nOrganizers/series: STIMULATE ×2; This Is Ours KC ×2; 808SHE ×1; STRICTLY ×1",
+      "placeIds": [
+        "mod"
+      ],
+      "sceneMatched": true,
+      "status": "Saved address and area.",
+      "possible": "Possible additional STIMULATE bill (P22-04); the August 14 recap adds no event.",
+      "main": 5,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "E02",
+          "title": "STRICTLY | SHE",
+          "date": "August 28, 9pm–late (2026 inferred)",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E02"
+          ]
+        },
+        {
+          "eventId": "E14",
+          "title": "STIMULATE: This Is a Dance Party",
+          "date": "September 12, 2026",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E14"
+          ]
+        },
+        {
+          "eventId": "E15",
+          "title": "STIMULATE: This Is a Dance Party (style-guide post)",
+          "date": "August 14, 9pm (2026 inferred)",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E15",
+            "A12",
+            "A13",
+            "A15"
+          ]
+        },
+        {
+          "eventId": "SC26-017",
+          "title": "Xmas Ugly Sweater Party",
+          "date": "Dec 13, 12–1:15am as printed",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A23"
+          ]
+        },
+        {
+          "eventId": "N22-05",
+          "title": "Afterglow — Janet / MOD",
+          "date": "Provisionally September 6; year not supplied",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:35"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-daa746dba1a6",
+      "name": "In Good Co / In Good Company",
+      "address": "1518 McGee St",
+      "area": "Crossroads",
+      "eventIds": [
+        "SC26-001",
+        "N22-08",
+        "N22-09",
+        "N22-10"
+      ],
+      "calendarIds": [
+        "C22-01",
+        "C22-02",
+        "C22-03",
+        "C22-04",
+        "C22-05",
+        "C22-06",
+        "C22-07"
+      ],
+      "connections": "Artists: DJ PBRJEFFY ×1; Josh The Wash ×1; Rickyology ×1\nOrganizers/series: This Is Ours KC ×1\nReported source/presenter (booking unresolved): Move the Needle KC ×2; Move the Needle KC / Rickyology ×1",
+      "placeIds": [
+        "in-good-co"
+      ],
+      "sceneMatched": true,
+      "status": "In Good Co and In Good Company share this address. Schedule venue attribution is user-reported. Move the Needle is a source/presenter; a performer booking is not established.",
+      "possible": "Undated Rickyology mention may overlap; Summer Daze has conflicting August 29 / June 29 date wording (P22-07, P22-08).",
+      "main": 4,
+      "calendar": 7,
+      "events": [
+        {
+          "eventId": "SC26-001",
+          "title": "R&Bey",
+          "date": "Friday September 4; OUR PRIDE 2026; doors 7pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "S01"
+          ]
+        },
+        {
+          "eventId": "N22-08",
+          "title": "ANTI / Lemonade — Rihanna and Beyoncé themed event",
+          "date": "September 24, 7pm; year not supplied",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:47",
+            "N:57"
+          ]
+        },
+        {
+          "eventId": "N22-09",
+          "title": "Summer Daze — reported title match",
+          "date": "User: August 29; I01 prints JUNE 29 under AUG 2026",
+          "treatment": "main",
+          "evidenceType": "user report + inspected supplied schedule",
+          "sourceRefs": [
+            "N:47",
+            "I01"
+          ]
+        },
+        {
+          "eventId": "N22-10",
+          "title": "Additional In Good Co appearance — title not retained",
+          "date": "Reported July 17; year not supplied",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:53"
+          ]
+        },
+        {
+          "eventId": "C22-01",
+          "title": "Vinyl Wednesdays",
+          "date": "August 5, 2026, 8pm",
+          "treatment": "calendar",
+          "evidenceType": "inspected supplied calendar; venue attributed by user",
+          "sourceRefs": [
+            "I01",
+            "N:53"
+          ]
+        },
+        {
+          "eventId": "C22-02",
+          "title": "Aura Cocktails",
+          "date": "August 6, 2026, 6pm",
+          "treatment": "calendar",
+          "evidenceType": "inspected supplied calendar; venue attributed by user",
+          "sourceRefs": [
+            "I01",
+            "N:53"
+          ]
+        },
+        {
+          "eventId": "C22-03",
+          "title": "Conversations, Karaoke & Cocktails",
+          "date": "August 13, 2026, 7pm",
+          "treatment": "calendar",
+          "evidenceType": "inspected supplied calendar; venue attributed by user",
+          "sourceRefs": [
+            "I01",
+            "N:53"
+          ]
+        },
+        {
+          "eventId": "C22-04",
+          "title": "Hotter Than July",
+          "date": "August 15, 2026, 2–6pm",
+          "treatment": "calendar",
+          "evidenceType": "inspected supplied calendar; venue attributed by user",
+          "sourceRefs": [
+            "I01",
+            "N:53"
+          ]
+        },
+        {
+          "eventId": "C22-05",
+          "title": "Members Select",
+          "date": "Thursday 23; month/year absent; all night",
+          "treatment": "calendar",
+          "evidenceType": "inspected supplied calendar; venue attributed by user",
+          "sourceRefs": [
+            "I02",
+            "N:53"
+          ]
+        },
+        {
+          "eventId": "C22-06",
+          "title": "DJ Rickyology",
+          "date": "Friday 24; month/year absent; 8pm–12am",
+          "treatment": "calendar",
+          "evidenceType": "inspected supplied calendar; venue attributed by user",
+          "sourceRefs": [
+            "I02",
+            "N:53"
+          ]
+        },
+        {
+          "eventId": "C22-07",
+          "title": "R&B Shynin",
+          "date": "Saturday 25; month/year absent; 9pm–12am",
+          "treatment": "calendar",
+          "evidenceType": "inspected supplied calendar; venue attributed by user",
+          "sourceRefs": [
+            "I02",
+            "N:53"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-ad93b9c97567",
+      "name": "In The Lowest Ferns",
+      "address": "1105 Hickory St",
+      "area": "West Bottoms",
+      "eventIds": [
+        "SC26-002",
+        "SC26-023",
+        "N22-03"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: SirQueen ×2; DJ Billo ×1; DJ Surabhi ×1; Gant Garrard aka Gant-Man ×1; Janet / Janet Azimuth (reported match) ×1; Kamp-Capow ×1; Kay-Fan ×1; La Del Tumbao ×1; Maxwell’s Nephew ×1; Rickyology ×1; RITZ ×1\nOrganizers/series: COLORS ×2; Cowtown Revival ×1; SirQueen ×1; This Is Ours KC ×1",
+      "placeIds": [
+        "in-the-lowest-ferns"
+      ],
+      "sceneMatched": true,
+      "status": "Saved address and area.",
+      "possible": "867 FEST has competing location claims (SC26-015); Movidas is provisional (E09); Kinship may recap Nightmarket (SC26-302); Nomad/September 17 remains ambiguous (P22-03).",
+      "main": 3,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-002",
+          "title": "Labor Day Fiesta / The Nightmarket",
+          "date": "Sunday September 6, 7pm; SirQueen b2b RITZ 10pm–midnight",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "S03",
+            "A05",
+            "A11"
+          ]
+        },
+        {
+          "eventId": "SC26-023",
+          "title": "Disco Cathedral",
+          "date": "10.10 / October 10",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A34"
+          ]
+        },
+        {
+          "eventId": "N22-03",
+          "title": "COLORS 2 — Janet at Lowest Ferns",
+          "date": "August 7; year not supplied",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:35"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-ed50f46c3300",
+      "name": "The Ship",
+      "address": "1221 Union Ave",
+      "area": "West Bottoms",
+      "eventIds": [
+        "SC26-010",
+        "SC26-020",
+        "N22-02"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: DJ Billo ×2; agrekulture ×1; edie diiiiir ×1; Janet / Janet Azimuth (reported match) ×1; localuva ×1; ritz ×1",
+      "placeIds": [
+        "the-ship"
+      ],
+      "sceneMatched": true,
+      "status": "Saved address and area. Includes a separate user-reported Janet appearance.",
+      "possible": "",
+      "main": 3,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-010",
+          "title": "Technomall sound showcase and night market",
+          "date": "July 15, 7pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A03"
+          ]
+        },
+        {
+          "eventId": "SC26-020",
+          "title": "Love Boat",
+          "date": "September 19",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A24"
+          ]
+        },
+        {
+          "eventId": "N22-02",
+          "title": "Janet at The Ship",
+          "date": "Reported July 31; year not supplied",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:33"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-7eb72923cb0d",
+      "name": "Historic brick building / STRICTLY event address",
+      "address": "1428 St Louis Ave",
+      "area": "West Bottoms",
+      "eventIds": [
+        "E05"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: Charmaine ×1; DamnDatDiva ×1; Localuva ×1; LOV3 ×1; Melak ×1; Regulardress ×1; Stinkcur ×1\nOrganizers/series: STRICTLY ×1",
+      "placeIds": [
+        "1428-st-louis-ave"
+      ],
+      "sceneMatched": true,
+      "status": "Reported correction: West Bottoms. An event address, not a claim of a permanent public venue.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "E05",
+          "title": "STRICTLY | Luvaffair",
+          "date": "February 20, 2026, 9pm–3am",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E05",
+            "A31"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-c50c3e93b8df",
+      "name": "SK8BAR",
+      "address": "209 Westport Rd",
+      "area": "Westport",
+      "eventIds": [
+        "E04",
+        "SC26-122",
+        "SC26-124",
+        "SC26-126",
+        "SC26-127"
+      ],
+      "calendarIds": [
+        "SC26-103",
+        "SC26-104",
+        "SC26-105",
+        "SC26-106",
+        "SC26-107",
+        "SC26-108",
+        "SC26-109",
+        "SC26-110",
+        "SC26-111",
+        "SC26-112",
+        "SC26-113",
+        "SC26-114",
+        "SC26-115",
+        "SC26-116",
+        "SC26-117",
+        "SC26-118",
+        "SC26-119",
+        "SC26-120",
+        "SC26-121",
+        "SC26-125",
+        "SC26-128",
+        "SC26-129",
+        "SC26-130",
+        "SC26-225",
+        "SC26-226"
+      ],
+      "connections": "Artists: 86 Red ×1; Apricot Glow ×1; Chernobyl Dogs ×1; Death by Science Fiction ×1; Ester Diol ×1; Hardpoint ×1; Hyde Park ×1; Jordan Rome ×1; LOV3 ×1; Mitchmakebeat ×1; Nocturn ×1; Reptile House ×1; Shift ×1; Simul Astra ×1; Sleez Kangs ×1; The Mad Kings ×1; With What’s Left ×1",
+      "placeIds": [
+        "sk8bar"
+      ],
+      "sceneMatched": true,
+      "status": "Main total includes one benefit and four individually supported band bills. The 25 monthly-poster-only entries are separate.",
+      "possible": "Undated open mic SC26-301 may duplicate a calendar entry; excluded from both totals.",
+      "main": 5,
+      "calendar": 25,
+      "events": [
+        {
+          "eventId": "E04",
+          "title": "Flora's Bloody Benefit Bash",
+          "date": "February 8, 2–6pm (year unconfirmed)",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E04"
+          ]
+        },
+        {
+          "eventId": "SC26-122",
+          "title": "Apricot Glow / Shift / With What’s Left",
+          "date": "September 22, 2026; 8pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18",
+            "A10"
+          ]
+        },
+        {
+          "eventId": "SC26-124",
+          "title": "Hardpoint / Sleez Kangs / Nocturn / Hyde Park",
+          "date": "September 24, 2026; 7pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18",
+            "A10",
+            "A07"
+          ]
+        },
+        {
+          "eventId": "SC26-126",
+          "title": "Reptile House / Jordan Rome / The Mad Kings",
+          "date": "September 26, 2026; 8pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18",
+            "A10",
+            "A33"
+          ]
+        },
+        {
+          "eventId": "SC26-127",
+          "title": "86 Red / Simul Astra / Chernobyl Dogs / Death by Science Fiction",
+          "date": "September 27, 2026; 7pm doors / 8pm show",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18",
+            "A10",
+            "A19"
+          ]
+        },
+        {
+          "eventId": "SC26-103",
+          "title": "A Very Frankie karaoke — extended edition",
+          "date": "September 3, 2026; 8pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-104",
+          "title": "FEA / The Bad Ideas / Teazers / Steer Away",
+          "date": "September 4, 2026; 7pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-105",
+          "title": "White Line Nightmares bill",
+          "date": "September 5, 2026; 7pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-106",
+          "title": "Postal / Aster the Endling",
+          "date": "September 6, 2026; 8pm; additional act TBA",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-107",
+          "title": "Open Mic",
+          "date": "September 7, 2026; time not stated",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-108",
+          "title": "The Well / Moon Destroys / Wasteland",
+          "date": "September 8, 2026; 7pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-109",
+          "title": "Homicidal / Shiv / Chimera / Crispy Bits",
+          "date": "September 9, 2026; 8pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-110",
+          "title": "Rachel Is Kozi / Twin Monarchs / Sara Bellum & the Brainwaves",
+          "date": "September 10, 2026; 7pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-111",
+          "title": "Pink Fuzz / Jorge Arana Trio / Hoaxes / Kilverez",
+          "date": "September 11, 2026; 7pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-112",
+          "title": "Phasers to Kill / The Fall Offs / The Fallback / Dead Internet",
+          "date": "September 12, 2026; 8pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-113",
+          "title": "Vulgarian / Violent Testimony / Piltdown / W(((O)))RM",
+          "date": "September 13, 2026; 7pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-114",
+          "title": "Open Mic",
+          "date": "September 14, 2026; time not stated",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-115",
+          "title": "Black Serpent / Crispy Bits / Between the Elements",
+          "date": "September 15, 2026; 8pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-116",
+          "title": "Mormon Mincers / Bad Actor / Split/Decision / Nocturn",
+          "date": "September 16, 2026; 8pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-117",
+          "title": "Witch Ripper / Friendship Commanders / Blizzard Fight",
+          "date": "September 17, 2026; 7pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-118",
+          "title": "SK8BARPALOOZA day 1",
+          "date": "September 18, 2026; 7pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-119",
+          "title": "SK8BARPALOOZA day 2",
+          "date": "September 19, 2026; 6pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-120",
+          "title": "Artillery / Sarkatha / Celestial Wizard / Tyrants Fist",
+          "date": "September 20, 2026; 7pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-121",
+          "title": "Open Mic",
+          "date": "September 21, 2026; time not stated",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-125",
+          "title": "Fundraiser show / Shorty",
+          "date": "September 25, 2026; 8pm; more details TBA",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-128",
+          "title": "Open Mic",
+          "date": "September 28, 2026; time not stated",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-129",
+          "title": "Macbeth Theater program",
+          "date": "September 29, 2026; 7pm; bands, burlesque, poetry",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-130",
+          "title": "Let’s Leave / Anarchist Jukebox",
+          "date": "September 30, 2026; 8pm; additional act TBA",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-225",
+          "title": "SK8BAR Autumn Free Store",
+          "date": "September 25, 2026, noon–5pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        },
+        {
+          "eventId": "SC26-226",
+          "title": "SK8BAR Autumn Free Store",
+          "date": "September 26, 2026, noon–5pm",
+          "treatment": "calendar",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A18"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-998034c5e5fc",
+      "name": "Westport Bowery",
+      "address": "817 Westport Rd",
+      "area": "Westport",
+      "eventIds": [
+        "E16",
+        "E18",
+        "SC26-009",
+        "SC26-014"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: As We Were Before ×1; DJ Billo ×1; Dom Corleo ×1; Hang Your Hate ×1; Lord KI ×1; Mani Pedi ×1; RDMR ×1\nOrganizers/series: Absar Events ×1; Massacre Music ×1; RDMR ×1\nHosts: RDMR ×1\nCollectives (role unspecified): Bass Anglers Collective ×1; META Hi-Fi Sound ×1; Wildflower Arts Collective ×1",
+      "placeIds": [
+        "westport-bowery"
+      ],
+      "sceneMatched": true,
+      "status": "Includes the retained reported Dom Corleo event; its venue match remains qualified.",
+      "possible": "Underground rap reference E19 may overlap E18; excluded from main total.",
+      "main": 4,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "E16",
+          "title": "META / Bass Anglers / Wildflower",
+          "date": "June 28 (2025 supported by post date)",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E16"
+          ]
+        },
+        {
+          "eventId": "E18",
+          "title": "Dom Corleo + special guests",
+          "date": "September 25, 2026, 8pm (note transcription)",
+          "treatment": "main",
+          "evidenceType": "retained user note",
+          "sourceRefs": [
+            "H-E18"
+          ]
+        },
+        {
+          "eventId": "SC26-009",
+          "title": "Galentine’s Party",
+          "date": "February 6, 9pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A02"
+          ]
+        },
+        {
+          "eventId": "SC26-014",
+          "title": "RDMR: Fear and Understanding EP release",
+          "date": "Saturday February 24, 2024, 6:30pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A16"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-b2e53216635b",
+      "name": "miniBar",
+      "address": "3810 Broadway",
+      "area": "Westport",
+      "eventIds": [
+        "E07"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: DJ Diehard ×1; DJ Taye ×1; LOV3 ×1\nHosts: DJ Diehard ×1",
+      "placeIds": [
+        "minibar"
+      ],
+      "sceneMatched": true,
+      "status": "Saved address and area.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "E07",
+          "title": "DJ Taye / DJ Diehard / DJ LOV3",
+          "date": "October 11, 2025; doors 7pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E07"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-efe03d212c7c",
+      "name": "Uptown Theater / Encore Room",
+      "address": "3700 Broadway Blvd",
+      "area": "Midtown near Westport",
+      "eventIds": [
+        "E06",
+        "SC26-016"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: ACE ×1; DJ Billo ×1; Localuva ×1; LOV3 ×1; Melak ×1; Xanna ×1; Zack Fox ×1\nOrganizers/series: Room 96 ×2; DJ Billo ×1; Localuva ×1; Melak ×1; Xanna ×1",
+      "placeIds": [
+        "uptown-theater"
+      ],
+      "sceneMatched": true,
+      "status": "Two events at one address: Uptown Theater and Encore Room retain separate venue names. This does not assign Encore a new Place ID.",
+      "possible": "",
+      "main": 2,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "E06",
+          "title": "Zack Fox DJ set",
+          "date": "November 1, 2025, 9pm–late",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E06"
+          ]
+        },
+        {
+          "eventId": "SC26-016",
+          "title": "Room 96 at Encore Room",
+          "date": "December 13; DJ Billo 9–10pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A23",
+            "A30"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-ff03dd53049c",
+      "name": "The Bottleneck",
+      "address": "737 New Hampshire St, Lawrence, KS 66044",
+      "area": "Lawrence, Kansas",
+      "eventIds": [
+        "E08"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: Catsitter ×1; ishotwitty ×1; Kemper10k ×1; lone3lm ×1; Nate ×1\nOrganizers/series: Room 96 ×1",
+      "placeIds": [
+        "the-bottleneck"
+      ],
+      "sceneMatched": true,
+      "status": "Lawrence, Kansas; outside Kansas City totals.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "E08",
+          "title": "Room 96 second anniversary / AIRR fundraiser",
+          "date": "January 23, 9pm–1am (year unconfirmed)",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E08"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-ab3fd3c0d93b",
+      "name": "Grinders KC Event Venue",
+      "address": "1826 Locust St; alternate flyer/caption address: 417 E 18th St",
+      "area": "Crossroads",
+      "eventIds": [
+        "SC26-008"
+      ],
+      "calendarIds": [],
+      "connections": "Organizers/series: QueerAokee ×1; This Is Ours KC ×1",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Concert venue and attached business/entrance addresses retained as supplied; one event counted once.",
+      "possible": "An earlier 417 E 18th/STIMULATE fragment may describe another event (P22-05); not counted.",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-008",
+          "title": "Pool Haus Party / QueerAokee Black Pride",
+          "date": "September 5; A22 Saturday, doors 5:30pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A01",
+            "A22"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-c10d6b45628b",
+      "name": "Third Place Lounge",
+      "address": "1744 Broadway Blvd",
+      "area": "Crossroads",
+      "eventIds": [],
+      "calendarIds": [],
+      "connections": "Series: On the Couch; host: FK Menace. Relationship only; no count.",
+      "placeIds": [
+        "third-place-lounge"
+      ],
+      "sceneMatched": false,
+      "status": "Profile-only On the Couch series connection, hosted by FK Menace. No individual event established; zero does not imply no activity.",
+      "possible": "",
+      "main": 0,
+      "calendar": 0,
+      "events": []
+    },
+    {
+      "locationKey": "address-1ba7f2630dd7",
+      "name": "Switchback @ Incline on 9th / Janet’s address-only flyer",
+      "address": "1414 W 9th St",
+      "area": "West Bottoms",
+      "eventIds": [
+        "SC26-011",
+        "N22-06"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: Janet / Janet Azimuth (reported match) ×1; Koo Whop ×1; RE:VRA ×1; Sam Binga ×1; SYNC ×1\nOrganizers/series: Ephemeral Forever ×1; Saucy ×1",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Shared address. The specific room for the reported Janet event is unspecified.",
+      "possible": "",
+      "main": 2,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-011",
+          "title": "Sam Binga / Ephemeral Forever & Saucy",
+          "date": "7.10.26",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A04"
+          ]
+        },
+        {
+          "eventId": "N22-06",
+          "title": "Janet flyer at 1414 W 9th",
+          "date": "Undated",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:37"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-01cbc92020e7",
+      "name": "Outsiders Social Club",
+      "address": "427 Westport Rd",
+      "area": "Westport",
+      "eventIds": [
+        "E10",
+        "E11",
+        "E12",
+        "E13",
+        "N22-07"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: Rickyology ×1\nHosts: Go To Kellz ×2; Daylie ×1",
+      "placeIds": [
+        "outsiders-social-club"
+      ],
+      "sceneMatched": false,
+      "status": "Includes an R&B party, Bible Study, football watch party, cowork program and a reported Rickyology bill. Not five DJ nights.",
+      "possible": "August 14 STIMULATE venue wording conflicts with MOD; no additional event assigned (P22-04).",
+      "main": 5,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "E10",
+          "title": "Pretty Girls Love R&B",
+          "date": "September 18, 2026, 9pm–2am",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E10"
+          ]
+        },
+        {
+          "eventId": "E11",
+          "title": "Bible Study",
+          "date": "September 15, 2026, 6–7pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E11"
+          ]
+        },
+        {
+          "eventId": "E12",
+          "title": "Kellz Chiefs Party",
+          "date": "September 14, 2026, 6–10pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E12"
+          ]
+        },
+        {
+          "eventId": "E13",
+          "title": "Co-Work Day promotion",
+          "date": "September 14–20, 2026; flyer 10am–4pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "H-E13"
+          ]
+        },
+        {
+          "eventId": "N22-07",
+          "title": "Rickyology at Outsiders Social Club",
+          "date": "Tentatively October 7; year not supplied",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:39"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-bd5d146dfb8d",
+      "name": "Sound Bite Social / Warehouse on Broadway",
+      "address": "3951 Broadway Blvd",
+      "area": "Westport",
+      "eventIds": [
+        "SC26-013",
+        "SC26-021",
+        "N22-04"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: DJ Billo ×2; Heather Fellas ×2; Jack Hammr ×2; Janet / Janet Azimuth (reported match) ×1; Ki’yanna Uchawi ×1; LOV3 ×1; Pettyoffense ×1\nOrganizers/series: DIVA ×3; Heather Fellas ×1; Jack Hammr ×1",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Sound Bite Social and Warehouse on Broadway share this address. Venue/room names remain separate; each event counted once.",
+      "possible": "Generic Janet DIVA mention may repeat the August event (P22-02).",
+      "main": 3,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-013",
+          "title": "DIVA Holiday",
+          "date": "December 20, 9pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A14",
+            "A23"
+          ]
+        },
+        {
+          "eventId": "SC26-021",
+          "title": "DIVA September",
+          "date": "September 26, 2026; 9pm–late",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A24",
+            "A35"
+          ]
+        },
+        {
+          "eventId": "N22-04",
+          "title": "DIVA — Janet / Warehouse on Broadway",
+          "date": "Provisionally August 15; year not supplied",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:35"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-c8d5be7c255a",
+      "name": "Q Kansas City",
+      "address": "504 Westport Rd",
+      "area": "Westport",
+      "eventIds": [
+        "SC26-003"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: DJ MZTEKCAH ×1\nOrganizers/series: Q Kansas City ×1; {B/qKC} ×1",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Saved public venue address; Westport supported.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-003",
+          "title": "Soakie’s: The Afterparty",
+          "date": "09/26/2026, 8pm–close",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "S04",
+            "A21"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-31da1c808c7c",
+      "name": "El Torreon",
+      "address": "3101 Gillham Plaza",
+      "area": "Martini Corner / Midtown",
+      "eventIds": [
+        "SC26-006",
+        "SC26-018"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: DJ Billo ×2; Hank ×1; Kamp Capow ×1; Morning After ×1; Nomadin ×1\nOrganizers/series: Cowtown Revival ×2",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Two separate Cowtown Revival events; saved flyer address.",
+      "possible": "",
+      "main": 2,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-006",
+          "title": "Cowtown Vintage & Art Exchange",
+          "date": "September 17, 2026 6–11pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "S08",
+            "A24"
+          ]
+        },
+        {
+          "eventId": "SC26-018",
+          "title": "Cowtown Vintage & Art Exchange",
+          "date": "December 18, 7–8pm DJ Billo set",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A23"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-101d33ec00e9",
+      "name": "Devoured Pizza / Orange By: Devoured",
+      "address": "325 E 31st St, Suite 100",
+      "area": "Martini Corner / Midtown",
+      "eventIds": [
+        "SC26-012"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: Bazzie Starstuff ×1; Lord KI ×1; Star*Lord ×1\nOrganizers/series: This Is Ours KC ×1",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Reported suite/address matches retained flyer evidence; Martini Corner/Midtown supported.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-012",
+          "title": "OUR PRIDE: Meet & Mingle",
+          "date": "September 3, 2026, 6pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A06",
+            "A08",
+            "A09",
+            "A25"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-2b82e065b69c",
+      "name": "H&R Block Pavilion",
+      "address": "SE corner of 13th & Main",
+      "area": "Downtown",
+      "eventIds": [
+        "SC26-005"
+      ],
+      "calendarIds": [],
+      "connections": "Organizers/series: City of KCMO ×1; {B/qKC} ×1",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Source-named intersection only; no street number invented. Public reveal/speaker program, not a confirmed DJ set.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-005",
+          "title": "Soakie’s: The Big Reveal",
+          "date": "09/26/2026, noon–12:45pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "S06",
+            "S05",
+            "A27",
+            "A29"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-085a9b2989d7",
+      "name": "Palm Tree Club",
+      "address": "14 E 14th St",
+      "area": "Downtown",
+      "eventIds": [
+        "SC26-004"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: Chrysalis ×1; Rickyology ×1\nOrganizers/series: This Is Ours KC ×1; {B/qKC} ×1",
+      "placeIds": [
+        "palm-tree-club"
+      ],
+      "sceneMatched": false,
+      "status": "Saved address; Power & Light within Downtown.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-004",
+          "title": "Soakie’s: The Celebration",
+          "date": "09/26/2026, 1–3pm",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "S05",
+            "S06",
+            "A29",
+            "A27",
+            "A32"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-2bec44c29411",
+      "name": "DISTRKCT",
+      "address": "1328 Agnes Ave, Kansas City, MO 64127",
+      "area": "East side / Truman Road–Agnes",
+      "eventIds": [
+        "N22-11",
+        "N22-12"
+      ],
+      "calendarIds": [],
+      "connections": "Reported source/presenter (booking unresolved): Move the Needle KC ×2",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Reported address matches the saved venue source. Broad east-side area only. Move the Needle KC is a source/presenter with booking role unresolved. Sade, Rihanna and Beyoncé references are music themes, not bookings.",
+      "possible": "Diamond Life / Love Deluxe may describe two sessions, but repeated August 27 wording establishes only one distinct appearance (P22-09).",
+      "main": 2,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "N22-11",
+          "title": "Sade session — Diamond Life / Love Deluxe wording",
+          "date": "August 7 / August 27 unresolved; August 27 may be the post date",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:54",
+            "N:55"
+          ]
+        },
+        {
+          "eventId": "N22-12",
+          "title": "Lemonade / Beyoncé-themed session at DISTRKCT",
+          "date": "Undated",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:55",
+            "N:57"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-e8627bc9a7a4",
+      "name": "Tintolectro Test Labs / Tintoretta Tattoo Studio",
+      "address": "1017 W 29th St",
+      "area": "Westside",
+      "eventIds": [
+        "SC26-022"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: Alex Tea ×1; Sull!van ×1; Symbiocene ×1; Xanna ×1; Xtina ×1",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Broad Westside retained; finer neighborhood boundary unresolved.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "SC26-022",
+          "title": "POSITRON",
+          "date": "06.27.26, 0900–0130 as printed",
+          "treatment": "main",
+          "evidenceType": "retained inspected flyer/caption",
+          "sourceRefs": [
+            "A28"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-3ae453caafeb",
+      "name": "Harrison Street DIY Skatepark",
+      "address": "401 Harrison St",
+      "area": "Columbus Park",
+      "eventIds": [
+        "E17"
+      ],
+      "calendarIds": [],
+      "connections": "Organizers/series: Alternative Collective KC ×1",
+      "placeIds": [
+        "harrison-street-diy"
+      ],
+      "sceneMatched": false,
+      "status": "Public park address. One retained user-note event; original flyer unavailable.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "E17",
+          "title": "ACKC 3: Alt Night Market",
+          "date": "September 26, 2026, 6–11pm (note transcription)",
+          "treatment": "main",
+          "evidenceType": "retained user note",
+          "sourceRefs": [
+            "H-E17"
+          ]
+        }
+      ]
+    },
+    {
+      "locationKey": "address-483a493f6274",
+      "name": "Unnamed venue — reported Janet appearance",
+      "address": "2512 Home Street, Kansas City, Missouri — as dictated",
+      "area": "Unresolved area",
+      "eventIds": [
+        "N22-01"
+      ],
+      "calendarIds": [],
+      "connections": "Artists: Janet / Janet Azimuth (reported match) ×1",
+      "placeIds": [],
+      "sceneMatched": false,
+      "status": "Reported address text only; street spelling, venue and area unresolved. Not changed to Holmes or assigned a pin.",
+      "possible": "",
+      "main": 1,
+      "calendar": 0,
+      "events": [
+        {
+          "eventId": "N22-01",
+          "title": "Janet flyer — title not retained",
+          "date": "Undated",
+          "treatment": "main",
+          "evidenceType": "new user-reported observation",
+          "sourceRefs": [
+            "N:31"
+          ]
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "eventId": "E01",
+      "title": "STRICTLY | DURO",
+      "date": "May 1, 10pm–2am (year unconfirmed)",
+      "treatment": "unassigned",
+      "evidenceType": "retained inspected flyer/caption",
+      "sourceRefs": [
+        "H-E01"
+      ],
+      "status": "UL address remains unknown. Do not merge automatically with the West Bottoms Union Library event."
+    },
+    {
+      "eventId": "E03",
+      "title": "META Hi-Fi Full Spectrum",
+      "date": "May 31, 2025, 9pm–2am",
+      "treatment": "unassigned",
+      "evidenceType": "retained inspected flyer/caption",
+      "sourceRefs": [
+        "H-E03"
+      ],
+      "status": "Undisclosed location; no address or area assigned."
+    },
+    {
+      "eventId": "E09",
+      "title": "Movidas 32",
+      "date": "Date unresolved",
+      "treatment": "unassigned",
+      "evidenceType": "retained inspected flyer/caption",
+      "sourceRefs": [
+        "H-E09"
+      ],
+      "status": "Movidas identity and possible Lowest Ferns association remain provisional."
+    },
+    {
+      "eventId": "SC26-007",
+      "title": "STRICTLY INTERRUPTING",
+      "date": "9.11, 10pm–late; year contextual",
+      "treatment": "area-only",
+      "evidenceType": "retained inspected flyer/caption",
+      "sourceRefs": [
+        "S09"
+      ],
+      "status": "West Bottoms explicitly named; no address. One area-only connection, outside address totals."
+    },
+    {
+      "eventId": "SC26-015",
+      "title": "867 FEST",
+      "date": "11/21/25; doors 5pm/music 7pm",
+      "treatment": "unassigned",
+      "evidenceType": "retained inspected flyer/caption",
+      "sourceRefs": [
+        "A17"
+      ],
+      "status": "Competing reported Lowest Ferns and 1737 Locust claims; no accepted address."
+    },
+    {
+      "eventId": "SC26-019",
+      "title": "COLORS VII",
+      "date": "September 5, DM for Location",
+      "treatment": "unassigned",
+      "evidenceType": "retained inspected flyer/caption",
+      "sourceRefs": [
+        "A24"
+      ],
+      "status": "Undisclosed location; no address or area assigned."
+    },
+    {
+      "eventId": "N22-13",
+      "title": "The Pride Afters / KC Pride Fest reference",
+      "date": "Undated",
+      "treatment": "unassigned",
+      "evidenceType": "new user-reported observation",
+      "sourceRefs": [
+        "N:57"
+      ],
+      "status": "User-reported Pride Afters reference; undisclosed location, retained separately."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "ebe40b029291d8772a42350d21abdaae49c9553d",
+  "frontendCommit": "2fe0e7367124867be98d3de17a94d67c7fa4db9c",
   "housingExportGeneratedAt": "2026-09-25T19:41:41.101Z",
   "workbookSha256": "751814a461daff8a99daf1568ca16142ca6f7315884968a3a8672d55f2d2b911",
   "housingExportSha256": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
@@ -19,8 +19,10 @@
     "secondRunWrites": 0
   },
   "files": {
-    "assets/index-CLvdjEMP.css": "c33900de49fe9b1c8c3b1e1c495c18ba41f9def7ac2952f1cdd20c9c7b6d119e",
-    "assets/index-CaVBYLUV.js": "becf1acf2a1967907c3771089907c0cbffc84ab67a5e40328a26065228f9171d",
+    ".nojekyll": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "assets/app-B4gevdsf.js": "dc57eb21c05991ad86f0890bc7a52385f14142232575599157b05056e26a9cac",
+    "assets/index-C1QxK33S.css": "977f49fd0adb99d66cc04d9a7072bd10e1daa9a739847ad958d4672c2ce1bcd4",
+    "assets/index-rCyyz1UD.js": "ec9c26ba2772709146b74ac12b851ff4bd5326eb2ef2d45916cb0c8a880c2605",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -47,11 +49,43 @@
     "assets/scene/2026-09-18_outsiders-social-club_pretty-girls-love-rnb_go-to-kellz.png": "4d212b9f8eb4b469785240908dc8c81b4b44880611a7d0de75f144eedadba25c",
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
-    "index.html": "9e0230a99a78bff176aaf90fc7ed70237fd377dc292b3c1363f40a2cb3ae2c5d",
-    "map-data.js": "01fbba49482e0d59d9af60f313c1f2c534aea4c4bd1b182dffd38c7830b00ba2"
+    "favicon.svg": "0723e77e970fb6ee20c3debeb652bfa5379073b6b61b00fab53f61f407ead081",
+    "housing-export.json": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
+    "index.html": "15cafa4414b91f26d96212fa761ad071c248fc28603f278d7dfffaede7b5320b",
+    "map-data.js": "01fbba49482e0d59d9af60f313c1f2c534aea4c4bd1b182dffd38c7830b00ba2",
+    "neighborhood-amenities.json": "016b6a0992ffed59dc94b30c80949fbb2115b75b3eb6b1c021a29e51374e3d59",
+    "previews/amenities-desktop.png": "4438193af42a2ac2016d0c6bb7224f29393919da997bc23746c7e558da577dac",
+    "previews/amenities-landscape.png": "5d6951b4d4393ba41cc8d34e8d2e1fea2ce7e6225cbdd3c663c3e3d399e8252d",
+    "previews/amenities-mobile.png": "c9e7f920dac54212f6cb2b4403dd408529e4cbbc364eb72d6128761e1c9c123a",
+    "previews/detail-desktop.png": "d56e902f2f9e0690847a79b2d5f4ce2c068d9d1b93d3316e9372cd58c00793bc",
+    "previews/detail-landscape.png": "9857738b7e9488635c249f976bdba55a4af27dd88748c4a14c0aa48797e8396b",
+    "previews/detail-mobile.png": "a20601ce5dca2a6296b87fba46e8017dcf75f7a3dd526c52040a0139c8653687",
+    "previews/directions-desktop.png": "473a505c539ce0d6f7464d36a93b4c891a2e5a89d7a09643d63274cb8613c11c",
+    "previews/directions-landscape.png": "0425ce610e260f03282127bdd0baafd6615210c99d2fd02485d0b6bbf304fbdd",
+    "previews/directions-mobile.png": "3e979a547413179ae1a9f5f382fae30b9cd6df257730e3c649073863e748af60",
+    "previews/explore-desktop.png": "6a53e5eae384dea7114e2ea323100c70ab5985ef7a8d74027e13c1c4f2960848",
+    "previews/explore-landscape.png": "a0bcaee271db254732eae601996987f89c45818d49df834ddf42724c05e13488",
+    "previews/explore-mobile.png": "f4121d9de0cb4ff971d621a1d9cd5c0bc68c32df3975ed2ee2b230c738b0a25b",
+    "previews/favorites-desktop.png": "f3ee3e51415a0dcade6adc1ff803329b61c9e66cc4d5a0d0a4bf28215a44eb60",
+    "previews/favorites-landscape.png": "e28f90dc1307b4578599faddad0806c63d94d4d82cd48fde7a32ca1fb5c718ea",
+    "previews/favorites-mobile.png": "fdb86c5f883639539e864162b1eca3929589b196b045b5c08438469a10c7f50b",
+    "previews/integration-desktop.png": "fb3346749c22322c8e310a235ce2b023a0fd209c906916af8c2b063e6e0ab409",
+    "previews/integration-landscape.png": "4e4ba45aa40da247e92d24372a3a04b4da71f70965b95f1066a6f0b2f4583c96",
+    "previews/integration-mobile.png": "099a6e6f91ced9de6f5eb29ca157ca7a2b457b5731bcfb58db76255d31ee7cb3",
+    "previews/options-desktop.png": "51b649317a4db28d01368eebca5b702bfaf0c8358a6108e14349cc79a3eaa884",
+    "previews/options-landscape.png": "bf0a72162071dff5351e18e7dc7bbf2c389f0f63747752ae0ab2c0728f478916",
+    "previews/options-mobile.png": "efaf68d26ce0ec809133956dfdf0899d093d0e309257564238845c1078ac2456",
+    "previews/places-desktop.png": "73bde5ff6aa18bbcf78f21f14bb0cf5b9c42ad549f286629887322eeccfa7e54",
+    "previews/places-landscape.png": "d63a64263adfa03f14a72489902e103a60b37570cdde41e118418d62032e853b",
+    "previews/places-mobile.png": "f584ac20a974bd1e8bb812bb9ade9fd61639e1c9ac515b824ac4f4e737e7c859",
+    "previews/properties-desktop.png": "5b59ac4340d3f43c9b4db5e6c37156d47aa9f0d9ef3d1fb15f930655fe12fa9a",
+    "previews/properties-landscape.png": "cb32330869c1710110abe77a7cfd4f7f8add3db9b1ecb807eea2230412c5d866",
+    "previews/properties-mobile.png": "e95b397f1de596e44e9c59ef62edaf62a9dcf880abd071859890f2fb5e9ed3af",
+    "saved-events.json": "d7bfaf3cbe29f00d8d8265866a90c630cbfba91dfa283951e69330896982c987",
+    "scene-tallies.json": "899f3c00ee01953514fc994b0dcbdc38922e91f90eb03f6e02a7b3144e2a3b54"
   },
   "units": 47,
-  "publicationScope": "On-demand live routing for apartments and amenities in both directions; GPS, Places search, Home/Work presets, walking/transit/driving/biking modes, route summaries and expandable steps. Curated neighborhood walks and housing data unchanged.",
+  "publicationScope": "Approved HomeSource redesign with nine navigation pages and responsive orientation layouts; existing Google map, directions, Places photos, shared favorites and dated housing snapshot preserved.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -302,10 +336,13 @@
     "source": "https://www.coldstorageloftskc.com/kansas-city/cold-storage-lofts/amenities/"
   },
   "favorites": {
-    "storage": "Browser-local stable property IDs",
-    "filter": "Map and list; combines with other active filters",
+    "storage": "One shared public property-ID list in the existing Apps Script service",
+    "filter": "Map and list; combines with other active filters; browser-local on/off setting",
     "crossTabSync": true,
-    "crossDeviceSync": false,
+    "crossDeviceSync": true,
+    "refreshSeconds": 15,
+    "writes": "Serialized per-property add/remove updates; no whole-list replacement",
+    "previousBrowserList": "Optional import preserves local backup",
     "sheetWrites": 0
   },
   "oldTownFilter": {
@@ -355,5 +392,24 @@
     ],
     "calculation": "on-demand with session cache",
     "privatePresets": "browser-local storage only"
+  },
+  "homesourceRedesign": {
+    "approvedAt": "2026-10-08",
+    "pages": [
+      "explore",
+      "properties",
+      "detail",
+      "favorites",
+      "places",
+      "directions",
+      "amenities",
+      "options",
+      "integration"
+    ],
+    "dataAsOf": "2026-09-25",
+    "desktop": "Persistent sidebar and wider split map/results layout",
+    "mobile": "Stacked content and compact bottom navigation",
+    "landscape": "Responsive map/content arrangement",
+    "sourceKitPublished": false
   }
 }

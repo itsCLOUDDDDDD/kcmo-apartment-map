@@ -6,9 +6,11 @@ Live routing is a display-only map interaction. A selected property or amenity s
 
 Old Town membership uses an exact case-insensitive current Management value of Old Town Management. It does not use neighborhood names, historical manager mentions or Cold Storage ownership. The official 11 portfolio links correspond to 13 existing building IDs because 119, 207 and 213 Walnut remain distinct pins. Manager toggles combine by union before ZIP/amenity/favorites filtering. No new facts or private leasing correspondence are exported by this presentation change.
 
-## Saved property favorites — September 25, 2026
+## Shared property favorites — current behavior
 
-`kcmo_favorite_properties_v1` stores only stable Property IDs in browser localStorage. App startup restores the set; card and detail controls persist toggles and storage events synchronize tabs. As of September 26, `kcmo_favorites_only_v1` separately saves the Favorites only boolean. Startup restores it; toggling and Reset filters persist it, and storage events synchronize it across tabs. The filter feeds the same filtered property collection to map and list. Each storage error retains the current session choice and shows its corresponding save-failure notice. Browser-local choices are not exported, written to the Sheet or synchronized between devices. Other filters still apply.
+One existing public Apps Script service stores stable property IDs for everyone across browsers and devices. Serialized per-ID add/remove updates preserve other visitors’ edits. Save/loading/failure/retry states are explicit, with refresh every 15 seconds and on return to the page. The old `kcmo_favorite_properties_v1` browser list is a preserved backup and can be added to the shared list only by clicking Import. The isolated design-draft favorites are never imported.
+
+`kcmo_favorites_only_v1` saves only the local filter boolean; startup, reset and same-origin storage events preserve it. The filter feeds the same filtered property collection to map and list, combining with the other active filters. Failed local saves show a notice. Shared favorites do not write housing facts or the Sheet. Cover selections and Home/Work route presets remain browser-local.
 
 ## MAC access-scope model — September 24, 2026
 

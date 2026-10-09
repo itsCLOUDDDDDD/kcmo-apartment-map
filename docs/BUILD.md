@@ -1,10 +1,11 @@
-# Build and publish the AI Studio housing interface
+# Build and publish HomeSource
 
-Editable frontend source: `itsCLOUDDDDDD/aistudio`. Use its reviewed main commit and existing Tailwind system. `release.json` identifies the source commit used for this release.
+Editable frontend source: `itsCLOUDDDDDD/aistudio`. Use its reviewed main commit. The current entry is `src/homesource/main.ts`, with the approved layout in `app.js`/`styles.css` and existing provider components connected by `LiveServices.tsx`. `release.json` identifies the source commit used for this release.
 
 ```sh
 npm ci
 npm test
+npm run test:shared
 npm run lint
 npm run build
 ```
@@ -21,4 +22,4 @@ Review intended paths and privacy, check desktop/mobile behavior, then commit an
 
 ## Current full-list publication scope
 
-The September 21 user approval includes all 231 existing candidate IDs, including prior holds and exclusions. Generate the reviewed public allowlisted payload with `tools/research/build.cjs --all` from the private read-only Sheet snapshot, retaining the current 226 mapped and five list-only records, with the 122 supplied locations explicitly labeled unverified. Do not revert to the older Yes-only/four-ZIP gate or change Sheet visibility merely to build the site. Keep private notes and provenance evidence out of the payload. See DATA-FLOW.md and CURRENT-STATUS.md for current scope and verification.
+The October 8 presentation release preserves the already published September 25 snapshot byte-for-byte: 261 properties, 250 mapped/11 list-only, 47 units, 64 places and 2,808 saved walks. No Sheet export, vacancy refresh or new candidate decision is included. Preserve all IDs, unverified supplied locations and dated sources. The earlier full-list authorization continues to include prior holds and exclusions; do not restore the old Yes-only/four-ZIP gate. Source-kit files, private notes, environment files and original evidence stay outside the deployment. Page previews show the production UI using public data. See DATA-FLOW.md and CURRENT-STATUS.md for recorded behavior.
