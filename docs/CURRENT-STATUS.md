@@ -1,3 +1,17 @@
+# Map interaction repair — October 19, 2026
+
+This release keeps the Google map connected during page updates and preserves marker attachments, including a registered-marker fallback where state-preserving DOM moves are unavailable. Selecting a home updates its card without rebuilding the map host. Clicking blank map space or the new close button dismisses the card while preserving the last property for details/directions. Mobile Filters has an accessible label.
+
+Favorites display the number matching the active filters beside the shared total, with an explicit Clear filters control. This fixes the misleading impression that a ZIP-filtered list lost saved homes; it does not alter anyone's favorites.
+
+Hide/Restore UI and a separate shared-list client are included, but **cross-device hiding is not active yet**: the existing Apps Script service still needs the prepared backend version. The frontend requires an explicit hidden-list protocol before enabling Hide or sending any write, so the older favorites service cannot accidentally receive a favorite mutation. There is no browser-only fallback. Once activated, hidden homes leave active map/list results, remain accessible under Hidden homes and direct detail links, and can be restored without changing favorites or research. Saving/error/retry states and periodic refresh are explicit.
+
+Frontend source: `59e4bd5393018817fb0d58c5ea919878e577bb08`. Required frontend, shared-client/backend, TypeScript and production-build checks pass. Browser coverage includes native and forced-fallback marker selection/panning, filters, card dismissal, camera/host retention and mobile interaction. Mocked independent-browser Hide checks cover persistence, restore, failed writes/retry, retained favorites/research and rejection of the older backend protocol. No actual shared favorite or hidden selections were changed. Safari and a second physical device have not been tested.
+
+The September 25 housing export remains byte-identical: 261 properties, 250 mapped/11 list-only, 47 recorded units, 64 places and 2,808 saved walks. This release does not refresh vacancies or write the Sheet. Existing provider/chunk-size notices are nonblocking. `release.json` contains the reviewed source and served-file hashes; live publication is confirmed separately after Pages deployment.
+
+---
+
 # HomeSource redesign — October 8, 2026
 
 The approved nine-page HomeSource interface is implemented: Explore, Properties, Property detail, Favorites, Places & Scene, Directions, Amenities, Map options and Integration guide. The All pages gallery links each screen and current desktop/mobile previews. Desktop keeps sidebar navigation and a wider map/results view; portrait and landscape adapt content and retain navigation.

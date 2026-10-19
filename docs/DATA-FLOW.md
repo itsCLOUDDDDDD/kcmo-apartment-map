@@ -1,3 +1,9 @@
+# Shared hidden homes — October 19, 2026
+
+The shared Hide client requires `namespace: hidden` and `protocol: hidden-properties-v1` from the existing service's `?action=hidden` read before any write. Its distinct `set-hidden` action updates one property ID at a time. Backend hidden keys/revision are separate from favorites, preserving existing favorite behavior. Shared IDs filter both active map and list results; Hidden homes provides reversible access. Direct research/detail links remain usable. Confirmed IDs may be cached, but startup does not apply or upload a browser-only list.
+
+The frontend is prepared; the existing Apps Script backend deployment remains pending. Unsupported service responses disable Hide. Website publication does not deploy Apps Script or change list decisions. Property, unit, route, media, Sheet and master records are unchanged.
+
 ## On-demand live routing — September 26, 2026
 
 Live routing is a display-only map interaction. A selected property or amenity supplies its existing mapped coordinates as the target; the user supplies an origin through current GPS, Google Places Autocomplete, or browser-local Home/Work presets, or switches to a searched destination for the reverse direction. Walking, Transit, Driving and Bicycling requests are issued only after `Get Directions` or an active-route mode change and are cached for the session. The resulting Google route, summary and sanitized step instructions stay in UI state and are not written to the housing export, `map-data.js`, Sheet, favorites service or curated walking records. Curated neighborhood walks continue to use their existing saved geometry and measurements.

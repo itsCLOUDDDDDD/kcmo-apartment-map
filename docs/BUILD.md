@@ -23,3 +23,7 @@ Review intended paths and privacy, check desktop/mobile behavior, then commit an
 ## Current full-list publication scope
 
 The October 8 presentation release preserves the already published September 25 snapshot byte-for-byte: 261 properties, 250 mapped/11 list-only, 47 units, 64 places and 2,808 saved walks. No Sheet export, vacancy refresh or new candidate decision is included. Preserve all IDs, unverified supplied locations and dated sources. The earlier full-list authorization continues to include prior holds and exclusions; do not restore the old Yes-only/four-ZIP gate. Source-kit files, private notes, environment files and original evidence stay outside the deployment. Page previews show the production UI using public data. See DATA-FLOW.md and CURRENT-STATUS.md for recorded behavior.
+
+## Shared Hide activation — October 19, 2026
+
+The prepared backend source and deployment instructions are in the private frontend repository under `shared-favorites/`. Update the existing Apps Script deployment to a new version while retaining its URL, owner/access settings and Script Properties. Never replace favorites with a browser snapshot or initialize/reset the service. Verify the distinct hidden-list protocol, unchanged favorites and independent-browser hide/restore before declaring cross-device hiding active. Until then the published frontend keeps Hide disabled.

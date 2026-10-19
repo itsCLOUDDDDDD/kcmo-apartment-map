@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "2fe0e7367124867be98d3de17a94d67c7fa4db9c",
+  "frontendCommit": "59e4bd5393018817fb0d58c5ea919878e577bb08",
   "housingExportGeneratedAt": "2026-09-25T19:41:41.101Z",
   "workbookSha256": "751814a461daff8a99daf1568ca16142ca6f7315884968a3a8672d55f2d2b911",
   "housingExportSha256": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
@@ -20,9 +20,9 @@
   },
   "files": {
     ".nojekyll": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-    "assets/app-B4gevdsf.js": "dc57eb21c05991ad86f0890bc7a52385f14142232575599157b05056e26a9cac",
-    "assets/index-C1QxK33S.css": "977f49fd0adb99d66cc04d9a7072bd10e1daa9a739847ad958d4672c2ce1bcd4",
-    "assets/index-rCyyz1UD.js": "ec9c26ba2772709146b74ac12b851ff4bd5326eb2ef2d45916cb0c8a880c2605",
+    "assets/app-CiIzR6sH.js": "caf940a1f110eec22f9e2bb6a115ff3a7c8babe5ce92851a76b276d3d77843d4",
+    "assets/index-8XEussWR.css": "402f4c949c822ee3d587b910f412778e5b8dd6d102fef2b13df73a46a8b43d2e",
+    "assets/index-CrfhdFTP.js": "d57110f60d3f825dcef97e616f19dffb4636f3ab32b600b2680a3affd1ca5a85",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -51,7 +51,7 @@
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
     "favicon.svg": "0723e77e970fb6ee20c3debeb652bfa5379073b6b61b00fab53f61f407ead081",
     "housing-export.json": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
-    "index.html": "15cafa4414b91f26d96212fa761ad071c248fc28603f278d7dfffaede7b5320b",
+    "index.html": "d3170009df759bdccffa8f9a556573f37c184b1c988ba02016d3794db60bd109",
     "map-data.js": "01fbba49482e0d59d9af60f313c1f2c534aea4c4bd1b182dffd38c7830b00ba2",
     "neighborhood-amenities.json": "016b6a0992ffed59dc94b30c80949fbb2115b75b3eb6b1c021a29e51374e3d59",
     "previews/amenities-desktop.png": "4438193af42a2ac2016d0c6bb7224f29393919da997bc23746c7e558da577dac",
@@ -85,7 +85,7 @@
     "scene-tallies.json": "899f3c00ee01953514fc994b0dcbdc38922e91f90eb03f6e02a7b3144e2a3b54"
   },
   "units": 47,
-  "publicationScope": "Approved HomeSource redesign with nine navigation pages and responsive orientation layouts; existing Google map, directions, Places photos, shared favorites and dated housing snapshot preserved.",
+  "publicationScope": "Repair persistent map markers and selected-card dismissal; clarify filtered favorite counts; add capability-gated shared Hide/Restore UI. Historical housing snapshot unchanged.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -411,5 +411,22 @@
     "mobile": "Stacked content and compact bottom navigation",
     "landscape": "Responsive map/content arrangement",
     "sourceKitPublished": false
+  },
+  "mapInteractionRepair": {
+    "date": "2026-10-19",
+    "selection": "Direct selected-card updates; blank map and close button clear selection",
+    "host": "State-preserving connected moves with registered-marker fallback",
+    "favorites": "Show visible versus total saved count and explicit Clear filters"
+  },
+  "hiddenHomes": {
+    "scope": "One separate shared property-ID list across browsers and devices",
+    "status": "Frontend prepared; existing Apps Script backend deployment still required",
+    "protocol": "hidden-properties-v1",
+    "activation": "Requires server capability response; Hide disabled when unsupported",
+    "restore": true,
+    "favoriteChanges": false,
+    "propertyDataDeleted": false,
+    "browserOnlyFallback": false,
+    "refreshSeconds": 15
   }
 }
