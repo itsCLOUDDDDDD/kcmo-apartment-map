@@ -1,3 +1,15 @@
+# Explore list follows the map — October 28, 2026
+
+Explore now lists only filtered homes with saved pins inside the current Google map bounds. The count identifies homes in the map area and the total matching filters. Pan or zoom to update the results automatically; empty areas provide a clear message and access to the full catalog. Properties and Favorites retain their full filtered scope, including list-only homes. Mobile List retains the last visible map area.
+
+Viewport changes patch only the results panel and preserve the map host, camera, markers, selection, sort choice and retained card photo roots. Filtered markers outside the current bounds remain available when the user pans. Pagination restarts when viewport membership changes.
+
+All frontend and shared-list suites, TypeScript and the production build pass. The 49 production-preview browser checks cover desktop, older-browser fallback and mobile; they verify bounds/list agreement, filters, sorting, pagination, selection, navigation, retained camera/markers, full catalog and mobile viewport retention. No shared-list writes, application errors, horizontal overflow or React unmount warnings occurred. The existing Google provider notice remains nonblocking.
+
+The existing housing export, units, dates, planning calculations, shared favorites and gated shared Hide backend are unchanged. The source commit and reviewed generated-file hashes are recorded in `release.json`.
+
+---
+
 # Map interaction repair — October 19, 2026
 
 This release keeps the Google map connected during page updates and preserves marker attachments, including a registered-marker fallback where state-preserving DOM moves are unavailable. Selecting a home updates its card without rebuilding the map host. Clicking blank map space or the new close button dismisses the card while preserving the last property for details/directions. Mobile Filters has an accessible label.

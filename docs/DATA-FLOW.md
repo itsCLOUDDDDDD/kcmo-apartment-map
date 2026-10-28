@@ -1,3 +1,13 @@
+# Explore viewport and catalog scope — October 28, 2026
+
+Search, quick filters, management, favorites and shared hidden-home rules first produce the complete matching property collection. The map always receives that complete collection, preserving offscreen markers for subsequent panning. Only Explore's results panel intersects it with the last valid visible Google map bounds. Saved coordinates use `[latitude, longitude]`; missing locations never acquire invented pins.
+
+Map idle and stationary filter/host changes report bounds through `LiveServices.tsx`. The application updates the count and cards directly without calling its full renderer or moving the map host. Unchanged visible membership avoids another patch; retained cards keep their photo roots and focused controls regain focus. A membership change resets pagination. Zero-size or parked maps cannot overwrite the last visible area, so mobile List uses the preceding map viewport. Properties and Favorites do not inherit this viewport restriction.
+
+This display behavior does not modify the housing export, Sheet, location evidence, shared lists or routing measurements.
+
+---
+
 # Shared hidden homes — October 19, 2026
 
 The shared Hide client requires `namespace: hidden` and `protocol: hidden-properties-v1` from the existing service's `?action=hidden` read before any write. Its distinct `set-hidden` action updates one property ID at a time. Backend hidden keys/revision are separate from favorites, preserving existing favorite behavior. Shared IDs filter both active map and list results; Hidden homes provides reversible access. Direct research/detail links remain usable. Confirmed IDs may be cached, but startup does not apply or upload a browser-only list.

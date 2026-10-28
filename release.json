@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "59e4bd5393018817fb0d58c5ea919878e577bb08",
+  "frontendCommit": "c515edc66e9b140b698b310217eeaa86103eca9a",
   "housingExportGeneratedAt": "2026-09-25T19:41:41.101Z",
   "workbookSha256": "751814a461daff8a99daf1568ca16142ca6f7315884968a3a8672d55f2d2b911",
   "housingExportSha256": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
@@ -20,9 +20,9 @@
   },
   "files": {
     ".nojekyll": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-    "assets/app-CiIzR6sH.js": "caf940a1f110eec22f9e2bb6a115ff3a7c8babe5ce92851a76b276d3d77843d4",
+    "assets/app-CcAM8UMK.js": "8e0cd6ef0bdf69bec6e44bab792bc848c980f95ead6a86cb8f9b0a28fad465cd",
     "assets/index-8XEussWR.css": "402f4c949c822ee3d587b910f412778e5b8dd6d102fef2b13df73a46a8b43d2e",
-    "assets/index-CrfhdFTP.js": "d57110f60d3f825dcef97e616f19dffb4636f3ab32b600b2680a3affd1ca5a85",
+    "assets/index-Cel1obQy.js": "af4acd41941bfd8569282da34b184a81a323758dd4b56695c2be668f3105e59c",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -51,7 +51,7 @@
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
     "favicon.svg": "0723e77e970fb6ee20c3debeb652bfa5379073b6b61b00fab53f61f407ead081",
     "housing-export.json": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
-    "index.html": "d3170009df759bdccffa8f9a556573f37c184b1c988ba02016d3794db60bd109",
+    "index.html": "e27d3ff9d7a086eac3531ff031c7322f0f066b16b55595311a0cd55ceb09567f",
     "map-data.js": "01fbba49482e0d59d9af60f313c1f2c534aea4c4bd1b182dffd38c7830b00ba2",
     "neighborhood-amenities.json": "016b6a0992ffed59dc94b30c80949fbb2115b75b3eb6b1c021a29e51374e3d59",
     "previews/amenities-desktop.png": "4438193af42a2ac2016d0c6bb7224f29393919da997bc23746c7e558da577dac",
@@ -331,7 +331,7 @@
   },
   "coldStoragePoolReview": {
     "propertyId": "prop-7f716988-54b7-4ab5-81d6-61b4473aba44",
-    "amenity": "Yes — rooftop pool",
+    "amenity": "Yes \u2014 rooftop pool",
     "checkedDate": "2026-09-25",
     "source": "https://www.coldstorageloftskc.com/kansas-city/cold-storage-lofts/amenities/"
   },
@@ -428,5 +428,17 @@
     "propertyDataDeleted": false,
     "browserOnlyFallback": false,
     "refreshSeconds": 15
+  },
+  "frontendSourceStatus": "Local source commit; configured private remote unavailable at publication",
+  "exploreMapResults": {
+    "date": "2026-10-28",
+    "scope": "Explore list follows the current visible Google map area",
+    "filtering": "Existing search and filters intersect map bounds; map retains all matching markers",
+    "updates": "After map idle and after host resize, without remounting the map",
+    "catalog": "Properties and Favorites retain their full filtered scope, including unlocated homes",
+    "mobile": "List retains the last visible map area",
+    "verification": "49 production-preview browser checks across desktop, fallback and mobile; full frontend/shared tests, TypeScript and build pass",
+    "propertyDataChanges": 0,
+    "sharedListWrites": 0
   }
 }
