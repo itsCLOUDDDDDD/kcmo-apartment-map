@@ -1,3 +1,11 @@
+# River’s Edge scoped addition — October 31, 2026
+
+The canonical Sheet owns one new building ID, `rivers-edge-1400-e-riverfront`, its seven structured plan/unit records, address-bound pin and HAKC/64120 standard. A fresh read-only Sheet export supplies the public allowlisted property object. This addition-only release retains all 261 prior public property objects, places, routes and media unchanged. `meta.scopedAddition` records the old baseline and new source fingerprints; a new generation date does not refresh older vacancies.
+
+The new property uses the dated HAKC 2026 PDF’s $1,496 one-bedroom comparator and the existing $90 planning setting for every size. Four restricted plan advertisements remain waitlists; three numbered market advertisements are distinct. No restricted numbered vacancy, HCV acceptance, utility allowance or measured walk is inferred. The named-place pin is 39.1186744, -94.5681546, not a camera center. ZIP 64120 receives a new fixed color; previous ZIP assignments remain unchanged.
+
+---
+
 # Explore viewport and catalog scope — October 28, 2026
 
 Search, quick filters, management, favorites and shared hidden-home rules first produce the complete matching property collection. The map always receives that complete collection, preserving offscreen markers for subsequent panning. Only Explore's results panel intersects it with the last valid visible Google map bounds. Saved coordinates use `[latitude, longitude]`; missing locations never acquire invented pins.

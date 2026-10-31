@@ -1,11 +1,11 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "c515edc66e9b140b698b310217eeaa86103eca9a",
-  "housingExportGeneratedAt": "2026-09-25T19:41:41.101Z",
-  "workbookSha256": "751814a461daff8a99daf1568ca16142ca6f7315884968a3a8672d55f2d2b911",
-  "housingExportSha256": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
-  "properties": 261,
-  "mapped": 250,
+  "frontendCommit": "f933768458ec6dfe6832e863ca24475b21a9e49c",
+  "housingExportGeneratedAt": "2026-10-31T18:16:21.736Z",
+  "workbookSha256": "92e94966d683832939822766b3c68fc2e831d75e9a8638e7752d91d84c35b8f5",
+  "housingExportSha256": "403543d2513bb57b3ae8448d9733c9977021372597d2164fded7e9117204f304",
+  "properties": 262,
+  "mapped": 251,
   "listOnly": 11,
   "savedWalkingMeasurements": 2808,
   "venueCatalog": 64,
@@ -20,9 +20,9 @@
   },
   "files": {
     ".nojekyll": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-    "assets/app-CcAM8UMK.js": "8e0cd6ef0bdf69bec6e44bab792bc848c980f95ead6a86cb8f9b0a28fad465cd",
+    "assets/app-It474zBV.js": "8e80d23025db1fae7e60eb3cac2247e3912b3e8c53c8043ef43c5bc929e0bd16",
     "assets/index-8XEussWR.css": "402f4c949c822ee3d587b910f412778e5b8dd6d102fef2b13df73a46a8b43d2e",
-    "assets/index-Cel1obQy.js": "af4acd41941bfd8569282da34b184a81a323758dd4b56695c2be668f3105e59c",
+    "assets/index-BkAcLwOv.js": "3e6d0bb3b1f0f31b656fdab1e65a939d15b714c1bf648e895224db19646b7ef8",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -50,9 +50,9 @@
     "assets/scene/research.html": "f79d1e01c70ddaf52e5241b9222018659daf497ff41dc9781c4d38aebfa0616a",
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
     "favicon.svg": "0723e77e970fb6ee20c3debeb652bfa5379073b6b61b00fab53f61f407ead081",
-    "housing-export.json": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
-    "index.html": "e27d3ff9d7a086eac3531ff031c7322f0f066b16b55595311a0cd55ceb09567f",
-    "map-data.js": "01fbba49482e0d59d9af60f313c1f2c534aea4c4bd1b182dffd38c7830b00ba2",
+    "housing-export.json": "403543d2513bb57b3ae8448d9733c9977021372597d2164fded7e9117204f304",
+    "index.html": "158566e13651eada0814f8592c4ff6f039b0b527341c9933229545f113ae80af",
+    "map-data.js": "613fa5ce2a6868092e028c254fa512b5b00dda868ee27c0260b096e7dc9af9b0",
     "neighborhood-amenities.json": "016b6a0992ffed59dc94b30c80949fbb2115b75b3eb6b1c021a29e51374e3d59",
     "previews/amenities-desktop.png": "4438193af42a2ac2016d0c6bb7224f29393919da997bc23746c7e558da577dac",
     "previews/amenities-landscape.png": "5d6951b4d4393ba41cc8d34e8d2e1fea2ce7e6225cbdd3c663c3e3d399e8252d",
@@ -84,8 +84,8 @@
     "saved-events.json": "d7bfaf3cbe29f00d8d8265866a90c630cbfba91dfa283951e69330896982c987",
     "scene-tallies.json": "899f3c00ee01953514fc994b0dcbdc38922e91f90eb03f6e02a7b3144e2a3b54"
   },
-  "units": 47,
-  "publicationScope": "Repair persistent map markers and selected-card dismissal; clarify filtered favorite counts; add capability-gated shared Hide/Restore UI. Historical housing snapshot unchanged.",
+  "units": 54,
+  "publicationScope": "Add River’s Edge from the verified canonical Sheet; retain all 261 prior public properties, places, routes, media and shared-list behavior.",
   "suppliedLocationImport": {
     "matched": 122,
     "pending": 2,
@@ -95,7 +95,7 @@
     "actualRepeatWrites": 0
   },
   "zipColors": {
-    "assignedZips": 27,
+    "assignedZips": 28,
     "fixed": true,
     "matchingPickerSwatches": true,
     "venueColorsChanged": false
@@ -331,7 +331,7 @@
   },
   "coldStoragePoolReview": {
     "propertyId": "prop-7f716988-54b7-4ab5-81d6-61b4473aba44",
-    "amenity": "Yes \u2014 rooftop pool",
+    "amenity": "Yes — rooftop pool",
     "checkedDate": "2026-09-25",
     "source": "https://www.coldstorageloftskc.com/kansas-city/cold-storage-lofts/amenities/"
   },
@@ -440,5 +440,19 @@
     "verification": "49 production-preview browser checks across desktop, fallback and mobile; full frontend/shared tests, TypeScript and build pass",
     "propertyDataChanges": 0,
     "sharedListWrites": 0
+  },
+  "riversEdgeAddition": {
+    "date": "2026-10-31",
+    "propertyId": "rivers-edge-1400-e-riverfront",
+    "baselineGeneratedAt": "2026-09-25T19:41:41.101Z",
+    "baselineWorkbookSha256": "751814a461daff8a99daf1568ca16142ca6f7315884968a3a8672d55f2d2b911",
+    "baselineExportSha256": "b3c0dc2758a1d520a0ae1210a9daa214589aa676054da9aa1cf5739d004769c1",
+    "sourceWorkbookSha256": "92e94966d683832939822766b3c68fc2e831d75e9a8638e7752d91d84c35b8f5",
+    "scope": "One canonical-Sheet property addition; all 261 earlier public property objects, places, routes and media preserved.",
+    "waitlistPlans": 4,
+    "numberedMarketAdvertisements": 3,
+    "paymentStandard": 1496,
+    "planningUtilities": 90,
+    "newSavedWalkingMeasurements": 0
   }
 }

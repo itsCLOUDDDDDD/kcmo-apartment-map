@@ -1,3 +1,15 @@
+# River’s Edge addition — October 31, 2026
+
+This release adds River’s Edge Residences at Current Landing, 1400 E Riverfront Dr, through its verified canonical Sheet record. The public collection now contains 262 properties, 251 mapped/11 list-only, 54 structured plan/unit records, 64 places and 2,808 saved walks. All 261 earlier public property objects, places, routes and media are preserved.
+
+Four restricted plan advertisements are waiting-list records; three numbered market advertisements (#340, #624 and #440) remain separate. The dated HAKC 2026 PDF provides the $1,496 one-bedroom comparator, used with the unchanged $90 planning setting for every size. No HCV acceptance, restricted numbered vacancy or new walking measurement is claimed. ZIP 64120 has a new fixed color without recoloring existing ZIPs.
+
+Frontend commit `f933768458ec6dfe6832e863ca24475b21a9e49c`; canonical read-back workbook SHA-256 `92e94966d683832939822766b3c68fc2e831d75e9a8638e7752d91d84c35b8f5`; public export SHA-256 `403543d2513bb57b3ae8448d9733c9977021372597d2164fded7e9117204f304`. The scoped metadata identifies the prior baseline separately, so older research is not represented as freshly checked.
+
+All frontend and shared-list tests, TypeScript and production build pass; 48 exporter contract checks pass. Canonical read-back verified all 163 added cells, seven units, formulas, pin/address binding, table range and preserved existing data/formulas/visibility. An independent staged-data audit passed 15 checks. Shared favorites and hidden-home behavior are unchanged, with no shared-list writes. Live deployment/hash and desktop/mobile verification follow publication and are recorded in the task evidence. `release.json` identifies the reviewed source, snapshot and served-file hashes. Rollback is a normal revert to the preceding public release `5307b9ff304804a12b27cbfb69c1d7454d9ef9e5`, preserving shared decisions.
+
+---
+
 # Explore list follows the map — October 28, 2026
 
 Explore now lists only filtered homes with saved pins inside the current Google map bounds. The count identifies homes in the map area and the total matching filters. Pan or zoom to update the results automatically; empty areas provide a clear message and access to the full catalog. Properties and Favorites retain their full filtered scope, including list-only homes. Mobile List retains the last visible map area.
