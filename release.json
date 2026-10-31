@@ -1,6 +1,6 @@
 {
   "frontendRepository": "itsCLOUDDDDDD/aistudio",
-  "frontendCommit": "f933768458ec6dfe6832e863ca24475b21a9e49c",
+  "frontendCommit": "67b7b8cda8147121bf523955274dbccef1d39c10",
   "housingExportGeneratedAt": "2026-10-31T18:16:21.736Z",
   "workbookSha256": "92e94966d683832939822766b3c68fc2e831d75e9a8638e7752d91d84c35b8f5",
   "housingExportSha256": "403543d2513bb57b3ae8448d9733c9977021372597d2164fded7e9117204f304",
@@ -20,9 +20,9 @@
   },
   "files": {
     ".nojekyll": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-    "assets/app-It474zBV.js": "8e80d23025db1fae7e60eb3cac2247e3912b3e8c53c8043ef43c5bc929e0bd16",
+    "assets/app-CojqIndP.js": "2f33ac5f6312150d9ccc38d5e0f7cdd96841bc34e81e470d65f613263756f86a",
     "assets/index-8XEussWR.css": "402f4c949c822ee3d587b910f412778e5b8dd6d102fef2b13df73a46a8b43d2e",
-    "assets/index-BkAcLwOv.js": "3e6d0bb3b1f0f31b656fdab1e65a939d15b714c1bf648e895224db19646b7ef8",
+    "assets/index-DyLtixDc.js": "683898cbf91242e266d301f688038cf0d373f244762d5d41928dabc6b6f37ea7",
     "assets/photos/one-nine-vine-302-hud/balcony-skyline.png": "a0dd5bb57669700ce4a0cddc1e50476b1611cb82113ed2c0a64644dd56493d7b",
     "assets/photos/one-nine-vine-302-hud/bathroom-1.png": "28a9e22db914d8e6c6c3937287b4f6c4e6c92f21da06841fa2708c3511142b04",
     "assets/photos/one-nine-vine-302-hud/bathroom-2.png": "ecbfab28fa3dc02eff8976f32e06e039ce825ac618fc333bf9277fa129a5cfa7",
@@ -51,7 +51,7 @@
     "assets/scene/undated_venue-unconfirmed_movidas-32_phong-ace-witty-fk-menace_full.png": "be90015714918689042d477147610081072ccf6f80436f4ab6579c40851a8197",
     "favicon.svg": "0723e77e970fb6ee20c3debeb652bfa5379073b6b61b00fab53f61f407ead081",
     "housing-export.json": "403543d2513bb57b3ae8448d9733c9977021372597d2164fded7e9117204f304",
-    "index.html": "158566e13651eada0814f8592c4ff6f039b0b527341c9933229545f113ae80af",
+    "index.html": "8413854ef15dc2cf0e661a07fdc3215edc305d6c9fc5bbe17f9e76f1cc3357a2",
     "map-data.js": "ae77c7bdb7d42850534bd6b5c7fec8fe43540e670d8158686535369fcceb452e",
     "neighborhood-amenities.json": "016b6a0992ffed59dc94b30c80949fbb2115b75b3eb6b1c021a29e51374e3d59",
     "previews/amenities-desktop.png": "4438193af42a2ac2016d0c6bb7224f29393919da997bc23746c7e558da577dac",
